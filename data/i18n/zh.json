@@ -14,10 +14,10 @@
   },
 
   "tool": {
-    "systemChecker": "System Requirements Checker",
-    "gachaSim": "Gacha Simulator",
-    "buildRecommender": "Build Recommender",
-    "achievementTracker": "Achievement Tracker"
+    "systemChecker": "系统配置检测",
+    "gachaSim": "抽卡模拟器",
+    "buildRecommender": "配队推荐器",
+    "achievementTracker": "成就追踪器"
   },
 
   "systemCheckerPage": {

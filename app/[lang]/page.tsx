@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getGame, getSystemTiers, getUITranslations, listGames, listTools } from "@/lib/data";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { touchSession } from "@/lib/session";
 
 const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -22,24 +23,15 @@ export default async function LangHomePage({ params }: Props) {
   const tools = await listTools();
   const tiers = await getSystemTiers();
 
+  // Touch the session for analytics
+  touchSession(safeLang).catch(() => {});
+
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100">
       <div className="mx-auto max-w-4xl px-4 py-12">
         {/* Lang switcher */}
-        <div className="mb-8 flex gap-2 text-sm">
-          {SUPPORTED_LANGS.map((l) => (
-            <Link
-              key={l}
-              href={`/${l}`}
-              className={`rounded-full px-3 py-1 ${
-                l === safeLang
-                  ? "bg-brand-600 text-white"
-                  : "bg-white/5 text-gray-300 hover:bg-white/10"
-              }`}
-            >
-              {l.toUpperCase()}
-            </Link>
-          ))}
+        <div className="mb-8 flex justify-end">
+          <LanguageSwitcher current={safeLang} />
         </div>
 
         {/* Hero */}

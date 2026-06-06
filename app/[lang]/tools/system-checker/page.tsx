@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getGame, getSystemTiers, getUITranslations, listGames } from "@/lib/data";
 import SystemCheckerClient from "@/components/tools/SystemCheckerClient";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -43,6 +44,10 @@ export default async function SystemCheckerPage({ params, searchParams }: Props)
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100">
       <div className="mx-auto max-w-3xl px-4 py-8">
+        {/* Lang switcher */}
+        <div className="mb-4 flex justify-end">
+          <LanguageSwitcher current={safeLang} />
+        </div>
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-white">

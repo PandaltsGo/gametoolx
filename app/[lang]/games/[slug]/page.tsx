@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getGame, getUITranslations, listTools, listGames } from "@/lib/data";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -95,6 +96,10 @@ export default async function GamePage({ params }: Props) {
         }}
       />
       <div className="mx-auto max-w-3xl px-4 py-8">
+        {/* Header with lang switcher */}
+        <div className="mb-4 flex justify-end">
+          <LanguageSwitcher current={safeLang} />
+        </div>
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-400 mb-4">
           <Link href={`/${safeLang}`} className="hover:text-white">

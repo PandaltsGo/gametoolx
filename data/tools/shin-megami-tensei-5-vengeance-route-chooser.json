@@ -1,0 +1,269 @@
+{
+  "slug": "shin-megami-tensei-5-vengeance-route-chooser",
+  "gameSlug": "shin-megami-tensei-5-vengeance",
+  "type": "route-chooser",
+  "title": {
+    "en": "Route Chooser",
+    "ja": "ルート選択ガイド",
+    "ko": "루트 선택 가이드",
+    "zh": "路线推荐"
+  },
+  "description": {
+    "en": "Help choosing between Creation Route and Vengeance Route based on your time, playstyle, and story preferences.",
+    "ja": "プレイ時間・好み・ストーリー重視度から、創世の女神編と復讐の女神編のどちらが合っているか診断します。",
+    "ko": "플레이 시간, 플레이 스타일, 스토리 선호도에 따라 창세의 여신편과 복수의 여신편 중 어느 쪽이 맞는지 진단합니다.",
+    "zh": "根据游玩时长、玩法偏好、剧情倾向，推荐创世女神篇或复仇女神篇。"
+  },
+  "data": {
+    "questions": [
+      {
+        "id": "playtime",
+        "text": {
+          "en": "How much time do you have?",
+          "ja": "プレイ時間はどのくらい？",
+          "ko": "플레이 시간이 얼마나 되시나요?",
+          "zh": "你有多少时间游玩？"
+        },
+        "options": [
+          {
+            "value": "short",
+            "label": {
+              "en": "30-50 hours (one route only)",
+              "ja": "30〜50時間（片道のみ）",
+              "ko": "30~50시간 (편도만)",
+              "zh": "30-50 小时（单路线通关）"
+            }
+          },
+          {
+            "value": "medium",
+            "label": {
+              "en": "80-100 hours (one route + extras)",
+              "ja": "80〜100時間（片道＋α）",
+              "ko": "80~100시간 (편도 + 추가)",
+              "zh": "80-100 小时（一路线 + 支线）"
+            }
+          },
+          {
+            "value": "long",
+            "label": {
+              "en": "150+ hours (both routes + 100% completion)",
+              "ja": "150時間以上（両ルート＋やり込み）",
+              "ko": "150시간 이상 (양쪽 + 도감 완비)",
+              "zh": "150 小时以上（双路线 + 全收集）"
+            }
+          }
+        ]
+      },
+      {
+        "id": "story",
+        "text": {
+          "en": "What story theme appeals most?",
+          "ja": "どのストーリーテーマに惹かれる？",
+          "ko": "어떤 스토리 테마가 끌리시나요?",
+          "zh": "哪个剧情主题更吸引你？"
+        },
+        "options": [
+          {
+            "value": "classic",
+            "label": {
+              "en": "Classic JRPG - angels vs demons, world order",
+              "ja": "クラシックJRPG - 天使vs悪魔、世界の秩序",
+              "ko": "클래식 JRPG - 천사와 악마, 세계의 질서",
+              "zh": "经典 JRPG - 天使 vs 恶魔、世界秩序"
+            }
+          },
+          {
+            "value": "revenge",
+            "label": {
+              "en": "Revenge drama with new characters (Qadistu, Yoko)",
+              "ja": "新キャラ（カディシュトゥ、洋子）の復讐劇",
+              "ko": "신캐릭터(카디슈투, 요코)의 복수극",
+              "zh": "新角色（献牲者、洋子）的复仇剧"
+            }
+          },
+          {
+            "value": "both",
+            "label": {
+              "en": "Both sound interesting, want to see all sides",
+              "ja": "どちらも気になる、両方見たい",
+              "ko": "둘 다 궁금, 양쪽 다 보고 싶다",
+              "zh": "两边都有兴趣，想看全部"
+            }
+          }
+        ]
+      },
+      {
+        "id": "endings",
+        "text": {
+          "en": "How important are all endings to you?",
+          "ja": "全エンディングの優先度は？",
+          "ko": "전 엔딩 우선순위는?",
+          "zh": "全结局的优先级？"
+        },
+        "options": [
+          {
+            "value": "all",
+            "label": {
+              "en": "Must see every ending (true ending too)",
+              "ja": "全エンディングを見たい（真EDも）",
+              "ko": "모든 엔딩을 보고 싶다 (진엔딩 포함)",
+              "zh": "想看所有结局（包括真结局）"
+            }
+          },
+          {
+            "value": "main",
+            "label": {
+              "en": "Just the main endings, not all 6",
+              "ja": "主要なエンディングだけでいい、6種全部は不要",
+              "ko": "주요 엔딩만, 6개 전부 안 봐도 됨",
+              "zh": "只要主要结局，6 个全看不用"
+            }
+          },
+          {
+            "value": "one",
+            "label": {
+              "en": "Pick one good ending and finish",
+              "ja": "1ついいエンディングを選んでクリア",
+              "ko": "하나 좋은 엔딩 골라서 클리어",
+              "zh": "挑一个好结局通关即可"
+            }
+          }
+        ]
+      },
+      {
+        "id": "difficulty",
+        "text": {
+          "en": "What difficulty do you prefer?",
+          "ja": "難易度の好みは？",
+          "ko": "난이도 선호는?",
+          "zh": "难度偏好？"
+        },
+        "options": [
+          {
+            "value": "casual",
+            "label": {
+              "en": "Casual / Story focus (Safety / Normal)",
+              "ja": "カジュアル / ストーリー重視 (Safety / Normal)",
+              "ko": "캐주얼 / 스토리 위주 (Safety / Normal)",
+              "zh": "休闲 / 剧情向（Safety / Normal）"
+            }
+          },
+          {
+            "value": "balanced",
+            "label": {
+              "en": "Balanced challenge (Hard)",
+              "ja": "バランス重視 (Hard)",
+              "ko": "밸런스 챌린지 (Hard)",
+              "zh": "平衡挑战（Hard）"
+            }
+          },
+          {
+            "value": "hardcore",
+            "label": {
+              "en": "Hardcore / NG+ (Safety/Hard + Creation mode)",
+              "ja": "やり込み派 / NG+ (Safety/Hard + 創生モード)",
+              "ko": "하드코어 / NG+ (Safety/Hard + 창생 모드)",
+              "zh": "硬核 / NG+（Safety/Hard + 创生模式）"
+            }
+          }
+        ]
+      },
+      {
+        "id": "experience",
+        "text": {
+          "en": "Your SMT series experience?",
+          "ja": "女神転生シリーズの経験は？",
+          "ko": "여신전생 시리즈 경험은?",
+          "zh": "女神转生系列经验？"
+        },
+        "options": [
+          {
+            "value": "first",
+            "label": {
+              "en": "First time (need guided tutorial)",
+              "ja": "初めて（丁寧なチュートリアル希望）",
+              "ko": "처음 (자세한 튜토리얼 필요)",
+              "zh": "第一次（需要详细引导）"
+            }
+          },
+          {
+            "value": "played",
+            "label": {
+              "en": "Played SMT III/IV/Persona 5",
+              "ja": "SMT III/IV/P5をプレイ済み",
+              "ko": "신3/4/P5 플레이 경험",
+              "zh": "玩过 SMT III/IV/Persona 5"
+            }
+          },
+          {
+            "value": "veteran",
+            "label": {
+              "en": "Hardcore veteran, played all",
+              "ja": "全作プレイ済み、ベテラン",
+              "ko": "전작 모두 플레이, 베테랑",
+              "zh": "全系列通关，硬核玩家"
+            }
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "creation-first",
+        "title": {
+          "en": "Creation Route (創世女神篇)",
+          "ja": "創世の女神編",
+          "ko": "창세의 여신편",
+          "zh": "创世女神篇"
+        },
+        "matches": {
+          "playtime": ["short", "medium"],
+          "story": ["classic"],
+          "endings": ["one", "main", "all"],
+          "difficulty": ["casual", "balanced"],
+          "experience": ["first", "played"]
+        },
+        "summary": {
+          "en": "Start with Creation Route. It's the original story, more forgiving for newcomers, and only requires one choice at the start. You can always play Vengeance in NG+.",
+          "ja": "創世の女神編から始めましょう。原作ストーリーで初心者にも優しく、冒頭1つだけの選択で済みます。復讐編は二週目でプレイできます。",
+          "ko": "창세의 여신편부터 시작하세요. 오리지널 스토리라 초보자도 친절하고, 시작 시 선택 1개로 끝. 복수편은 NG+에서 플레이 가능.",
+          "zh": "从创世女神篇开始。原作剧情，对新手更友好，开局只需 1 个选择。复仇篇可以等二周目打。"
+        },
+        "firstChoice": {
+          "en": "Choose 'Don't hold the girl's hand' (不牵少女的手)",
+          "ja": "「少女の手を取らない」を選択",
+          "ko": "'소녀의 손을 잡지 않는다' 선택",
+          "zh": "选择「不牵少女的手」"
+        }
+      },
+      {
+        "id": "vengeance-first",
+        "title": {
+          "en": "Vengeance Route (復讐女神篇)",
+          "ja": "復讐の女神編",
+          "ko": "복수의 여신편",
+          "zh": "复仇女神篇"
+        },
+        "matches": {
+          "playtime": ["medium", "long"],
+          "story": ["revenge", "both"],
+          "endings": ["one", "main", "all"],
+          "difficulty": ["balanced", "hardcore"],
+          "experience": ["played", "veteran"]
+        },
+        "summary": {
+          "en": "Start with Vengeance Route. The new story with Qadistu and Yoko is more cinematic, and the system improvements (e.g. Safety difficulty) make it the better 'first time' experience in 2024+. You can play Creation later for the true ending.",
+          "ja": "復讐の女神編から始めましょう。カディシュトゥと洋子の新ストーリーは演出が優れており、Safety難易度などの改善点も多く、2024年現在「初回体験」に向いています。真ED用に創世編は後でプレイできます。",
+          "ko": "복수의 여신편부터 시작하세요. 카디슈투와 요코의 새 스토리는 연출이 뛰어나고 Safety 난이도 등 개선사항도 많아 2024년 기준 '첫 플레이'에 적합. 진엔딩용 창세편은 나중에 플레이 가능.",
+          "zh": "从复仇女神篇开始。献牲者和洋子的新剧情演出更出色，且有 Safety 难度等改进，2024 年是「第一次体验」首选。创世篇可以留到后面打真结局。"
+        },
+        "firstChoice": {
+          "en": "Choose 'Hold the girl's hand' (牵起少女的手)",
+          "ja": "「少女の手を取る」を選択",
+          "ko": "'소녀의 손을 잡는다' 선택",
+          "zh": "选择「牵起少女的手」"
+        }
+      }
+    ]
+  }
+}

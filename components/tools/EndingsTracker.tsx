@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import type { ToolData, UITranslations } from "@/lib/data";
+import { useProgress } from "@/hooks/useProgress";
 
 type Props = {
   lang: string;
@@ -47,42 +48,41 @@ export default function EndingsTracker({ lang, ui, tool }: Props) {
     return out;
   }, [routes]);
 
-  const [unlocked, setUnlocked] = useState<Set<string>>(new Set());
+  // DB-backed progress (auto cross-device)
+  const { progress: progressMap, set: setProgress, remove: removeProgress, loading } = useProgress(tool.slug);
   const [filter, setFilter] = useState<string>("all");
+  const [hydrated, setHydrated] = useState(false);
 
-  // Load from localStorage
-  useEffect(() => {
+  const unlocked = useMemo<Set<string>>(() => {
     try {
-      const raw = localStorage.getItem(`endings-tracker:${tool.slug}`);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        setUnlocked(new Set(parsed));
-      }
-    } catch {}
-  }, [tool.slug]);
+      const raw = progressMap["unlocked"];
+      if (!raw) return new Set();
+      const arr = JSON.parse(raw);
+      return new Set(Array.isArray(arr) ? arr : []);
+    } catch {
+      return new Set();
+    }
+  }, [progressMap]);
 
-  // Save to localStorage
   useEffect(() => {
-    try {
-      localStorage.setItem(`endings-tracker:${tool.slug}`, JSON.stringify(Array.from(unlocked)));
-    } catch {}
-  }, [unlocked, tool.slug]);
+    if (!loading) setHydrated(true);
+  }, [loading]);
 
   function toggleEnding(id: string) {
     const next = new Set(unlocked);
     if (next.has(id)) next.delete(id);
     else next.add(id);
-    setUnlocked(next);
+    setProgress("unlocked", JSON.stringify(Array.from(next)));
   }
 
   function resetAll() {
     if (confirm("Reset all progress?")) {
-      setUnlocked(new Set());
+      removeProgress("unlocked");
     }
   }
 
-  const progress = `${unlocked.size} / ${allEndings.length}`;
-  const percent = Math.round((unlocked.size / allEndings.length) * 100);
+  const progress = `${hydrated ? unlocked.size : 0} / ${allEndings.length}`;
+  const percent = Math.round(((hydrated ? unlocked.size : 0) / allEndings.length) * 100);
 
   const tips = proTips[lang] || proTips.en || [];
 
@@ -145,7 +145,7 @@ export default function EndingsTracker({ lang, ui, tool }: Props) {
             <div className="space-y-3">
               {route.endings.map((ending) => {
                 const fullId = `${route.id}::${ending.id}`;
-                const isUnlocked = unlocked.has(fullId);
+                const isUnlocked = hydrated && unlocked.has(fullId);
                 return (
                   <div
                     key={ending.id}
