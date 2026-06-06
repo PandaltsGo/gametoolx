@@ -5,7 +5,7 @@ import { getGame, getTool, getSystemTiers, getUITranslations, listTools } from "
 import SystemChecker from "@/components/tools/SystemChecker";
 import BuildRecommender from "@/components/tools/BuildRecommender";
 
-const SUPPORTED_LANGS = ["ja", "ko", "en"] as const;
+const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = {
@@ -140,6 +140,14 @@ export default async function ToolPage({ params }: Props) {
 
         {/* Header */}
         <header className="mb-8">
+          {game.images?.capsule && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={game.images.capsule}
+              alt={gameTitle}
+              className="w-full max-w-2xl rounded-2xl mb-6 shadow-lg shadow-black/40"
+            />
+          )}
           <h1 className="text-3xl font-bold text-white">
             {gameTitle} - {toolTitle}
           </h1>

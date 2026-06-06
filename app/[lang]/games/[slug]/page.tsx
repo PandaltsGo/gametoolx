@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getGame, getUITranslations, listTools, listGames } from "@/lib/data";
 
-const SUPPORTED_LANGS = ["ja", "ko", "en"] as const;
+const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
@@ -106,6 +106,14 @@ export default async function GamePage({ params }: Props) {
 
         {/* Header */}
         <header className="mb-8">
+          {game.images?.header && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={game.images.header}
+              alt={gameTitle}
+              className="w-full rounded-2xl mb-6 shadow-lg shadow-black/40"
+            />
+          )}
           <h1 className="text-3xl font-bold text-white">{gameTitle}</h1>
           <div className="mt-2 text-sm text-gray-400 space-y-1">
             <p>Release: {game.releaseDate || "—"}</p>

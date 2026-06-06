@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGame, getSystemTiers, getUITranslations, listGames, listTools } from "@/lib/data";
 
-const SUPPORTED_LANGS = ["ja", "ko", "en"] as const;
+const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = { params: Promise<{ lang: string }> };

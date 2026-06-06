@@ -14,6 +14,12 @@ export type GameData = {
   steamAppId: number;
   releaseDate?: string;
   genres?: string[];
+  images?: {
+    library?: string;
+    header?: string;
+    capsule?: string;
+    logo?: string;
+  };
   systemRequirements?: {
     minimum?: Record<string, string> | null;
     recommended?: Record<string, string> | null;

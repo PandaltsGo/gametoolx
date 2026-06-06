@@ -3,6 +3,12 @@
   "title": {
     "en": "Octopath Traveler II"
   },
+  "images": {
+    "library": "/images/games/octopath-traveler-2/library.jpg",
+    "header": "/images/games/octopath-traveler-2/header.jpg",
+    "capsule": "/images/games/octopath-traveler-2/capsule.jpg",
+    "logo": "/images/games/octopath-traveler-2/logo.png"
+  },
   "steamAppId": 1971650,
   "releaseDate": "2023-02-24",
   "genres": [

@@ -1,0 +1,63 @@
+{
+  "_comment": "UI text translations. Nested by feature area.",
+  "version": "1.0.0",
+
+  "site": {
+    "title": "GameToolX",
+    "tagline": "让游戏工具更简单"
+  },
+
+  "nav": {
+    "home": "首页",
+    "tools": "工具",
+    "games": "游戏"
+  },
+
+  "tool": {
+    "systemChecker": "系统配置检测器",
+    "gachaSim": "抽卡模拟器",
+    "buildRecommender": "职业搭配推荐器",
+    "achievementTracker": "成就追踪器"
+  },
+
+  "action": {
+    "check": "检查",
+    "simulate": "模拟",
+    "recommend": "推荐",
+    "reset": "重置",
+    "copy": "复制结果"
+  },
+
+  "result": {
+    "compatible": "可以运行",
+    "notCompatible": "无法运行",
+    "partial": "可以部分运行"
+  },
+
+  "checker": {
+    "yourPc": "你的电脑配置",
+    "cpu": "处理器 (CPU)",
+    "gpu": "显卡 (GPU)",
+    "ram": "内存 (RAM)",
+    "storage": "硬盘类型",
+    "cpuPlaceholder": "例如: 锐龙 5 5600X, 酷睿 i5-12400F",
+    "gpuPlaceholder": "例如: RTX 3060, RX 6600",
+    "result": "兼容性检测结果",
+    "recommendation": "推荐画质设置",
+    "summary": "总结"
+  },
+
+  "recommender": {
+    "unlocked": "已解锁职业",
+    "playstyle": "玩法风格",
+    "suggested": "推荐队伍",
+    "reason": "推荐理由",
+    "show": "查看推荐"
+  },
+
+  "common": {
+    "loading": "加载中...",
+    "error": "出错了",
+    "backToTools": "← 返回工具列表"
+  }
+}
