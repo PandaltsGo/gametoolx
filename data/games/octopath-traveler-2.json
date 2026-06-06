@@ -1,0 +1,31 @@
+{
+  "slug": "octopath-traveler-2",
+  "title": {
+    "en": "Octopath Traveler II"
+  },
+  "steamAppId": 1971650,
+  "releaseDate": "2023-02-24",
+  "genres": [
+    "RPG"
+  ],
+  "systemRequirements": {
+    "minimum": {
+      "os": "Windows® 10 / 11 64-bit",
+      "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i3-6100",
+      "ram": "8 GB RAM",
+      "gpu": "AMD Radeon™ RX 460 / NVIDIA® GeForce® GTX 750",
+      "directx": "Version 12",
+      "storage": "10 GB available space",
+      "notes": "60 FPS @ 1280x720, Preset \"Low\", 2GB VRAM required"
+    },
+    "recommended": {
+      "os": "Windows® 10 / 11 64-bit",
+      "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
+      "ram": "8 GB RAM",
+      "gpu": "AMD Radeon™ RX 470 / Intel® Arc™ A750 / NVIDIA® GeForce® GTX 1060 6GB VRAM",
+      "directx": "Version 12",
+      "storage": "10 GB available space",
+      "notes": "60 FPS @ 1920x1080, Preset \"Highest\", Systen RAM 16GB required when running on Intel GPU"
+    }
+  }
+}

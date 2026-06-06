@@ -43,3 +43,8 @@ next-env.d.ts
 # dev server logs (mavis-managed)
 .dev-*.log
 
+# python cache + temp scripts
+__pycache__/
+*.pyc
+scripts/validate-*.py
+

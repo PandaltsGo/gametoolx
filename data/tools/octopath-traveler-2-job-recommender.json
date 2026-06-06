@@ -1,0 +1,277 @@
+{
+  "slug": "octopath-traveler-2-job-recommender",
+  "gameSlug": "octopath-traveler-2",
+  "type": "build-recommender",
+  "title": {
+    "en": "Job Recommender",
+    "ja": "",
+    "ko": ""
+  },
+  "description": {
+    "en": "Find the best 4-person party combination for Octopath Traveler II based on the jobs you've unlocked and your preferred playstyle. Covers all 8 base jobs (Warrior, Merchant, Scholar, Dancer, Hunter, Apothecary, Thief, Cleric).",
+    "ja": "",
+    "ko": ""
+  },
+  "data": {
+    "jobs": [
+      {
+        "id": "warrior",
+        "name": { "en": "Warrior", "ja": "", "ko": "" },
+        "role": "attack",
+        "weapon": ["sword", "axe"],
+        "description": {
+          "en": "Physical tank. High HP and physical defense, wielding swords and axes. Excels at drawing enemy aggro and dishing out steady physical damage with skills like Brand's Thunder and Staggering Sword.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "merchant",
+        "name": { "en": "Merchant", "ja": "", "ko": "" },
+        "role": "support",
+        "weapon": ["sword", "axe"],
+        "description": {
+          "en": "Utility and economy support. Skills like Hired Help summon mercenaries to attack, and Rest can revive a downed ally. Carries extra inventory with the Merchant's passive.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "scholar",
+        "name": { "en": "Scholar", "ja": "", "ko": "" },
+        "role": "magic",
+        "weapon": ["staff", "dagger"],
+        "description": {
+          "en": "Pure magic damage dealer. Elemental spells (fire, ice, lightning) target multiple weaknesses. The Scholar's advanced skill 'Alephan's Wisdom' analyses enemy HP and weaknesses.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "dancer",
+        "name": { "en": "Dancer", "ja": "", "ko": "" },
+        "role": "speed",
+        "weapon": ["dagger", "spear"],
+        "description": {
+          "en": "Speed-focused buffer. Skills like Peacock Strut and Bewildering Grace provide party-wide buffs and unpredictable effects. Dancer's passive improves evasion.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hunter",
+        "name": { "en": "Hunter", "ja": "", "ko": "" },
+        "role": "speed",
+        "weapon": ["bow", "dagger"],
+        "description": {
+          "en": "Ranged physical attacker. Bow attacks hit weak points reliably. Skills like Thunderbird and Take Cover provide ranged offense and self-protection.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "apothecary",
+        "name": { "en": "Apothecary", "ja": "", "ko": "" },
+        "role": "magic",
+        "weapon": ["staff", "axe"],
+        "description": {
+          "en": "Healer and poison specialist. Heals HP and removes status ailments. Abilities like Rehabilitate and the Apothecary's healing support skills make it the premier healer.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "thief",
+        "name": { "en": "Thief", "ja": "", "ko": "" },
+        "role": "speed",
+        "weapon": ["sword", "dagger"],
+        "description": {
+          "en": "Fast single-target damage dealer. Steal SP from enemies, apply debuffs, and chain turn order. Daggers and swords with high speed for breaking boss shields.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "cleric",
+        "name": { "en": "Cleric", "ja": "", "ko": "" },
+        "role": "magic",
+        "weapon": ["staff", "shield"],
+        "description": {
+          "en": "Light-elemental magic and support healer. Heals, revives, buffs elemental attack, and provides light damage. Cleric's defensive buff 'Healing Light' is essential for tough boss fights.",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "playstyle": "balanced",
+        "name": {
+          "en": "Classic All-Rounder",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "cleric", "scholar", "hunter"],
+        "reason": {
+          "en": "The quintessential OT2 party. Warrior tanks and breaks, Cleric heals and revives, Scholar handles all magic damage, Hunter adds range to exploit multi-hit weakness chains. Reliable from Chapter 1 through the final boss.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "balanced",
+        "name": {
+          "en": "Utility Healer",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "merchant", "apothecary", "hunter"],
+        "reason": {
+          "en": "Tanky with strong item economy. Merchant's Hired Help gives free summons, Apothecary heals and removes ailments, Warrior breaks shields, Hunter exploits ranged weakness. Great for players who like buying items and using them.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "attack",
+        "name": {
+          "en": "Physical Burst",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "hunter", "thief", "apothecary"],
+        "reason": {
+          "en": "Pure physical damage team. Two sword users (Warrior, Thief) and a bow user (Hunter) break enemy weaknesses in 1-2 turns. Apothecary keeps the team alive. Best for boss fights with multiple physical weaknesses.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "attack",
+        "name": {
+          "en": "Shield Breaker",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "warrior", "hunter", "apothecary"],
+        "reason": {
+          "en": "Two Warriors means double sword/axe coverage for shield breaking, plus the Warrior's high HP lets them survive counterattacks. Use this when you need to grind through high-defense bosses.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "magic",
+        "name": {
+          "en": "Elemental Storm",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["scholar", "cleric", "apothecary", "warrior"],
+        "reason": {
+          "en": "Triple magic damage dealers. Scholar, Cleric, and Apothecary all have elemental coverage; together they can hit any weakness. Warrior tanks. Best against bosses weak to fire/ice/lightning/light.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "magic",
+        "name": {
+          "en": "Quad Scholar",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["scholar", "scholar", "cleric", "apothecary"],
+        "reason": {
+          "en": "Maximum magic DPS. With two Scholars you can output insane elemental damage, and Cleric+Apothecary keep everyone alive. Squishy, but fights end before the enemy can retaliate.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "speed",
+        "name": {
+          "en": "Turn Order Manipulator",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["thief", "dancer", "hunter", "scholar"],
+        "reason": {
+          "en": "Three high-speed classes. Thief's dagger speed + Dancer's evasion + Hunter's bow speed means you go first in nearly every fight. Dancer's Bewildering Grace adds random effects that can one-shot enemies.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "speed",
+        "name": {
+          "en": "Speed Sustain",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["thief", "dancer", "hunter", "cleric"],
+        "reason": {
+          "en": "Fast offence with Cleric as safety net. Thief/Hunter break shields quickly, Dancer buffs, Cleric keeps everyone healed. Strong in long boss fights where you need to stay alive while exploiting turn order.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "support",
+        "name": {
+          "en": "Buff Economy",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["merchant", "dancer", "cleric", "warrior"],
+        "reason": {
+          "en": "Defensive party that wins by attrition. Merchant's Hired Help + Dancer's buffs + Cleric's heals + Warrior's tank. Long fights favor this setup since you rarely run out of resources.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "support",
+        "name": {
+          "en": "Healer Stack",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["merchant", "dancer", "cleric", "apothecary"],
+        "reason": {
+          "en": "No dedicated tank, but double healer + Dancer buffs + Merchant summons. Damage output is low but you almost never die. Great for learning boss patterns without pressure.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "early",
+        "name": {
+          "en": "Free Base Set (Chapter 1)",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "cleric", "scholar", "dancer"],
+        "reason": {
+          "en": "Four base jobs available from guilds in the first few hours. Tank + heal + magic + buff. The safest starter party — you'll never be stuck without an answer to a weakness.",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "playstyle": "early",
+        "name": {
+          "en": "Early Damage (Chapter 1-2)",
+          "ja": "",
+          "ko": ""
+        },
+        "party": ["warrior", "hunter", "cleric", "apothecary"],
+        "reason": {
+          "en": "All four unlocked by mid-Chapter 2. Two physical damage dealers (Warrior, Hunter) plus dual healer (Cleric, Apothecary). Good for grinding JP early on.",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ]
+  }
+}
