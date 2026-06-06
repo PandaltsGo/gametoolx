@@ -34,6 +34,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const gameTitle = game.title[lang] || game.title.en;
   const toolDesc = tool.description[lang] || tool.description.en;
 
+  // JSON-LD structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: `${gameTitle} ${toolTitle}`,
+    description: toolDesc,
+    url: `https://gametoolx.cc/${lang}/tools/${slug}`,
+    applicationCategory: "GameApplication",
+    operatingSystem: "Web Browser",
+    inLanguage: SUPPORTED_LANGS,
+    isAccessibleForFree: true,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    about: {
+      "@type": "VideoGame",
+      name: gameTitle,
+      gamePlatform: "PC",
+    },
+  };
+
   return {
     title: `${toolTitle} - ${gameTitle} | GameToolX`,
     description: toolDesc,
@@ -48,7 +71,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         SUPPORTED_LANGS.map((l) => [l, `/${l}/tools/${slug}`]),
       ),
     },
+    other: {
+      "application/ld+json": JSON.stringify(jsonLd),
+    },
   };
+}
+
+// JSON-LD also injected as inline script (rendered into <head> via Next.js 15+ conventions)
+function JsonLdScript({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
 }
 
 export default async function ToolPage({ params }: Props) {
@@ -71,9 +107,23 @@ export default async function ToolPage({ params }: Props) {
 
   const toolTitle = tool.title[safeLang] || tool.title.en;
   const gameTitle = game.title[safeLang] || game.title.en;
+  const toolDesc = tool.description[safeLang] || tool.description.en;
 
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100">
+      <JsonLdScript data={{
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: `${gameTitle} ${toolTitle}`,
+        description: toolDesc,
+        url: `https://gametoolx.cc/${safeLang}/tools/${slug}`,
+        applicationCategory: "GameApplication",
+        operatingSystem: "Web Browser",
+        inLanguage: SUPPORTED_LANGS,
+        isAccessibleForFree: true,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        about: { "@type": "VideoGame", name: gameTitle, gamePlatform: "PC" },
+      }} />
       <div className="mx-auto max-w-3xl px-4 py-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-400 mb-4">
