@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getGame, getSystemTiers, getUITranslations, listGames, listTools } from "@/lib/data";
 
@@ -47,7 +48,43 @@ export default async function LangHomePage({ params }: Props) {
           <p className="mt-2 text-lg text-gray-400">{ui.site.tagline}</p>
         </header>
 
-        {/* Tools list */}
+        {/* Games gallery (with images) */}
+        {games.length > 0 && (
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-white">
+              {ui.nav.games} ({games.length})
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {games.map((g) => {
+                const gameTitle = g.title[safeLang] || g.title.en;
+                return (
+                  <Link
+                    key={g.slug}
+                    href={`/${safeLang}/games/${g.slug}`}
+                    className="block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-colors hover:bg-white/10"
+                  >
+                    {g.images?.capsule && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={g.images.capsule}
+                        alt={gameTitle}
+                        className="w-full h-40 object-cover"
+                      />
+                    )}
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-white">{gameTitle}</h3>
+                      <p className="mt-1 text-xs text-gray-400">
+                        {ui.page.release}: {g.releaseDate || "—"}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* Tools list (with game thumbnail) */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-white">
             {ui.nav.tools} ({tools.length})
@@ -64,47 +101,29 @@ export default async function LangHomePage({ params }: Props) {
                   <Link
                     key={tool.slug}
                     href={`/${safeLang}/tools/${tool.slug}`}
-                    className="block rounded-2xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10"
+                    className="block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-colors hover:bg-white/10"
                   >
-                    <h3 className="text-lg font-semibold text-white">{toolTitle}</h3>
-                    <p className="mt-1 text-sm text-gray-400">{gameTitle}</p>
-                    <p className="mt-3 text-sm text-gray-500 line-clamp-2">
-                      {tool.description[safeLang] || tool.description.en}
-                    </p>
+                    {game?.images?.capsule && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={game.images.capsule}
+                        alt={gameTitle}
+                        className="w-full h-32 object-cover opacity-80"
+                      />
+                    )}
+                    <div className="p-5">
+                      <h3 className="text-lg font-semibold text-white">{toolTitle}</h3>
+                      <p className="mt-1 text-sm text-gray-400">{gameTitle}</p>
+                      <p className="mt-3 text-sm text-gray-500 line-clamp-2">
+                        {tool.description[safeLang] || tool.description.en}
+                      </p>
+                    </div>
                   </Link>
                 );
               })}
             </div>
           )}
         </section>
-
-        {/* Games list */}
-        {games.length > 0 && (
-          <section>
-            <h2 className="text-2xl font-semibold mb-4 text-white">
-              {ui.nav.games} ({games.length})
-            </h2>
-            <ul className="space-y-2">
-              {games.map((g) => (
-                <li key={g.slug} className="text-gray-300">
-                  {g.title[safeLang] || g.title.en}{" "}
-                  <span className="text-gray-500 text-sm">({g.releaseDate})</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Debug info (temporary) */}
-        {tiers && (
-          <details className="mt-12 text-xs text-gray-600">
-            <summary className="cursor-pointer">Debug: tier info</summary>
-            <pre className="mt-2 overflow-x-auto bg-black/30 p-2 rounded">
-              {Object.keys(tiers.gpu_tiers).length} GPU tiers,{" "}
-              {Object.keys(tiers.cpu_generation_tiers.intel).length + Object.keys(tiers.cpu_generation_tiers.amd).length} CPU models
-            </pre>
-          </details>
-        )}
       </div>
     </main>
   );

@@ -50,9 +50,30 @@
   "recommender": {
     "unlocked": "해금된 직업",
     "playstyle": "플레이 스타일",
+    "playstyles": {
+      "balanced": "밸런스",
+      "attack": "어택",
+      "magic": "매직",
+      "speed": "스피드",
+      "support": "서포트",
+      "early": "초반"
+    },
     "suggested": "추천 파티",
     "reason": "이 조합의 이유",
-    "show": "추천 파티 보기"
+    "show": "추천 파티 보기",
+    "slot": "슬롯",
+    "locked": "미해금"
+  },
+
+  "page": {
+    "release": "출시일",
+    "genres": "장르",
+    "viewOnSteam": "Steam 스토어 →",
+    "noTools": "이 게임에는 아직 사용 가능한 도구가 없습니다.",
+    "type": "유형",
+    "systemRequirements": "시스템 요구사항",
+    "minimum": "최소",
+    "recommended": "권장"
   },
 
   "common": {

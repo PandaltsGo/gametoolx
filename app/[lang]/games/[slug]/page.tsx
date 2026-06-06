@@ -116,9 +116,9 @@ export default async function GamePage({ params }: Props) {
           )}
           <h1 className="text-3xl font-bold text-white">{gameTitle}</h1>
           <div className="mt-2 text-sm text-gray-400 space-y-1">
-            <p>Release: {game.releaseDate || "—"}</p>
+            <p>{ui.page.release}: {game.releaseDate || "—"}</p>
             {game.genres && game.genres.length > 0 && (
-              <p>Genres: {game.genres.join(", ")}</p>
+              <p>{ui.page.genres}: {game.genres.join(", ")}</p>
             )}
             <p>
               <a
@@ -127,7 +127,7 @@ export default async function GamePage({ params }: Props) {
                 rel="noopener noreferrer"
                 className="text-brand-400 hover:underline"
               >
-                Steam Store →
+                {ui.page.viewOnSteam}
               </a>
             </p>
           </div>
@@ -139,7 +139,7 @@ export default async function GamePage({ params }: Props) {
             {ui.nav.tools} ({gameTools.length})
           </h2>
           {gameTools.length === 0 ? (
-            <p className="text-gray-500">No tools available for this game yet.</p>
+            <p className="text-gray-500">{ui.page.noTools}</p>
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
               {gameTools.map((tool) => {
@@ -152,7 +152,7 @@ export default async function GamePage({ params }: Props) {
                   >
                     <h3 className="text-lg font-semibold text-white">{toolTitle}</h3>
                     <p className="mt-1 text-sm text-gray-400">
-                      Type: {tool.type}
+                      {ui.page.type}: {tool.type}
                     </p>
                     <p className="mt-3 text-sm text-gray-500 line-clamp-2">
                       {tool.description[safeLang] || tool.description.en}
@@ -167,10 +167,10 @@ export default async function GamePage({ params }: Props) {
         {/* System requirements reference */}
         {game.systemRequirements && (
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold mb-4 text-white">System Requirements</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-white">{ui.page.systemRequirements}</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <h3 className="text-sm font-semibold text-yellow-300 mb-2">Minimum</h3>
+                <h3 className="text-sm font-semibold text-yellow-300 mb-2">{ui.page.minimum}</h3>
                 <dl className="text-sm space-y-1">
                   {Object.entries(game.systemRequirements.minimum || {}).map(([k, v]) => (
                     <div key={k} className="flex gap-2">
@@ -181,7 +181,7 @@ export default async function GamePage({ params }: Props) {
                 </dl>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <h3 className="text-sm font-semibold text-green-300 mb-2">Recommended</h3>
+                <h3 className="text-sm font-semibold text-green-300 mb-2">{ui.page.recommended}</h3>
                 <dl className="text-sm space-y-1">
                   {Object.entries(game.systemRequirements.recommended || {}).map(([k, v]) => (
                     <div key={k} className="flex gap-2">

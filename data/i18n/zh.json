@@ -50,9 +50,30 @@
   "recommender": {
     "unlocked": "已解锁职业",
     "playstyle": "玩法风格",
+    "playstyles": {
+      "balanced": "平衡型",
+      "attack": "进攻型",
+      "magic": "魔法型",
+      "speed": "速度型",
+      "support": "辅助型",
+      "early": "前期"
+    },
     "suggested": "推荐队伍",
     "reason": "推荐理由",
-    "show": "查看推荐"
+    "show": "查看推荐",
+    "slot": "位置",
+    "locked": "未解锁"
+  },
+
+  "page": {
+    "release": "发售日期",
+    "genres": "类型",
+    "viewOnSteam": "Steam 商店 →",
+    "noTools": "该游戏还没有可用工具。",
+    "type": "类型",
+    "systemRequirements": "系统配置",
+    "minimum": "最低配置",
+    "recommended": "推荐配置"
   },
 
   "common": {

@@ -50,9 +50,30 @@
   "recommender": {
     "unlocked": "Unlocked Jobs",
     "playstyle": "Play Style",
+    "playstyles": {
+      "balanced": "Balanced",
+      "attack": "Attack",
+      "magic": "Magic",
+      "speed": "Speed",
+      "support": "Support",
+      "early": "Early"
+    },
     "suggested": "Suggested Party",
     "reason": "Why this works",
-    "show": "Show Recommendation"
+    "show": "Show Recommendation",
+    "slot": "Slot",
+    "locked": "Locked"
+  },
+
+  "page": {
+    "release": "Release",
+    "genres": "Genres",
+    "viewOnSteam": "Steam Store →",
+    "noTools": "No tools available for this game yet.",
+    "type": "Type",
+    "systemRequirements": "System Requirements",
+    "minimum": "Minimum",
+    "recommended": "Recommended"
   },
 
   "common": {

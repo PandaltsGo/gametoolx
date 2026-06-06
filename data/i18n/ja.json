@@ -50,9 +50,30 @@
   "recommender": {
     "unlocked": "解放済み職業",
     "playstyle": "プレイスタイル",
+    "playstyles": {
+      "balanced": "バランス",
+      "attack": "アタック",
+      "magic": "マジック",
+      "speed": "スピード",
+      "support": "サポート",
+      "early": "序盤"
+    },
     "suggested": "推奨パーティ",
     "reason": "おすすめの理由",
-    "show": "推奨パーティを見る"
+    "show": "推奨パーティを見る",
+    "slot": "スロット",
+    "locked": "未解放"
+  },
+
+  "page": {
+    "release": "発売日",
+    "genres": "ジャンル",
+    "viewOnSteam": "Steam ストア →",
+    "noTools": "このゲームにはまだツールがありません。",
+    "type": "タイプ",
+    "systemRequirements": "動作環境",
+    "minimum": "最低",
+    "recommended": "推奨"
   },
 
   "common": {
