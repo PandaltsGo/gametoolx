@@ -1,7 +1,10 @@
 {
   "slug": "octopath-traveler-2",
   "title": {
-    "en": "Octopath Traveler II"
+    "en": "Octopath Traveler II",
+    "ja": "歧路旅人II",
+    "ko": "옥토패스 트래블러 II",
+    "zh": "歧路旅人II"
   },
   "images": {
     "library": "/images/games/octopath-traveler-2/library.jpg",
