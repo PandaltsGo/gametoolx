@@ -62,7 +62,11 @@
     "reason": "おすすめの理由",
     "show": "推奨パーティを見る",
     "slot": "スロット",
-    "locked": "未解放"
+    "locked": "未解放",
+    "skills": "スキル一覧",
+    "mainSkills": "メインスキル",
+    "supportSkills": "サポートスキル",
+    "keySkills": "重要スキル"
   },
 
   "page": {

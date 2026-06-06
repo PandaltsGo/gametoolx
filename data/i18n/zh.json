@@ -62,7 +62,11 @@
     "reason": "推荐理由",
     "show": "查看推荐",
     "slot": "位置",
-    "locked": "未解锁"
+    "locked": "未解锁",
+    "skills": "技能列表",
+    "mainSkills": "主技能",
+    "supportSkills": "辅助技能",
+    "keySkills": "核心技能"
   },
 
   "page": {

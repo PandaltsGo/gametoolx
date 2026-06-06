@@ -9,17 +9,27 @@ type Props = {
   tool: ToolData;
 };
 
+type LocalizedName = { en: string; ja?: string; ko?: string; zh?: string };
+type Skill = { en: string; ja?: string; ko?: string; zh?: string };
+
 type Job = {
   id: string;
-  name: Record<string, string>;
+  name: LocalizedName;
   role: string;
+  weapon?: string[];
+  description?: LocalizedName;
+  skills?: {
+    main?: Skill[];
+    support?: Skill[];
+  };
 };
 
 type Recommendation = {
   playstyle: string;
-  name: Record<string, string>;
+  name: LocalizedName;
   party: string[];
-  reason: Record<string, string>;
+  reason: LocalizedName;
+  skills?: string[];
 };
 
 export default function BuildRecommender({ lang, ui, tool }: Props) {
@@ -29,8 +39,14 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
   const [unlocked, setUnlocked] = useState<Set<string>>(new Set());
   const [playstyle, setPlaystyle] = useState<string>("balanced");
   const [submitted, setSubmitted] = useState(false);
+  const [expandedJob, setExpandedJob] = useState<string | null>(null);
 
   const playstyles = Array.from(new Set(recommendations.map((r) => r.playstyle)));
+
+  const t = (obj: LocalizedName | undefined): string => {
+    if (!obj) return "";
+    return obj[lang as keyof LocalizedName] || obj.en || "";
+  };
 
   const result = useMemo<{
     matched: Recommendation | null;
@@ -42,7 +58,6 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
     const target = recommendations.find((r) => r.playstyle === playstyle);
     if (!target) return null;
 
-    const t = (obj: Record<string, string>) => obj[lang] || obj.en;
     const unlockedArr = Array.from(unlocked);
     const unlockedParty = target.party.map((jobId) => (unlocked.has(jobId) ? jobId : null));
     const missingJobs = target.party.filter((jobId) => !unlocked.has(jobId));
@@ -87,7 +102,7 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {jobs.map((job) => {
             const checked = unlocked.has(job.id);
-            const jobName = job.name[lang] || job.name.en || job.id;
+            const jobName = t(job.name);
             return (
               <label
                 key={job.id}
@@ -141,36 +156,125 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
       {result && result.matched && (
         <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h2 className="text-2xl font-semibold mb-2 text-white">
-            🎯 {result.matched.name[lang] || result.matched.name.en}
+            🎯 {t(result.matched.name)}
           </h2>
           <p className="text-sm text-gray-400 mb-4">
             {ui.recommender.playstyle}: {ui.recommender.playstyles?.[result.matched.playstyle] || result.matched.playstyle}
           </p>
 
           {/* Party */}
-          <div className="grid grid-cols-4 gap-3 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
             {result.matched.party.map((jobId, i) => {
               const job = jobs.find((j) => j.id === jobId);
-              const jobName = job?.name[lang] || job?.name.en || jobId;
+              const jobName = t(job?.name);
               const isUnlocked = unlocked.has(jobId);
+              const isExpanded = expandedJob === jobId;
               return (
                 <div
                   key={i}
-                  className={`rounded-xl border p-3 text-center ${
+                  className={`rounded-xl border p-3 ${
                     isUnlocked
                       ? "border-green-500/30 bg-green-500/10"
                       : "border-yellow-500/30 bg-yellow-500/10"
                   }`}
                 >
-                  <div className="text-xs text-gray-400">{ui.recommender.slot} {i + 1}</div>
-                  <div className="mt-1 text-sm font-semibold text-white">{jobName}</div>
-                  {!isUnlocked && (
-                    <div className="mt-1 text-xs text-yellow-400">🔒 {ui.recommender.locked}</div>
+                  <div className="text-center">
+                    <div className="text-xs text-gray-400">{ui.recommender.slot} {i + 1}</div>
+                    <div className="mt-1 text-sm font-semibold text-white">{jobName}</div>
+                    {!isUnlocked && (
+                      <div className="mt-1 text-xs text-yellow-400">🔒 {ui.recommender.locked}</div>
+                    )}
+                  </div>
+                  {job?.skills && (
+                    <button
+                      onClick={() => setExpandedJob(isExpanded ? null : jobId)}
+                      className="mt-2 w-full text-xs text-brand-300 hover:text-brand-200 transition-colors"
+                    >
+                      {isExpanded ? "▲" : "▼"} {ui.recommender.skills || "Skills"}
+                    </button>
                   )}
                 </div>
               );
             })}
           </div>
+
+          {/* Expanded job skills */}
+          {expandedJob && (() => {
+            const job = jobs.find((j) => j.id === expandedJob);
+            if (!job?.skills) return null;
+            return (
+              <div className="mb-6 rounded-xl border border-brand-500/30 bg-brand-600/5 p-4">
+                <h3 className="text-base font-semibold text-white mb-3">
+                  {t(job.name)} — {ui.recommender.skills || "Skills"}
+                </h3>
+                {job.skills.main && job.skills.main.length > 0 && (
+                  <div className="mb-3">
+                    <div className="text-xs uppercase tracking-wide text-brand-300 mb-2">
+                      {ui.recommender.mainSkills || "Main Skills"}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {job.skills.main.map((sk, i) => (
+                        <span
+                          key={i}
+                          className="rounded-md bg-white/5 border border-white/10 px-2 py-1 text-xs text-white"
+                        >
+                          {t(sk)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {job.skills.support && job.skills.support.length > 0 && (
+                  <div>
+                    <div className="text-xs uppercase tracking-wide text-gray-400 mb-2">
+                      {ui.recommender.supportSkills || "Support Skills"}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {job.skills.support.map((sk, i) => (
+                        <span
+                          key={i}
+                          className="rounded-md bg-white/5 border border-white/10 px-2 py-1 text-xs text-gray-300"
+                        >
+                          {t(sk)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* Key skills for recommendation */}
+          {result.matched.skills && result.matched.skills.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-sm font-medium text-gray-300 mb-2">
+                {ui.recommender.keySkills || "Key Skills"}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {result.matched.skills.map((skillEn, i) => {
+                  // Find the skill in any job's skills array to get localized name
+                  let localized: string = skillEn;
+                  for (const job of jobs) {
+                    const all = [...(job.skills?.main || []), ...(job.skills?.support || [])];
+                    const found = all.find((s) => s.en === skillEn);
+                    if (found) {
+                      localized = t(found);
+                      break;
+                    }
+                  }
+                  return (
+                    <span
+                      key={i}
+                      className="rounded-md bg-brand-600/20 border border-brand-500/30 px-2 py-1 text-xs text-white"
+                    >
+                      ⚔️ {localized}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Reason */}
           <div>

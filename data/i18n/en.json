@@ -62,7 +62,11 @@
     "reason": "Why this works",
     "show": "Show Recommendation",
     "slot": "Slot",
-    "locked": "Locked"
+    "locked": "Locked",
+    "skills": "Skills",
+    "mainSkills": "Main Skills",
+    "supportSkills": "Support Skills",
+    "keySkills": "Key Skills"
   },
 
   "page": {

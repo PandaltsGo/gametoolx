@@ -62,7 +62,11 @@
     "reason": "이 조합의 이유",
     "show": "추천 파티 보기",
     "slot": "슬롯",
-    "locked": "미해금"
+    "locked": "미해금",
+    "skills": "스킬 목록",
+    "mainSkills": "메인 스킬",
+    "supportSkills": "서포트 스킬",
+    "keySkills": "핵심 스킬"
   },
 
   "page": {
