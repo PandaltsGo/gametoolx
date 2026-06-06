@@ -5,12 +5,14 @@
   "title": {
     "en": "System Requirements Checker",
     "ja": "動作環境チェッカー",
-    "ko": "시스템 요구사항 체커"
+    "ko": "시스템 요구사항 체커",
+    "zh": "系统配置检测"
   },
   "description": {
     "en": "Check if your PC can run Octopath Traveler II. Enter your CPU, GPU, RAM, and storage to see if you meet the minimum or recommended requirements.",
     "ja": "あなたのPCで歧路旅人IIが動作するかチェックします。CPU、GPU、メモリー、ストレージを入力すると、最低・推奨要件を満たしているか判定します。",
-    "ko": "내 PC에서 옥토패스 트래블러 II가 동작하는지 확인합니다. CPU, GPU, 메모리, 스토리지를 입력하면 최소/권장 사양을 충족하는지 판정합니다."
+    "ko": "내 PC에서 옥토패스 트래블러 II가 동작하는지 확인합니다. CPU, GPU, 메모리, 스토리지를 입력하면 최소/권장 사양을 충족하는지 판정합니다.",
+    "zh": "检测你的电脑能否运行歧路旅人II。输入 CPU、GPU、内存、硬盘后判断是否满足最低/推荐配置。"
   },
   "data": {
     "_comment": "SystemChecker uses game.systemRequirements and data/system-tiers.json — no tool-specific data needed here."

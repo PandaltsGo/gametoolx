@@ -22,7 +22,7 @@ type Recommendation = {
   reason: Record<string, string>;
 };
 
-export default function BuildRecommender({ ui, tool }: Props) {
+export default function BuildRecommender({ lang, ui, tool }: Props) {
   const jobs = (tool.data.jobs as Job[]) || [];
   const recommendations = (tool.data.recommendations as Recommendation[]) || [];
 
@@ -42,12 +42,13 @@ export default function BuildRecommender({ ui, tool }: Props) {
     const target = recommendations.find((r) => r.playstyle === playstyle);
     if (!target) return null;
 
+    const t = (obj: Record<string, string>) => obj[lang] || obj.en;
     const unlockedArr = Array.from(unlocked);
     const unlockedParty = target.party.map((jobId) => (unlocked.has(jobId) ? jobId : null));
     const missingJobs = target.party.filter((jobId) => !unlocked.has(jobId));
 
     let matched = target;
-    let reason = target.reason;
+    let reason = t(target.reason);
 
     if (missingJobs.length > 0) {
       // Find closest match by playstyle + minimizing missing jobs
@@ -64,13 +65,12 @@ export default function BuildRecommender({ ui, tool }: Props) {
         });
       if (sorted.length > 0 && sorted[0].miss < missingJobs.length) {
         matched = sorted[0].rec;
-        const newMissing = matched.party.filter((j) => !unlocked.has(j));
-        reason = `${matched.reason}\n\n⚠️ Note: this is the closest match given your unlocked jobs. Original recommendation (${target.name}) would need: ${missingJobs.join(", ")}.`;
+        reason = `${t(matched.reason)}\n\n⚠️ Note: this is the closest match given your unlocked jobs. Original recommendation (${t(target.name)}) would need: ${missingJobs.join(", ")}.`;
       }
     }
 
     return { matched, missingJobs, unlockedParty, reason };
-  }, [submitted, unlocked, playstyle, recommendations]);
+  }, [submitted, unlocked, playstyle, recommendations, lang]);
 
   function toggleJob(id: string) {
     const next = new Set(unlocked);
