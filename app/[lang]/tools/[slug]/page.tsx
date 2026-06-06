@@ -4,6 +4,8 @@ import Link from "next/link";
 import { getGame, getTool, getSystemTiers, getUITranslations, listTools } from "@/lib/data";
 import SystemChecker from "@/components/tools/SystemChecker";
 import BuildRecommender from "@/components/tools/BuildRecommender";
+import EndingsTracker from "@/components/tools/EndingsTracker";
+import Walkthrough from "@/components/tools/Walkthrough";
 
 const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -165,7 +167,15 @@ export default async function ToolPage({ params }: Props) {
           <BuildRecommender lang={safeLang} ui={ui} tool={tool} />
         )}
 
-        {!["system-checker", "build-recommender"].includes(tool.type) && (
+        {tool.type === "endings-tracker" && (
+          <EndingsTracker lang={safeLang} ui={ui} tool={tool} />
+        )}
+
+        {tool.type === "walkthrough" && (
+          <Walkthrough lang={safeLang} tool={tool} />
+        )}
+
+        {!["system-checker", "build-recommender", "endings-tracker", "walkthrough"].includes(tool.type) && (
           <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6 text-center">
             <p className="text-yellow-300">
               🚧 Tool type &quot;{tool.type}&quot; not yet implemented

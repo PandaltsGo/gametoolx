@@ -1,0 +1,217 @@
+{
+  "slug": "shin-megami-tensei-5-vengeance-endings-tracker",
+  "gameSlug": "shin-megami-tensei-5-vengeance",
+  "type": "endings-tracker",
+  "title": {
+    "en": "Endings Tracker",
+    "ja": "エンディングガイド",
+    "ko": "엔딩 가이드",
+    "zh": "全结局攻略"
+  },
+  "description": {
+    "en": "Complete guide to all 6 endings in Shin Megami Tensei V: Vengeance. Track your progress, learn the requirements for each route, and unlock every secret ending.",
+    "ja": "『真・女神転生V Vengeance』の全6エンディング完全攻略。進行状況を記録し、各ルートの条件を把握して、すべての隠しエンディングを解放しよう。",
+    "ko": "『신・여신전생V Vengeance』의 전 6개 엔딩 완벽 가이드. 진행 상황을 추적하고 각 루트의 조건을 파악해 모든 히든 엔딩을 해금하세요.",
+    "zh": "《真·女神转生Ⅴ 复仇》全 6 结局完整攻略。记录你的进度，掌握每条路线的条件，解锁所有隐藏结局。"
+  },
+  "data": {
+    "routes": [
+      {
+        "id": "creation",
+        "name": {
+          "en": "Creation Route (創世女神篇)",
+          "ja": "創世の女神編",
+          "ko": "창세의 여신편",
+          "zh": "创世女神篇"
+        },
+        "description": {
+          "en": "The original story of Shin Megami Tensei V. Available by choosing 'Don't hold the girl's hand' at the start. Contains 4 endings.",
+          "ja": "『真・女神転生V』の原版ストーリー。冒頭で「少女の手を取らない」を選択すると開始できる。4種のエンディングあり。",
+          "ko": "『신・여신전생V』의 오리지널 스토리. 시작 시 '소녀의 손을 잡지 않는다'를 선택하면 시작 가능. 4종 엔딩 포함.",
+          "zh": "《真·女神转生Ⅴ》的原版剧情。开局选择「不牵少女的手」即可进入。包含 4 种结局。"
+        },
+        "endings": [
+          {
+            "id": "creation-law",
+            "name": {
+              "en": "Law Ending (律法永恒)",
+              "ja": "法のエンディング",
+              "ko": "법의 엔딩",
+              "zh": "秩序结局"
+            },
+            "requirement": "Before entering Tennozu, choose 'Protect the order of the gods'.",
+            "requirementLocalized": {
+              "en": "Before entering Tennozu (至高天), choose 'Protect the order of the gods' (必须守护神的秩序).",
+              "ja": "至高天に入る前に「神の秩序を守る」を選択する。",
+              "ko": "천공전에 들어가기 전에 '신의 질서를 지킨다'를 선택.",
+              "zh": "在进入至高天前选择「必须守护神的秩序」。"
+            },
+            "summary": {
+              "en": "Yoshido becomes the new YHVH, creating a world of strict divine law.",
+              "ja": "ヨシダが新しいヤハウェとなり、厳格な神の法に支配された世界が誕生する。",
+              "ko": "요시도가 새로운 야훼가 되어 엄격한 신의 법에 지배된 세계가 탄생한다.",
+              "zh": "吉田成为新的耶和华，建立起严格的神之秩序支配的世界。"
+            }
+          },
+          {
+            "id": "creation-neutral",
+            "name": {
+              "en": "Neutral Ending (破坏王座)",
+              "ja": "中立のエンディング",
+              "ko": "중립의 엔딩",
+              "zh": "中立结局"
+            },
+            "requirement": "Before entering Tennozu, choose 'Destroy the throne' (破坏王座).",
+            "requirementLocalized": {
+              "en": "Before entering Tennozu, choose 'Destroy the throne' (破坏王座).",
+              "ja": "至高天に入る前に「玉座を破壊する」を選択する。",
+              "ko": "천공전에 들어가기 전에 '옥좌를 파괴한다'를 선택.",
+              "zh": "在进入至高天前选择「破坏王座」。"
+            },
+            "summary": {
+              "en": "The protagonist destroys YHVH's throne. Order and chaos both lose their leaders, leaving humanity free to choose its own path.",
+              "ja": "主人公がヤハウェの玉座を破壊。秩序と混沌のリーダーを失い、人類は自らの道を選択する自由を得る。",
+              "ko": "주인공이 야훼의 옥좌를 파괴. 질서와 혼돈의 지도자를 잃고 인류는 스스로의 길을 선택할 자유를 얻는다.",
+              "zh": "主人公破坏了耶和华的王座。秩序与混沌都失去领袖，人类获得选择自己道路的自由。"
+            }
+          },
+          {
+            "id": "creation-chaos",
+            "name": {
+              "en": "Chaos Ending (原初的混沌)",
+              "ja": "混沌のエンディング",
+              "ko": "혼돈의 엔딩",
+              "zh": "混沌结局"
+            },
+            "requirement": "Before entering Tennozu, choose 'Create to save Tokyo' (为了拯救东京我要创世).",
+            "requirementLocalized": {
+              "en": "Before entering Tennozu, choose 'Create to save Tokyo' (为了拯救东京我要创世).",
+              "ja": "至高天に入る前に「東京を救うために創世する」を選択する。",
+              "ko": "천공전에 들어가기 전에 '도쿄를 구하기 위해 창세한다'를 선택.",
+              "zh": "在进入至高天前选择「为了拯救东京，我要创世」。"
+            },
+            "summary": {
+              "en": "The protagonist attempts to recreate Tokyo as a new world, but at great personal cost.",
+              "ja": "主人公が東京を新しい世界として再生しようとするが、莫大な代償を払うことになる。",
+              "ko": "주인공이 도쿄를 새로운 세계로 재생하려 하지만 막대한 대가를 치른다.",
+              "zh": "主人公试图将东京重塑为新世界，但付出了巨大的代价。"
+            }
+          },
+          {
+            "id": "creation-true",
+            "name": {
+              "en": "True Ending (启示的创世)",
+              "ja": "真エンディング",
+              "ko": "진 엔딩",
+              "zh": "真结局"
+            },
+            "requirement": "Choose 'Destroy the throne' + complete 4 sub-quest chains (Finn MacCool + Egyptian gods + Shiva).",
+            "requirementLocalized": {
+              "en": "1) Choose 'Destroy the throne'. 2) Complete sub-quests 'Mandrake Root' + 'Like Dew' + 'Finn MacCool's Resolution'. 3) Complete 'Falcon Head' + 'Investigate Egypt Branch' + 'Battle for Winged Sun' + 'Inheritance of Ra' (keep Khonsu alive!). 4) Complete 'Stop the Universe from Being Destroyed' (need Lv80+ to enter Asakusa pink leyline).",
+              "ja": "1）「玉座を破壊する」を選択。2）サブクエスト「マンドレイクの根」「露のごとく」「フィン・マックールの決意」を完了。3）「鷹の頭」「エジプト支部の調査」「翼ある太陽の争奪戦」「ラの継承」を完了（コンズー生存必須！）。4）「宇宙が破壊されるのを阻止せよ」を完了（浅草の桃色龍脈、レベル80以上必要）。",
+              "ko": "1) '옥좌를 파괴한다'를 선택. 2) 서브 퀘스트 '맨드레이크 뿌리' + '이슬처럼' + '핀 매쿠얼의 결의' 완료. 3) '매의 머리' + '이집트 지부 조사' + '날개 달린 태양 쟁탈전' + '라의 계승' 완료 (콘수 생존 필수!). 4) '우주가 파괴되는 것을 막아라' 완료 (아사쿠사 핑크색 용맥, 레벨 80 이상 필요).",
+              "zh": "1) 选择「破坏王座」。2) 完成支线「收集曼陀罗的根」+「如雨露般」+「芬恩·麦克库尔的决心」。3) 完成「隼鹰头」+「打探埃及分部的情况」+「有翼太阳争夺战」+「拉的继承」（**孔苏必须存活！**）。4) 完成「阻止宇宙被破坏吧」（浅草粉紫色龙脉，需 80 级）。"
+            },
+            "summary": {
+              "en": "The 'best' ending. The protagonist creates a truly new world alongside Tao Isonokami.",
+              "ja": "「最良」のエンディング。主人公が五十嵐(いそらぎ)タオと共に真に新しい世界を創造する。",
+              "ko": "가장 좋은 엔딩. 주인공이 이소라기 타오와 함께 진정으로 새로운 세계를 창조한다.",
+              "zh": "「最佳」结局。主人公与矶野上多绪一同创造了真正崭新的世界。"
+            }
+          }
+        ]
+      },
+      {
+        "id": "vengeance",
+        "name": {
+          "en": "Vengeance Route (復讐女神篇)",
+          "ja": "復讐の女神編",
+          "ko": "복수의 여신편",
+          "zh": "复仇女神篇"
+        },
+        "description": {
+          "en": "The new story added in Vengeance. Available by choosing 'Hold the girl's hand' at the start. Contains 2 endings.",
+          "ja": "Vengeanceで追加された新ストーリー。冒頭で「少女の手を取る」を選択すると開始できる。2種のエンディングあり。",
+          "ko": "Vengeance에서 추가된 새로운 스토리. 시작 시 '소녀의 손을 잡는다'를 선택하면 시작 가능. 2종 엔딩 포함.",
+          "zh": "复仇版新增剧情。开局选择「牵起少女的手」即可进入。包含 2 种结局。"
+        },
+        "endings": [
+          {
+            "id": "vengeance-law",
+            "name": {
+              "en": "Law Ending (律法永恒)",
+              "ja": "法のエンディング",
+              "ko": "법의 엔딩",
+              "zh": "秩序结局"
+            },
+            "requirement": "Before entering Tennozu, lean towards Law. OR: be Neutral, then choose 'I can't let you do that' at the throne.",
+            "requirementLocalized": {
+              "en": "Before entering Tennozu, lean towards Law alignment. Alternative: be Neutral, then choose 'I can't let you do that' (不能让你那么做) at the throne.",
+              "ja": "至高天に入る前に秩序寄りの選択肢を選ぶ。別ルート: 中立の場合、玉座で「あなたにはそれをしてほしくない」(不能让你那么做)を選ぶ。",
+              "ko": "천공전에 들어가기 전에 질서 쪽 선택. 대안: 중립일 경우 옥좌에서 '당신이 그렇게 하는 건 허락할 수 없어' 선택.",
+              "zh": "进入至高天前倾向秩序方向。或保持中立后在王座前选择「不能让你那么做」。"
+            },
+            "summary": {
+              "en": "A new divine order rises. The Qadistu are defeated but their grievance remains.",
+              "ja": "新しい神の秩序が立ち上がる。カディシュトゥは倒されるが、彼女たちの怨恨は消えない。",
+              "ko": "새로운 신의 질서가 세워진다. 카디슈투는 패배하지만 그녀들의 원한은 사라지지 않는다.",
+              "zh": "新的神之秩序建立。献牲者被打败，但她们的怨恨并未消散。"
+            }
+          },
+          {
+            "id": "vengeance-chaos",
+            "name": {
+              "en": "Chaos Ending (原初的混沌)",
+              "ja": "混沌のエンディング",
+              "ko": "혼돈의 엔딩",
+              "zh": "混沌结局"
+            },
+            "requirement": "Before entering Tennozu, lean towards Chaos. OR: be Neutral, then choose 'I'm glad you're okay' at the throne.",
+            "requirementLocalized": {
+              "en": "Before entering Tennozu, lean towards Chaos alignment. Alternative: be Neutral, then choose 'I'm glad you're okay' (你没事真好) at the throne.",
+              "ja": "至高天に入る前に混沌寄りの選択肢を選ぶ。別ルート: 中立の場合、玉座で「無事でよかった」(你没事真好)を選ぶ。",
+              "ko": "천공전에 들어가기 전에 혼돈 쪽 선택. 대안: 중립일 경우 옥좌에서 '무사해서 다행이야' 선택.",
+              "zh": "进入至高天前倾向混沌方向。或保持中立后在王座前选择「你没事真好」。"
+            },
+            "summary": {
+              "en": "Tiamat is resurrected, ending YHVH's reign. The world is reborn through chaos.",
+              "ja": "ティアマトが復活し、ヤハウェの支配が終わる。混沌を通じて世界は再生する。",
+              "ko": "티아마트가 부활하고 야훼의 지배가 끝난다. 혼돈을 통해 세계가 재생된다.",
+              "zh": "提亚马特复活，耶和华的统治终结。混沌中世界迎来新生。"
+            }
+          }
+        ]
+      }
+    ],
+    "proTips": {
+      "en": [
+        "Save before entering Tennozu to access all 4 Creation endings in one playthrough.",
+        "For the True Ending, do NOT kill Khonsu in 'Investigate Egypt Branch' - his survival is required for 'Inheritance of Ra'.",
+        "The 'Safety' difficulty is unlocked after clearing the game - great for casual play.",
+        "On NG+, 'Creation Mode' (创生) is available - enemies scale to Lv150 with extreme difficulty.",
+        "To recruit Lucifer (Lv99) you need to play through the 'Creation' (创生) mode at least once."
+      ],
+      "ja": [
+        "至高天に入る前にセーブすれば、1周で4種のエンディングを確認できる。",
+        "真エンディングのため、「エジプト支部の調査」でコンズーを殺さないこと。「ラの継承」の前提条件。",
+        "「Safety」難易度はゲームクリア後に解放される - カジュアル向け。",
+        "NG+で「創生モード」解放 - 敵がLv150相当の超高難度。",
+        "ルシフェル(Lv99)を合体制限するには「創生」モードを一度プレイする必要がある。"
+      ],
+      "ko": [
+        "천공전에 들어가기 전에 세이브하면 한 플레이로 4종 엔딩 확인 가능.",
+        "진 엔딩을 위해 '이집트 지부 조사'에서 콘수를 죽이지 말 것. '라의 계승' 전제 조건.",
+        "'Safety' 난이도는 게임 클리어 후 해금 - 캐주얼 플레이용.",
+        "NG+에서 '창생 모드' 해금 - 적이 Lv150 수준의 초고난도.",
+        "루시퍼(Lv99) 합체 해금에는 '창생' 모드를 한 번 플레이해야 함."
+      ],
+      "zh": [
+        "进入至高天前存档，1 周目可看完创世线 4 个结局。",
+        "真结局关键：**不要在「打探埃及分部的情况」中杀死孔苏**，否则无法完成「拉的继承」。",
+        "通关后解锁「Safety」难度，适合休闲玩家。",
+        "通关后开启「创生」模式，敌人升至 Lv150，挑战极限。",
+        "合成路西法 (Lv99) 需要先通关一次「创生」模式。"
+      ]
+    }
+  }
+}

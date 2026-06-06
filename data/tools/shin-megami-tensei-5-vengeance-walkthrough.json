@@ -1,0 +1,506 @@
+{
+  "slug": "shin-megami-tensei-5-vengeance-walkthrough",
+  "gameSlug": "shin-megami-tensei-5-vengeance",
+  "type": "walkthrough",
+  "title": {
+    "en": "Walkthrough & Strategy Guide",
+    "ja": "攻略ガイド",
+    "ko": "공략 가이드",
+    "zh": "图文流程攻略"
+  },
+  "description": {
+    "en": "Complete walkthrough to ensure you can finish the game. Covers basics, story chapters, key bosses, and endings. All information sourced from NGA, 3DM, 萌娘百科, GameWith, and Steam.",
+    "ja": "ゲームを最後までプレイできる完全攻略。基本システム、ストーリーチャプター、重要ボス、エンディングを網羅。NGA、3DM、萌娘百科、ゲームウィズ、Steamを参照。",
+    "ko": "게임을 끝까지 플레이할 수 있는 완전 공략. 기본 시스템, 스토리 챕터, 주요 보스, 엔딩을 다룹니다. NGA, 3DM, 萌娘百科, GameWith, Steam 참조.",
+    "zh": "保证能通关的完整图文攻略。覆盖基础机制、流程章节、关键 BOSS 与结局。资料来源：NGA、3DM、萌娘百科、GameWith、Steam 官方页面。"
+  },
+  "data": {
+    "sources": [
+      {
+        "name": "NGA 玩家社区",
+        "url": "https://bbs.nga.cn/thread.php?stid=11291877"
+      },
+      {
+        "name": "3DM 单机",
+        "url": "https://www.3dmgame.com/games/smtvv/"
+      },
+      {
+        "name": "萌娘百科",
+        "url": "https://mzh.moegirl.org.cn/%E7%9C%9F%C2%B7%E5%A5%B3%E7%A5%9E%E8%BD%AC%E7%94%9FV_Vengeance"
+      },
+      {
+        "name": "百度贴吧 女神异闻录吧",
+        "url": "https://tieba.baidu.com/f?kw=%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%95"
+      },
+      {
+        "name": "GameWith (日)",
+        "url": "https://gamewith.jp/ps5/game/show/10772"
+      },
+      {
+        "name": "Fami 通公式攻略本",
+        "url": "https://www.famitsu.com/"
+      },
+      {
+        "name": "Steam 商店",
+        "url": "https://store.steampowered.com/app/1875830/"
+      },
+      {
+        "name": "MegaTen Wiki (Fandom)",
+        "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance"
+      }
+    ],
+    "sections": [
+      {
+        "id": "basics",
+        "title": {
+          "en": "Basics & Combat System",
+          "ja": "基本と戦闘システム",
+          "ko": "기본 및 전투 시스템",
+          "zh": "基础机制与战斗系统"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Press Turn Battle",
+              "ja": "プレスターンバトル",
+              "ko": "프레스 턴 배틀",
+              "zh": "Press Turn 战斗系统"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": {
+              "en": "The signature ATLUS combat system. Each side has 4 action icons per turn. Hitting a weakness, getting a critical, or passing turns can grant bonus icons (Half-Press on a defended target). Missing or hitting a resist consumes extra icons. The player always has a turn-counter advantage when exploiting weaknesses — exploit this constantly.",
+              "ja": "ATLUS独自の戦闘システム。ターンごとに4つのアクションアイコンが与えられる。弱点突き、クリティカル、パスでボーナスアイコン(ハーフプレス)獲得。空振り・耐性ヒットで消費量が増える。弱点を突いて常にターン有利を取ろう。",
+              "ko": "ATLUS 시그니처 전투 시스템. 양쪽 모두 매 턴 4개의 액션 아이콘을 받는다. 약점 공격, 크리티컬, 패스 시 보너스 아이콘(하프 프레스) 획득. 빗나감/저항 시 추가 소모. 약점을 공략해 항상 턴 우세를 유지하라.",
+              "zh": "ATLUS 招牌战斗系统。每回合 4 个行动图标。命中弱点、暴击或 Pass 都能获得额外图标（Half-Press）。Miss 或打到耐性会消耗更多图标。**始终打弱点**，让行动回合永远是 4+ 优势。"
+            }
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "8 Elements & Weakness",
+              "ja": "8属性と弱点",
+              "ko": "8속성과 약점",
+              "zh": "8 种属性与弱点"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": {
+              "en": "Physical, Gun, Fire, Ice, Electric, Wind, Light, Dark, plus Almighty (万能) which ignores all resistances. Each demon has 2-4 weaknesses you can exploit. Scan enemies by attacking them once to reveal their weakness icon. Almighty is useful against neutral targets but can't crit or hit weakness.",
+              "ja": "物理・銃・火・氷・電・風・光・闇、万能(すべてを貫く属性)。各悪魔は2-4つの弱点を持つ。1回攻撃すれば弱点アイコンが表示される。万能は耐性を無視するがクリティカル・弱点発生は無し。",
+              "ko": "물리, 총, 불, 얼음, 번개, 풍, 빛, 어둠 + 만능(모든 내성 무시). 각 악마는 2-4개 약점 보유. 1회 공격 후 약점 아이콘 표시. 만능은 내성 무시하나 크리티컬·약점 발동 없음.",
+              "zh": "物理、枪、火、冰、雷、风、光、暗 8 种属性 + 万能（无视耐性）。每个恶魔有 2-4 个弱点。攻击 1 次后会显示弱点图标。**万能**虽然无视耐性，但不能暴击、不能触发弱点加成。"
+            }
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Demon Fusion (悪魔合体)",
+              "ja": "悪魔合体",
+              "ko": "악마 합체",
+              "zh": "恶魔合体"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": {
+              "en": "Combine 2+ demons to create a new one. The result demon inherits skills from ingredients and gets stat bonuses based on ingredient levels. Special fusion uses 3-4 ingredients to unlock hidden/unique demons. Spirit fusion (精霊合体) uses elemental spirits to promote/demote demons within their race — essential for skill inheritance.",
+              "ja": "2体以上の悪魔を合体して新種を生成。素材はスキルと能力を継承。特殊合体は3-4素材で隠し・固有悪魔を解禁。精霊合体で同種族内昇格/降格、スキル継承に必須。",
+              "ko": "2마리 이상의 악마를 합체해 새 악마 생성. 재료는 스킬과 능력치 상속. 특수 합체는 3-4 재료로 히든/유니크 악마 해금. 정령 합체로 동일 종족 승급/강등, 스킬 상속에 필수.",
+              "zh": "2 只或以上恶魔合体生成新恶魔。**技能和属性**由素材继承，属性加成取决于素材等级。**特殊合体**用 3-4 只素材解锁隐藏/独占恶魔。**精灵合体**用元素精灵在同种族内升/降级——**技能继承的关键**。"
+            }
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Essences & Magatsuhi",
+              "ja": "神意と禍霊",
+              "ko": "신의와 마가츠히",
+              "zh": "神意（被动）与祸灵槽"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": {
+              "en": "Essences (神意) are passive skills unlocked with Glory (御严, earned from exploration/quests). Magatsuhi (禍霊槽) is a 4-slot gauge filled by red crystals/battles — each demon has a unique Magatsuhi skill that uses 1-4 slots. Charge them up to unleash powerful effects.",
+              "ja": "神意は御严(探索・支線で獲得)で解放するパッシブスキル。禍霊槽は4スロットのゲージ、赤結晶や戦闘で充填。各悪魔の固有禍霊スキルは1-4スロット消費し強力な効果。",
+              "ko": "신의는 어엄(탐색·의뢰로 획득)으로 해금하는 패시브 스킬. 마가츠히(禍霊槽)는 4슬롯 게이지, 붉은 결정이나 전투로 충전. 각 악마 고유 마가츠히 스킬은 1-4슬롯 소모하며 강력한 효과 발동.",
+              "zh": "**神意（被动）**用御严（探索/支线获取）解锁。**祸灵槽**是 4 格资源槽，红结晶或战斗积累。每只恶魔有独特的祸灵技能，消耗 1-4 槽位发动强力效果。"
+            }
+          }
+        ]
+      },
+      {
+        "id": "chapter1",
+        "title": {
+          "en": "Chapter 1: Tokyo Tower & The First Choice",
+          "ja": "第1章 東京タワーと最初の選択",
+          "ko": "1챕터 도쿄 타워와 첫 선택",
+          "zh": "第 1 章 东京塔与第一个选择"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "en": "The First Major Decision (CRITICAL)",
+              "ja": "最初の重要な選択（超重要）",
+              "ko": "첫 번째 주요 선택 (매우 중요)",
+              "zh": "第一个重大选择（关键）"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "warning",
+            "text": {
+              "en": "Right after the school scene, you'll see a girl asking for your help. **Left option: 'Hold her hand'** → Vengeance Route (new story). **Right option: 'Don't hold her hand'** → Creation Route (original story). This is the ONLY way to switch routes. There is NO option to change later — start a new save.",
+              "ja": "学校シーン直後、少女が助けてと問いかけてくる。**左:「手を取る」** → 復讐の女神編（新ストーリー）。**右:「手を取らない」** → 創世の女神編（原版）。**後から変更不可** — 別セーブで再スタート。",
+              "ko": "학교 장면 직후, 소녀가 도와달라고 묻는다. **왼쪽: '손을 잡는다'** → 복수의 여신편 (새 스토리). **오른쪽: '손을 잡지 않는다'** → 창세의 여신편 (오리지널). **나중에 변경 불가** — 새 세이브로 재시작.",
+              "zh": "学校场景之后，少女向你求助。**左选项：「牵起她的手」** → 复仇女神篇（新剧情）。**右选项：「不牵她的手」** → 创世女神篇（原版）。**这是唯一的路线切换方式**，之后无法改变 — 想换路线只能开新存档。"
+            }
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "en": "Walkthrough",
+              "ja": "進行ルート",
+              "ko": "진행 루트",
+              "zh": "流程要点"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "en": "After the dream and school conversation, head to Shinagawa Station West Exit. Listen to the NPC near the subway, then proceed to Takanawa Tunnel.",
+              "ja": "夢と学校会話後、品川駅西口へ。地下鉄のNPCの会話を聞き、高輪トンネルへ。",
+              "ko": "꿈과 학교 대화 후, 시나가와역 서쪽 출구로. 지하철의 NPC 대화를 들으며 다카나와 터널로.",
+              "zh": "梦境 + 学校对话后，去品川站西出口。听地铁 NPC 的话，前往高轮隧道。"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "en": "In the tunnel you'll encounter the anomaly and collapse. You'll wake up in the ruined Tokyo. The protagonist fuses with Aogami (青神) and becomes the Nahobino.",
+              "ja": "トンネルで異変に遭い倒れる。廃墟の東京で目覚め、青神と合体し創毘となる。",
+              "ko": "터널에서 이변을 만나 쓰러진다. 폐허가 된 도쿄에서 깨어나 아오가미와 합체해 나호비노가 된다.",
+              "zh": "隧道中遭遇异变倒下。在废墟东京醒来，与青神合体重生为「创毘」。"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "en": "Progress to Tokyo Tower. Collect red/yellow/green crystals along the way to restore HP/MP. Reach the first Dragon's Den (龍穴) for shopping.",
+              "ja": "東京タワーへ。途中で赤/黄/緑結晶を集めてHP/MP回復。最初の龍穴で買い物。",
+              "ko": "도쿄 타워로. 가는 길에 빨강/노랑/초록 결정 수집하여 HP/MP 회복. 첫 용궁(龍穴)에서 쇼핑.",
+              "zh": "前往东京塔。沿途收集红/黄/绿结晶恢复 HP/MP，到达第一个龙穴可以购物。"
+            }
+          },
+          {
+            "type": "boss",
+            "name": {
+              "en": "Girimekhala (杀戮之兽)",
+              "ja": "ギリメカラ",
+              "ko": "기리메카라",
+              "zh": "杀戮之兽"
+            },
+            "level": "5-7",
+            "weakness": {
+              "en": "Electric",
+              "ja": "電撃",
+              "ko": "전기",
+              "zh": "电"
+            },
+            "strategy": {
+              "en": "Recommended level 5-7. Bring electric demons in slot 4. Use Magatsuhi skill in turn 1 with Atsuta's crit to get 3+4 actions. Boss crits in turn 2 — use defense buff or items. Heal on turn 3+ if needed. 3 turns to clear.",
+              "ja": "推奨Lv5-7。4番目に電撃スキル持ち悪魔を配置。1T目で敦田のクリティカル+禍霊スキルで3+4行動。2T目ボス必ずクリティカル — 防御バフ or アイテム使用。3T目以降回復しながら削る。3ターンで撃破可能。",
+              "ko": "추천 Lv5-7. 4번 슬롯에 전기 스킬 악마 배치. 1턴에 마가츠히 + 아츠타 크리티컬로 3+4 행동. 2턴에 보스 크리티컬 확정 — 방어 버프/아이템 사용. 3턴 이후 회복하면서 공격. 3턴 안에 격파 가능.",
+              "zh": "推荐 Lv 5-7。4 号位放电属性恶魔。第 1 回合敦田暴击 + 祸灵技能打 3+4 行动。**第 2 回合 BOSS 必定暴击** — 提前上防御 buff 或用药。第 3 回合起边回血边输出。3 回合可击杀。"
+            }
+          }
+        ]
+      },
+      {
+        "id": "chapter2",
+        "title": {
+          "en": "Chapter 2: Minato Region & First Route-Specific Content",
+          "ja": "第2章 港区と最初のルート分岐",
+          "ko": "2챕터 미나토 지구와 첫 루트 분기",
+          "zh": "第 2 章 港区与首次路线分支"
+        },
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": {
+              "en": "After defeating Girimekhala, you begin exploring the Minato region. The map opens up: collect Leyline (龙脉) points for fast travel, use Gust (祸径) paths to reach hidden areas, break Cursed Mounds (祸冢) to unlock new Essences.",
+              "ja": "ギリメカラ撃破後、港区を探索開始。マップが広がり龍脈でファストトラベル、禍径で隠しエリアへ、禍冢を破壊して新神意を解放。",
+              "ko": "기리메카라 격파 후, 미나토 지구를 탐험 시작. 지도가 확장되며 용맥(龍脈)으로 패스트 트래블, 禍徑(화경)으로 숨겨진 지역 진입, 禍冢(화분) 파괴로 신 신의 해금.",
+              "zh": "击杀杀戮之兽后，开始探索港区。地图开放后：通过**龙脉**快速传送、用**祸径**进入隐藏区域、破坏**祸冢**解锁新神意。"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "en": "Find 'Miman' (未满) creatures — collecting 200 of them across both routes unlocks an achievement. The 'Find the Runaway Child' quest from Gustave is endless.",
+              "ja": "「未满」を探す — 両ルート合計200体で実績解除。グスターヴの「迷子の子を探せ」は長期依頼。",
+              "ko": "'미만(未满)' 수집 — 양 루트 합계 200마리로 도전과제 해금. 구스타브의 '도망친 아이 찾기'는 장기 의뢰.",
+              "zh": "收集**未满** — 两个路线共 250 只（每区 50），找到 200 只解锁「寻找走失孩童的神眼」成就。古斯塔夫的「寻找未满」是长期支线。"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "en": "Talk to Gustave at the Dragon's Den to unlock Spirit Fusion (灵体合体) and Essences. Both are core progression systems.",
+              "ja": "龍穴のグスターヴと会話し「霊体合体」と「神意」を解禁。両方とも重要成長要素。",
+              "ko": "용궁(龍穴)에서 구스타브와 대화해 '영체 합체'와 '신의'를 해금. 두 가지 모두 핵심 성장 요소.",
+              "zh": "在龙穴和古斯塔夫对话解锁**灵体合体**和**神意**。两者都是核心成长系统。"
+            }
+          }
+        ]
+      },
+      {
+        "id": "endings-quick",
+        "title": {
+          "en": "Quick Endings Reference",
+          "ja": "エンディング早見表",
+          "ko": "엔딩 빠른 참조",
+          "zh": "结局速查表"
+        },
+        "blocks": [
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "en": "For full endings guide (with all 6 endings, exact choices, and True Ending requirements), see our dedicated **Endings Tracker** tool. Below is the TL;DR.",
+              "ja": "全6エンディング・正確な選択肢・真エンディング条件は専用「エンドガイド」ツールへ。下記は要約。",
+              "ko": "전 6개 엔딩, 정확한 선택, 진엔딩 조건은 전용 '엔딩 가이드' 도구 참고. 아래는 요약.",
+              "zh": "完整 6 结局 + 准确选项 + 真结局条件见专用 **全结局攻略** 工具。下面是速查版。"
+            }
+          },
+          {
+            "type": "table",
+            "header": {
+              "en": [
+                "Route",
+                "Ending",
+                "Key Choice"
+              ],
+              "ja": [
+                "ルート",
+                "エンディング",
+                "選択肢"
+              ],
+              "ko": [
+                "루트",
+                "엔딩",
+                "선택"
+              ],
+              "zh": [
+                "路线",
+                "结局",
+                "关键选择"
+              ]
+            },
+            "rows": [
+              {
+                "en": [
+                  "Creation",
+                  "Law (律法永恒)",
+                  "Protect divine order"
+                ],
+                "ja": [
+                  "創世",
+                  "法 (律法永恒)",
+                  "神の秩序を守る"
+                ],
+                "ko": [
+                  "창세",
+                  "법 (율법영원)",
+                  "신의 질서를 지킨다"
+                ],
+                "zh": [
+                  "创世",
+                  "秩序 (律法永恒)",
+                  "守护神的秩序"
+                ]
+              },
+              {
+                "en": [
+                  "Creation",
+                  "Neutral (破坏王座)",
+                  "Destroy the throne"
+                ],
+                "ja": [
+                  "創世",
+                  "中立 (王座破壊)",
+                  "玉座を破壊する"
+                ],
+                "ko": [
+                  "창세",
+                  "중립 (옥좌 파괴)",
+                  "옥좌를 파괴한다"
+                ],
+                "zh": [
+                  "创世",
+                  "中立 (破坏王座)",
+                  "破坏王座"
+                ]
+              },
+              {
+                "en": [
+                  "Creation",
+                  "Chaos (原初的混沌)",
+                  "Recreate Tokyo"
+                ],
+                "ja": [
+                  "創世",
+                  "混沌 (原初の混沌)",
+                  "東京を救うために創世する"
+                ],
+                "ko": [
+                  "창세",
+                  "혼돈 (원초의 혼돈)",
+                  "도쿄를 구하기 위해 창세"
+                ],
+                "zh": [
+                  "创世",
+                  "混沌 (原初的混沌)",
+                  "为拯救东京而创世"
+                ]
+              },
+              {
+                "en": [
+                  "Creation",
+                  "TRUE (启示的创世)",
+                  "Destroy throne + all 4 sub-quest chains"
+                ],
+                "ja": [
+                  "創世",
+                  "真 (啓示の創世)",
+                  "玉座破壊 + 4つのサブクエスト"
+                ],
+                "ko": [
+                  "창세",
+                  "진 (계시의 창세)",
+                  "옥좌 파괴 + 4개 서브 퀘스트"
+                ],
+                "zh": [
+                  "创世",
+                  "**真结局 (启示的创世)**",
+                  "破坏王座 + 4 条支线全做完"
+                ]
+              },
+              {
+                "en": [
+                  "Vengeance",
+                  "Law",
+                  "Lean Law OR be Neutral + 'I can't let you'"
+                ],
+                "ja": [
+                  "復讐",
+                  "法",
+                  "秩序寄り OR 中立+「あなたにはそれをしてほしくない」"
+                ],
+                "ko": [
+                  "복수",
+                  "법",
+                  "질서 쪽 OR 중립+ '당신이 그렇게 하는 건 허락할 수 없어'"
+                ],
+                "zh": [
+                  "复仇",
+                  "秩序",
+                  "倾向秩序，或中立+「不能让你那么做」"
+                ]
+              },
+              {
+                "en": [
+                  "Vengeance",
+                  "Chaos",
+                  "Lean Chaos OR be Neutral + 'I'm glad you're okay'"
+                ],
+                "ja": [
+                  "復讐",
+                  "混沌",
+                  "混沌寄り OR 中立+「無事でよかった」"
+                ],
+                "ko": [
+                  "복수",
+                  "혼돈",
+                  "혼돈 쪽 OR 중립+ '무사해서 다행이야'"
+                ],
+                "zh": [
+                  "复仇",
+                  "混沌",
+                  "倾向混沌，或中立+「你没事真好」"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "essential-tips",
+        "title": {
+          "en": "Essential Tips for New Players",
+          "ja": "初心者必須Tips",
+          "ko": "초보자 필수 팁",
+          "zh": "新手必看 Tips"
+        },
+        "blocks": [
+          {
+            "type": "tip",
+            "text": {
+              "en": "Save often — at Dragon's Den before any major decision. The game is long (~80h per route) and you don't want to lose progress.",
+              "ja": "こまめにセーブ — 龍穴で重要な選択の前に。本編は1ルート約80時間と長い。",
+              "ko": "자주 세이브 — 용궁에서 중요한 결정 전. 메인 스토리는 1루트 약 80시간.",
+              "zh": "频繁存档 — 在龙穴前 / 重要决定前 / 新章节前。1 个路线 ~80 小时，丢了血亏。"
+            }
+          },
+          {
+            "type": "tip",
+            "text": {
+              "en": "Always carry 1-2 multi-target physical/almighty demons. They cover unexpected weaknesses in random encounters.",
+              "ja": "全体物理・万能スキル持ちを1-2体常備。ランダムエンカウントの想定外弱点をカバー。",
+              "ko": "전체 물리/만능 스킬 악마 1-2마리 항상 편성. 랜덤 조우의 의외 약점 커버.",
+              "zh": "常备 1-2 只**全体物理/万能**技能的恶魔。应对随机遭遇的意外弱点。"
+            }
+          },
+          {
+            "type": "tip",
+            "text": {
+              "en": "Don't sell the 4 elemental Sprites (Stone/Water/Wind/Fire). Train them to Lv99 + register them in the Demon Index — they're the cheapest way to promote/demote demons for skill inheritance.",
+              "ja": "四大精霊(石/水/風/火)は絶対に売らない。Lv99まで育てて悪魔全書に登録 — スキル継承の最安手段。",
+              "ko": "4정령(돌/물/바람/불)은 절대 팔지 말 것. Lv99까지 키우고 악마 전서에 등록 — 스킬 상속의 최저가 수단.",
+              "zh": "**别卖 4 只元素精灵**（石/水/风/火）！练到 Lv99 + 登录恶魔全书——**最便宜的种族升降级材料**，技能继承必备。"
+            }
+          },
+          {
+            "type": "tip",
+            "text": {
+              "en": "For the True Ending, keep Khonsu alive in 'Investigate Egypt Branch' — his survival is required for 'Inheritance of Ra' which is required for the True Ending.",
+              "ja": "真エンディングには「コンズーを生存させる」必須。エジプト支部の調査で殺さないこと — ラの継承の前提。",
+              "ko": "진 엔딩을 위해 '콘수 생존' 필수. 이집트 지부 조사에서 콘수를 죽이지 말 것 — 라의 계승 전제.",
+              "zh": "**真结局关键：在「打探埃及分部的情况」中不要杀死孔苏！**否则无法完成「拉的继承」，真结局触发不了。"
+            }
+          },
+          {
+            "type": "tip",
+            "text": {
+              "en": "Demo progress carries over to the full game. If you haven't bought yet, play the demo first to try combat.",
+              "ja": "体験版のセーブデータは本編に引継ぎ可能。買う前に体験版で戦闘を試すのもアリ。",
+              "ko": "체험판 세이브는 본편으로 이어짐. 구매 전 체험판으로 전투 테스트 가능.",
+              "zh": "**试玩版存档可继承到正式版**。没买之前可以先打试玩版试战斗系统。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

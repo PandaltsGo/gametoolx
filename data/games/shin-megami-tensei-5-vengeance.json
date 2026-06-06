@@ -1,0 +1,69 @@
+{
+  "slug": "shin-megami-tensei-5-vengeance",
+  "title": {
+    "en": "Shin Megami Tensei V: Vengeance",
+    "ja": "真・女神転生V Vengeance",
+    "ko": "신・여신전생V Vengeance",
+    "zh": "真·女神转生Ⅴ 复仇"
+  },
+  "images": {
+    "library": "/images/games/shin-megami-tensei-5-vengeance/library.jpg",
+    "header": "/images/games/shin-megami-tensei-5-vengeance/header.jpg",
+    "capsule": "/images/games/shin-megami-tensei-5-vengeance/capsule.jpg",
+    "logo": "/images/games/shin-megami-tensei-5-vengeance/logo.png",
+    "hero": "/images/games/shin-megami-tensei-5-vengeance/hero.jpg",
+    "screenshots": [
+      "/images/games/shin-megami-tensei-5-vengeance/ss_00.jpg",
+      "/images/games/shin-megami-tensei-5-vengeance/ss_01.jpg",
+      "/images/games/shin-megami-tensei-5-vengeance/ss_02.jpg",
+      "/images/games/shin-megami-tensei-5-vengeance/ss_03.jpg",
+      "/images/games/shin-megami-tensei-5-vengeance/ss_04.jpg",
+      "/images/games/shin-megami-tensei-5-vengeance/ss_05.jpg"
+    ]
+  },
+  "steamAppId": 1875830,
+  "releaseDate": "2024-06-14",
+  "developer": "ATLUS",
+  "publisher": "SEGA",
+  "genres": ["RPG", "JRPG", "Turn-based"],
+  "languages": ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fr", "it", "de", "es", "pl", "pt-BR", "tr", "ru"],
+  "metacriticScore": 90,
+  "steamReviewPercent": 92,
+  "price": {
+    "currency": "CNY",
+    "standard": 268,
+    "deluxe": 298,
+    "dlcSet": 62
+  },
+  "playtimeHours": 80,
+  "platforms": ["Windows", "PS4", "PS5", "Xbox One", "Xbox Series", "Switch"],
+  "description": {
+    "en": "Shin Megami Tensei V: Vengeance is the definitive edition of the critically acclaimed RPG. The world of Da'at awaits, with 270+ demons to recruit, two complete story routes, and 6 endings. Choose between the Creation route (original story) or the Vengeance route (new story) at the start.",
+    "ja": "全世界累計100万本突破のRPG『真・女神転生Ⅴ』の決定版。「創世の女神編」と「復讐の女神編」の2つのルート、270体以上の悪魔、複数エンディングを収録。荒廃した東京「ダアト」で神と魔が繰り広げる戦いに身を投じよう。",
+    "ko": "전 세계 누적 판매 100만 본 돌파한 RPG『신・여신전생V』의 결정판. 「창세의 여신편」과「복수의 여신편」 2개 루트, 270체 이상의 악마, 다중 엔딩을 수록. 황폐한 도쿄 '다아트'에서 신과 마의 전쟁에 몸을 던지세요.",
+    "zh": "全球累计销量突破 100 万套的 RPG《真·女神转生Ⅴ》决定版。收录「创世女神篇」与「复仇女神篇」两条完整路线、270+ 种恶魔与多重结局。在荒废的东京「达识」与神魔展开激战。"
+  },
+  "systemRequirements": {
+    "minimum": {
+      "os": "Windows 10 64-bit",
+      "processor": "Intel Core i5-2400 / AMD FX-6350",
+      "memory": "6 GB RAM",
+      "graphics": "NVIDIA GeForce GTX 550 Ti 1GB / AMD Radeon HD 7750 1GB",
+      "directX": "Version 12",
+      "storage": "30 GB"
+    },
+    "recommended": {
+      "os": "Windows 10/11 64-bit",
+      "processor": "Intel Core i5-3470 / AMD Ryzen 5 1400",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA GeForce GTX 960 4GB / AMD Radeon R9 380 4GB",
+      "directX": "Version 12",
+      "storage": "30 GB SSD"
+    }
+  },
+  "availableTools": [
+    "system-checker",
+    "endings-tracker",
+    "fusion-calculator"
+  ]
+}
