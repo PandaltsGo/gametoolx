@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getGame, getTool, getSystemTiers, getUITranslations, listTools } from "@/lib/data";
 import SystemChecker from "@/components/tools/SystemChecker";
+import BuildRecommender from "@/components/tools/BuildRecommender";
 
 const SUPPORTED_LANGS = ["ja", "ko", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -102,10 +103,14 @@ export default async function ToolPage({ params }: Props) {
           <SystemChecker lang={safeLang} ui={ui} game={game} tiers={tiers} />
         )}
 
-        {tool.type !== "system-checker" && (
+        {tool.type === "build-recommender" && (
+          <BuildRecommender lang={safeLang} ui={ui} tool={tool} />
+        )}
+
+        {!["system-checker", "build-recommender"].includes(tool.type) && (
           <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6 text-center">
             <p className="text-yellow-300">
-              🚧 Tool type &quot;{tool.type}&quot; not yet implemented (MVP: system-checker first)
+              🚧 Tool type &quot;{tool.type}&quot; not yet implemented
             </p>
           </div>
         )}
