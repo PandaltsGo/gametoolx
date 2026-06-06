@@ -14,10 +14,15 @@
   },
 
   "tool": {
-    "systemChecker": "系统配置检测器",
-    "gachaSim": "抽卡模拟器",
-    "buildRecommender": "职业搭配推荐器",
-    "achievementTracker": "成就追踪器"
+    "systemChecker": "System Requirements Checker",
+    "gachaSim": "Gacha Simulator",
+    "buildRecommender": "Build Recommender",
+    "achievementTracker": "Achievement Tracker"
+  },
+
+  "systemCheckerPage": {
+    "title": "系统配置检测器",
+    "subtitle": "检测你的电脑能否运行游戏"
   },
 
   "action": {

@@ -20,6 +20,11 @@
     "achievementTracker": "Achievement Tracker"
   },
 
+  "systemCheckerPage": {
+    "title": "System Requirements Checker",
+    "subtitle": "Check if your PC can run the game"
+  },
+
   "action": {
     "check": "Check",
     "simulate": "Simulate",

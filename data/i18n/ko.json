@@ -14,10 +14,15 @@
   },
 
   "tool": {
-    "systemChecker": "시스템 요구사항 체커",
-    "gachaSim": "가챠 시뮬레이터",
-    "buildRecommender": "빌드 추천 도구",
-    "achievementTracker": "업적 추적 도구"
+    "systemChecker": "System Requirements Checker",
+    "gachaSim": "Gacha Simulator",
+    "buildRecommender": "Build Recommender",
+    "achievementTracker": "Achievement Tracker"
+  },
+
+  "systemCheckerPage": {
+    "title": "시스템 요구사항 체커",
+    "subtitle": "게임이 실행 가능한지 확인"
   },
 
   "action": {

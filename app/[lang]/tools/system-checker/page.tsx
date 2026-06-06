@@ -13,9 +13,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
+  const ui = await getUITranslations(lang);
   return {
-    title: lang === "ja" ? "動作環境チェッカー | GameToolX" : "System Requirements Checker | GameToolX",
-    description: "Check if your PC can run any game. Supports auto-detection of your hardware.",
+    title: `${ui.systemCheckerPage?.title || ui.tool.systemChecker} | GameToolX`,
+    description: ui.systemCheckerPage?.subtitle || "Check if your PC can run any game. Supports auto-detection of your hardware.",
     alternates: {
       languages: Object.fromEntries(
         SUPPORTED_LANGS.map((l) => [l, `/${l}/tools/system-checker`]),
@@ -45,10 +46,10 @@ export default async function SystemCheckerPage({ params, searchParams }: Props)
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-white">
-            {ui.tool.systemChecker}
+            {ui.systemCheckerPage?.title || ui.tool.systemChecker}
           </h1>
           <p className="mt-2 text-gray-400">
-            {ui.checker.yourPc} — {game.title[safeLang] || game.title.en}
+            {ui.systemCheckerPage?.subtitle || ui.checker.yourPc} — {game.title[safeLang] || game.title.en}
           </p>
         </header>
 
