@@ -1,0 +1,122 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getGame, getTool, getSystemTiers, getUITranslations, listTools } from "@/lib/data";
+import SystemChecker from "@/components/tools/SystemChecker";
+
+const SUPPORTED_LANGS = ["ja", "ko", "en"] as const;
+type Lang = (typeof SUPPORTED_LANGS)[number];
+
+type Props = {
+  params: Promise<{ lang: string; slug: string }>;
+};
+
+export async function generateStaticParams() {
+  // MVP: 2 tools × 3 langs = 6 pages
+  const tools = await listTools();
+  const params: { lang: string; slug: string }[] = [];
+  for (const t of tools) {
+    for (const lang of SUPPORTED_LANGS) {
+      params.push({ lang, slug: t.slug });
+    }
+  }
+  return params;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const tool = await getTool(slug);
+  const game = tool ? await getGame(tool.gameSlug) : null;
+  if (!tool || !game) return { title: "Not Found" };
+
+  const toolTitle = tool.title[lang] || tool.title.en;
+  const gameTitle = game.title[lang] || game.title.en;
+  const toolDesc = tool.description[lang] || tool.description.en;
+
+  return {
+    title: `${toolTitle} - ${gameTitle} | GameToolX`,
+    description: toolDesc,
+    openGraph: {
+      title: `${toolTitle} - ${gameTitle}`,
+      description: toolDesc,
+      locale: lang === "ja" ? "ja_JP" : lang === "ko" ? "ko_KR" : "en_US",
+      type: "website",
+    },
+    alternates: {
+      languages: Object.fromEntries(
+        SUPPORTED_LANGS.map((l) => [l, `/${l}/tools/${slug}`]),
+      ),
+    },
+  };
+}
+
+export default async function ToolPage({ params }: Props) {
+  const { lang, slug } = await params;
+
+  if (!SUPPORTED_LANGS.includes(lang as Lang)) {
+    notFound();
+  }
+  const safeLang = lang as Lang;
+
+  const tool = await getTool(slug);
+  if (!tool) notFound();
+
+  const game = await getGame(tool.gameSlug);
+  if (!game) notFound();
+
+  const ui = await getUITranslations(safeLang);
+  const tiers = await getSystemTiers();
+  if (!tiers) notFound();
+
+  const toolTitle = tool.title[safeLang] || tool.title.en;
+  const gameTitle = game.title[safeLang] || game.title.en;
+
+  return (
+    <main className="min-h-screen bg-gray-950 text-gray-100">
+      <div className="mx-auto max-w-3xl px-4 py-8">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-gray-400 mb-4">
+          <Link href={`/${safeLang}`} className="hover:text-white">
+            GameToolX
+          </Link>
+          <span className="mx-1">›</span>
+          <Link href={`/${safeLang}/games/${game.slug}`} className="hover:text-white">
+            {gameTitle}
+          </Link>
+          <span className="mx-1">›</span>
+          <span className="text-white">{toolTitle}</span>
+        </nav>
+
+        {/* Header */}
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-white">
+            {gameTitle} - {toolTitle}
+          </h1>
+          <p className="mt-2 text-gray-400">
+            {tool.description[safeLang] || tool.description.en}
+          </p>
+        </header>
+
+        {/* Tool-specific component */}
+        {tool.type === "system-checker" && (
+          <SystemChecker lang={safeLang} ui={ui} game={game} tiers={tiers} />
+        )}
+
+        {tool.type !== "system-checker" && (
+          <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6 text-center">
+            <p className="text-yellow-300">
+              🚧 Tool type &quot;{tool.type}&quot; not yet implemented (MVP: system-checker first)
+            </p>
+          </div>
+        )}
+
+        {/* Footer back link */}
+        <div className="mt-12 text-center">
+          <Link href={`/${safeLang}`} className="text-sm text-gray-400 hover:text-white">
+            {ui.common.backToTools}
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}

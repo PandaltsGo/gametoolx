@@ -1,0 +1,68 @@
+{
+  "_comment": "System requirement tier definitions. Used by SystemChecker to compare user PC vs game requirements.",
+  "version": "1.0.0",
+  "lastUpdated": "2026-06-06",
+
+  "gpu_tiers": {
+    "ultra": {
+      "score": 100,
+      "label": { "en": "Ultra (4K 60fps)", "ja": "ウルトラ (4K 60fps)", "ko": "울트라 (4K 60fps)" },
+      "resolution": "3840x2160",
+      "fps": 60,
+      "gpus": ["RTX 4090", "RTX 4080 Super", "RTX 4080", "RX 7900 XTX", "RX 7900 XT"]
+    },
+    "high": {
+      "score": 80,
+      "label": { "en": "High (1440p 60fps)", "ja": "ハイ (1440p 60fps)", "ko": "하이 (1440p 60fps)" },
+      "resolution": "2560x1440",
+      "fps": 60,
+      "gpus": ["RTX 4070 Ti Super", "RTX 4070 Ti", "RTX 4070 Super", "RTX 4070", "RTX 3080", "RTX 3070 Ti", "RX 7800 XT", "RX 6800 XT"]
+    },
+    "medium": {
+      "score": 60,
+      "label": { "en": "Medium (1080p 60fps)", "ja": "ミディアム (1080p 60fps)", "ko": "미디엄 (1080p 60fps)" },
+      "resolution": "1920x1080",
+      "fps": 60,
+      "gpus": ["RTX 4060 Ti", "RTX 3070", "RTX 3060 Ti", "RTX 2080 Super", "RTX 2080", "RX 7700 XT", "RX 6700 XT", "RX 7600 XT"]
+    },
+    "low": {
+      "score": 40,
+      "label": { "en": "Low (1080p 30fps)", "ja": "ロー (1080p 30fps)", "ko": "로우 (1080p 30fps)" },
+      "resolution": "1920x1080",
+      "fps": 30,
+      "gpus": ["RTX 4060", "RTX 3060", "RTX 2070", "RTX 2060 Super", "GTX 1660 Super", "GTX 1660 Ti", "GTX 1660", "RX 7600", "RX 6600", "RX 6600 XT", "RX 580", "RX 570", "Arc A770", "Arc A750"]
+    },
+    "potato": {
+      "score": 20,
+      "label": { "en": "Minimum (720p 30fps)", "ja": "ミニマム (720p 30fps)", "ko": "최소 (720p 30fps)" },
+      "resolution": "1280x720",
+      "fps": 30,
+      "gpus": ["GTX 1650 Super", "GTX 1650", "GTX 1050 Ti", "GTX 1050", "GTX 970", "GTX 960", "RX 6500 XT", "RX 560", "RX 550", "Vega 8", "Vega 11", "UHD 770", "UHD 750", "UHD 630"]
+    }
+  },
+
+  "cpu_generation_tiers": {
+    "_comment": "Score for CPU generation. Higher = better. Used to compare user CPU vs requirement.",
+    "intel": {
+      "core-i9-14": 100, "core-i9-13": 95, "core-i9-12": 90, "core-i9-11": 80, "core-i9-10": 75, "core-i9-9": 70,
+      "core-i7-14": 90, "core-i7-13": 85, "core-i7-12": 80, "core-i7-11": 70, "core-i7-10": 65, "core-i7-9": 60, "core-i7-8": 55, "core-i7-7": 45, "core-i7-6": 35, "core-i7-5": 25, "core-i7-4": 20,
+      "core-i5-14": 75, "core-i5-13": 70, "core-i5-12": 65, "core-i5-11": 55, "core-i5-10": 50, "core-i5-9": 45, "core-i5-8": 40, "core-i5-7": 30, "core-i5-6": 25, "core-i5-5": 20,
+      "core-i3-14": 50, "core-i3-13": 45, "core-i3-12": 40, "core-i3-11": 35, "core-i3-10": 30, "core-i3-9": 25, "core-i3-8": 20
+    },
+    "amd": {
+      "ryzen-9-7": 95, "ryzen-9-5": 90, "ryzen-9-3": 80, "ryzen-7-7": 85, "ryzen-7-5": 80, "ryzen-7-3": 70, "ryzen-7-2": 60, "ryzen-7-1": 50,
+      "ryzen-5-7": 75, "ryzen-5-5": 65, "ryzen-5-3": 55, "ryzen-5-2": 45, "ryzen-5-1": 35,
+      "ryzen-3-7": 60, "ryzen-3-5": 50, "ryzen-3-3": 40, "ryzen-3-2": 30
+    }
+  },
+
+  "ram_options_gb": [4, 8, 16, 32, 64, 128],
+
+  "storage_types": ["SSD", "HDD"],
+
+  "default_scoring": {
+    "_comment": "If user doesn't provide CPU/GPU model, fall back to these thresholds for 'minimum' / 'recommended'.",
+    "min_score": 40,
+    "rec_score": 60
+  }
+}

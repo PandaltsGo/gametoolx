@@ -1,0 +1,63 @@
+{
+  "_comment": "UI text translations. Nested by feature area.",
+  "version": "1.0.0",
+
+  "site": {
+    "title": "GameToolX",
+    "tagline": "ゲーム攻略ツールを、もっとシンプルに"
+  },
+
+  "nav": {
+    "home": "ホーム",
+    "tools": "ツール一覧",
+    "games": "ゲーム一覧"
+  },
+
+  "tool": {
+    "systemChecker": "動作環境チェッカー",
+    "gachaSim": "ガチャシミュレーター",
+    "buildRecommender": "ビルド推奨ツール",
+    "achievementTracker": "実績追跡ツール"
+  },
+
+  "action": {
+    "check": "チェックする",
+    "simulate": "シミュレート",
+    "recommend": "推奨を表示",
+    "reset": "リセット",
+    "copy": "結果をコピー"
+  },
+
+  "result": {
+    "compatible": "動作します",
+    "notCompatible": "動作しません",
+    "partial": "一部動作します"
+  },
+
+  "checker": {
+    "yourPc": "あなたのPCスペック",
+    "cpu": "プロセッサー (CPU)",
+    "gpu": "グラフィックボード (GPU)",
+    "ram": "メモリー (RAM)",
+    "storage": "ストレージ種別",
+    "cpuPlaceholder": "例: Ryzen 5 5600X, Core i5-12400F",
+    "gpuPlaceholder": "例: RTX 3060, RX 6600",
+    "result": "判定結果",
+    "recommendation": "推奨設定",
+    "summary": "サマリー"
+  },
+
+  "recommender": {
+    "unlocked": "解放済み職業",
+    "playstyle": "プレイスタイル",
+    "suggested": "推奨パーティ",
+    "reason": "おすすめの理由",
+    "show": "推奨パーティを見る"
+  },
+
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "backToTools": "← ツール一覧へ戻る"
+  }
+}

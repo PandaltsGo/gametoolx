@@ -1,0 +1,63 @@
+{
+  "_comment": "UI text translations. Nested by feature area.",
+  "version": "1.0.0",
+
+  "site": {
+    "title": "GameToolX",
+    "tagline": "Game Tools, Made Simple"
+  },
+
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "games": "Games"
+  },
+
+  "tool": {
+    "systemChecker": "System Requirements Checker",
+    "gachaSim": "Gacha Simulator",
+    "buildRecommender": "Build Recommender",
+    "achievementTracker": "Achievement Tracker"
+  },
+
+  "action": {
+    "check": "Check",
+    "simulate": "Simulate",
+    "recommend": "Recommend",
+    "reset": "Reset",
+    "copy": "Copy Result"
+  },
+
+  "result": {
+    "compatible": "Compatible",
+    "notCompatible": "Not Compatible",
+    "partial": "Partially Compatible"
+  },
+
+  "checker": {
+    "yourPc": "Your PC Specs",
+    "cpu": "Processor (CPU)",
+    "gpu": "Graphics Card (GPU)",
+    "ram": "Memory (RAM)",
+    "storage": "Storage Type",
+    "cpuPlaceholder": "e.g. Ryzen 5 5600X, Core i5-12400F",
+    "gpuPlaceholder": "e.g. RTX 3060, RX 6600",
+    "result": "Compatibility Result",
+    "recommendation": "Recommended Settings",
+    "summary": "Summary"
+  },
+
+  "recommender": {
+    "unlocked": "Unlocked Jobs",
+    "playstyle": "Play Style",
+    "suggested": "Suggested Party",
+    "reason": "Why this works",
+    "show": "Show Recommendation"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "backToTools": "← Back to All Tools"
+  }
+}

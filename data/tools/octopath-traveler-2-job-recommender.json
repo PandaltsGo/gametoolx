@@ -4,102 +4,102 @@
   "type": "build-recommender",
   "title": {
     "en": "Job Recommender",
-    "ja": "",
-    "ko": ""
+    "ja": "職業推奨ツール",
+    "ko": "직업 추천 도구"
   },
   "description": {
     "en": "Find the best 4-person party combination for Octopath Traveler II based on the jobs you've unlocked and your preferred playstyle. Covers all 8 base jobs (Warrior, Merchant, Scholar, Dancer, Hunter, Apothecary, Thief, Cleric).",
-    "ja": "",
-    "ko": ""
+    "ja": "解放済みの職業と好みのプレイスタイルから、Octopath Traveler IIの最強4人パーティを提案します。8つの基本職業(剣士・商人・学者・踊り子・狩人・薬師・盗賊・神官)すべてに対応。",
+    "ko": "해금한 직업과 선호하는 플레이 스타일로 Octopath Traveler II의 최적 4인 파티를 추천합니다. 8개 기본 직업(검사·상인·학자·무희·사냥꾼·약사·도적·사제) 모두 지원."
   },
   "data": {
     "jobs": [
       {
         "id": "warrior",
-        "name": { "en": "Warrior", "ja": "", "ko": "" },
+        "name": { "en": "Warrior", "ja": "剣士", "ko": "검사" },
         "role": "attack",
         "weapon": ["sword", "axe"],
         "description": {
           "en": "Physical tank. High HP and physical defense, wielding swords and axes. Excels at drawing enemy aggro and dishing out steady physical damage with skills like Brand's Thunder and Staggering Sword.",
-          "ja": "",
-          "ko": ""
+          "ja": "物理アタッカー兼タンク。HPと物理防御が高く、剣と斧を使いこなす。「ブランドサンダー」や「よろめき斬り」などで安定した物理火力を出し、敵の攻撃を引きつける役割も担います。",
+          "ko": "물리 탱커. HP와 물리 방어력이 높고 검과 도끼를 사용합니다. '브랜드의 천둥'이나 '비틀기 참격' 등으로 안정적인 물리 딜을 넣으며 적의 어그로를 끌어오는 역할도 합니다."
         }
       },
       {
         "id": "merchant",
-        "name": { "en": "Merchant", "ja": "", "ko": "" },
+        "name": { "en": "Merchant", "ja": "商人", "ko": "상인" },
         "role": "support",
         "weapon": ["sword", "axe"],
         "description": {
           "en": "Utility and economy support. Skills like Hired Help summon mercenaries to attack, and Rest can revive a downed ally. Carries extra inventory with the Merchant's passive.",
-          "ja": "",
-          "ko": ""
+          "ja": "ユーティリティと経済面のサポーター。「傭兵雇用」で仲間を呼んで攻撃し、「休息」で倒れた味方を蘇生可能。商人パッシブで所持アイテム数が増えます。",
+          "ko": "유틸리티와 경제를 담당하는 서포터. '고용하기'로 용병을 소환해 공격하고, '휴식'으로 쓰러진 아군을 부활시킬 수 있습니다. 상인 패시브로 아이템 소지 수가 늘어납니다."
         }
       },
       {
         "id": "scholar",
-        "name": { "en": "Scholar", "ja": "", "ko": "" },
+        "name": { "en": "Scholar", "ja": "学者", "ko": "학자" },
         "role": "magic",
         "weapon": ["staff", "dagger"],
         "description": {
           "en": "Pure magic damage dealer. Elemental spells (fire, ice, lightning) target multiple weaknesses. The Scholar's advanced skill 'Alephan's Wisdom' analyses enemy HP and weaknesses.",
-          "ja": "",
-          "ko": ""
+          "ja": "純粋な魔法アタッカー。火・氷・雷の属性魔法で複数の弱点を突けます。学者の上位スキル「アレファンの叡智」は敵のHPと弱点を分析します。",
+          "ko": "순수 마법 딜러. 불·얼음·번개 속성 마법으로 다양한 약점을 공략할 수 있습니다. 학자 상위 스킬 '알레판의 지혜'는 적의 HP와 약점을 분석합니다."
         }
       },
       {
         "id": "dancer",
-        "name": { "en": "Dancer", "ja": "", "ko": "" },
+        "name": { "en": "Dancer", "ja": "踊り子", "ko": "무희" },
         "role": "speed",
         "weapon": ["dagger", "spear"],
         "description": {
           "en": "Speed-focused buffer. Skills like Peacock Strut and Bewildering Grace provide party-wide buffs and unpredictable effects. Dancer's passive improves evasion.",
-          "ja": "",
-          "ko": ""
+          "ja": "スピード重視のバッファー。「クジャクの舞」や「気まぐれの恵み」でパーティ全体にバフと予測不能な効果。踊り子パッシブで回避率が上がります。",
+          "ko": "속도 중심 버퍼. '공작의 춤'과 '변덕의 은총'으로 파티 전체에 버프와 예측 불가 효과를 제공합니다. 무희 패시브로 회피율이 상승합니다."
         }
       },
       {
         "id": "hunter",
-        "name": { "en": "Hunter", "ja": "", "ko": "" },
+        "name": { "en": "Hunter", "ja": "狩人", "ko": "사냥꾼" },
         "role": "speed",
         "weapon": ["bow", "dagger"],
         "description": {
           "en": "Ranged physical attacker. Bow attacks hit weak points reliably. Skills like Thunderbird and Take Cover provide ranged offense and self-protection.",
-          "ja": "",
-          "ko": ""
+          "ja": "遠距離物理アタッカー。弓攻撃で弱点を確実に突けます。「サンダーバード」や「身を隠す」で遠距離火力と自己防御を両立。",
+          "ko": "원거리 물리 딜러. 활 공격으로 약점을 안정적으로 공략합니다. '썬더버드'와 '은신'으로 원거리 딜과 자기 방어를 동시에 챙길 수 있습니다."
         }
       },
       {
         "id": "apothecary",
-        "name": { "en": "Apothecary", "ja": "", "ko": "" },
+        "name": { "en": "Apothecary", "ja": "薬師", "ko": "약사" },
         "role": "magic",
         "weapon": ["staff", "axe"],
         "description": {
           "en": "Healer and poison specialist. Heals HP and removes status ailments. Abilities like Rehabilitate and the Apothecary's healing support skills make it the premier healer.",
-          "ja": "",
-          "ko": ""
+          "ja": "ヒーラー兼毒使い。HP回復と状態異常回復が可能。「リハビリー」や薬師のサポート回復スキルで最強の回復役として活躍します。",
+          "ko": "힐러 겸 독 전문가. HP 회복과 상태이상 해제가 가능합니다. '리허빌리'와 약사 지원 회복 스킬로 최강의 힐러 역할을 합니다."
         }
       },
       {
         "id": "thief",
-        "name": { "en": "Thief", "ja": "", "ko": "" },
+        "name": { "en": "Thief", "ja": "盗賊", "ko": "도적" },
         "role": "speed",
         "weapon": ["sword", "dagger"],
         "description": {
           "en": "Fast single-target damage dealer. Steal SP from enemies, apply debuffs, and chain turn order. Daggers and swords with high speed for breaking boss shields.",
-          "ja": "",
-          "ko": ""
+          "ja": "素早い単火力アタッカー。敵からSPを盗み、デバフを掛け、行動順をつなげます。ダガーと剣で速度が高く、ボスのシールド削りに最適。",
+          "ko": "빠른 단일 대상 딜러. 적에게서 SP를 훔치고 디버프를 걸며 턴 오더를 이어갑니다. 단검과 검이 속도가 높아 보스 쉴드 깨기에 최적입니다."
         }
       },
       {
         "id": "cleric",
-        "name": { "en": "Cleric", "ja": "", "ko": "" },
+        "name": { "en": "Cleric", "ja": "神官", "ko": "사제" },
         "role": "magic",
         "weapon": ["staff", "shield"],
         "description": {
           "en": "Light-elemental magic and support healer. Heals, revives, buffs elemental attack, and provides light damage. Cleric's defensive buff 'Healing Light' is essential for tough boss fights.",
-          "ja": "",
-          "ko": ""
+          "ja": "光属性魔法と補助ヒーラー。回復、蘇生、属性攻撃バフ、光属性ダメージ。「癒しの光」防御バフは強敵ボス戦に必須です。",
+          "ko": "빛 속성 마법과 보조 힐러. 회복, 부활, 속성 공격 버프, 빛 속성 딜을 제공합니다. '치유의 빛' 방어 버프는 어려운 보스전에 필수입니다."
         }
       }
     ],
@@ -108,168 +108,168 @@
         "playstyle": "balanced",
         "name": {
           "en": "Classic All-Rounder",
-          "ja": "",
-          "ko": ""
+          "ja": "定番の万能パーティ",
+          "ko": "클래식 올라운더"
         },
         "party": ["warrior", "cleric", "scholar", "hunter"],
         "reason": {
           "en": "The quintessential OT2 party. Warrior tanks and breaks, Cleric heals and revives, Scholar handles all magic damage, Hunter adds range to exploit multi-hit weakness chains. Reliable from Chapter 1 through the final boss.",
-          "ja": "",
-          "ko": ""
+          "ja": "OT2の最も定番パーティ。剣士が盾とシールド破壊、神官が回復と蘇生、学者が全属性魔法、狩人が遠距離で弱点連鎖を担当。第1章からラスボスまで安定して活躍します。",
+          "ko": "OT2의 가장 정통 파티. 검사가 탱킹과 쉴드 파괴, 사제가 회복과 부활, 학자가 모든 속성 마법 딜, 사냥꾼이 원거리로 약점 연쇄를 담당합니다. 1챕터부터 최종 보스까지 안정적입니다."
         }
       },
       {
         "playstyle": "balanced",
         "name": {
           "en": "Utility Healer",
-          "ja": "",
-          "ko": ""
+          "ja": "サポート回復型",
+          "ko": "유틸리티 힐러"
         },
         "party": ["warrior", "merchant", "apothecary", "hunter"],
         "reason": {
           "en": "Tanky with strong item economy. Merchant's Hired Help gives free summons, Apothecary heals and removes ailments, Warrior breaks shields, Hunter exploits ranged weakness. Great for players who like buying items and using them.",
-          "ja": "",
-          "ko": ""
+          "ja": "タフで経済力に優れた構成。商人の傭兵雇用で無料召喚、薬師が回復と状態異常回復、剣士がシールド破壊、狩人が遠距離弱点を突く。アイテムを集めて使うのが好きな人向け。",
+          "ko": "탱킹과 아이템 경제가 강한 조합. 상인의 고용하기로 무료 소환, 약사가 회복과 상태이상 해제, 검사가 쉴드 파괴, 사냥꾼이 원거리 약점 공략. 아이템 수집과 사용을 즐기는 플레이어에게 추천."
         }
       },
       {
         "playstyle": "attack",
         "name": {
           "en": "Physical Burst",
-          "ja": "",
-          "ko": ""
+          "ja": "物理バースト型",
+          "ko": "물리 버스트"
         },
         "party": ["warrior", "hunter", "thief", "apothecary"],
         "reason": {
           "en": "Pure physical damage team. Two sword users (Warrior, Thief) and a bow user (Hunter) break enemy weaknesses in 1-2 turns. Apothecary keeps the team alive. Best for boss fights with multiple physical weaknesses.",
-          "ja": "",
-          "ko": ""
+          "ja": "純粋物理パーティ。剣士と盗賊の剣使い2人と狩人の弓で1〜2ターンで敵弱点を破壊。薬師が生存を維持。物理弱点多数のボスに最適。",
+          "ko": "순수 물리 딜 파티. 검사와 도적의 검사 2명, 사냥꾼의 활로 1~2턴 안에 적 약점을 부숩니다. 약사가 생존을 유지. 물리 약점이 많은 보스에 최적."
         }
       },
       {
         "playstyle": "attack",
         "name": {
           "en": "Shield Breaker",
-          "ja": "",
-          "ko": ""
+          "ja": "シールドブレイカー",
+          "ko": "쉴드 브레이커"
         },
         "party": ["warrior", "warrior", "hunter", "apothecary"],
         "reason": {
           "en": "Two Warriors means double sword/axe coverage for shield breaking, plus the Warrior's high HP lets them survive counterattacks. Use this when you need to grind through high-defense bosses.",
-          "ja": "",
-          "ko": ""
+          "ja": "剣士2人で剣/斧カバレッジ倍増、シールド破壊に超特化。剣士の高HPで反撃も耐えます。高防御ボスのゴリ押し攻略にどうぞ。",
+          "ko": "검사 2명으로 검/도끼 커버리지 2배, 쉴드 파괴에 특화. 검사의 높은 HP로 반격도 버팁니다. 고방어 보스 공략에 추천."
         }
       },
       {
         "playstyle": "magic",
         "name": {
           "en": "Elemental Storm",
-          "ja": "",
-          "ko": ""
+          "ja": "属性魔法型",
+          "ko": "정령 마법형"
         },
         "party": ["scholar", "cleric", "apothecary", "warrior"],
         "reason": {
           "en": "Triple magic damage dealers. Scholar, Cleric, and Apothecary all have elemental coverage; together they can hit any weakness. Warrior tanks. Best against bosses weak to fire/ice/lightning/light.",
-          "ja": "",
-          "ko": ""
+          "ja": "魔法アタッカー3人体制。学者・神官・薬師で全属性をカバー、弱点関係なく当てられる。剣士が盾役。火/氷/雷/光弱点のボスに最適。",
+          "ko": "마법 딜러 3인 체제. 학자·사제·약사가 모든 속성을 커버하여 약점 상관없이 명중. 검사가 탱킹. 불/얼음/번개/빛 약점 보스에 최적."
         }
       },
       {
         "playstyle": "magic",
         "name": {
           "en": "Quad Scholar",
-          "ja": "",
-          "ko": ""
+          "ja": "四学者編成",
+          "ko": "쿼드 스콜라"
         },
         "party": ["scholar", "scholar", "cleric", "apothecary"],
         "reason": {
           "en": "Maximum magic DPS. With two Scholars you can output insane elemental damage, and Cleric+Apothecary keep everyone alive. Squishy, but fights end before the enemy can retaliate.",
-          "ja": "",
-          "ko": ""
+          "ja": "最大魔法火力。学者2人で属性ダメージがエグい。神官+薬師で生存維持。防御は紙ですが、敵が反撃する前に戦闘が終わります。",
+          "ko": "최대 마법 DPS. 학자 2명으로 속성 딜이 미쳤고, 사제+약사가 생존을 유지. 방어가 종이처럼 얇지만 적의 반격 전에 전투가 끝납니다."
         }
       },
       {
         "playstyle": "speed",
         "name": {
           "en": "Turn Order Manipulator",
-          "ja": "",
-          "ko": ""
+          "ja": "行動順操作型",
+          "ko": "턴 오더 조작형"
         },
         "party": ["thief", "dancer", "hunter", "scholar"],
         "reason": {
           "en": "Three high-speed classes. Thief's dagger speed + Dancer's evasion + Hunter's bow speed means you go first in nearly every fight. Dancer's Bewildering Grace adds random effects that can one-shot enemies.",
-          "ja": "",
-          "ko": ""
+          "ja": "スピード職3人体制。盗賊のダガー速度+踊り子の回避+狩人の弓速度でほとんどの戦闘で先手。踊り子の気まぐれの恵みで一撃必殺もあり。",
+          "ko": "속도 직업 3인 체제. 도적의 단검 속도 + 무희의 회피 + 사냥꾼의 활 속도로 거의 모든 전투에서 선제. 무희의 변덕의 은총으로 즉사 공격도 가능."
         }
       },
       {
         "playstyle": "speed",
         "name": {
           "en": "Speed Sustain",
-          "ja": "",
-          "ko": ""
+          "ja": "スピード維持型",
+          "ko": "스피드 지속형"
         },
         "party": ["thief", "dancer", "hunter", "cleric"],
         "reason": {
           "en": "Fast offence with Cleric as safety net. Thief/Hunter break shields quickly, Dancer buffs, Cleric keeps everyone healed. Strong in long boss fights where you need to stay alive while exploiting turn order.",
-          "ja": "",
-          "ko": ""
+          "ja": "神官を安全網に据えた速攻型。盗賊/狩人がシールドを素早く破壊、踊り子がバフ、神官が回復維持。行動順を活かしながら長期戦を戦うボス戦に強い。",
+          "ko": "사제를 안전망으로 둔 스피드형. 도적/사냥꾼이 쉴드를 빠르게 부수고, 무희가 버프, 사제가 회복 유지. 턴 오더를 활용하면서 장기전을 버텨야 하는 보스전에 강함."
         }
       },
       {
         "playstyle": "support",
         "name": {
           "en": "Buff Economy",
-          "ja": "",
-          "ko": ""
+          "ja": "バフ経済型",
+          "ko": "버프 이코노미"
         },
         "party": ["merchant", "dancer", "cleric", "warrior"],
         "reason": {
           "en": "Defensive party that wins by attrition. Merchant's Hired Help + Dancer's buffs + Cleric's heals + Warrior's tank. Long fights favor this setup since you rarely run out of resources.",
-          "ja": "",
-          "ko": ""
+          "ja": "持久戦に持ち込む防御型パーティ。商人の傭兵雇用+踊り子のバフ+神官の回復+剣士の盾。長期戦ほど有利で、リソース切れが起きにくい。",
+          "ko": "끈질긴 방어형 파티. 상인의 고용하기 + 무희의 버프 + 사제의 회복 + 검사의 탱킹. 장기전일수록 유리하며 리소스가 바닥나기 어렵습니다."
         }
       },
       {
         "playstyle": "support",
         "name": {
           "en": "Healer Stack",
-          "ja": "",
-          "ko": ""
+          "ja": "ヒーラースタック",
+          "ko": "힐러 스택"
         },
         "party": ["merchant", "dancer", "cleric", "apothecary"],
         "reason": {
           "en": "No dedicated tank, but double healer + Dancer buffs + Merchant summons. Damage output is low but you almost never die. Great for learning boss patterns without pressure.",
-          "ja": "",
-          "ko": ""
+          "ja": "タンク不在だが回復2人+踊り子バフ+商人傭兵。火力は低いがほぼ死なない。ボスパターンを覚えてから攻略したい人向け。",
+          "ko": "전담 탱커 없지만 힐러 2명 + 무희 버프 + 상인 소환. 딜은 낮지만 거의 죽지 않음. 보스 패턴을 익히면서 공략하고 싶은 플레이어에게 추천."
         }
       },
       {
         "playstyle": "early",
         "name": {
           "en": "Free Base Set (Chapter 1)",
-          "ja": "",
-          "ko": ""
+          "ja": "序盤フリーセット",
+          "ko": "초반 무료 세트"
         },
         "party": ["warrior", "cleric", "scholar", "dancer"],
         "reason": {
           "en": "Four base jobs available from guilds in the first few hours. Tank + heal + magic + buff. The safest starter party — you'll never be stuck without an answer to a weakness.",
-          "ja": "",
-          "ko": ""
+          "ja": "序盤数時間で取得できる基本職4つ。盾+回復+魔法+バフの最も安全なスターターパーティ。弱点に対応できない状況に陥ることはありません。",
+          "ko": "초반 몇 시간 내에 길드에서 얻는 기본 직업 4개. 탱+회복+마법+버프의 가장 안전한 스타터 파티. 약점에 대응 못하는 상황은 없습니다."
         }
       },
       {
         "playstyle": "early",
         "name": {
           "en": "Early Damage (Chapter 1-2)",
-          "ja": "",
-          "ko": ""
+          "ja": "序盤火力型",
+          "ko": "초반 딜 세팅"
         },
         "party": ["warrior", "hunter", "cleric", "apothecary"],
         "reason": {
           "en": "All four unlocked by mid-Chapter 2. Two physical damage dealers (Warrior, Hunter) plus dual healer (Cleric, Apothecary). Good for grinding JP early on.",
-          "ja": "",
-          "ko": ""
+          "ja": "第2章中盤までに全員取得可能。物理アタッカー2人(剣士・狩人)+ダブルヒーラー(神官・薬師)。序盤のJP稼ぎに最適。",
+          "ko": "2챕터 중반까지 모두 해금. 물리 딜러 2명(검사·사냥꾼) + 듀얼 힐러(사제·약사). 초반 JP 파밍에 적합."
         }
       }
     ]

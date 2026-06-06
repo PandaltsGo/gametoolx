@@ -1,0 +1,63 @@
+{
+  "_comment": "UI text translations. Nested by feature area.",
+  "version": "1.0.0",
+
+  "site": {
+    "title": "GameToolX",
+    "tagline": "게임 도구를 더 간단하게"
+  },
+
+  "nav": {
+    "home": "홈",
+    "tools": "도구 목록",
+    "games": "게임 목록"
+  },
+
+  "tool": {
+    "systemChecker": "시스템 요구사항 체커",
+    "gachaSim": "가챠 시뮬레이터",
+    "buildRecommender": "빌드 추천 도구",
+    "achievementTracker": "업적 추적 도구"
+  },
+
+  "action": {
+    "check": "확인",
+    "simulate": "시뮬레이트",
+    "recommend": "추천 보기",
+    "reset": "초기화",
+    "copy": "결과 복사"
+  },
+
+  "result": {
+    "compatible": "동작합니다",
+    "notCompatible": "동작하지 않습니다",
+    "partial": "일부 동작합니다"
+  },
+
+  "checker": {
+    "yourPc": "내 PC 사양",
+    "cpu": "프로세서 (CPU)",
+    "gpu": "그래픽 카드 (GPU)",
+    "ram": "메모리 (RAM)",
+    "storage": "스토리지 종류",
+    "cpuPlaceholder": "예: Ryzen 5 5600X, Core i5-12400F",
+    "gpuPlaceholder": "예: RTX 3060, RX 6600",
+    "result": "판정 결과",
+    "recommendation": "추천 설정",
+    "summary": "요약"
+  },
+
+  "recommender": {
+    "unlocked": "해금된 직업",
+    "playstyle": "플레이 스타일",
+    "suggested": "추천 파티",
+    "reason": "이 조합의 이유",
+    "show": "추천 파티 보기"
+  },
+
+  "common": {
+    "loading": "불러오는 중...",
+    "error": "오류가 발생했습니다",
+    "backToTools": "← 도구 목록으로 돌아가기"
+  }
+}
