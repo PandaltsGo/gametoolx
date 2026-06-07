@@ -1,9 +1,11 @@
 # GameToolX
 
 > 面向小语种市场（日 / 韩 / 中）的多游戏工具站。
-> 当前 2 款游戏、6 个工具、4 种语言，RAG 数据层已就绪等待 AI Q&A 接入。
+> 当前 2 款游戏、8 个工具、4 种语言，已上线生产。
+>
+> **🌐 在线访问**：<https://gametoolx.top>（HTTPS，4 语言自动切换）
 
-[功能](#功能) • [技术栈](#技术栈) • [开发](#开发) • [贡献](#贡献) • [许可](#许可)
+[功能](#功能) • [技术栈](#技术栈) • [部署](#部署) • [开发](#开发) • [贡献](#贡献) • [许可](#许可)
 
 ---
 
@@ -42,10 +44,10 @@
 
 ## 当前支持的游戏
 
-| 游戏 | 工具 |
-|------|------|
-| 歧路旅人 II / Octopath Traveler II | 系统检测、Job 推荐 |
-| 真・女神转生Ⅴ 复仇 / Shin Megami Tensei V: Vengeance | 系统检测、结局追踪、流程攻略、路线选择、仲魔合体 |
+| 游戏 | 工具 | 状态 |
+|------|------|------|
+| 歧路旅人 II / Octopath Traveler II | 系统检测 / Job 推荐 / 流程攻略 | 完整（3 工具） |
+| 真・女神转生Ⅴ 复仇 / Shin Megami Tensei V: Vengeance | 系统检测 / 结局追踪 / 流程攻略 / 路线选择 / 仲魔合体 | 完整（5 工具） |
 
 ## 技术栈
 
@@ -55,6 +57,24 @@
 - **i18n**：自定义 middleware + cookie 持久化
 - **翻译**：LLM（MiniMax-Text-01，OpenAI 兼容）
 - **爬虫**：Fandom MediaWiki API
+- **生产环境**：腾讯云 ECS + 宝塔面板腾讯云专享版 + pm2 + nginx + TrustAsia SSL
+
+## 部署
+
+**线上地址**：<https://gametoolx.top>
+
+| 项目 | 详情 |
+|------|------|
+| 域名 | `gametoolx.top`（DNS 阿里云） |
+| 服务器 | 腾讯云 ECS，OpenCloudOS 9.4，3.5GB RAM / 60GB 磁盘 |
+| 控制面板 | 宝塔面板腾讯云专享版 |
+| Node.js | v24.16.0（24 LTS） |
+| 反向代理 | nginx（80 → 443 强制 HTTPS） |
+| SSL | TrustAsia DV TLS RSA CA 2024（3 个月免费） |
+| 进程 | pm2（user=www，开机自启） |
+| 数据 | SQLite 7.8MB（gitignored，scp 同步） |
+
+完整部署文档见 `aapanel-node-deploy` skill（cross-project 沉淀到 `~/.mavis/agents/mavis/skills/`）。
 
 ## 开发
 

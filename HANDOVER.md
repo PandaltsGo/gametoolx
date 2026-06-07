@@ -3,11 +3,12 @@
 > **本文档是临时的**，记录"当前"状态。要看 canonical 的接手指南（不怎么变），请先读 `AGENTS.md`。
 > 每次重要工作结束都更新一下。
 
-## 当前状态（2026-06-07 15:30 HKT）
+## 当前状态（2026-06-07 19:30 HKT）
 
-- **代码**：全部已推到 `master`，最新 commit `585bce2`
-- **定位变更**：从"Humble 月包工具站"扩展为"批量搜索 + 整理 4 语言游戏攻略"，Humble 是游戏来源之一
-- **新规则**：每款游戏至少包含 2 类工具（攻略 + 系统配置检测），扩展工具按游戏特点加
+- **代码**：全部已推到 `master`，最新 commit `4ce2f1b`
+- **🎉 线上部署完成**：`https://gametoolx.top` 上线，HTTPS + TrustAsia SSL + aaPanel Node 项目跟踪
+- **OT2 攻略工具已补**（commit `ef0af85`）：7 章节 22 块 30KB，2+ 源验证 + 来源徽章
+- **修复了 6 处 TypeScript 类型错**（commit `4ce2f1b`）—— `next build` 才能通过（dev 模式不报）
 - **数据**：本地 SQLite `data/gametoolx.db` 内保留
   - 1 个抓取源（MegaTen Wiki Fandom）
   - 15 篇文档（Vengeance / SMT V / Press Turn / Magatsuhi / Masakado + 8 个 List of XXX）
@@ -19,8 +20,8 @@
 
 | 游戏 | 工具 | 状态 |
 |------|------|------|
-| OT2 | system-checker ✓ / job-recommender ✓ / **walkthrough ✗** | **缺攻略工具，下次开发优先补** |
-| SMT5V | system-checker ✓ / walkthrough ✓ / endings-tracker ✓ / route-chooser ✓ / fusion-calculator ✓ | 完整 |
+| OT2 | system-checker ✓ / job-recommender ✓ / walkthrough ✓ | **完整**（3 工具，符合 2 类最低 + 1 扩展） |
+| SMT5V | system-checker ✓ / walkthrough ✓ / endings-tracker ✓ / route-chooser ✓ / fusion-calculator ✓ | 完整（5 工具） |
 
 ## 已完成
 
@@ -34,7 +35,8 @@
 ### 第二阶段：工具
 - **歧路旅人 II**（首款游戏）
   - 系统配置检测（Universal System Checker）
-  - 职业搭配推荐（24 条推荐 + 8 职业 + 完整技能数据）
+  - 职业搭配推荐（24 条推荐 + 8 职业 + 完整技能数据 + 8 职业解锁/装备/阶段指引）
+  - **流程攻略**（7 章节 / 22 块 / 30KB / 2+ 源验证）
 - **真·女神转生Ⅴ 复仇**（第二款游戏）
   - 系统配置检测
   - 全结局攻略（6 结局，DB 存进度）
@@ -64,6 +66,25 @@
 - v3 迁移脚本：`scripts/apply-v3-migration.cjs`（幂等）
 - 搜索页：`/[lang]/search` 用 FTS5 全文检索，**按用户语言优先返回翻译版**
 - AI Q&A 占位：搜索结果底部"🤖 AI 攻略问答 · 即将上线"
+
+### 第四阶段：生产部署（2026-06-07）✅
+
+- **服务器**：腾讯云 ECS（OpenCloudOS 9.4，3.5GB RAM / 60GB 磁盘），IP `124.156.229.149`
+- **控制面板**：宝塔面板腾讯云专享版（`<server>:8888`）
+- **域名**：`gametoolx.top`（已解析到 server IP，DNS 验证通过阿里 223.5.5.5）
+- **SSL**：TrustAsia DV TLS RSA CA 2024，**有效期 3 个月**（2026-06-07 → 2026-09-05），9 月初续期
+- **Node.js**：v24.16.0，路径 `/www/server/nodejs/v24.16.0/`，通过 `/etc/profile.d/nodejs.sh` 永久入 PATH
+- **包管理**：npm（淘宝镜像 `registry.npmmirror.com`）
+- **swap**：2GB（防 Next.js build OOM）
+- **进程管理**：pm2（`pm2 start npm --name gametoolx --user www -- start`），开机自启
+- **反向代理**：nginx（aaPanel 自动生成 + 手工修 well-known typo + 加 X-Forwarded-Proto）
+- **HTTPS**：443 SSL + 80→443 301 重定向
+- **数据**：本地 DB 已 scp 上传，owner=www，pm2 restart 后生效
+- **aaPanel 项目跟踪**：注册到 `site.db.sites` 表，inner JSON `project_type=pm2` + `pm2_name=gametoolx`
+
+完整部署 skill：`C:\Users\zy187\.mavis\agents\mavis\skills\aapanel-node-deploy\`
+
+## 文件结构
 
 ## 文件结构
 
@@ -129,6 +150,41 @@ npm run dev
 # （首次会自动 307 重定向到 /en 或 /zh，根据浏览器语言）
 ```
 
+## 生产部署更新（最简）
+
+服务器已就位，平时只改代码：
+
+```powershell
+# 1. 本地 commit + push
+cd "D:\Idea Project\gametoolx"
+git add <具体路径>     # 别 git add -A
+git commit -m "fix: <change>"
+git push
+
+# 2. 一行远程更新（用 SSH 密钥）
+ssh -i "D:\Idea Project\dream\.ssh-tmp\gametoolx-root-2026-06-07" root@124.156.229.149 "cd /www/wwwroot/gametoolx.top && git pull --rebase && npm ci && npm run build && pm2 restart gametoolx"
+```
+
+完整部署流程参考 `C:\Users\zy187\.mavis\agents\mavis\skills\aapanel-node-deploy\SKILL.md`。
+
+## 生产验证
+
+```powershell
+# 1. HTTPS 主页（中间件 307 跳 lang）
+curl -I https://gametoolx.top
+
+# 2. 各语言 + 关键页
+curl -I https://gametoolx.top/zh/games/octopath-traveler-2
+curl -I https://gametoolx.top/ja/tools/shin-megami-tensei-5-vengeance-walkthrough
+curl -I https://gametoolx.top/en/search?q=demon
+
+# 3. HTTP→HTTPS 重定向
+curl -I http://gametoolx.top     # 期望 301 + Location: https://...
+
+# 4. 进程
+ssh -i "D:\Idea Project\dream\.ssh-tmp\gametoolx-root-2026-06-07" root@124.156.229.149 "pm2 list"
+```
+
 ## 验证数据没丢
 
 ```bash
@@ -192,11 +248,13 @@ git config --global https.proxy http://127.0.0.1:7890
 | 优先级 | 方向 | 工作量 |
 |-------|------|--------|
 | 🥇 | **接 LLM 做 AI Q&A**：写 `/api/qa` 路由，searchChunks → LLM prompt → 流式返回 | 1-2 小时 |
-| 🥈 | **多来源爬虫**：NGA 帖子、3DM 攻略、GameWith 日文、Steam News | 半天 |
-| 🥉 | **向量搜索**：embed chunks 进 sqlite-vss 或切到 pgvector | 半天 |
-| 4 | **云部署**：腾讯云首尔 2C4G + aaPanel + 域名（$15-180 一次性） | 1 天 |
+| 🥈 | **SSL 证书 9 月初续期**（到期 2026-09-05）：aaPanel → SSL → 续期 | 5 分钟 |
+| 🥉 | **多来源爬虫**：NGA 帖子、3DM 攻略、GameWith 日文、Steam News | 半天 |
+| 4 | **向量搜索**：embed chunks 进 sqlite-vss 或切到 pgvector | 半天 |
 | 5 | **第三款游戏**：再验证一遍多游戏架构 | 半天 |
 | 6 | **SystemCheckerClient 残留英文 + i18n 收尾** | 1 小时 |
+| 7 | **加 zh-TW 繁体中文**（台湾市场） | 1 小时 |
+| 8 | **轮换 SSH 密钥**（gametoolx-root-2026-06-07 已用一次） | 5 分钟 |
 
 ## 关键约定
 
