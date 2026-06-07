@@ -41,31 +41,56 @@
               "en": "Cross Strike",
               "ja": "十文字斬り",
               "ko": "십자베기",
-              "zh": "十字斩"
+              "zh": "十字斩",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职剑士即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Brand's Thunder",
               "ja": "ブランディングサンダー",
               "ko": "브랜드의 천둥",
-              "zh": "雷神之力"
+              "zh": "雷神之力",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职剑士即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Staggering Sword",
               "ja": "よろめき斬り",
               "ko": "비틀기 참격",
-              "zh": "震击斩"
+              "zh": "震击斩",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职剑士即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Abide",
               "ja": "アバイド",
               "ko": "인내",
-              "zh": "蓄势待发"
+              "zh": "蓄势待发",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职剑士即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Safeguard",
               "ja": "セーフガード",
               "ko": "세이프가드",
-              "zh": "护卫"
+              "zh": "护卫",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职剑士即可习得",
+                "phase": "anytime"
+              }
             }
           ],
           "support": [
@@ -73,34 +98,177 @@
               "en": "Surpassing Power",
               "ja": "威力上昇",
               "ko": "위력 상승",
-              "zh": "威力提升"
+              "zh": "威力提升",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "剑士转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Grows in Strength",
               "ja": "力上昇",
               "ko": "힘 상승",
-              "zh": "力量提升"
+              "zh": "力量提升",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "剑士转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Empowering Blow",
               "ja": "強撃追加",
               "ko": "강격 추가",
-              "zh": "追加重击"
+              "zh": "追加重击",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "剑士转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Surpassing Speed",
               "ja": "速度上昇",
               "ko": "속도 상승",
-              "zh": "速度提升"
+              "zh": "速度提升",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "剑士转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Resounding Shield",
               "ja": "大盾の備え",
               "ko": "대패의 준비",
-              "zh": "大盾戒备"
+              "zh": "大盾戒备",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "剑士转职后习得",
+                "phase": "anytime"
+              }
             }
           ]
-        }
+        },
+        "unlock": {
+          "en": "Find the Warrior Guild in the Harborlands, near the top-right of the harbor town. Speak to the guild master for 1 free license. Get 2 more via NPC duels (see Sniper's Rain, Mature Storm, Onslaught Strike, Golden Right below).",
+          "ja": "東大陸の港町「ハボランド」右上で剣士ギルドを見つけ、ギルドマスターに話しかける(1個無料ライセンス)。残り2個はNPC比武で入手(村箭雨・風瀟雨晦・猛攻裂断・黄金之右など)。",
+          "ko": "동대륙 항구도시 하보란드 우측 상단에서 검사 길드장에게 대화(첫 라이선스 무료). 나머지 2개는 NPC 결투로 획득(촌우비/풍소우회/맹공열단/황금지우 등).",
+          "zh": "东大陆港湾都市哈伯兰多右上方找剑士工会会长对话(首张免费)。第2、3张通过 NPC 决斗获得,见下方『村箭雨』『风潇雨晦』『猛攻裂断』『黄金之右』详细位置。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Sword / Axe",
+            "ja": "剣 / 斧",
+            "ko": "검 / 도끼",
+            "zh": "剑 / 斧"
+          },
+          "early": {
+            "en": "Steel Sword + Iron Shield (starter). Use Inn-keep shop swords in Wildlands for fire-damage options.",
+            "ja": "鉄の剣 + 鉄の盾(初期)。Wildlands の宿屋ショップで火属性の剣も入手可能。",
+            "ko": "강철 검 + 철 방패(초반). Wildlands 여관 상점에서 화속성 �도 구매 가능.",
+            "zh": "铁剑 + 铁盾(初始)。Wildlands 旅馆商店可买火属性剑。"
+          },
+          "mid": {
+            "en": "Battle-tested Sword (歷戰之劍) + Giant's Club (巨人棒槌) for double-damage passive. Use the Axe of the Warrior to round out coverage.",
+            "ja": "歴戦の剣 + 巨人の棍棒(双加成)。戦士の斧で属性カバー。",
+            "ko": "역전의 검 + 거인의 몽둥이(쌍 가산). 전사의 도끼로 속성 커버.",
+            "zh": "历战之剑 + 巨人棒槌(双加成)。再配战斧覆盖属性。"
+          },
+          "late": {
+            "en": "Armsmaster-license: all 6 weapons (sword/axe/spear/dagger/staff/bow). Equip Onslaught Strike (猛攻裂断) and use the Blade of the Fallen (歷戰斧) for lightning follow-up.",
+            "ja": "武芸家ライセンス取得で全6武器装備可能。猛攻裂断 + 歴戦の斧で雷鳴追撃。",
+            "ko": "무예가 라이선스 시 전 6종 무기. 맹공열단 + 역전의 도끼로 번개 추격.",
+            "zh": "武艺家许可证后装备全 6 种武器。猛攻裂断 + 历战斧打出雷电追击连段。"
+          }
+        },
+        "key_acquisition_skills": [
+          {
+            "name": {
+              "en": "Sniper's Rain (村箭雨)",
+              "ja": "村箭雨",
+              "ko": "촌우비",
+              "zh": "村箭雨"
+            },
+            "sp": 22,
+            "type": {
+              "en": "Bow AOE 3-5 hits",
+              "ja": "全体弓3-5回",
+              "ko": "전체 궁 3-5회",
+              "zh": "全体弓 3-5 段"
+            },
+            "acquisition": {
+              "en": "Duel the beastman NPC inside the house in Kurōp'Tīru (舞娘 starting town, east of Western Wellgrove). Use his own weapon weakness, or steal-then-sleep combo.",
+              "ja": "ウェルグローブの東「クロプティール」自宅の獣人 NPC に比武(初期は寝瓶+毒瓶で無傷攻略可能)。",
+              "ko": "서부 웰그로브 동쪽 크로프티르의 집 안 수인 NPC 결투. 잠병+독병 루트로 무피해 가능.",
+              "zh": "外尔兰多东边「库罗普提尔」家中兽人 NPC 决斗。可用噩梦瓶+毒瓶叠层无伤获取。"
+            }
+          },
+          {
+            "name": {
+              "en": "Mature Storm (风潇雨晦)",
+              "ja": "風瀟雨晦",
+              "ko": "풍소우회",
+              "zh": "风潇雨晦"
+            },
+            "sp": 30,
+            "type": {
+              "en": "Bow AOE 4-8 hits",
+              "ja": "全体弓4-8回",
+              "ko": "전체 궁 4-8회",
+              "zh": "全体弓 4-8 段"
+            },
+            "acquisition": {
+              "en": "Defeat the gate captain in front of the Timberain castle square. Same spear-and-shield weakness.",
+              "ja": "ティンベレン城前広場左の兵長を撃破(槍・盾弱点)。",
+              "ko": "팀버레인 성 광장 좌측 문지기 격파. 창·방패 약점.",
+              "zh": "汀巴雷因城前广场左侧守门兵长(槍/盾弱)。"
+            }
+          },
+          {
+            "name": {
+              "en": "Onslaught Strike (猛攻裂断)",
+              "ja": "猛攻裂断",
+              "ko": "맹공열단",
+              "zh": "猛攻裂断"
+            },
+            "sp": 62,
+            "type": {
+              "en": "Axe AOE 2x + Atk-up 2 turns",
+              "ja": "全体斧2回+物攻UP 2T",
+              "ko": "전체 도끼 2회+물공UP 2T",
+              "zh": "全体斧 2 段+物攻上升 2 回合"
+            },
+            "acquisition": {
+              "en": "Defeat the bridge captain in Timberain. Same NPC, but slightly higher level.",
+              "ja": "ティンベレン橋の兵長。",
+              "ko": "팀버레인 다리 위 문지기.",
+              "zh": "汀巴雷因桥上兵长。"
+            }
+          },
+          {
+            "name": {
+              "en": "Golden Right (黄金之右)",
+              "ja": "黄金之右",
+              "ko": "황금지우",
+              "zh": "黄金之右"
+            },
+            "sp": 60,
+            "type": {
+              "en": "Ignore weakness x2 + high damage",
+              "ja": "弱点無視2回+大ダメ",
+              "ko": "약점무시 2회+고데미",
+              "zh": "无视弱点 2 段+大量伤害"
+            },
+            "acquisition": {
+              "en": "In the Clockbank (Thief starting area) casino, defeat the NPC at the far-right vault. Loot chest behind contains: Forbidden Dagger + Physical Belt + Leaf Coins.",
+              "ja": "盗賊初期地 New Delsta(クロックバンク)のカジノ右奥 NPC 撃破。宝箱から禁忌の短剣+物理ベルト入手。",
+              "ko": "도적 초기지 클락뱅크 카지노 최우측 금고 NPC 격파. 보물상자: 금지의 단검+물리 벨트.",
+              "zh": "盗贼初始地新德尔斯塔赌场最右保险处 NPC。宝箱出禁忌匕首+物理腰带+叶币。"
+            }
+          }
+        ]
       },
       {
         "id": "merchant",
@@ -127,31 +295,56 @@
               "en": "Hired Help",
               "ja": "傭兵雇用",
               "ko": "고용하기",
-              "zh": "雇佣帮手"
+              "zh": "雇佣帮手",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职商人即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Rest",
               "ja": "休息",
               "ko": "휴식",
-              "zh": "休息"
+              "zh": "休息",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职商人即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Purchase Order",
               "ja": "購入依頼",
               "ko": "구매 의뢰",
-              "zh": "采购委托"
+              "zh": "采购委托",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职商人即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Sideline",
               "ja": "サイドライン",
               "ko": "부업",
-              "zh": "副业"
+              "zh": "副业",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职商人即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Gold-Backed Hand",
               "ja": "金の拳",
               "ko": "황금의 주먹",
-              "zh": "黄金之手"
+              "zh": "黄金之手",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职商人即可习得",
+                "phase": "anytime"
+              }
             }
           ],
           "support": [
@@ -159,33 +352,90 @@
               "en": "Nimble Fingers",
               "ja": "手先の器用さ",
               "ko": "손재주",
-              "zh": "灵活手指"
+              "zh": "灵活手指",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "商人转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Serene Wisdom",
               "ja": "静謐の叡智",
               "ko": "고요한 지혜",
-              "zh": "宁静智慧"
+              "zh": "宁静智慧",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "商人转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "A Life of Luxury",
               "ja": "豪華な暮らし",
               "ko": "사치스러운 삶",
-              "zh": "奢华生活"
+              "zh": "奢华生活",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "商人转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "No Stone Unturned",
               "ja": "見逃すな",
               "ko": "놓치지 않는다",
-              "zh": "不留遗漏"
+              "zh": "不留遗漏",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "商人转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Reticent Magnetism",
               "ja": "魅惑の人柄",
               "ko": "매혹적 인품",
-              "zh": "内敛魅力"
+              "zh": "内敛魅力",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "商人转职后习得",
+                "phase": "anytime"
+              }
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Merchant Guild in Western Crackridge Wilds (left of the cliff area). 1 free license. License 2: pay 100,000 Leaves. License 3: pay 300,000 Leaves. Steal, mug, or entreat high-value items early to save cash.",
+          "ja": "西大陸 Crackridge Wilds の西の断崖近くで商人工会を探す(1個無料)。2個目 100,000リーフ、3個目 300,000リーフ。盗む・乞う・騙すで金策。",
+          "ko": "서부 크랙리지 야원의 절벽 왼쪽에서 상인 길드(첫 무료). 2번 100,000리프, 3번 300,000리프. 훔치기/구걸/간청으로 자금 확보.",
+          "zh": "西大陆 Crackridge Wilds 西部悬崖处商人工会(首张免费)。第2张 100,000 叶币,第3张 300,000 叶币。前期靠偷窃/乞讨/诱惑攒钱。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Sword / Axe",
+            "ja": "剣 / 斧",
+            "ko": "검 / 도끼",
+            "zh": "剑 / 斧"
+          },
+          "early": {
+            "en": "Buy cheap Mercenaries (150 / 800 / 2000 Leaves) for free AOE chip damage. Gold-Backed Hand + Inn-keep shop sword.",
+            "ja": "傭兵(150/800/2000リーフ)を序盤から雇ってAOE削り。黄金の手 + 宿屋ショップの剣。",
+            "ko": "초반 용병(150/800/2000리프) 즉시 고용해 AOE 딜. 골드 핸드 + 여관 상점 겁.",
+            "zh": "前期直接雇佣兵(150/800/2000 叶币)当 AOE 输出来用。黄金之手 + 旅馆商店的剑。"
+          },
+          "mid": {
+            "en": "Unlock Hire of Legends (50000 Leaves - requires defeating the Extraneous Assassin in Merry Hills mountains at night). Use it as party heal/AOE.",
+            "ja": "異邦の暗殺者(メリーヒルズ山道·夜)を倒すと 50000リーフの傭兵解禁。全体回復AOEとして運用。",
+            "ko": "이방의 암살자(메리힐즈 산길·밤) 격파 후 50000리프 용병 해금. 전힐 AOE로 운용.",
+            "zh": "击败梅里希尔斯山道夜晚的「异邦暗杀者」后解锁 50000 叶币佣兵。作群体回血 AOE 用。"
+          },
+          "late": {
+            "en": "Merchant's full BP boost + Alfyn-style BP-recovery becomes party engine. Equip BP-recovery accessories (Greed Amulet, Sage Stone) to spam BP Eater.",
+            "ja": "商人満BP + 全体BP補充がエンジン化。BP回復アクセ(強欲の腕輪・賢者の石)で BP 連発。",
+            "ko": "상인 만BP + 파티 BP 보충 엔진화. BP 회복 장신구(탐욕 팔찌·현자의 돌)로 BP 연타.",
+            "zh": "商人满 BP + 队伍 BP 补给成引擎。配 BP 回复饰品(贪婪护腕/贤者之石)连发 BP 大招。"
+          }
         }
       },
       {
@@ -213,31 +463,56 @@
               "en": "Fire Storm",
               "ja": "ファイアーストーム",
               "ko": "파이어 스톰",
-              "zh": "火焰风暴"
+              "zh": "火焰风暴",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职学者即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Ice Storm",
               "ja": "アイスストーム",
               "ko": "아이스 스톰",
-              "zh": "冰霜风暴"
+              "zh": "冰霜风暴",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职学者即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Lightning Storm",
               "ja": "サンダーストーム",
               "ko": "썬더 스톰",
-              "zh": "雷电风暴"
+              "zh": "雷电风暴",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职学者即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Alephan's Wisdom",
               "ja": "アレファンの叡智",
               "ko": "알레판의 지혜",
-              "zh": "阿雷凡之智"
+              "zh": "阿雷凡之智",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职学者即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Sweeping Cleave",
               "ja": "払い斬り",
               "ko": "휘둘러 베기",
-              "zh": "横扫斩"
+              "zh": "横扫斩",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职学者即可习得",
+                "phase": "anytime"
+              }
             }
           ],
           "support": [
@@ -245,33 +520,90 @@
               "en": "Elemental Augmentation",
               "ja": "属性攻撃強化",
               "ko": "속성 공격 강화",
-              "zh": "属性攻击强化"
+              "zh": "属性攻击强化",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "学者转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Perceiver's Wisdom",
               "ja": "予知の知識",
               "ko": "예지하는 지식",
-              "zh": "先知之智"
+              "zh": "先知之智",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "学者转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Heightened Intelligence",
               "ja": "知力上昇",
               "ko": "지력 상승",
-              "zh": "智力提升"
+              "zh": "智力提升",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "学者转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Vim and Vigor",
               "ja": "気力充実",
               "ko": "활력 충전",
-              "zh": "气力充沛"
+              "zh": "气力充沛",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "学者转职后习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Elemental Defense",
               "ja": "属性防御",
               "ko": "속성 방어",
-              "zh": "属性防御"
+              "zh": "属性防御",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "学者转职后习得",
+                "phase": "anytime"
+              }
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Scholar's Guild in Western Winterbloom Snows (Hikari Chapter 2 area), a house on a hill north of the bridge. 1 free. License 2: 5 Ancient Sentinel Cores (factory boss in Partitio Ch.2). License 3: 5 Almighty Soulstones (steal from elementals in Winterbloom at night or Abandoned Village).",
+          "ja": "西大陸 Winterbloom Snows(Hikari 第二章)橋北の丘の上の家で学者のギルド(1個無料)。2個目:古代の番兵の核×5(Partitio 第二章の工場ボス)。3個目:全能の魂石×5(冬夜の元素怪から盗む)。",
+          "ko": "서부 윈터블룸 설원(히카리 2장) 다리 북쪽 언덕 위 학자 길드. 2번: 고대의 파수꾼 핵×5. 3번: 전능의 혼석×5(겨울밤 정령에게서 훔치기).",
+          "zh": "西大陆冬雪原(光第二章)桥北山坡上的屋子。1 张免费。第 2 张: 5 个古代哨兵核心(Partitio 第二章工厂 BOSS)。第 3 张: 5 个全能魂石(冬夜元素怪偷取)。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Staff / Dagger",
+            "ja": "杖 / 短剣",
+            "ko": "지팡이 / 단검",
+            "zh": "杖 / 短剑"
+          },
+          "early": {
+            "en": "Sage Staff (商店购买,属攻 90+) + Scholar's Robe. Use Ice Storm for AoE windup on the early broken-ice enemies.",
+            "ja": "賢者の杖(ショップ,属攻90+) + 学者のローブ。アイスを序盤雑魚に撒く。",
+            "ko": "현자의 지팡이(상점, 속공 90+) + 학자 로브. 아이스로 초반 정리.",
+            "zh": "贤者之杖(商店,属攻 90+) + 学者长袍。前期用冰霜风暴打小怪。"
+          },
+          "mid": {
+            "en": "Add a high-element dagger (Viper Dagger from Thief arc) for second-element coverage. Pair with Hunter sub-job to access Ice Bow + Lightning Axe (Wellspring 套装).",
+            "ja": "高属攻の短剣(大蛇の短剣等)2属性目を確保。狩人副職で氷弓+雷斧(歴戦武器)。",
+            "ko": "고속공 단검(살무사 단검) 추가. 사냥꾼 부직업으로 빙궁+번개도끼(역전 시리즈).",
+            "zh": "配高属攻短剑(大蛇短剑等)凑第二属性。猎人副职用冰弓+雷斧(历战武器)。"
+          },
+          "late": {
+            "en": "Armsmaster for 90% all-element bonus (剑/斧/杖). Stack: Sage Staff + Lightning Battle Axe + Knowledge Dagger. Add BP-cost passives to spam 3BP spells.",
+            "ja": "武芸家で全6武器90%加成。杖+雷の斧+知の短剣。BP消耗軽減で 3BP 魔法連発。",
+            "ko": "무예가로 전 6종 90% 가산. 지팡이+번개 도끼+지식 단검. BP 경감으로 3BP 마법 연사.",
+            "zh": "武艺家全 6 武器 90% 加成。杖+雷斧+知识短剑。BP 消耗减轻连发 3BP 魔法。"
+          }
         }
       },
       {
@@ -305,7 +637,12 @@
               "en": "Peacock Strut",
               "ja": "クジャクの舞",
               "ko": "공작의 춤",
-              "zh": "孔雀之舞"
+              "zh": "孔雀之舞",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职舞娘即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Slowing Strike",
@@ -358,6 +695,38 @@
               "zh": "光辉华尔兹"
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Dancer's Guild in Wellgrove, eastern building. 1 free license. License 2 & 3: Have one character fully unlock Dancer's 7 skills, then a second character does the same. Dancer's Divine Skill (Peacock Strut) requires all 7 skills + 9000+ JP.",
+          "ja": "ウェルグローブ東の建物で踊り子ギルド(1個無料)。2個目/3個目: 1人目が踊り子の7スキル全部を覚えた上で、2人目も同様に。奥義(孔雀の舞い)には7スキル+9000JP必要。",
+          "ko": "웰그로브 동쪽 건물 무희 길드. 2/3번: 한 명이 7스킬 마스터 후 두 번째 캐릭터도 반복. 무희奥義(공작의 춤)에는 7스킬+9000JP.",
+          "zh": "外尔兰多东侧建筑舞娘工会。第2/3张需 1 人学完舞娘 7 技能,第 2 人重复。舞娘奥义(孔雀之舞)需 7 技能 + 9000+ JP。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Dagger / Bow",
+            "ja": "短剣 / 弓",
+            "ko": "단검 / 활",
+            "zh": "短剑 / 弓"
+          },
+          "early": {
+            "en": "Wind-element dagger (Aeolian Dagger) + wind-element bow. Best paired with the Conjurer for fire-enchant spread. Speed-accessory priority.",
+            "ja": "風の短剣 + 風の弓。占星師と組んで火属性付与を全体化。速度アクセサリ最優先。",
+            "ko": "바람 속성 단검 + 바람 활. 점성술사와 조합해 화부여 전체화. 속도 장신구 최우선.",
+            "zh": "风属性短剑 + 风属性弓。配占星师火附魔全体化。速度饰品优先。"
+          },
+          "mid": {
+            "en": "Add speed-up accessories. Dancer's Bewildering Grace is a wildcard (1-shot kills, instant debuffs) for breaking boss pace.",
+            "ja": "速度上昇アクセサリ追加。迷茫の舞でBOSSを即死/デバフ可能。",
+            "ko": "속도 상승 장신구. 미망의 춤으로 BOSS 즉사/디버프 가능.",
+            "zh": "加速度上升饰品。迷茫之舞能 BOSS 即死/上 debuff。"
+          },
+          "late": {
+            "en": "Dancer + Merchant combo: Dancer's group-wide buff (Peacock Strut) at 1BP feeds all allies into Merchant's full-BP ults.",
+            "ja": "舞娘+商人: 舞娘の全体化(孔雀)で全員にバフ → 商人のBP満タン奥義。",
+            "ko": "무희+상인: 무희 전체화(공작)로 아군 전체 버프 → 상인 만BP 궁극기.",
+            "zh": "舞娘+商人: 舞娘全体化(孔雀之舞)给全队 buff → 商人满 BP 大招。"
+          }
         }
       },
       {
@@ -444,6 +813,38 @@
               "zh": "周边视野"
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Hunter's Guild in Western Tropu'hopu Traverse, east of Beastling Village. 1 free. License 2: Quicksand Monster's Liver (西大陆 Sai 西边流沙监牢 LV30 BOSS). License 3: Sea Monster's Whisker (海域大漩涡 BOSS,需先有船).",
+          "ja": "東大陸 Toto'haha Traverse(獣人村東)で狩人ギルド(1個無料)。2個目: 流砂の魔物の肝(西大陸 Sai 西の流砂牢獄 LV30)。3個目: 海の魔物の髭(海の大渦巻き BOSS, 船必要)。",
+          "ko": "동대륙 토토하하 횡단(야수 마을 동) 사냥꾼 길드. 2번: 유사 마물 간(서부 사이 서쪽 유사 감옥 LV30). 3번: 바다 마물 수염(바다 소용돌이 BOSS, 배 필요).",
+          "zh": "东大陆 Toto'haha 古道(兽人之村东)猎人工会。第 2 张: 流沙魔物之肝(西大陆 Sai 西边流沙监牢 LV30 BOSS)。第 3 张: 海中魔物之须(海域大漩涡 BOSS,需先有船)。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Bow / Axe",
+            "ja": "弓 / 斧",
+            "ko": "활 / 도끼",
+            "zh": "弓 / 斧"
+          },
+          "early": {
+            "en": "Composite Bow + Beast Fangs. Capture a 10-star monster (Quetzalcoatl/Arch-Akala works) for 3BP AoE break.",
+            "ja": "強化弓+獣の牙。10星魔物(ケツァルコアトル/大阿卡拉)を捕獲で 3BP AOE 破盾。",
+            "ko": "강화 활+야수 이빨. 10성 마물(케찰코아틀/대아카라) 포획으로 3BP AOE 브레이크.",
+            "zh": "复合弓 + 兽牙。抓 10 星魔兽(羽蛇/大阿卡拉)做 3BP 群体破盾。"
+          },
+          "mid": {
+            "en": "Snipe (固定伤害不随 BP) + 10-star Merciless Shark (海中大旋涡 BOSS) summons 9999 AoE + full party HP/SP heal + BP+1.",
+            "ja": "スナイプ(固定ダメ) + 歴戦の鮫(海の大渦 BOSS)で 9999 AOE + 全快 + BP+1。",
+            "ko": "저격(고정 데미지) + 역전 상어(바다 소용돌이 BOSS) 소환으로 9999 AOE + 전원 회복 + BP+1.",
+            "zh": "狙击(固定伤害) + 历战之鲛(海中大漩涡 BOSS)召唤 9999 AOE + 全员回血 + BP+1。"
+          },
+          "late": {
+            "en": "Hunter's late game = Beastly Roar (兽之咆哮) for maxed enemy elemental defense down. Stacks with Scholar's Alephan's Wisdom + Alfyn poisons.",
+            "ja": "狩人後期: 獣の咆哮で敵属防大幅ダウン。学者+薬師と重ねがけで BOSS 防御ゼロ化。",
+            "ko": "사냥꾼 후반: 짐승의 포효로 적 속방 대폭 다운. 학자+약사와 중첩으로 BOSS 방어 0화.",
+            "zh": "猎人后期: 兽之咆哮大幅降敌属防。与学者阿雷凡之智 + 药师毒断击叠加,BOSS 防御清零。"
+          }
         }
       },
       {
@@ -471,7 +872,12 @@
               "en": "Heal",
               "ja": "ヒール",
               "ko": "힐",
-              "zh": "治疗"
+              "zh": "治疗",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职药师即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Rehabilitate",
@@ -503,7 +909,13 @@
               "en": "Concoct",
               "ja": "コンコト",
               "ko": "콩코트",
-              "zh": "调和"
+              "zh": "调和",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职药师即可习得",
+                "phase": "anytime",
+                "tip": "风/光/暗三属性,0BP调和2种,每+1BP多1种,最多5种"
+              }
             },
             {
               "en": "Peripherality",
@@ -527,9 +939,46 @@
               "en": "Improved Concoction",
               "ja": "調合強化",
               "ko": "조화 강화",
-              "zh": "调和强化"
+              "zh": "调和强化",
+              "acquisition": {
+                "location": "默认被动",
+                "method": "药师转职后习得",
+                "phase": "anytime"
+              }
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Apothecary's Guild in Conning Creek, south of the Harborlands. 1 free. License 2: 5 Herb-of-Grace Buds (Giant Gator in Toto'haha Anchorage drops). License 3: 5 Primeval Horn Elixir (Devil Deer in Wellgrove & Wellows Manor - strong enemies).",
+          "ja": "港湾 Conning Creek の南で薬師ギルド(1個無料)。2個目: 芸香の蕾×5(Toto'haha Anchorage の大鰐)。3個目: 太古の角薬×5(ウェルグローブ/ウェローズ館の鹿型魔物 - 強敵)。",
+          "ko": "항만 컨닝 크릭 남쪽 약사 길드. 2번: 향초 순芽×5(토토하하 정박장 대형 악어). 3번: 태고의 뿔약×5(웰그로브/웰로즈 저택 사슴 - 강적).",
+          "zh": "港湾 Conning Creek 南边药师工会。第 2 张: 5 个芸香花蕾(托托哈哈港大鳄鱼掉落)。第 3 张: 5 个太古角药(外尔兰多/韦罗斯馆鹿型魔物,强敌)。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Staff / Axe",
+            "ja": "杖 / 斧",
+            "ko": "지팡이 / 도끼",
+            "zh": "杖 / 斧"
+          },
+          "early": {
+            "en": "Healing Staff + Conning Creek Apothecary Robe. Use Healing Light 治愈 + Alfyn's 持续疗伤 for self/party sustain.",
+            "ja": "癒しの杖 + 薬師のローブ。神官の治癒と薬師の継続療傷で二重回復。",
+            "ko": "치유 지팡이 + 약사 로브. 신관의 치유 + 약사 지속 치료로 이중 회복.",
+            "zh": "治疗之杖 + 药师长袍。神官治愈 + 药师持续疗伤双线维持。"
+          },
+          "mid": {
+            "en": "Wind-element axe (Wind-element Battle Axe) + Wind-dagger for 90% wind bonus via sub-job. Apothecary's Attuned (调和) can chain 5 ingredients at 3BP.",
+            "ja": "風の斧 + 風の短剣(副職で 90% 風加成)。3BP 調和で最大 5 種素材を一気に発動。",
+            "ko": "바람 도끼 + 바람 단검(부직업 90% 바람 가산). 3BP 조화로 5종 동시 발동.",
+            "zh": "风属性斧 + 风属性短剑(副职 90% 风加成)。3BP 调和连 5 种素材。"
+          },
+          "late": {
+            "en": "Apothecary = party BP engine. 5-ingredient Concoction (调和) feeds BP Eater / Merchant ults. Equip BP recovery accessories (BP Pomegranate 特大).",
+            "ja": "薬師 = パーティ BP エンジン。5種調和 → 商人/学者BP 連発。BP回復ザクロ(特大)装備。",
+            "ko": "약사 = 파티 BP 엔진. 5종 조화 → 상인/학자 BP 연사. BP 회복 석류(특대) 장비.",
+            "zh": "药师 = 队伍 BP 引擎。5 种调和 → 商人/学者 BP 连发。装备 BP 石榴(特大)。"
+          }
         }
       },
       {
@@ -616,6 +1065,38 @@
               "zh": "遭遇减半"
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Thieves' Guild in Clockbank industrial district (end of alley). Enter only at night. 1 free. License 2: Thief's Gem (steal from Clockbank resident). License 3: Master Thief's Sapphire (steal from Master Thief in Timberain, near end of game).",
+          "ja": "Clockbank(盗賊初期地)工業地区の路地奥で盗賊ギルド。夜のみ入店可能。2個目: 盗賊の宝石(クロックバンク住民から盗む)。3個目: 盗賊王のサファイア(Timberain の盗賊王から - 終盤)。",
+          "ko": "클락뱅크 공업지구 골목 끝 도적 길드(밤에만). 2번: 도적의 보석(클락뱅크 주민 훔치기). 3번: 도적왕의 사파이어(팀버레인 도적왕, 후반).",
+          "zh": "盗贼初始地 Clockbank 工业街巷尾(仅夜间)。第 2 张: 盗贼宝石(Clockbank 居民偷取)。第 3 张: 盗贼王蓝宝石(终局 Timberain 盗贼王偷取)。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Dagger / Sword",
+            "ja": "短剣 / 剣",
+            "ko": "단검 / 검",
+            "zh": "短剑 / 剑"
+          },
+          "early": {
+            "en": "Steel Dagger + Thief's Cloak. Steal-then-combo path: Muramasa / Viper Dagger / Sage Staff are easy early steals via Therion (Chapter 1 starts).",
+            "ja": "鉄の短剣 + 盗賊の外套。盗む→即装備の楽な流れ: 村正/大蛇の短剣/賢者の杖(Therion 第一章序盤で盗める)。",
+            "ko": "강철 단검 + 도적 외투. 도적 1장 초반 데리온으로 무라마사/살무사 단검/현자 지팡이 즉시 훔쳐 장비 가능.",
+            "zh": "铁短剑 + 盗贼外套。前期靠盗贼初始角色 Therion 第一章直接偷禁忌之剑/大蛇短剑/贤者之杖。"
+          },
+          "mid": {
+            "en": "Multi-hit dagger (Forbidden Dagger) + Dark-element sword (Viper Dagger has dark affinity). Pair with Armsmaster for 60% dark bonus.",
+            "ja": "多段短剣(禁忌の短剣) + 暗属性の剣(大蛇の短剣)。武器大師で 60% 暗加成。",
+            "ko": "다단 단검(금지 단검) + 암속성 검(살무사). 무예가로 60% 암 가산.",
+            "zh": "多段短剑(禁忌匕首) + 暗属性剑(大蛇短剑)。武艺家 60% 暗加成。"
+          },
+          "late": {
+            "en": "Thief's Divine Skill damage scales with action speed - equip all speed-up accessories. Stack with Armsmaster multi-weapon for 6-weapon burst.",
+            "ja": "盗賊奥義は行動速度依存。速度アクセサリ全振り。武器大師 6 武器バースト。",
+            "ko": "도적奥의는 행동속도 의존. 속도 장신구 풀 스택. 무예가 6종 무기 연타.",
+            "zh": "盗贼奥义按行动速度算伤害。速度饰品拉满。武艺家 6 武器连段爆发。"
+          }
         }
       },
       {
@@ -643,13 +1124,23 @@
               "en": "Heal",
               "ja": "ヒール",
               "ko": "힐",
-              "zh": "治疗"
+              "zh": "治疗",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职药师即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Revive",
               "ja": "蘇生",
               "ko": "부활",
-              "zh": "复活"
+              "zh": "复活",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职神官即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Sacred Light",
@@ -675,7 +1166,12 @@
               "en": "Healing Light",
               "ja": "癒しの光",
               "ko": "치유의 빛",
-              "zh": "治愈之光"
+              "zh": "治愈之光",
+              "acquisition": {
+                "location": "默认技能",
+                "method": "转职神官即可习得",
+                "phase": "anytime"
+              }
             },
             {
               "en": "Healer's Creed",
@@ -702,6 +1198,38 @@
               "zh": "恩典之光"
             }
           ]
+        },
+        "unlock": {
+          "en": "Find the Cleric's Guild in Borderfall (between Flamechurch and Montwise). 1 free. License 2: High Priest's Amulet (boss drop in Starfall Springs dungeon, Leaflands). License 3: Book of Scripture - hidden boss under damaged bridge in Beneath the Wall dungeon, Stormhail Snows. Need 8 followers (combine Partitio hire + Agnea allure + Ochette befriend + Temenos guide).",
+          "ja": "Flamechurch と Montwise の間 Borderfall で神官ギルド(1個無料)。2個目: 大神官の護符(Starfall Springs ダンジョン BOSS)。3個目: 大神官の聖典 - Beneath the Wall の壊れた橋の下の隠し BOSS。8人の同行者必要(Partitio 雇用 + Agnea 誘惑 + Ochette 友好 + Temenos 導き)。",
+          "ko": "플레임처치와 몬트와이즈 사이 보더폴 신관 길드. 2번: 대사제의 부적(별낙하 샘 BOSS). 3번: 대사제의 경전 - 벽 아래 던전(Beneath the Wall) 손상된 다리 아래 히든 BOSS. 8명 동행 필요(파르티시오 고용+아그네아 유혹+오체트 친교+테메노스 인도).",
+          "zh": "Flamechurch 与 Montwise 之间的 Borderfall 神官工会。第 2 张: 大神官护身符(星落之泉 BOSS)。第 3 张: 大神官圣典 — 墙下迷宫(Beneath the Wall)断桥下隐藏 BOSS,需 8 个同行者(Partitio 雇佣 + Agnea 诱惑 + Ochette 友好 + Temenos 引路)。"
+        },
+        "equipment": {
+          "primary_weapon": {
+            "en": "Staff / Shield",
+            "ja": "杖 / 盾",
+            "ko": "지팡이 / 방패",
+            "zh": "杖 / 盾"
+          },
+          "early": {
+            "en": "Bishop's Staff + Sage Shield. Light magic has 30% light-staff bonus, so stack light-staff if going damage-dealer.",
+            "ja": "司教の杖 + 賢者の盾。神聖魔法は 30% 光杖加成あるので DPS なら光杖重視。",
+            "ko": "주교의 지팡이 + 현자의 방패. 신성 마법 30% 광지팡이 보너스 → 딜러면 광지팡이 중시.",
+            "zh": "主教之杖 + 贤者之盾。神圣魔法 30% 光杖加成,走输出就堆光杖。"
+          },
+          "mid": {
+            "en": "Pair with Apothecary sub-job for double healing (Cleric Light + Apothecary 持续疗伤). Add Magical Cost (魔力的代价) passive for HP→MP sustain.",
+            "ja": "薬師副職で二重回復(光+継続)。魔力の代価パッシブで HP→MP 維持。",
+            "ko": "약사 부직업으로 이중 회복(빛+지속). 마력 대가 패시브로 HP→MP 유지.",
+            "zh": "药师副职双线治疗(光 + 持续疗伤)。魔力的代价被动 HP→MP 持续。"
+          },
+          "late": {
+            "en": "Cleric's max BP + Apothecary 5-ingredient Concoction = infinite heal/AoE. Use the legendary Battle Staff (歷戰之杖, post-game dungeon) for stat-bonus ultimate.",
+            "ja": "神官満BP + 薬師 5種調和で無限回復/AOE。歴戦の杖(裏ダンジョン)でステータス最大化。",
+            "ko": "신관 만BP + 약사 5종 조화로 무한 회복/AOE. 역전의 지팡이(이후 던전) 옵티멀.",
+            "zh": "神官满 BP + 药师 5 种调和 = 无限回血 / AOE。历战之杖(里迷宫)把属性拉到顶。"
+          }
         }
       }
     ],
@@ -736,7 +1264,8 @@
           "ja": "OT2の最も定番パーティ。剣士が盾とシールド破壊、神官が回復と蘇生、学者が全属性魔法、狩人が遠距離で弱点連鎖を担当。第1章からラスボスまで安定して活躍します。",
           "ko": "OT2의 가장 정통 파티. 검사가 탱킹과 쉴드 파괴, 사제가 회복과 부활, 학자가 모든 속성 마법 딜, 사냥꾼이 원거리로 약점 연쇄를 담당합니다. 1챕터부터 최종 보스까지 안정적입니다.",
           "zh": "OT2 最经典的阵容。剑士抗伤破盾，神官治疗复活，学者负责所有魔法伤害，猎人补充远程弱点连击。从第一章到最终 BOSS 都稳定可靠。"
-        }
+        },
+        "phase": "balanced"
       },
       {
         "playstyle": "balanced",
@@ -768,7 +1297,8 @@
           "ja": "タフで経済力に優れた構成。商人の傭兵雇用で無料召喚、薬師が回復と状態異常回復、剣士がシールド破壊、狩人が遠距離弱点を突く。アイテムを集めて使うのが好きな人向け。",
           "ko": "탱킹과 아이템 경제가 강한 조합. 상인의 고용하기로 무료 소환, 약사가 회복과 상태이상 해제, 검사가 쉴드 파괴, 사냥꾼이 원거리 약점 공략. 아이템 수집과 사용을 즐기는 플레이어에게 추천.",
           "zh": "坦克 + 强经济型。商人免费召唤、药师治疗解状态、剑士破盾、猎人远程弱点。喜欢攒道具并使用的玩家首选。"
-        }
+        },
+        "phase": "balanced"
       },
       {
         "playstyle": "attack",
@@ -799,7 +1329,8 @@
           "ja": "純粋物理パーティ。剣士と盗賊の剣使い2人と狩人の弓で1〜2ターンで敵弱点を破壊。薬師が生存を維持。物理弱点多数のボスに最適。",
           "ko": "순수 물리 딜 파티. 검사와 도적의 검사 2명, 사냥꾼의 활로 1~2턴 안에 적 약점을 부숩니다. 약사가 생존을 유지. 물리 약점이 많은 보스에 최적.",
           "zh": "纯物理输出队。两位剑系（剑士、盗贼）加一位弓系（猎人）1-2 回合内破弱点。药师维持生命。适合物理弱点多的 BOSS。"
-        }
+        },
+        "phase": "attack"
       },
       {
         "playstyle": "attack",
@@ -830,7 +1361,8 @@
           "ja": "剣士2人で剣/斧カバレッジ倍増、シールド破壊に超特化。剣士の高HPで反撃も耐えます。高防御ボスのゴリ押し攻略にどうぞ。",
           "ko": "검사 2명으로 검/도끼 커버리지 2배, 쉴드 파괴에 특화. 검사의 높은 HP로 반격도 버팁니다. 고방어 보스 공략에 추천.",
           "zh": "双剑士让剑/斧覆盖翻倍，破盾特化。剑士高 HP 扛反击。适合硬刚高防 BOSS。"
-        }
+        },
+        "phase": "attack"
       },
       {
         "playstyle": "magic",
@@ -862,7 +1394,8 @@
           "ja": "魔法アタッカー3人体制。学者・神官・薬師で全属性をカバー、弱点関係なく当てられる。剣士が盾役。火/氷/雷/光弱点のボスに最適。",
           "ko": "마법 딜러 3인 체제. 학자·사제·약사가 모든 속성을 커버하여 약점 상관없이 명중. 검사가 탱킹. 불/얼음/번개/빛 약점 보스에 최적.",
           "zh": "三法师阵容。学者/神官/药师覆盖全属性，无视弱点都能命中。剑士抗伤。适合火/冰/雷/光弱 BOSS。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "magic",
@@ -893,7 +1426,8 @@
           "ja": "最大魔法火力。学者2人で属性ダメージがエグい。神官+薬師で生存維持。防御は紙ですが、敵が反撃する前に戦闘が終わります。",
           "ko": "최대 마법 DPS. 학자 2명으로 속성 딜이 미쳤고, 사제+약사가 생존을 유지. 방어가 종이처럼 얇지만 적의 반격 전에 전투가 끝납니다.",
           "zh": "极限魔法 DPS。双学者属性伤害爆炸，神官+药师保命。脆皮但敌人还没反击就结束战斗。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "speed",
@@ -924,7 +1458,8 @@
           "ja": "スピード職3人体制。盗賊のダガー速度+踊り子の回避+狩人の弓速度でほとんどの戦闘で先手。踊り子の気まぐれの恵みで一撃必殺もあり。",
           "ko": "속도 직업 3인 체제. 도적의 단검 속도 + 무희의 회피 + 사냥꾼의 활 속도로 거의 모든 전투에서 선제. 무희의 변덕의 은총으로 즉사 공격도 가능.",
           "zh": "三速度职业。盗贼匕首速度+舞娘回避+猎人弓速，几乎每战先手。舞娘「奇想天降」可一击必杀。"
-        }
+        },
+        "phase": "speed"
       },
       {
         "playstyle": "speed",
@@ -955,7 +1490,8 @@
           "ja": "神官を安全網に据えた速攻型。盗賊/狩人がシールドを素早く破壊、踊り子がバフ、神官が回復維持。行動順を活かしながら長期戦を戦うボス戦に強い。",
           "ko": "사제를 안전망으로 둔 스피드형. 도적/사냥꾼이 쉴드를 빠르게 부수고, 무희가 버프, 사제가 회복 유지. 턴 오더를 활용하면서 장기전을 버텨야 하는 보스전에 강함.",
           "zh": "神官做安全网的速度型。盗贼/猎人快速破盾，舞娘加 buff，神官维持回复。在需要保持先手又扛长 BOSS 战的场景下很强。"
-        }
+        },
+        "phase": "speed"
       },
       {
         "playstyle": "support",
@@ -986,7 +1522,8 @@
           "ja": "持久戦に持ち込む防御型パーティ。商人の傭兵雇用+踊り子のバフ+神官の回復+剣士の盾。長期戦ほど有利で、リソース切れが起きにくい。",
           "ko": "끈질긴 방어형 파티. 상인의 고용하기 + 무희의 버프 + 사제의 회복 + 검사의 탱킹. 장기전일수록 유리하며 리소스가 바닥나기 어렵습니다.",
           "zh": "防御持久型。商人召唤+舞娘 buff+神官治疗+剑士抗伤。战斗越长越有利，资源不容易耗尽。"
-        }
+        },
+        "phase": "support"
       },
       {
         "playstyle": "support",
@@ -1017,7 +1554,8 @@
           "ja": "タンク不在だが回復2人+踊り子バフ+商人傭兵。火力は低いがほぼ死なない。ボスパターンを覚えてから攻略したい人向け。",
           "ko": "전담 탱커 없지만 힐러 2명 + 무희 버프 + 상인 소환. 딜은 낮지만 거의 죽지 않음. 보스 패턴을 익히면서 공략하고 싶은 플레이어에게 추천.",
           "zh": "没抗伤但双治疗+舞娘 buff+商人召唤。火力低但几乎死不了。适合想无压力熟悉 BOSS 招式的玩家。"
-        }
+        },
+        "phase": "support"
       },
       {
         "playstyle": "early",
@@ -1047,7 +1585,8 @@
           "ja": "序盤数時間で取得できる基本職4つ。盾+回復+魔法+バフの最も安全なスターターパーティ。弱点に対応できない状況に陥ることはありません。",
           "ko": "초반 몇 시간 내에 길드에서 얻는 기본 직업 4개. 탱+회복+마법+버프의 가장 안전한 스타터 파티. 약점에 대응 못하는 상황은 없습니다.",
           "zh": "前几个小时就能从公会获得的基础职业 4 个。抗伤+治疗+魔法+buff，最稳的开荒队——任何弱点都能应对。"
-        }
+        },
+        "phase": "early"
       },
       {
         "playstyle": "early",
@@ -1077,7 +1616,8 @@
           "ja": "第2章中盤までに全員取得可能。物理アタッカー2人(剣士・狩人)+ダブルヒーラー(神官・薬師)。序盤のJP稼ぎに最適。",
           "ko": "2챕터 중반까지 모두 해금. 물리 딜러 2명(검사·사냥꾼) + 듀얼 힐러(사제·약사). 초반 JP 파밍에 적합.",
           "zh": "第二章中前就能全部解锁。两位物理输出（剑士、猎人）+ 双治疗（神官、药师）。适合前期刷 JP。"
-        }
+        },
+        "phase": "early"
       },
       {
         "playstyle": "support",
@@ -1105,7 +1645,8 @@
           "ja": "盗賊の鎧の溶ける短剣で物理防御デバフ。学者のサンダーストームでデバフ活用。剣士がシールド破壊。神官が回復。",
           "ko": "도적 갑옷 녹이는 단검으로 물리 방어 디버프. 학자 썬더 스톰으로 디버프 활용. 검사가 쉴드 파괴. 사제가 회복.",
           "zh": "盗贼蚀甲短剑 debuff 物防。学者雷电风暴利用 debuff。剑士破盾。神官回复。"
-        }
+        },
+        "phase": "support"
       },
       {
         "playstyle": "magic",
@@ -1133,7 +1674,8 @@
           "ja": "神官2人でセイクリッドライトで全体光属性大ダメージ。学者はサンダーストームで盾破壊。剣士が盾役。闇/アンデッドボスに最適。",
           "ko": "신관 2명으로 세이크리드 라이트 광속성 광역 딜. 학자는 썬더 스톰으로 쉴드 파괴. 검사가 탱킹. 어둠/언데드 보스에 최적.",
           "zh": "双神官堆叠神圣之光提供 AOE 光属性大伤害。学者雷电风暴破盾。剑士抗伤。对暗/不死 BOSS 首选。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "attack",
@@ -1160,7 +1702,8 @@
           "ja": "十文字斬り+鎧の溶ける短剣で物理防御デバフ重ね。剣士が盾破壊、盗賊が防御崩し、狩人が多段、薬師が状態異常回復。",
           "ko": "십자베기+갑옷 녹이는 단검으로 물리 방어 디버프 중첩. 검사가 쉴드 파괴, 도적이 방어 붕괴, 사냥꾼이 다단, 약사가 상태이상 해제.",
           "zh": "十字斩 + 蚀甲短剑叠加物理防御 debuff。剑士破盾、盗贼降防、猎人多段、药师解状态。"
-        }
+        },
+        "phase": "attack"
       },
       {
         "playstyle": "speed",
@@ -1187,7 +1730,8 @@
           "ja": "狩人2人でサンダーバード連打+多段連撃。学者で属性対応。神官で回復。火力最速ラッシュ。",
           "ko": "사냥꾼 2명 썬더버드 연타+다단 연격. 학자 속성 대응. 사제 회복. 딜 최속 러시.",
           "zh": "双猎人雷鸟连打多段连击。学者补属性。神官回复。纯输出速攻队。"
-        }
+        },
+        "phase": "speed"
       },
       {
         "playstyle": "attack",
@@ -1214,7 +1758,8 @@
           "ja": "盗賊2人で最大SPドレイン。狩人が遠距離サポート。薬師のリハビリーで状態異常回復。敵の番が来る前に戦闘終了。",
           "ko": "도적 2명으로 최대 SP 약화. 사냥꾼 원거리 지원. 약사 리허빌리로 상태이상 해제. 적 턴 전에 전투 종료.",
           "zh": "双盗贼最大 SP 削弱。猎人远程补刀。药师康复解状态。敌人未出手战斗结束。"
-        }
+        },
+        "phase": "attack"
       },
       {
         "playstyle": "magic",
@@ -1241,7 +1786,8 @@
           "ja": "学者2人でファイアーストーム2回+アレファンの叡智で弱点分析。剣士が盾破壊。薬師ペップでHP維持。氷属性敵に最適。",
           "ko": "학자 2명으로 파이어 스톰 2회+알레판의 지혜 약점 분석. 검사가 쉴드 파괴. 약사 페프 HP 유지. 얼음 속성 적에 최적.",
           "zh": "双学者双倍火焰风暴+阿雷凡之智分析弱点。剑士破盾。药师振奋维持 HP。冰属性敌人首选。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "magic",
@@ -1268,7 +1814,8 @@
           "ja": "剣士2人タンク+学者全体魔法。神官の癒しの光で被ダメ半減。よろめき斬り+十文字斬りで素早いシールド破壊。多段階ボス戦向け。",
           "ko": "검사 2명 탱킹+학자 광역 마법. 사제 치유의 빛 피해 반감. 비틀기 참격+십자베기로 빠른 쉴드 파괴. 다단계 보스전 적합.",
           "zh": "双剑士抗伤+学者 AOE 魔法。神官治愈之光减伤。震击斩+十字斩快速破盾。多阶段 BOSS 战适合。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "magic",
@@ -1295,7 +1842,8 @@
           "ja": "学者のアレファンの叡智でボス全弱点1ターン目に公開。剣士が盾破壊、狩人が遠距離、神官が維持。ボス初見攻略向け。",
           "ko": "학자 알레판의 지혜로 보스 전 약점 1턴째에 공개. 검사가 쉴드 파괴, 사냥꾼이 원거리, 사제가 유지. 보스 첫 도전용.",
           "zh": "学者阿雷凡之智在第 1 回合暴露 BOSS 所有弱点。剑士破盾、猎人远程、神官维持。BOSS 首战首选。"
-        }
+        },
+        "phase": "magic"
       },
       {
         "playstyle": "support",
@@ -1322,7 +1870,8 @@
           "ja": "サポート4人。タンク不在。傭兵雇用+癒しの舞+ヒール+ペップ=ほぼ死なないが火力低。のんびりプレイ向け。",
           "ko": "서포트 4명. 탱커 없음. 고용하기+치유의 춤+힐+페프=거의 죽지 않지만 딜 낮음. 캐주얼 플레이용.",
           "zh": "4 辅助无抗伤。雇佣帮手+回复之舞+治疗+振奋=几乎不死但慢。休闲玩家首选。"
-        }
+        },
+        "phase": "support"
       },
       {
         "playstyle": "speed",
@@ -1349,7 +1898,8 @@
           "ja": "踊り子2人でバフ+ランダム効果重ね。狩人+剣士で物理火力。気まぐれの恵みで予想外の展開も。",
           "ko": "무희 2명으로 버프+랜덤 효과 중첩. 사냥꾼+검사로 물리 딜. 변덕의 은총으로 의외 전개 가능.",
           "zh": "双舞娘堆叠 buff + 随机效果。猎人+剑士物理输出。奇想天降可打出意外翻盘。"
-        }
+        },
+        "phase": "speed"
       },
       {
         "playstyle": "early",
@@ -1376,7 +1926,8 @@
           "ja": "主人公4人+各章で自然な構成。ブランディングサンダー+アローレイン+アレファンの叡智で序盤ストーリー最速攻略。",
           "ko": "주인공 4명+각 챕터 자연스러운 구성. 브랜드의 천둥+화살비+알레판의 지혜로 초반 스토리 최속 공략.",
           "zh": "4 主角各自章节用。雷神之力+箭雨+阿雷凡之智前期剧情速推。"
-        }
+        },
+        "phase": "early"
       },
       {
         "playstyle": "support",
@@ -1403,7 +1954,8 @@
           "ja": "商人のBP関連支援、踊り子のクジャクの舞で攻撃バフ。剣士のアバイドで次ターン3連撃。学者で魔法火力。",
           "ko": "상인 BP 관련 지원, 무희 공작의 춤 공격 버프. 검사 인내로 다음 턴 3연타. 학자 마법 딜.",
           "zh": "商人 BP 加成支援，舞娘孔雀之舞攻击 buff。剑士蓄势待发下回合 3 连击。学者魔法输出。"
-        }
+        },
+        "phase": "support"
       }
     ],
     "sources": [
@@ -1427,7 +1979,137 @@
         "url": "https://www.bilibili.com/read/cv21380088",
         "attribution": "B站 — 职业搭配与昼夜指令系统"
       }
-    ]
+    ],
+    "phaseGuide": {
+      "en": [
+        {
+          "phase": "early",
+          "title": "Early (Ch.1-2, Lv.1-20): Build your 4 base jobs",
+          "tips": [
+            "Pick Thief (Therion) as your main - unlocks Armsmaster near New Delsta (invention) in Chapter 1.",
+            "Get Scholar (Osvald) into the party ASAP - AOE magic grinds lv.7-8 zones into lv.30+ fast.",
+            "Unlock all 8 base job guilds first (Scholar guild, Dancer guild, Merchant guild, Hunter guild, Apothecary guild, Thief guild, Cleric guild, Warrior guild). Most are reachable in Ch.2.",
+            "Skip stealing skill farm until you have the Black Market in New Delsta at night (sleep bottle + poison bottle stacking combo)."
+          ]
+        },
+        {
+          "phase": "mid",
+          "title": "Mid (Ch.3-4, Lv.20-45): License #2 licenses + party synergy",
+          "tips": [
+            "Get your 2nd license for Hunter (流沙魔物之肝) and Thief (盗贼宝石) early - they unlock unique combat paths.",
+            "Scholar + Hunter combo is the most efficient breaker: Ice Bow for 4-weakness hit + Lightning Axe + Wind staff for 3 more elements.",
+            "Save Leaves for the Merchant 300,000 license in late Ch.4 - this is the steepest gate.",
+            "Buy a Ship (Partitio's Scent of Commerce side quests, 100,000 Leaves) for the Lost Isle and sea-monster licenses."
+          ]
+        },
+        {
+          "phase": "late",
+          "title": "Late (Ch.5 + post-game, Lv.45+): All 4 secret jobs + endgame armor",
+          "tips": [
+            "Unlock all 4 secret jobs in order: Inventor (新德尔斯塔) → Conjurer (Ku 塔) → Arcanist (Lost Isle) → Armsmaster (Gravell).",
+            "Armsmaster + Scholar + Apothecary + Merchant = 'All 6 weapons + 90% bonus + BP engine' is the meta endgame team.",
+            "Use the 5-ingredient Apothecary Concoction to spam BP - it's the best party heal AND a 9999-damage spell at the same time.",
+            "Hunt the Extraneous Assassin (Merry Hills mountains, night) for the 50,000-Leaf Mercenary that heals the whole party + AoE."
+          ]
+        }
+      ],
+      "ja": [
+        {
+          "phase": "early",
+          "title": "序盤(第1-2章、Lv.1-20): 基本4ジョブを整える",
+          "tips": [
+            "主人公は盗賊(Therion)推奨 — 第1章で武芸家(発明家)が New Delsta 近くで解禁。",
+            "学者(Osvald)を最優先加入 — AOE 魔法で Lv.7-8 エリアを Lv.30+ まで高速育成可能。",
+            "まず 8 つの基本ギルド全部を解禁(学者・踊り子・商人・狩人・薬師・盗賊・神官・剣士)。第2章でほぼ到達可能。",
+            "スキル奪取は New Delsta 夜市の黒市解禁まで保留(睡眠瓶+毒瓶で無傷周回)。"
+          ]
+        },
+        {
+          "phase": "mid",
+          "title": "中盤(第3-4章、Lv.20-45): 第2ライセンス + パーティ連携",
+          "tips": [
+            "狩人第2(流砂魔物の肝)・盗賊第2(盗賊の宝石)を早めに取得。",
+            "学者+狩人 = 氷弓+雷斧+風杖で 4 属性の WEAK を一網打尽。",
+            "商人第3(300,000リーフ)は第4章後半が最難関。貯金を切らさない。",
+            "船(Partitio のサブクエスト「商いの香り」、100,000リーフ)を買って Lost Isle と海魔物ライセンスへ。"
+          ]
+        },
+        {
+          "phase": "late",
+          "title": "終盤(第5章+ポストゲーム、Lv.45+): 隠し4職業 + エンド装備",
+          "tips": [
+            "隠し職業解禁順: 発明家(新德尔斯塔) → 魔術師(Ku 塔) → 祈祷師(Lost Isle) → 武器大師(Gravell)。",
+            "武器大師+学者+薬師+商人 = 「全6武器90%加成+BPエンジン」が終盤メタ。",
+            "薬師の 5 種調和で BP 連発 — 最強の全体回復と 9999 ダメ魔法を兼ねる。",
+            "異邦の暗殺者(メリーヒルズ山道・夜)を狩って 50,000リーフの傭兵解禁(全体回復+AOE)。"
+          ]
+        }
+      ],
+      "ko": [
+        {
+          "phase": "early",
+          "title": "초반(1-2장, Lv.1-20): 기본 4직업 정비",
+          "tips": [
+            "주인공은 도적(Therion) 추천 — 1장에서 무예가(발명가)가 New Delsta 부근 해금.",
+            "학자(Osvald) 최우선 합류 — AOE 마법으로 Lv.7-8 지역을 Lv.30+ 고속 육성.",
+            "8개 기본 길드 모두 우선 해금(학자·무희·상인·사냥꾼·약사·도적·신관·검사). 2장 내 도달 가능.",
+            "스킬 탈취는 New Delsta 야시장 해금까지 보류(수면병+독병 루트)."
+          ]
+        },
+        {
+          "phase": "mid",
+          "title": "중반(3-4장, Lv.20-45): 2차 라이선스 + 파티 시너지",
+          "tips": [
+            "사냥꾼 2번(유사 마물 간)·도적 2번(도적 보석) 우선 확보.",
+            "학자+사냥꾼 = 빙궁+번개도끼+바람지팡이로 4속성 WEAK 일망타진.",
+            "상인 3번(300,000리프)은 4장 후반이 최대 고비. 저축 유지.",
+            "배(Partitio 사이드 퀘스트 '상인의 향기', 100,000리프) 구매 후 Lost Isle·바다 마물 라이선스."
+          ]
+        },
+        {
+          "phase": "late",
+          "title": "후반(5장+포스트, Lv.45+): 히든 4직업 + 엔드 장비",
+          "tips": [
+            "히든 직업 해금 순서: 발명가(뉴델스타) → 마술사(Ku 탑) → 기도사(Lost Isle) → 무예가(그래벨).",
+            "무예가+학자+약사+상인 = '전 6종 90% 가산+BP 엔진'이 후반 메타.",
+            "약사 5종 조화로 BP 연사 — 최강의 전힐과 9999 데미지 마법 동시 보유.",
+            "이방의 암살자(메리힐즈 산길·밤) 격파 후 50000리프 용병 해금(전힐+AOE)."
+          ]
+        }
+      ],
+      "zh": [
+        {
+          "phase": "early",
+          "title": "前期(第1-2章, Lv.1-20): 凑齐 4 个基础职业",
+          "tips": [
+            "主角选盗贼(Therion) — 第 1 章就能在新德尔斯塔附近解锁武艺家(发明家)。",
+            "优先把学者(Osvald)招进队伍 — AOE 魔法能把 Lv.7-8 区域高速练到 Lv.30+。",
+            "先解禁 8 个基础工会(学者/舞娘/商人/猎人/药师/盗贼/神官/剑士),第 2 章基本都到得了。",
+            "技能夺取留到新德尔斯塔夜市黑市开启后再做(睡眠瓶+毒瓶叠层无伤周回)。"
+          ]
+        },
+        {
+          "phase": "mid",
+          "title": "中期(第3-4章, Lv.20-45): 第 2 许可证 + 队伍联动",
+          "tips": [
+            "先拿猎人第 2 张(流沙魔物之肝)和盗贼第 2 张(盗贼宝石),解锁独有战斗路线。",
+            "学者+猎人是最强破盾组合: 冰弓+雷斧+风杖覆盖 4 属性 WEAK。",
+            "商人第 3 张(300,000 叶币)是第 4 章后半最大门槛,别把钱花光。",
+            "在 Partitio 「商人的气息」支线买船(100,000 叶币)去打 Lost Isle 和海中魔物许可证。"
+          ]
+        },
+        {
+          "phase": "late",
+          "title": "后期(第 5 章 + 后期, Lv.45+): 4 个隐藏职业 + 终局装备",
+          "tips": [
+            "隐藏职业解禁顺序: 发明家(新德尔斯塔) → 魔导师(Ku 塔) → 祈祷师(Lost Isle) → 武器大师(Gravell)。",
+            "武器大师+学者+药师+商人 = 「全 6 武器 90% 加成 + BP 引擎」是后期 meta。",
+            "药师 5 种调和连发 BP = 最强群体治疗和 9999 伤害魔法兼得。",
+            "打梅里希尔斯山道夜晚的「异邦暗杀者」解锁 50000 叶币佣兵(全体回血+AOE)。"
+          ]
+        }
+      ]
+    }
   },
   "sources": [
     {
