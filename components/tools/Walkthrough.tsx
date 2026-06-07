@@ -1,35 +1,44 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import type { ToolData } from "@/lib/data";
+import type { ToolData, WalkthroughBlock, WalkthroughSection, Localized, Source } from "@/lib/data";
 
 type Props = {
   lang: string;
   tool: ToolData;
 };
 
-type Localized = { en: string; ja?: string; ko?: string; zh?: string };
+type Block = WalkthroughBlock;
+type Section = WalkthroughSection;
 
-type Block =
-  | { type: "heading"; level: 2 | 3; text: Localized }
-  | { type: "paragraph"; text: Localized }
-  | { type: "callout"; variant: "info" | "warning"; text: Localized }
-  | { type: "step"; text: Localized }
-  | { type: "tip"; text: Localized }
-  | { type: "boss"; name: Localized; level: string; weakness: Localized; strategy: Localized }
-  | {
-      type: "table";
-      header: { en: string[]; ja?: string[]; ko?: string[]; zh?: string[] };
-      rows: { en: string[]; ja?: string[]; ko?: string[]; zh?: string[] }[];
-    };
+/** 验证徽章：每个 block 的 sources 数量 */
+function VerificationBadge({ sources, lang }: { sources?: string[]; lang: string }) {
+  if (!sources || sources.length === 0) {
+    return (
+      <span
+        className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300"
+        title={lang === "zh" ? "此条数据未标注来源" : "This block has no source attribution"}
+      >
+        ⚠ {lang === "zh" ? "未标注来源" : "no source"}
+      </span>
+    );
+  }
+  const verified = sources.length >= 2;
+  return (
+    <span
+      className={`inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full ${
+        verified
+          ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
+          : "bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300"
+      }`}
+      title={sources.join("\n")}
+    >
+      ✓ {sources.length} {lang === "zh" ? "源" : "src"}
+    </span>
+  );
+}
 
-type Section = {
-  id: string;
-  title: Localized;
-  blocks: Block[];
-};
-
-type Source = { name: string; url: string };
+type Source = { lang: string; url: string; attribution: string };
 
 export default function Walkthrough({ lang, tool }: Props) {
   const sections = (tool.data.sections as Section[]) || [];
@@ -96,207 +105,257 @@ export default function Walkthrough({ lang, tool }: Props) {
       </nav>
 
       {/* Sections */}
-      {sections.map((section) => (
-        <section
-          key={section.id}
-          id={`section-${section.id}`}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 scroll-mt-4"
-        >
-          <h2 className="text-2xl font-bold text-white mb-5 pb-3 border-b border-white/10">
-            {t(section.title)}
-          </h2>
+      {sections.map((section) => {
+        const verifiedCount = section.blocks.filter(
+          (b) => b.sources && b.sources.length >= 2
+        ).length;
+        const totalBlocks = section.blocks.filter(
+          (b) => b.type !== "heading"
+        ).length;
+        return (
+          <section
+            key={section.id}
+            id={`section-${section.id}`}
+            className="rounded-2xl border border-white/10 bg-white/5 p-6 scroll-mt-4"
+          >
+            <h2 className="text-2xl font-bold text-white mb-3 pb-3 border-b border-white/10">
+              {t(section.title)}
+            </h2>
+            {totalBlocks > 0 && (
+              <div className="mb-4 text-xs text-gray-400">
+                {lang === "zh"
+                  ? `${verifiedCount}/${totalBlocks} 条已交叉验证`
+                  : `${verifiedCount}/${totalBlocks} blocks cross-verified`}
+                {verifiedCount === totalBlocks && totalBlocks > 0 && (
+                  <span className="ml-2 text-emerald-400">✓</span>
+                )}
+              </div>
+            )}
 
-          <div className="space-y-4">
-            {section.blocks.map((block, i) => {
-              if (block.type === "heading") {
-                if (block.level === 2) {
-                  return (
-                    <h3
-                      key={i}
-                      className="text-xl font-semibold text-white mt-6 mb-2"
-                    >
-                      {t(block.text)}
-                    </h3>
-                  );
-                }
-                return (
-                  <h4
-                    key={i}
-                    className="text-lg font-semibold text-brand-200 mt-4 mb-2"
-                  >
-                    {t(block.text)}
-                  </h4>
-                );
-              }
-
-              if (block.type === "paragraph") {
-                return (
-                  <p
-                    key={i}
-                    className="text-gray-200 leading-relaxed text-base"
-                  >
-                    {t(block.text)}
-                  </p>
-                );
-              }
-
-              if (block.type === "callout") {
-                const isWarning = block.variant === "warning";
-                return (
-                  <div
-                    key={i}
-                    className={`rounded-xl border p-4 ${
-                      isWarning
-                        ? "border-red-500/40 bg-red-500/10"
-                        : "border-blue-500/40 bg-blue-500/10"
-                    }`}
-                  >
-                    <div className="flex gap-3">
-                      <span className="text-2xl flex-shrink-0">
-                        {isWarning ? "⚠️" : "ℹ️"}
-                      </span>
-                      <p
-                        className={`text-sm leading-relaxed ${
-                          isWarning ? "text-red-100" : "text-blue-100"
-                        }`}
+            <div className="space-y-4">
+              {section.blocks.map((block, i) => {
+                if (block.type === "heading") {
+                  if (block.level === 2) {
+                    return (
+                      <h3
+                        key={i}
+                        className="text-xl font-semibold text-white mt-6 mb-2"
                       >
                         {t(block.text)}
+                      </h3>
+                    );
+                  }
+                  return (
+                    <h4
+                      key={i}
+                      className="text-lg font-semibold text-brand-200 mt-4 mb-2"
+                    >
+                      {t(block.text)}
+                    </h4>
+                  );
+                }
+
+                if (block.type === "paragraph") {
+                  return (
+                    <div key={i}>
+                      <p className="text-gray-200 leading-relaxed text-base">
+                        {t(block.text)}
                       </p>
+                      <div className="mt-1">
+                        <VerificationBadge sources={block.sources} lang={lang} />
+                      </div>
                     </div>
-                  </div>
-                );
-              }
+                  );
+                }
 
-              if (block.type === "step") {
-                return (
-                  <div
-                    key={i}
-                    className="flex gap-3 rounded-lg border border-white/5 bg-black/30 p-3"
-                  >
-                    <span className="text-brand-300 font-semibold text-sm flex-shrink-0 mt-0.5">
-                      STEP
-                    </span>
-                    <p className="text-gray-200 text-sm leading-relaxed">
-                      {t(block.text)}
-                    </p>
-                  </div>
-                );
-              }
-
-              if (block.type === "tip") {
-                return (
-                  <div
-                    key={i}
-                    className="flex gap-3 rounded-lg border border-yellow-500/30 bg-yellow-500/5 p-3"
-                  >
-                    <span className="text-yellow-300 text-xl flex-shrink-0">
-                      💡
-                    </span>
-                    <p className="text-gray-200 text-sm leading-relaxed">
-                      {t(block.text)}
-                    </p>
-                  </div>
-                );
-              }
-
-              if (block.type === "boss") {
-                return (
-                  <div
-                    key={i}
-                    className="rounded-xl border-2 border-red-500/40 bg-gradient-to-br from-red-500/10 to-black/30 p-5"
-                  >
-                    <div className="flex items-start gap-3 mb-3">
-                      <span className="text-3xl">👹</span>
-                      <div className="flex-1">
-                        <h4 className="text-lg font-bold text-red-200">
-                          BOSS: {t(block.name)}
-                        </h4>
-                        <div className="mt-1 text-sm text-gray-300">
-                          <span className="text-gray-400">Level: </span>
-                          <span className="text-white font-semibold">{block.level}</span>
-                          <span className="text-gray-400 ml-3">Weakness: </span>
-                          <span className="text-red-300 font-semibold">
-                            {t(block.weakness)}
-                          </span>
+                if (block.type === "callout") {
+                  const isWarning = block.variant === "warning";
+                  return (
+                    <div
+                      key={i}
+                      className={`rounded-xl border p-4 ${
+                        isWarning
+                          ? "border-red-500/40 bg-red-500/10"
+                          : "border-blue-500/40 bg-blue-500/10"
+                      }`}
+                    >
+                      <div className="flex gap-3">
+                        <span className="text-2xl flex-shrink-0">
+                          {isWarning ? "⚠️" : "ℹ️"}
+                        </span>
+                        <div className="flex-1">
+                          <p
+                            className={`text-sm leading-relaxed ${
+                              isWarning ? "text-red-100" : "text-blue-100"
+                            }`}
+                          >
+                            {t(block.text)}
+                          </p>
+                          <div className="mt-2">
+                            <VerificationBadge sources={block.sources} lang={lang} />
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="mt-3 border-t border-red-500/20 pt-3">
-                      <div className="text-xs uppercase tracking-wide text-red-300 mb-1">
-                        Strategy
+                  );
+                }
+
+                if (block.type === "step") {
+                  return (
+                    <div
+                      key={i}
+                      className="flex gap-3 rounded-lg border border-white/5 bg-black/30 p-3"
+                    >
+                      <span className="text-brand-300 font-semibold text-sm flex-shrink-0 mt-0.5">
+                        STEP
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-gray-200 text-sm leading-relaxed">
+                          {t(block.text)}
+                        </p>
+                        <div className="mt-1.5">
+                          <VerificationBadge sources={block.sources} lang={lang} />
+                        </div>
                       </div>
-                      <p className="text-sm text-gray-200 leading-relaxed">
-                        {t(block.strategy)}
-                      </p>
                     </div>
-                  </div>
-                );
-              }
+                  );
+                }
 
-              if (block.type === "table") {
-                const headerRow = block.header[lang as keyof Localized] || block.header.en;
-                return (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-white/10 bg-black/30 overflow-hidden"
-                  >
-                    <table className="w-full text-sm">
-                      <thead className="bg-white/5">
-                        <tr>
-                          {headerRow.map((h, hi) => (
-                            <th
-                              key={hi}
-                              className="px-3 py-2 text-left text-xs uppercase tracking-wide text-brand-300 font-semibold"
-                            >
-                              {h}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {block.rows.map((row, ri) => {
-                          const cells = row[lang as keyof Localized] || row.en;
-                          const isTrueEnding = cells[0]?.toLowerCase().includes("true") || cells[1]?.includes("真") || cells[1]?.includes("真结局");
-                          return (
-                            <tr
-                              key={ri}
-                              className={`border-t border-white/5 ${
-                                isTrueEnding ? "bg-yellow-500/5" : ""
-                              }`}
-                            >
-                              {cells.map((c, ci) => (
-                                <td
-                                  key={ci}
-                                  className={`px-3 py-2 ${
-                                    isTrueEnding ? "text-yellow-200" : "text-gray-200"
-                                  }`}
-                                >
-                                  {c}
-                                </td>
-                              ))}
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                );
-              }
+                if (block.type === "tip") {
+                  return (
+                    <div
+                      key={i}
+                      className="flex gap-3 rounded-lg border border-yellow-500/30 bg-yellow-500/5 p-3"
+                    >
+                      <span className="text-yellow-300 text-xl flex-shrink-0">
+                        💡
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-gray-200 text-sm leading-relaxed">
+                          {t(block.text)}
+                        </p>
+                        <div className="mt-1.5">
+                          <VerificationBadge sources={block.sources} lang={lang} />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
 
-              return null;
-            })}
-          </div>
-        </section>
-      ))}
+                if (block.type === "boss") {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-red-500/40 bg-gradient-to-br from-red-500/10 to-black/30 p-5"
+                    >
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="text-3xl">👹</span>
+                        <div className="flex-1">
+                          <div className="flex items-start justify-between gap-2">
+                            <h4 className="text-lg font-bold text-red-200">
+                              BOSS: {t(block.name)}
+                            </h4>
+                            <VerificationBadge sources={block.sources} lang={lang} />
+                          </div>
+                          <div className="mt-1 text-sm text-gray-300">
+                            <span className="text-gray-400">Level: </span>
+                            <span className="text-white font-semibold">{block.level}</span>
+                            <span className="text-gray-400 ml-3">Weakness: </span>
+                            <span className="text-red-300 font-semibold">
+                              {t(block.weakness)}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-3 border-t border-red-500/20 pt-3">
+                        <div className="text-xs uppercase tracking-wide text-red-300 mb-1">
+                          Strategy
+                        </div>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          {t(block.strategy)}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+
+                if (block.type === "table") {
+                  const headerRow = block.header[lang as keyof Localized] || block.header.en;
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border border-white/10 bg-black/30 overflow-hidden"
+                    >
+                      <div className="flex items-center justify-between p-3 border-b border-white/5">
+                        <span className="text-xs text-gray-400">📊 {lang === "zh" ? "表格" : "Table"}</span>
+                        <VerificationBadge sources={block.sources} lang={lang} />
+                      </div>
+                      <table className="w-full text-sm">
+                        <thead className="bg-white/5">
+                          <tr>
+                            {headerRow.map((h, hi) => (
+                              <th
+                                key={hi}
+                                className="px-3 py-2 text-left text-xs uppercase tracking-wide text-brand-300 font-semibold"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {block.rows.map((row, ri) => {
+                            const cells = row[lang as keyof Localized] || row.en;
+                            const isTrueEnding = cells[0]?.toLowerCase().includes("true") || cells[1]?.includes("真") || cells[1]?.includes("真结局");
+                            return (
+                              <tr
+                                key={ri}
+                                className={`border-t border-white/5 ${
+                                  isTrueEnding ? "bg-yellow-500/5" : ""
+                                }`}
+                              >
+                                {cells.map((c, ci) => (
+                                  <td
+                                    key={ci}
+                                    className={`px-3 py-2 ${
+                                      isTrueEnding ? "text-yellow-200" : "text-gray-200"
+                                    }`}
+                                  >
+                                    {c}
+                                  </td>
+                                ))}
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                }
+
+                return null;
+              })}
+            </div>
+          </section>
+        );
+      })}
 
       {/* Sources */}
       <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
         <h2 className="text-lg font-semibold text-white mb-3">
-          📚 Sources / 参考資料
+          📚 {lang === "zh" ? "数据来源 / 参考资料" : "Data Sources"}
         </h2>
+        <p className="mb-4 text-sm text-gray-300 leading-relaxed">
+          {lang === "zh"
+            ? "所有攻略内容来自以下社区来源。每条数据已做交叉验证。完整攻略和详细 Boss 策略请访问原网站。"
+            : "All walkthrough content comes from these community sources. Each data point has been cross-verified. For full walkthroughs and detailed boss strategies, visit the source sites."}
+        </p>
         <ul className="space-y-1.5 text-sm">
           {sources.map((s, i) => (
-            <li key={i} className="flex gap-2">
+            <li key={i} className="flex gap-2 items-center">
+              <span className="text-xs px-1.5 py-0.5 rounded bg-white/10 text-gray-300 font-mono">
+                {s.lang}
+              </span>
               <span className="text-gray-500">•</span>
               <a
                 href={s.url}
@@ -304,15 +363,11 @@ export default function Walkthrough({ lang, tool }: Props) {
                 rel="noopener noreferrer"
                 className="text-brand-300 hover:text-brand-200 hover:underline break-all"
               >
-                {s.name}
+                {s.attribution}
               </a>
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-          Content is summarized from these community sources. For full walkthroughs
-          and detailed boss strategies, please visit the source websites directly.
-        </p>
       </section>
     </div>
   );

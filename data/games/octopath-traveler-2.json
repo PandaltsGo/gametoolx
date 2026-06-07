@@ -6,7 +6,14 @@
     "ko": "옥토패스 트래블러 II",
     "zh": "歧路旅人II"
   },
-  "tags": ["humble2026-06", "rpg", "japanese", "j-rpg", "hd-2d", "turn-based"],
+  "tags": [
+    "humble2026-06",
+    "rpg",
+    "japanese",
+    "j-rpg",
+    "hd-2d",
+    "turn-based"
+  ],
   "images": {
     "library": "/images/games/octopath-traveler-2/library.jpg",
     "header": "/images/games/octopath-traveler-2/header.jpg",
@@ -37,5 +44,12 @@
       "storage": "10 GB available space",
       "notes": "60 FPS @ 1920x1080, Preset \"Highest\", Systen RAM 16GB required when running on Intel GPU"
     }
-  }
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://store.steampowered.com/app/1971650/OCTOPATH_TRAVELER_II/",
+      "attribution": "Steam Store — Official Page"
+    }
+  ]
 }

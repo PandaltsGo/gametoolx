@@ -17,36 +17,44 @@
   "data": {
     "sources": [
       {
-        "name": "NGA 玩家社区",
-        "url": "https://bbs.nga.cn/thread.php?stid=11291877"
+        "lang": "zh",
+        "url": "https://bbs.nga.cn/thread.php?stid=11291877",
+        "attribution": "NGA 玩家社区"
       },
       {
-        "name": "3DM 单机",
-        "url": "https://www.3dmgame.com/games/smtvv/"
+        "lang": "zh",
+        "url": "https://www.3dmgame.com/games/smtvv/",
+        "attribution": "3DM 单机"
       },
       {
-        "name": "萌娘百科",
-        "url": "https://mzh.moegirl.org.cn/%E7%9C%9F%C2%B7%E5%A5%B3%E7%A5%9E%E8%BD%AC%E7%94%9FV_Vengeance"
+        "lang": "en",
+        "url": "https://mzh.moegirl.org.cn/%E7%9C%9F%C2%B7%E5%A5%B3%E7%A5%9E%E8%BD%AC%E7%94%9FV_Vengeance",
+        "attribution": "萌娘百科"
       },
       {
-        "name": "百度贴吧 女神异闻录吧",
-        "url": "https://tieba.baidu.com/f?kw=%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%95"
+        "lang": "en",
+        "url": "https://tieba.baidu.com/f?kw=%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%95",
+        "attribution": "百度贴吧 女神异闻录吧"
       },
       {
-        "name": "GameWith (日)",
-        "url": "https://gamewith.jp/ps5/game/show/10772"
+        "lang": "ja",
+        "url": "https://gamewith.jp/ps5/game/show/10772",
+        "attribution": "GameWith (日)"
       },
       {
-        "name": "Fami 通公式攻略本",
-        "url": "https://www.famitsu.com/"
+        "lang": "en",
+        "url": "https://www.famitsu.com/",
+        "attribution": "Fami 通公式攻略本"
       },
       {
-        "name": "Steam 商店",
-        "url": "https://store.steampowered.com/app/1875830/"
+        "lang": "en",
+        "url": "https://store.steampowered.com/app/1875830/",
+        "attribution": "Steam 商店"
       },
       {
-        "name": "MegaTen Wiki (Fandom)",
-        "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance"
+        "lang": "en",
+        "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+        "attribution": "MegaTen Wiki (Fandom)"
       }
     ],
     "sections": [
@@ -502,5 +510,47 @@
         ]
       }
     ]
-  }
+  },
+  "sources": [
+    {
+      "lang": "zh",
+      "url": "https://bbs.nga.cn/thread.php?stid=11291877",
+      "attribution": "NGA 玩家社区"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.3dmgame.com/games/smtvv/",
+      "attribution": "3DM 单机"
+    },
+    {
+      "lang": "en",
+      "url": "https://mzh.moegirl.org.cn/%E7%9C%9F%C2%B7%E5%A5%B3%E7%A5%9E%E8%BD%AC%E7%94%9FV_Vengeance",
+      "attribution": "萌娘百科"
+    },
+    {
+      "lang": "en",
+      "url": "https://tieba.baidu.com/f?kw=%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%95",
+      "attribution": "百度贴吧 女神异闻录吧"
+    },
+    {
+      "lang": "ja",
+      "url": "https://gamewith.jp/ps5/game/show/10772",
+      "attribution": "GameWith (日)"
+    },
+    {
+      "lang": "en",
+      "url": "https://www.famitsu.com/",
+      "attribution": "Fami 通公式攻略本"
+    },
+    {
+      "lang": "en",
+      "url": "https://store.steampowered.com/app/1875830/",
+      "attribution": "Steam 商店"
+    },
+    {
+      "lang": "en",
+      "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+      "attribution": "MegaTen Wiki (Fandom)"
+    }
+  ]
 }

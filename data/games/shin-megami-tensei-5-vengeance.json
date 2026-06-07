@@ -6,7 +6,15 @@
     "ko": "신・여신전생V Vengeance",
     "zh": "真·女神转生Ⅴ 复仇"
   },
-  "tags": ["humble2026-05", "rpg", "japanese", "j-rpg", "press-turn", "demon-fusion", "uniqueness-of-souls"],
+  "tags": [
+    "humble2026-05",
+    "rpg",
+    "japanese",
+    "j-rpg",
+    "press-turn",
+    "demon-fusion",
+    "uniqueness-of-souls"
+  ],
   "images": {
     "library": "/images/games/shin-megami-tensei-5-vengeance/library.jpg",
     "header": "/images/games/shin-megami-tensei-5-vengeance/header.jpg",
@@ -26,8 +34,26 @@
   "releaseDate": "2024-06-14",
   "developer": "ATLUS",
   "publisher": "SEGA",
-  "genres": ["RPG", "JRPG", "Turn-based"],
-  "languages": ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fr", "it", "de", "es", "pl", "pt-BR", "tr", "ru"],
+  "genres": [
+    "RPG",
+    "JRPG",
+    "Turn-based"
+  ],
+  "languages": [
+    "en",
+    "ja",
+    "ko",
+    "zh-Hans",
+    "zh-Hant",
+    "fr",
+    "it",
+    "de",
+    "es",
+    "pl",
+    "pt-BR",
+    "tr",
+    "ru"
+  ],
   "metacriticScore": 90,
   "steamReviewPercent": 92,
   "price": {
@@ -37,7 +63,14 @@
     "dlcSet": 62
   },
   "playtimeHours": 80,
-  "platforms": ["Windows", "PS4", "PS5", "Xbox One", "Xbox Series", "Switch"],
+  "platforms": [
+    "Windows",
+    "PS4",
+    "PS5",
+    "Xbox One",
+    "Xbox Series",
+    "Switch"
+  ],
   "description": {
     "en": "Shin Megami Tensei V: Vengeance is the definitive edition of the critically acclaimed RPG. The world of Da'at awaits, with 270+ demons to recruit, two complete story routes, and 6 endings. Choose between the Creation route (original story) or the Vengeance route (new story) at the start.",
     "ja": "全世界累計100万本突破のRPG『真・女神転生Ⅴ』の決定版。「創世の女神編」と「復讐の女神編」の2つのルート、270体以上の悪魔、複数エンディングを収録。荒廃した東京「ダアト」で神と魔が繰り広げる戦いに身を投じよう。",
@@ -66,5 +99,12 @@
     "system-checker",
     "endings-tracker",
     "fusion-calculator"
+  ],
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://store.steampowered.com/app/1875830/Shin_Megami_Tensei_V_Vengeance/",
+      "attribution": "Steam Store — Official Page"
+    }
   ]
 }

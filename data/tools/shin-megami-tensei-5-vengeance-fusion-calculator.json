@@ -16,125 +16,1642 @@
   },
   "data": {
     "races": [
-      { "id": "megami",   "en": "Megami",   "ja": "女神",     "ko": "여신",    "zh": "女神" },
-      { "id": "kishin",   "en": "Kishin",   "ja": "鬼神",     "ko": "귀신",    "zh": "鬼神" },
-      { "id": "tenma",    "en": "Tenma",    "ja": "天魔",     "ko": "천마",    "zh": "天魔" },
-      { "id": "yoma",     "en": "Yoma",     "ja": "妖鬼",     "ko": "요귀",    "zh": "妖鬼" },
-      { "id": "fairy",    "en": "Fairy",    "ja": "妖精",     "ko": "요정",    "zh": "妖精" },
-      { "id": "night",    "en": "Night",    "ja": "夜魔",     "ko": "야마",    "zh": "夜魔" },
-      { "id": "herald",   "en": "Herald",   "ja": "天使",     "ko": "천사",    "zh": "天使" },
-      { "id": "genma",    "en": "Genma",    "ja": "幻魔",     "ko": "환마",    "zh": "幻魔" },
-      { "id": "jirae",    "en": "Jirae",    "ja": "地霊",     "ko": "지령",    "zh": "地灵" },
-      { "id": "snake",    "en": "Snake",    "ja": "龍蛇",     "ko": "용사",    "zh": "龙蛇" },
-      { "id": "beast",    "en": "Beast",    "ja": "魔兽",     "ko": "마수",    "zh": "魔兽" },
-      { "id": "wargod",   "en": "Wargod",   "ja": "破壊神",   "ko": "파괴신",  "zh": "破坏神" },
-      { "id": "lady",     "en": "Lady",     "ja": "魔人",     "ko": "마인",    "zh": "魔人" },
-      { "id": "world",    "en": "World",    "ja": "外道",     "ko": "외도",    "zh": "外道" },
-      { "id": "tyrant",   "en": "Tyrant",   "ja": "魔王",     "ko": "마왕",    "zh": "魔王" },
-      { "id": "dragon",   "en": "Dragon",   "ja": "龍王",     "ko": "용왕",    "zh": "龙王" },
-      { "id": "avatar",   "en": "Avatar",   "ja": "聖獣",     "ko": "성수",    "zh": "圣兽" },
-      { "id": "reaper",   "en": "Reaper",   "ja": "死神",     "ko": "사신",    "zh": "死神" },
-      { "id": "fiend",    "en": "Fiend",    "ja": "邪神",     "ko": "사신",    "zh": "邪神" },
-      { "id": "fallen",   "en": "Fallen",   "ja": "堕天使",   "ko": "타천사",  "zh": "堕天使" },
-      { "id": "hero",     "en": "Hero",     "ja": "英雄",     "ko": "영웅",    "zh": "英雄" },
-      { "id": "divine",   "en": "Divine",   "ja": "秘神",     "ko": "비신",    "zh": "秘神" },
-      { "id": "spirit",   "en": "Spirit",   "ja": "精霊",     "ko": "정령",    "zh": "精灵" }
+      {
+        "id": "megami",
+        "en": "Megami",
+        "ja": "女神",
+        "ko": "여신",
+        "zh": "女神"
+      },
+      {
+        "id": "kishin",
+        "en": "Kishin",
+        "ja": "鬼神",
+        "ko": "귀신",
+        "zh": "鬼神"
+      },
+      {
+        "id": "tenma",
+        "en": "Tenma",
+        "ja": "天魔",
+        "ko": "천마",
+        "zh": "天魔"
+      },
+      {
+        "id": "yoma",
+        "en": "Yoma",
+        "ja": "妖鬼",
+        "ko": "요귀",
+        "zh": "妖鬼"
+      },
+      {
+        "id": "fairy",
+        "en": "Fairy",
+        "ja": "妖精",
+        "ko": "요정",
+        "zh": "妖精"
+      },
+      {
+        "id": "night",
+        "en": "Night",
+        "ja": "夜魔",
+        "ko": "야마",
+        "zh": "夜魔"
+      },
+      {
+        "id": "herald",
+        "en": "Herald",
+        "ja": "天使",
+        "ko": "천사",
+        "zh": "天使"
+      },
+      {
+        "id": "genma",
+        "en": "Genma",
+        "ja": "幻魔",
+        "ko": "환마",
+        "zh": "幻魔"
+      },
+      {
+        "id": "jirae",
+        "en": "Jirae",
+        "ja": "地霊",
+        "ko": "지령",
+        "zh": "地灵"
+      },
+      {
+        "id": "snake",
+        "en": "Snake",
+        "ja": "龍蛇",
+        "ko": "용사",
+        "zh": "龙蛇"
+      },
+      {
+        "id": "beast",
+        "en": "Beast",
+        "ja": "魔兽",
+        "ko": "마수",
+        "zh": "魔兽"
+      },
+      {
+        "id": "wargod",
+        "en": "Wargod",
+        "ja": "破壊神",
+        "ko": "파괴신",
+        "zh": "破坏神"
+      },
+      {
+        "id": "lady",
+        "en": "Lady",
+        "ja": "魔人",
+        "ko": "마인",
+        "zh": "魔人"
+      },
+      {
+        "id": "world",
+        "en": "World",
+        "ja": "外道",
+        "ko": "외도",
+        "zh": "外道"
+      },
+      {
+        "id": "tyrant",
+        "en": "Tyrant",
+        "ja": "魔王",
+        "ko": "마왕",
+        "zh": "魔王"
+      },
+      {
+        "id": "dragon",
+        "en": "Dragon",
+        "ja": "龍王",
+        "ko": "용왕",
+        "zh": "龙王"
+      },
+      {
+        "id": "avatar",
+        "en": "Avatar",
+        "ja": "聖獣",
+        "ko": "성수",
+        "zh": "圣兽"
+      },
+      {
+        "id": "reaper",
+        "en": "Reaper",
+        "ja": "死神",
+        "ko": "사신",
+        "zh": "死神"
+      },
+      {
+        "id": "fiend",
+        "en": "Fiend",
+        "ja": "邪神",
+        "ko": "사신",
+        "zh": "邪神"
+      },
+      {
+        "id": "fallen",
+        "en": "Fallen",
+        "ja": "堕天使",
+        "ko": "타천사",
+        "zh": "堕天使"
+      },
+      {
+        "id": "hero",
+        "en": "Hero",
+        "ja": "英雄",
+        "ko": "영웅",
+        "zh": "英雄"
+      },
+      {
+        "id": "divine",
+        "en": "Divine",
+        "ja": "秘神",
+        "ko": "비신",
+        "zh": "秘神"
+      },
+      {
+        "id": "spirit",
+        "en": "Spirit",
+        "ja": "精霊",
+        "ko": "정령",
+        "zh": "精灵"
+      }
     ],
     "demons": [
-      { "id": "pixie",        "name": { "en": "Pixie",        "ja": "ピクシー",       "ko": "픽시",          "zh": "小妖精" },       "race": "fairy",  "level": 3,  "stats": { "str": 4, "mag": 8, "vit": 4, "agi": 8, "luc": 6 } },
-      { "id": "apsaras",      "name": { "en": "Apsaras",      "ja": "アプサラス",     "ko": "압사라스",       "zh": "飞天" },         "race": "yoma",   "level": 11, "stats": { "str": 5, "mag": 11,"vit": 6, "agi": 10,"luc": 9 } },
-      { "id": "highPixie",    "name": { "en": "High Pixie",   "ja": "ハイピクシー",   "ko": "하이 픽시",      "zh": "杰克霜精" },     "race": "fairy",  "level": 11, "stats": { "str": 6, "mag": 13,"vit": 7, "agi": 12,"luc": 11 } },
-      { "id": "anat",         "name": { "en": "Anat",         "ja": "アナト",         "ko": "아나트",         "zh": "阿娜希塔" },     "race": "lady",   "level": 29, "stats": { "str": 13,"mag": 24,"vit": 14,"agi": 18,"luc": 16 } },
-      { "id": "artemis",      "name": { "en": "Artemis",      "ja": "アルテミス",     "ko": "아르테미스",     "zh": "阿提密斯" },     "race": "megami", "level": 37, "stats": { "str": 16,"mag": 28,"vit": 16,"agi": 24,"luc": 19 } },
-      { "id": "thor",         "name": { "en": "Thor",         "ja": "トール",         "ko": "토르",           "zh": "托尔" },         "race": "wargod", "level": 66, "stats": { "str": 35,"mag": 32,"vit": 30,"agi": 30,"luc": 25 } },
-      { "id": "genbu",        "name": { "en": "Genbu",        "ja": "玄武",           "ko": "현무",           "zh": "玄武" },         "race": "jirae",  "level": 7,  "stats": { "str": 11,"mag": 6, "vit": 12,"agi": 5, "luc": 5 } },
-      { "id": "amaterasu",    "name": { "en": "Amaterasu",    "ja": "アマテラス",     "ko": "아마테라스",     "zh": "天照" },         "race": "megami", "level": 70, "stats": { "str": 28,"mag": 45,"vit": 32,"agi": 32,"luc": 30 } },
-      { "id": "makami",       "name": { "en": "Makami",       "ja": "マカミ",         "ko": "마카미",         "zh": "真神" },         "race": "avatar", "level": 33, "stats": { "str": 18,"mag": 26,"vit": 17,"agi": 22,"luc": 19 } },
-      { "id": "quetzalcoatl", "name": { "en": "Quetzalcoatl", "ja": "ケツァルコアトル","ko": "케찰코아틀",     "zh": "羽蛇神" },       "race": "snake",  "level": 55, "stats": { "str": 24,"mag": 38,"vit": 25,"agi": 28,"luc": 22 } },
-      { "id": "nuwa",         "name": { "en": "Nuwa",         "ja": "女媧",           "ko": "여와",           "zh": "女媧" },         "race": "lady",   "level": 80, "stats": { "str": 32,"mag": 50,"vit": 35,"agi": 35,"luc": 30 } },
-      { "id": "izanagi",      "name": { "en": "Izanagi",      "ja": "イザナギ",       "ko": "이자나기",       "zh": "伊邪那岐" },     "race": "divine", "level": 80, "stats": { "str": 35,"mag": 50,"vit": 38,"agi": 30,"luc": 32 } },
-      { "id": "loki",         "name": { "en": "Loki",         "ja": "ロキ",           "ko": "로키",           "zh": "洛基" },         "race": "tyrant", "level": 60, "stats": { "str": 28,"mag": 35,"vit": 28,"agi": 32,"luc": 25 } },
-      { "id": "hel",          "name": { "en": "Hel",          "ja": "ヘル",           "ko": "헐",             "zh": "赫尔" },         "race": "lady",   "level": 58, "stats": { "str": 22,"mag": 38,"vit": 30,"agi": 24,"luc": 22 } },
-      { "id": "jackFrost",    "name": { "en": "Jack Frost",    "ja": "ジャックフロスト","ko": "잭 프로스트",     "zh": "杰克霜精" },     "race": "fairy",  "level": 11, "stats": { "str": 6, "mag": 13,"vit": 7, "agi": 12,"luc": 11 } },
-      { "id": "kingJack",     "name": { "en": "King Jack",     "ja": "キングフロスト", "ko": "킹 잭 프로스트", "zh": "霜精之王" },     "race": "fairy",  "level": 33, "stats": { "str": 16,"mag": 26,"vit": 18,"agi": 22,"luc": 20 } },
-      { "id": "lilim",        "name": { "en": "Lilim",        "ja": "リリム",         "ko": "리림",           "zh": "莉莉姆" },       "race": "night",  "level": 16, "stats": { "str": 7, "mag": 14,"vit": 8, "agi": 13,"luc": 10 } },
-      { "id": "metatron",     "name": { "en": "Metatron",     "ja": "メタトロン",     "ko": "메타트론",       "zh": "梅塔特隆" },     "race": "herald", "level": 80, "stats": { "str": 35,"mag": 50,"vit": 38,"agi": 35,"luc": 30 } },
-      { "id": "michael",      "name": { "en": "Michael",      "ja": "ミカエル",       "ko": "미카엘",         "zh": "米迦勒" },       "race": "herald", "level": 90, "stats": { "str": 42,"mag": 55,"vit": 42,"agi": 38,"luc": 35 } },
-      { "id": "gabriel",      "name": { "en": "Gabriel",      "ja": "ガブリエル",     "ko": "가브리엘",       "zh": "加百列" },       "race": "herald", "level": 86, "stats": { "str": 38,"mag": 50,"vit": 38,"agi": 35,"luc": 32 } },
-      { "id": "raphael",      "name": { "en": "Raphael",      "ja": "ラファエル",     "ko": "라파엘",         "zh": "拉斐尔" },       "race": "herald", "level": 84, "stats": { "str": 36,"mag": 50,"vit": 38,"agi": 35,"luc": 30 } },
-      { "id": "uriel",        "name": { "en": "Uriel",        "ja": "ウリエル",       "ko": "우리엘",         "zh": "乌列尔" },       "race": "herald", "level": 82, "stats": { "str": 36,"mag": 48,"vit": 36,"agi": 33,"luc": 30 } },
-      { "id": "samael",       "name": { "en": "Samael",       "ja": "サマエル",       "ko": "사마엘",         "zh": "萨麦尔" },       "race": "fallen", "level": 88, "stats": { "str": 40,"mag": 45,"vit": 38,"agi": 40,"luc": 30 } },
-      { "id": "abaddon",      "name": { "en": "Abaddon",      "ja": "アバドン",       "ko": "아바돈",         "zh": "亚巴顿" },       "race": "fallen", "level": 78, "stats": { "str": 38,"mag": 40,"vit": 35,"agi": 35,"luc": 28 } },
-      { "id": "lucifer",      "name": { "en": "Lucifer",      "ja": "ルシファー",     "ko": "루시퍼",         "zh": "路西法" },       "race": "tyrant", "level": 99, "stats": { "str": 48,"mag": 60,"vit": 45,"agi": 42,"luc": 38 } },
-      { "id": "satan",        "name": { "en": "Satan",        "ja": "サタン",         "ko": "사탄",           "zh": "撒旦" },         "race": "tyrant", "level": 99, "stats": { "str": 50,"mag": 55,"vit": 48,"agi": 38,"luc": 35 } },
-      { "id": "beelzebub",    "name": { "en": "Beelzebub",    "ja": "ベルゼバブ",     "ko": "벨제붑",         "zh": "别西卜" },       "race": "tyrant", "level": 95, "stats": { "str": 45,"mag": 55,"vit": 42,"agi": 38,"luc": 32 } },
-      { "id": "shiva",        "name": { "en": "Shiva",        "ja": "シヴァ",         "ko": "시바",           "zh": "湿婆" },         "race": "wargod", "level": 96, "stats": { "str": 50,"mag": 55,"vit": 42,"agi": 38,"luc": 35 } },
-      { "id": "surt",         "name": { "en": "Surt",         "ja": "スルト",         "ko": "수르트",         "zh": "苏尔特" },       "race": "tyrant", "level": 62, "stats": { "str": 38,"mag": 30,"vit": 35,"agi": 22,"luc": 22 } },
-      { "id": "mephisto",     "name": { "en": "Mephisto",     "ja": "メフィスト",     "ko": "메피스토",       "zh": "墨菲斯托" },     "race": "tyrant", "level": 79, "stats": { "str": 36,"mag": 45,"vit": 35,"agi": 30,"luc": 28 } },
-      { "id": "mara",         "name": { "en": "Mara",         "ja": "マーラ",         "ko": "마라",           "zh": "魔罗" },         "race": "tyrant", "level": 70, "stats": { "str": 32,"mag": 42,"vit": 32,"agi": 28,"luc": 26 } },
-      { "id": "azumi",        "name": { "en": "Azumi",        "ja": "アズミ",         "ko": "아즈미",         "zh": "阿吽" },         "race": "yoma",   "level": 24, "stats": { "str": 11,"mag": 16,"vit": 12,"agi": 17,"luc": 14 } },
-      { "id": "kinnari",      "name": { "en": "Kinnari",      "ja": "キンナリー",     "ko": "킨나리",         "zh": "紧那罗" },       "race": "yoma",   "level": 30, "stats": { "str": 14,"mag": 22,"vit": 16,"agi": 22,"luc": 18 } },
-      { "id": "cliodna",      "name": { "en": "Cliodna",      "ja": "クリオドナ",     "ko": "클리오드나",     "zh": "克里欧德娜" },   "race": "yoma",   "level": 38, "stats": { "str": 17,"mag": 26,"vit": 18,"agi": 28,"luc": 22 } },
-      { "id": "chuChulainn",  "name": { "en": "Cu Chulainn",  "ja": "クー・フーリン", "ko": "쿠 훌린",        "zh": "库夫林" },       "race": "genma",  "level": 50, "stats": { "str": 28,"mag": 22,"vit": 24,"agi": 30,"luc": 22 } },
-      { "id": "yoshitsune",   "name": { "en": "Yoshitsune",   "ja": "義経",           "ko": "요시쓰네",       "zh": "义经" },         "race": "wargod", "level": 64, "stats": { "str": 36,"mag": 30,"vit": 28,"agi": 38,"luc": 26 } },
-      { "id": "zhaoYun",      "name": { "en": "Zhao Yun",     "ja": "趙雲",           "ko": "조운",           "zh": "赵云" },         "race": "wargod", "level": 52, "stats": { "str": 30,"mag": 26,"vit": 26,"agi": 32,"luc": 22 } },
-      { "id": "masakado",     "name": { "en": "Taira no Masakado","ja": "平将門",     "ko": "마사카도",       "zh": "平将门" },       "race": "wargod", "level": 94, "stats": { "str": 50,"mag": 50,"vit": 45,"agi": 38,"luc": 30 } },
-      { "id": "hayagriva",    "name": { "en": "Hayagriva",    "ja": "馬頭観音",       "ko": "하야그리바",     "zh": "马头观音" },     "race": "wargod", "level": 70, "stats": { "str": 42,"mag": 38,"vit": 32,"agi": 32,"luc": 28 } },
-      { "id": "kikuriHime",   "name": { "en": "Kikuri-Hime",  "ja": "菊理媛",         "ko": "키쿠리히메",     "zh": "菊理媛" },       "race": "kishin", "level": 18, "stats": { "str": 8, "mag": 16,"vit": 11,"agi": 14,"luc": 12 } },
-      { "id": "sukunaHikona", "name": { "en": "Sukuna-Hikona","ja": "少彦名",         "ko": "스쿠나히코나",   "zh": "少彦名" },       "race": "kishin", "level": 14, "stats": { "str": 7, "mag": 13,"vit": 9, "agi": 12,"luc": 11 } },
-      { "id": "okuninushi",   "name": { "en": "Ōkuninushi",   "ja": "大国主",         "ko": "오쿠니누시",     "zh": "大国主" },       "race": "kishin", "level": 40, "stats": { "str": 18,"mag": 26,"vit": 22,"agi": 22,"luc": 20 } },
-      { "id": "yamatanoOrochi","name":{"en": "Yamata-no-Orochi","ja": "ヤマタノオロチ","ko": "야마타노오로치", "zh": "八岐大蛇" },"race": "snake","level": 80, "stats": { "str": 42,"mag": 45,"vit": 42,"agi": 30,"luc": 28 } },
-      { "id": "kuramaTengu",  "name": { "en": "Kurama Tengu", "ja": "鞍馬天狗",       "ko": "쿠라마텐구",     "zh": "鞍马天狗" },     "race": "jirae",  "level": 16, "stats": { "str": 11,"mag": 14,"vit": 10,"agi": 18,"luc": 13 } },
-      { "id": "oumagadinesvara","name":{"en": "Ōmagadinesvara","ja": "大黒天",       "ko": "오마가디네스바라","zh": "大黑天" },"race": "tenma","level": 60, "stats": { "str": 28,"mag": 35,"vit": 32,"agi": 25,"luc": 26 } },
-      { "id": "maraTao",      "name": { "en": "Mara",         "ja": "マーラ",         "ko": "마라타오",       "zh": "天魔波罗" },     "race": "tenma",  "level": 65, "stats": { "str": 30,"mag": 38,"vit": 32,"agi": 28,"luc": 28 } },
-      { "id": "ananta",       "name": { "en": "Ananta",       "ja": "アナンタ",       "ko": "아난타",         "zh": "阿难陀" },       "race": "dragon", "level": 64, "stats": { "str": 32,"mag": 36,"vit": 35,"agi": 26,"luc": 26 } },
-      { "id": "vritra",       "name": { "en": "Vritra",       "ja": "ヴリトラ",       "ko": "브리트라",       "zh": "弗栗多" },       "race": "dragon", "level": 75, "stats": { "str": 38,"mag": 40,"vit": 40,"agi": 28,"luc": 28 } },
-      { "id": "nio",          "name": { "en": "Nio",          "ja": "仁王",           "ko": "니오",           "zh": "仁王" },         "race": "kishin", "level": 38, "stats": { "str": 22,"mag": 20,"vit": 26,"agi": 18,"luc": 18 } },
-      { "id": "kresnik",      "name": { "en": "Kresnik",      "ja": "クレスニク",     "ko": "크레스니크",     "zh": "克雷斯尼克" },   "race": "hero",   "level": 36, "stats": { "str": 22,"mag": 20,"vit": 18,"agi": 24,"luc": 18 } },
-      { "id": "vasukid",      "name": { "en": "Vasuki",       "ja": "ヴァースキ",     "ko": "바스키",         "zh": "那伽" },         "race": "snake",  "level": 38, "stats": { "str": 18,"mag": 24,"vit": 22,"agi": 22,"luc": 20 } },
-      { "id": "xuanzang",     "name": { "en": "Xuanzang",     "ja": "玄奘三蔵",       "ko": "현장",           "zh": "玄奘" },         "race": "hero",   "level": 48, "stats": { "str": 22,"mag": 30,"vit": 24,"agi": 26,"luc": 24 } },
-      { "id": "alice",        "name": { "en": "Alice",        "ja": "アリス",         "ko": "앨리스",         "zh": "爱丽丝" },       "race": "lady",   "level": 55, "stats": { "str": 16,"mag": 45,"vit": 22,"agi": 32,"luc": 30 } },
-      { "id": "kikuri",       "name": { "en": "Kikuri",       "ja": "菊理",           "ko": "키쿠리",         "zh": "菊理" },         "race": "kishin", "level": 18, "stats": { "str": 8, "mag": 16,"vit": 11,"agi": 14,"luc": 12 } },
-      { "id": "kelpie",       "name": { "en": "Kelpie",       "ja": "ケルピー",       "ko": "켈피",           "zh": "凯尔皮" },       "race": "beast",  "level": 6,  "stats": { "str": 8, "mag": 9, "vit": 8, "agi": 12,"luc": 9 } },
-      { "id": "cerberus",     "name": { "en": "Cerberus",     "ja": "ケルベロス",     "ko": "케르베로스",     "zh": "刻耳柏洛斯" },   "race": "beast",  "level": 36, "stats": { "str": 22,"mag": 18,"vit": 24,"agi": 18,"luc": 16 } },
-      { "id": "narcissus",    "name": { "en": "Narcissus",    "ja": "ナルキッソス",   "ko": "나르시스",       "zh": "那耳喀索斯" },   "race": "jirae",  "level": 18, "stats": { "str": 9, "mag": 16,"vit": 11,"agi": 14,"luc": 14 } },
-      { "id": "yurlungur",    "name": { "en": "Yurlungur",    "ja": "ユルングル",     "ko": "유르룽구르",     "zh": "彩虹蛇" },       "race": "dragon", "level": 70, "stats": { "str": 35,"mag": 40,"vit": 38,"agi": 28,"luc": 26 } },
-      { "id": "horus",        "name": { "en": "Horus",        "ja": "ホルス",         "ko": "호루스",         "zh": "荷鲁斯" },       "race": "herald", "level": 60, "stats": { "str": 28,"mag": 38,"vit": 26,"agi": 32,"luc": 26 } },
-      { "id": "isis",         "name": { "en": "Isis",         "ja": "イシス",         "ko": "이시스",         "zh": "伊西斯" },       "race": "lady",   "level": 56, "stats": { "str": 20,"mag": 42,"vit": 24,"agi": 28,"luc": 30 } },
-      { "id": "osiris",       "name": { "en": "Osiris",       "ja": "オシリス",       "ko": "오시리스",       "zh": "奥西里斯" },     "race": "tyrant", "level": 65, "stats": { "str": 30,"mag": 36,"vit": 30,"agi": 28,"luc": 28 } },
-      { "id": "anubis",       "name": { "en": "Anubis",       "ja": "アヌビス",       "ko": "아누비스",       "zh": "阿努比斯" },     "race": "tyrant", "level": 50, "stats": { "str": 24,"mag": 32,"vit": 26,"agi": 30,"luc": 24 } },
-      { "id": "hathor",       "name": { "en": "Hathor",       "ja": "ハトホル",       "ko": "하토르",         "zh": "哈托尔" },       "race": "lady",   "level": 30, "stats": { "str": 14,"mag": 24,"vit": 16,"agi": 22,"luc": 20 } },
-      { "id": "parvati",      "name": { "en": "Parvati",      "ja": "パールヴァティ", "ko": "파르바티",       "zh": "帕尔瓦蒂" },     "race": "megami", "level": 48, "stats": { "str": 20,"mag": 36,"vit": 22,"agi": 26,"luc": 24 } },
-      { "id": "kushinadaHime","name":{ "en": "Kushinada-Hime","ja": "クシナダヒメ",  "ko": "쿠시나다히메",   "zh": "菊理媛" },       "race": "megami", "level": 24, "stats": { "str": 11,"mag": 22,"vit": 14,"agi": 17,"luc": 16 } },
-      { "id": "sarasvati",    "name": { "en": "Sarasvati",    "ja": "サラスヴァティ", "ko": "사라스바티",     "zh": "辩才天" },       "race": "megami", "level": 36, "stats": { "str": 14,"mag": 30,"vit": 18,"agi": 22,"luc": 24 } },
-      { "id": "sati",         "name": { "en": "Sati",         "ja": "サティ",         "ko": "사티",           "zh": "莎缇" },         "race": "megami", "level": 30, "stats": { "str": 13,"mag": 25,"vit": 15,"agi": 20,"luc": 19 } },
-      { "id": "lakshmi",      "name": { "en": "Lakshmi",      "ja": "ラクシュミ",     "ko": "락슈미",         "zh": "吉祥天" },       "race": "megami", "level": 38, "stats": { "str": 15,"mag": 30,"vit": 18,"agi": 22,"luc": 22 } },
-      { "id": "kama",         "name": { "en": "Kama",         "ja": "カーマ",         "ko": "카마",           "zh": "迦摩" },         "race": "wargod", "level": 50, "stats": { "str": 24,"mag": 28,"vit": 24,"agi": 28,"luc": 24 } }
+      {
+        "id": "pixie",
+        "name": {
+          "en": "Pixie",
+          "ja": "ピクシー",
+          "ko": "픽시",
+          "zh": "小妖精"
+        },
+        "race": "fairy",
+        "level": 3,
+        "stats": {
+          "str": 4,
+          "mag": 8,
+          "vit": 4,
+          "agi": 8,
+          "luc": 6
+        }
+      },
+      {
+        "id": "apsaras",
+        "name": {
+          "en": "Apsaras",
+          "ja": "アプサラス",
+          "ko": "압사라스",
+          "zh": "飞天"
+        },
+        "race": "yoma",
+        "level": 11,
+        "stats": {
+          "str": 5,
+          "mag": 11,
+          "vit": 6,
+          "agi": 10,
+          "luc": 9
+        }
+      },
+      {
+        "id": "highPixie",
+        "name": {
+          "en": "High Pixie",
+          "ja": "ハイピクシー",
+          "ko": "하이 픽시",
+          "zh": "杰克霜精"
+        },
+        "race": "fairy",
+        "level": 11,
+        "stats": {
+          "str": 6,
+          "mag": 13,
+          "vit": 7,
+          "agi": 12,
+          "luc": 11
+        }
+      },
+      {
+        "id": "anat",
+        "name": {
+          "en": "Anat",
+          "ja": "アナト",
+          "ko": "아나트",
+          "zh": "阿娜希塔"
+        },
+        "race": "lady",
+        "level": 29,
+        "stats": {
+          "str": 13,
+          "mag": 24,
+          "vit": 14,
+          "agi": 18,
+          "luc": 16
+        }
+      },
+      {
+        "id": "artemis",
+        "name": {
+          "en": "Artemis",
+          "ja": "アルテミス",
+          "ko": "아르테미스",
+          "zh": "阿提密斯"
+        },
+        "race": "megami",
+        "level": 37,
+        "stats": {
+          "str": 16,
+          "mag": 28,
+          "vit": 16,
+          "agi": 24,
+          "luc": 19
+        }
+      },
+      {
+        "id": "thor",
+        "name": {
+          "en": "Thor",
+          "ja": "トール",
+          "ko": "토르",
+          "zh": "托尔"
+        },
+        "race": "wargod",
+        "level": 66,
+        "stats": {
+          "str": 35,
+          "mag": 32,
+          "vit": 30,
+          "agi": 30,
+          "luc": 25
+        }
+      },
+      {
+        "id": "genbu",
+        "name": {
+          "en": "Genbu",
+          "ja": "玄武",
+          "ko": "현무",
+          "zh": "玄武"
+        },
+        "race": "jirae",
+        "level": 7,
+        "stats": {
+          "str": 11,
+          "mag": 6,
+          "vit": 12,
+          "agi": 5,
+          "luc": 5
+        }
+      },
+      {
+        "id": "amaterasu",
+        "name": {
+          "en": "Amaterasu",
+          "ja": "アマテラス",
+          "ko": "아마테라스",
+          "zh": "天照"
+        },
+        "race": "megami",
+        "level": 70,
+        "stats": {
+          "str": 28,
+          "mag": 45,
+          "vit": 32,
+          "agi": 32,
+          "luc": 30
+        }
+      },
+      {
+        "id": "makami",
+        "name": {
+          "en": "Makami",
+          "ja": "マカミ",
+          "ko": "마카미",
+          "zh": "真神"
+        },
+        "race": "avatar",
+        "level": 33,
+        "stats": {
+          "str": 18,
+          "mag": 26,
+          "vit": 17,
+          "agi": 22,
+          "luc": 19
+        }
+      },
+      {
+        "id": "quetzalcoatl",
+        "name": {
+          "en": "Quetzalcoatl",
+          "ja": "ケツァルコアトル",
+          "ko": "케찰코아틀",
+          "zh": "羽蛇神"
+        },
+        "race": "snake",
+        "level": 55,
+        "stats": {
+          "str": 24,
+          "mag": 38,
+          "vit": 25,
+          "agi": 28,
+          "luc": 22
+        }
+      },
+      {
+        "id": "nuwa",
+        "name": {
+          "en": "Nuwa",
+          "ja": "女媧",
+          "ko": "여와",
+          "zh": "女媧"
+        },
+        "race": "lady",
+        "level": 80,
+        "stats": {
+          "str": 32,
+          "mag": 50,
+          "vit": 35,
+          "agi": 35,
+          "luc": 30
+        }
+      },
+      {
+        "id": "izanagi",
+        "name": {
+          "en": "Izanagi",
+          "ja": "イザナギ",
+          "ko": "이자나기",
+          "zh": "伊邪那岐"
+        },
+        "race": "divine",
+        "level": 80,
+        "stats": {
+          "str": 35,
+          "mag": 50,
+          "vit": 38,
+          "agi": 30,
+          "luc": 32
+        }
+      },
+      {
+        "id": "loki",
+        "name": {
+          "en": "Loki",
+          "ja": "ロキ",
+          "ko": "로키",
+          "zh": "洛基"
+        },
+        "race": "tyrant",
+        "level": 60,
+        "stats": {
+          "str": 28,
+          "mag": 35,
+          "vit": 28,
+          "agi": 32,
+          "luc": 25
+        }
+      },
+      {
+        "id": "hel",
+        "name": {
+          "en": "Hel",
+          "ja": "ヘル",
+          "ko": "헐",
+          "zh": "赫尔"
+        },
+        "race": "lady",
+        "level": 58,
+        "stats": {
+          "str": 22,
+          "mag": 38,
+          "vit": 30,
+          "agi": 24,
+          "luc": 22
+        }
+      },
+      {
+        "id": "jackFrost",
+        "name": {
+          "en": "Jack Frost",
+          "ja": "ジャックフロスト",
+          "ko": "잭 프로스트",
+          "zh": "杰克霜精"
+        },
+        "race": "fairy",
+        "level": 11,
+        "stats": {
+          "str": 6,
+          "mag": 13,
+          "vit": 7,
+          "agi": 12,
+          "luc": 11
+        }
+      },
+      {
+        "id": "kingJack",
+        "name": {
+          "en": "King Jack",
+          "ja": "キングフロスト",
+          "ko": "킹 잭 프로스트",
+          "zh": "霜精之王"
+        },
+        "race": "fairy",
+        "level": 33,
+        "stats": {
+          "str": 16,
+          "mag": 26,
+          "vit": 18,
+          "agi": 22,
+          "luc": 20
+        }
+      },
+      {
+        "id": "lilim",
+        "name": {
+          "en": "Lilim",
+          "ja": "リリム",
+          "ko": "리림",
+          "zh": "莉莉姆"
+        },
+        "race": "night",
+        "level": 16,
+        "stats": {
+          "str": 7,
+          "mag": 14,
+          "vit": 8,
+          "agi": 13,
+          "luc": 10
+        }
+      },
+      {
+        "id": "metatron",
+        "name": {
+          "en": "Metatron",
+          "ja": "メタトロン",
+          "ko": "메타트론",
+          "zh": "梅塔特隆"
+        },
+        "race": "herald",
+        "level": 80,
+        "stats": {
+          "str": 35,
+          "mag": 50,
+          "vit": 38,
+          "agi": 35,
+          "luc": 30
+        }
+      },
+      {
+        "id": "michael",
+        "name": {
+          "en": "Michael",
+          "ja": "ミカエル",
+          "ko": "미카엘",
+          "zh": "米迦勒"
+        },
+        "race": "herald",
+        "level": 90,
+        "stats": {
+          "str": 42,
+          "mag": 55,
+          "vit": 42,
+          "agi": 38,
+          "luc": 35
+        }
+      },
+      {
+        "id": "gabriel",
+        "name": {
+          "en": "Gabriel",
+          "ja": "ガブリエル",
+          "ko": "가브리엘",
+          "zh": "加百列"
+        },
+        "race": "herald",
+        "level": 86,
+        "stats": {
+          "str": 38,
+          "mag": 50,
+          "vit": 38,
+          "agi": 35,
+          "luc": 32
+        }
+      },
+      {
+        "id": "raphael",
+        "name": {
+          "en": "Raphael",
+          "ja": "ラファエル",
+          "ko": "라파엘",
+          "zh": "拉斐尔"
+        },
+        "race": "herald",
+        "level": 84,
+        "stats": {
+          "str": 36,
+          "mag": 50,
+          "vit": 38,
+          "agi": 35,
+          "luc": 30
+        }
+      },
+      {
+        "id": "uriel",
+        "name": {
+          "en": "Uriel",
+          "ja": "ウリエル",
+          "ko": "우리엘",
+          "zh": "乌列尔"
+        },
+        "race": "herald",
+        "level": 82,
+        "stats": {
+          "str": 36,
+          "mag": 48,
+          "vit": 36,
+          "agi": 33,
+          "luc": 30
+        }
+      },
+      {
+        "id": "samael",
+        "name": {
+          "en": "Samael",
+          "ja": "サマエル",
+          "ko": "사마엘",
+          "zh": "萨麦尔"
+        },
+        "race": "fallen",
+        "level": 88,
+        "stats": {
+          "str": 40,
+          "mag": 45,
+          "vit": 38,
+          "agi": 40,
+          "luc": 30
+        }
+      },
+      {
+        "id": "abaddon",
+        "name": {
+          "en": "Abaddon",
+          "ja": "アバドン",
+          "ko": "아바돈",
+          "zh": "亚巴顿"
+        },
+        "race": "fallen",
+        "level": 78,
+        "stats": {
+          "str": 38,
+          "mag": 40,
+          "vit": 35,
+          "agi": 35,
+          "luc": 28
+        }
+      },
+      {
+        "id": "lucifer",
+        "name": {
+          "en": "Lucifer",
+          "ja": "ルシファー",
+          "ko": "루시퍼",
+          "zh": "路西法"
+        },
+        "race": "tyrant",
+        "level": 99,
+        "stats": {
+          "str": 48,
+          "mag": 60,
+          "vit": 45,
+          "agi": 42,
+          "luc": 38
+        }
+      },
+      {
+        "id": "satan",
+        "name": {
+          "en": "Satan",
+          "ja": "サタン",
+          "ko": "사탄",
+          "zh": "撒旦"
+        },
+        "race": "tyrant",
+        "level": 99,
+        "stats": {
+          "str": 50,
+          "mag": 55,
+          "vit": 48,
+          "agi": 38,
+          "luc": 35
+        }
+      },
+      {
+        "id": "beelzebub",
+        "name": {
+          "en": "Beelzebub",
+          "ja": "ベルゼバブ",
+          "ko": "벨제붑",
+          "zh": "别西卜"
+        },
+        "race": "tyrant",
+        "level": 95,
+        "stats": {
+          "str": 45,
+          "mag": 55,
+          "vit": 42,
+          "agi": 38,
+          "luc": 32
+        }
+      },
+      {
+        "id": "shiva",
+        "name": {
+          "en": "Shiva",
+          "ja": "シヴァ",
+          "ko": "시바",
+          "zh": "湿婆"
+        },
+        "race": "wargod",
+        "level": 96,
+        "stats": {
+          "str": 50,
+          "mag": 55,
+          "vit": 42,
+          "agi": 38,
+          "luc": 35
+        }
+      },
+      {
+        "id": "surt",
+        "name": {
+          "en": "Surt",
+          "ja": "スルト",
+          "ko": "수르트",
+          "zh": "苏尔特"
+        },
+        "race": "tyrant",
+        "level": 62,
+        "stats": {
+          "str": 38,
+          "mag": 30,
+          "vit": 35,
+          "agi": 22,
+          "luc": 22
+        }
+      },
+      {
+        "id": "mephisto",
+        "name": {
+          "en": "Mephisto",
+          "ja": "メフィスト",
+          "ko": "메피스토",
+          "zh": "墨菲斯托"
+        },
+        "race": "tyrant",
+        "level": 79,
+        "stats": {
+          "str": 36,
+          "mag": 45,
+          "vit": 35,
+          "agi": 30,
+          "luc": 28
+        }
+      },
+      {
+        "id": "mara",
+        "name": {
+          "en": "Mara",
+          "ja": "マーラ",
+          "ko": "마라",
+          "zh": "魔罗"
+        },
+        "race": "tyrant",
+        "level": 70,
+        "stats": {
+          "str": 32,
+          "mag": 42,
+          "vit": 32,
+          "agi": 28,
+          "luc": 26
+        }
+      },
+      {
+        "id": "azumi",
+        "name": {
+          "en": "Azumi",
+          "ja": "アズミ",
+          "ko": "아즈미",
+          "zh": "阿吽"
+        },
+        "race": "yoma",
+        "level": 24,
+        "stats": {
+          "str": 11,
+          "mag": 16,
+          "vit": 12,
+          "agi": 17,
+          "luc": 14
+        }
+      },
+      {
+        "id": "kinnari",
+        "name": {
+          "en": "Kinnari",
+          "ja": "キンナリー",
+          "ko": "킨나리",
+          "zh": "紧那罗"
+        },
+        "race": "yoma",
+        "level": 30,
+        "stats": {
+          "str": 14,
+          "mag": 22,
+          "vit": 16,
+          "agi": 22,
+          "luc": 18
+        }
+      },
+      {
+        "id": "cliodna",
+        "name": {
+          "en": "Cliodna",
+          "ja": "クリオドナ",
+          "ko": "클리오드나",
+          "zh": "克里欧德娜"
+        },
+        "race": "yoma",
+        "level": 38,
+        "stats": {
+          "str": 17,
+          "mag": 26,
+          "vit": 18,
+          "agi": 28,
+          "luc": 22
+        }
+      },
+      {
+        "id": "chuChulainn",
+        "name": {
+          "en": "Cu Chulainn",
+          "ja": "クー・フーリン",
+          "ko": "쿠 훌린",
+          "zh": "库夫林"
+        },
+        "race": "genma",
+        "level": 50,
+        "stats": {
+          "str": 28,
+          "mag": 22,
+          "vit": 24,
+          "agi": 30,
+          "luc": 22
+        }
+      },
+      {
+        "id": "yoshitsune",
+        "name": {
+          "en": "Yoshitsune",
+          "ja": "義経",
+          "ko": "요시쓰네",
+          "zh": "义经"
+        },
+        "race": "wargod",
+        "level": 64,
+        "stats": {
+          "str": 36,
+          "mag": 30,
+          "vit": 28,
+          "agi": 38,
+          "luc": 26
+        }
+      },
+      {
+        "id": "zhaoYun",
+        "name": {
+          "en": "Zhao Yun",
+          "ja": "趙雲",
+          "ko": "조운",
+          "zh": "赵云"
+        },
+        "race": "wargod",
+        "level": 52,
+        "stats": {
+          "str": 30,
+          "mag": 26,
+          "vit": 26,
+          "agi": 32,
+          "luc": 22
+        }
+      },
+      {
+        "id": "masakado",
+        "name": {
+          "en": "Taira no Masakado",
+          "ja": "平将門",
+          "ko": "마사카도",
+          "zh": "平将门"
+        },
+        "race": "wargod",
+        "level": 94,
+        "stats": {
+          "str": 50,
+          "mag": 50,
+          "vit": 45,
+          "agi": 38,
+          "luc": 30
+        }
+      },
+      {
+        "id": "hayagriva",
+        "name": {
+          "en": "Hayagriva",
+          "ja": "馬頭観音",
+          "ko": "하야그리바",
+          "zh": "马头观音"
+        },
+        "race": "wargod",
+        "level": 70,
+        "stats": {
+          "str": 42,
+          "mag": 38,
+          "vit": 32,
+          "agi": 32,
+          "luc": 28
+        }
+      },
+      {
+        "id": "kikuriHime",
+        "name": {
+          "en": "Kikuri-Hime",
+          "ja": "菊理媛",
+          "ko": "키쿠리히메",
+          "zh": "菊理媛"
+        },
+        "race": "kishin",
+        "level": 18,
+        "stats": {
+          "str": 8,
+          "mag": 16,
+          "vit": 11,
+          "agi": 14,
+          "luc": 12
+        }
+      },
+      {
+        "id": "sukunaHikona",
+        "name": {
+          "en": "Sukuna-Hikona",
+          "ja": "少彦名",
+          "ko": "스쿠나히코나",
+          "zh": "少彦名"
+        },
+        "race": "kishin",
+        "level": 14,
+        "stats": {
+          "str": 7,
+          "mag": 13,
+          "vit": 9,
+          "agi": 12,
+          "luc": 11
+        }
+      },
+      {
+        "id": "okuninushi",
+        "name": {
+          "en": "Ōkuninushi",
+          "ja": "大国主",
+          "ko": "오쿠니누시",
+          "zh": "大国主"
+        },
+        "race": "kishin",
+        "level": 40,
+        "stats": {
+          "str": 18,
+          "mag": 26,
+          "vit": 22,
+          "agi": 22,
+          "luc": 20
+        }
+      },
+      {
+        "id": "yamatanoOrochi",
+        "name": {
+          "en": "Yamata-no-Orochi",
+          "ja": "ヤマタノオロチ",
+          "ko": "야마타노오로치",
+          "zh": "八岐大蛇"
+        },
+        "race": "snake",
+        "level": 80,
+        "stats": {
+          "str": 42,
+          "mag": 45,
+          "vit": 42,
+          "agi": 30,
+          "luc": 28
+        }
+      },
+      {
+        "id": "kuramaTengu",
+        "name": {
+          "en": "Kurama Tengu",
+          "ja": "鞍馬天狗",
+          "ko": "쿠라마텐구",
+          "zh": "鞍马天狗"
+        },
+        "race": "jirae",
+        "level": 16,
+        "stats": {
+          "str": 11,
+          "mag": 14,
+          "vit": 10,
+          "agi": 18,
+          "luc": 13
+        }
+      },
+      {
+        "id": "oumagadinesvara",
+        "name": {
+          "en": "Ōmagadinesvara",
+          "ja": "大黒天",
+          "ko": "오마가디네스바라",
+          "zh": "大黑天"
+        },
+        "race": "tenma",
+        "level": 60,
+        "stats": {
+          "str": 28,
+          "mag": 35,
+          "vit": 32,
+          "agi": 25,
+          "luc": 26
+        }
+      },
+      {
+        "id": "maraTao",
+        "name": {
+          "en": "Mara",
+          "ja": "マーラ",
+          "ko": "마라타오",
+          "zh": "天魔波罗"
+        },
+        "race": "tenma",
+        "level": 65,
+        "stats": {
+          "str": 30,
+          "mag": 38,
+          "vit": 32,
+          "agi": 28,
+          "luc": 28
+        }
+      },
+      {
+        "id": "ananta",
+        "name": {
+          "en": "Ananta",
+          "ja": "アナンタ",
+          "ko": "아난타",
+          "zh": "阿难陀"
+        },
+        "race": "dragon",
+        "level": 64,
+        "stats": {
+          "str": 32,
+          "mag": 36,
+          "vit": 35,
+          "agi": 26,
+          "luc": 26
+        }
+      },
+      {
+        "id": "vritra",
+        "name": {
+          "en": "Vritra",
+          "ja": "ヴリトラ",
+          "ko": "브리트라",
+          "zh": "弗栗多"
+        },
+        "race": "dragon",
+        "level": 75,
+        "stats": {
+          "str": 38,
+          "mag": 40,
+          "vit": 40,
+          "agi": 28,
+          "luc": 28
+        }
+      },
+      {
+        "id": "nio",
+        "name": {
+          "en": "Nio",
+          "ja": "仁王",
+          "ko": "니오",
+          "zh": "仁王"
+        },
+        "race": "kishin",
+        "level": 38,
+        "stats": {
+          "str": 22,
+          "mag": 20,
+          "vit": 26,
+          "agi": 18,
+          "luc": 18
+        }
+      },
+      {
+        "id": "kresnik",
+        "name": {
+          "en": "Kresnik",
+          "ja": "クレスニク",
+          "ko": "크레스니크",
+          "zh": "克雷斯尼克"
+        },
+        "race": "hero",
+        "level": 36,
+        "stats": {
+          "str": 22,
+          "mag": 20,
+          "vit": 18,
+          "agi": 24,
+          "luc": 18
+        }
+      },
+      {
+        "id": "vasukid",
+        "name": {
+          "en": "Vasuki",
+          "ja": "ヴァースキ",
+          "ko": "바스키",
+          "zh": "那伽"
+        },
+        "race": "snake",
+        "level": 38,
+        "stats": {
+          "str": 18,
+          "mag": 24,
+          "vit": 22,
+          "agi": 22,
+          "luc": 20
+        }
+      },
+      {
+        "id": "xuanzang",
+        "name": {
+          "en": "Xuanzang",
+          "ja": "玄奘三蔵",
+          "ko": "현장",
+          "zh": "玄奘"
+        },
+        "race": "hero",
+        "level": 48,
+        "stats": {
+          "str": 22,
+          "mag": 30,
+          "vit": 24,
+          "agi": 26,
+          "luc": 24
+        }
+      },
+      {
+        "id": "alice",
+        "name": {
+          "en": "Alice",
+          "ja": "アリス",
+          "ko": "앨리스",
+          "zh": "爱丽丝"
+        },
+        "race": "lady",
+        "level": 55,
+        "stats": {
+          "str": 16,
+          "mag": 45,
+          "vit": 22,
+          "agi": 32,
+          "luc": 30
+        }
+      },
+      {
+        "id": "kikuri",
+        "name": {
+          "en": "Kikuri",
+          "ja": "菊理",
+          "ko": "키쿠리",
+          "zh": "菊理"
+        },
+        "race": "kishin",
+        "level": 18,
+        "stats": {
+          "str": 8,
+          "mag": 16,
+          "vit": 11,
+          "agi": 14,
+          "luc": 12
+        }
+      },
+      {
+        "id": "kelpie",
+        "name": {
+          "en": "Kelpie",
+          "ja": "ケルピー",
+          "ko": "켈피",
+          "zh": "凯尔皮"
+        },
+        "race": "beast",
+        "level": 6,
+        "stats": {
+          "str": 8,
+          "mag": 9,
+          "vit": 8,
+          "agi": 12,
+          "luc": 9
+        }
+      },
+      {
+        "id": "cerberus",
+        "name": {
+          "en": "Cerberus",
+          "ja": "ケルベロス",
+          "ko": "케르베로스",
+          "zh": "刻耳柏洛斯"
+        },
+        "race": "beast",
+        "level": 36,
+        "stats": {
+          "str": 22,
+          "mag": 18,
+          "vit": 24,
+          "agi": 18,
+          "luc": 16
+        }
+      },
+      {
+        "id": "narcissus",
+        "name": {
+          "en": "Narcissus",
+          "ja": "ナルキッソス",
+          "ko": "나르시스",
+          "zh": "那耳喀索斯"
+        },
+        "race": "jirae",
+        "level": 18,
+        "stats": {
+          "str": 9,
+          "mag": 16,
+          "vit": 11,
+          "agi": 14,
+          "luc": 14
+        }
+      },
+      {
+        "id": "yurlungur",
+        "name": {
+          "en": "Yurlungur",
+          "ja": "ユルングル",
+          "ko": "유르룽구르",
+          "zh": "彩虹蛇"
+        },
+        "race": "dragon",
+        "level": 70,
+        "stats": {
+          "str": 35,
+          "mag": 40,
+          "vit": 38,
+          "agi": 28,
+          "luc": 26
+        }
+      },
+      {
+        "id": "horus",
+        "name": {
+          "en": "Horus",
+          "ja": "ホルス",
+          "ko": "호루스",
+          "zh": "荷鲁斯"
+        },
+        "race": "herald",
+        "level": 60,
+        "stats": {
+          "str": 28,
+          "mag": 38,
+          "vit": 26,
+          "agi": 32,
+          "luc": 26
+        }
+      },
+      {
+        "id": "isis",
+        "name": {
+          "en": "Isis",
+          "ja": "イシス",
+          "ko": "이시스",
+          "zh": "伊西斯"
+        },
+        "race": "lady",
+        "level": 56,
+        "stats": {
+          "str": 20,
+          "mag": 42,
+          "vit": 24,
+          "agi": 28,
+          "luc": 30
+        }
+      },
+      {
+        "id": "osiris",
+        "name": {
+          "en": "Osiris",
+          "ja": "オシリス",
+          "ko": "오시리스",
+          "zh": "奥西里斯"
+        },
+        "race": "tyrant",
+        "level": 65,
+        "stats": {
+          "str": 30,
+          "mag": 36,
+          "vit": 30,
+          "agi": 28,
+          "luc": 28
+        }
+      },
+      {
+        "id": "anubis",
+        "name": {
+          "en": "Anubis",
+          "ja": "アヌビス",
+          "ko": "아누비스",
+          "zh": "阿努比斯"
+        },
+        "race": "tyrant",
+        "level": 50,
+        "stats": {
+          "str": 24,
+          "mag": 32,
+          "vit": 26,
+          "agi": 30,
+          "luc": 24
+        }
+      },
+      {
+        "id": "hathor",
+        "name": {
+          "en": "Hathor",
+          "ja": "ハトホル",
+          "ko": "하토르",
+          "zh": "哈托尔"
+        },
+        "race": "lady",
+        "level": 30,
+        "stats": {
+          "str": 14,
+          "mag": 24,
+          "vit": 16,
+          "agi": 22,
+          "luc": 20
+        }
+      },
+      {
+        "id": "parvati",
+        "name": {
+          "en": "Parvati",
+          "ja": "パールヴァティ",
+          "ko": "파르바티",
+          "zh": "帕尔瓦蒂"
+        },
+        "race": "megami",
+        "level": 48,
+        "stats": {
+          "str": 20,
+          "mag": 36,
+          "vit": 22,
+          "agi": 26,
+          "luc": 24
+        }
+      },
+      {
+        "id": "kushinadaHime",
+        "name": {
+          "en": "Kushinada-Hime",
+          "ja": "クシナダヒメ",
+          "ko": "쿠시나다히메",
+          "zh": "菊理媛"
+        },
+        "race": "megami",
+        "level": 24,
+        "stats": {
+          "str": 11,
+          "mag": 22,
+          "vit": 14,
+          "agi": 17,
+          "luc": 16
+        }
+      },
+      {
+        "id": "sarasvati",
+        "name": {
+          "en": "Sarasvati",
+          "ja": "サラスヴァティ",
+          "ko": "사라스바티",
+          "zh": "辩才天"
+        },
+        "race": "megami",
+        "level": 36,
+        "stats": {
+          "str": 14,
+          "mag": 30,
+          "vit": 18,
+          "agi": 22,
+          "luc": 24
+        }
+      },
+      {
+        "id": "sati",
+        "name": {
+          "en": "Sati",
+          "ja": "サティ",
+          "ko": "사티",
+          "zh": "莎缇"
+        },
+        "race": "megami",
+        "level": 30,
+        "stats": {
+          "str": 13,
+          "mag": 25,
+          "vit": 15,
+          "agi": 20,
+          "luc": 19
+        }
+      },
+      {
+        "id": "lakshmi",
+        "name": {
+          "en": "Lakshmi",
+          "ja": "ラクシュミ",
+          "ko": "락슈미",
+          "zh": "吉祥天"
+        },
+        "race": "megami",
+        "level": 38,
+        "stats": {
+          "str": 15,
+          "mag": 30,
+          "vit": 18,
+          "agi": 22,
+          "luc": 22
+        }
+      },
+      {
+        "id": "kama",
+        "name": {
+          "en": "Kama",
+          "ja": "カーマ",
+          "ko": "카마",
+          "zh": "迦摩"
+        },
+        "race": "wargod",
+        "level": 50,
+        "stats": {
+          "str": 24,
+          "mag": 28,
+          "vit": 24,
+          "agi": 28,
+          "luc": 24
+        }
+      }
     ],
     "fusionChart": {
-      "metatron": { "ingredients": ["michael", "gabriel"], "race": "herald", "note": "Special 2-way herald fusion (highest level herald)" },
-      "lucifer":  { "ingredients": ["satan", "michael"], "race": "tyrant", "note": "Special fusion — requires NG+ Creation mode first" },
-      "satan":    { "ingredients": ["samael", "michael"], "race": "tyrant", "note": "Special post-game fusion" },
-      "shiva":    { "ingredients": ["yamatanoOrochi", "masakado"], "race": "wargod", "note": "Special high-level fusion (Lv96)" },
-      "amaterasu":{ "ingredients": ["amaterasu", "amaterasu"], "race": "megami", "note": "Special fusion — needs DLC 'Arahabaki' or special quest" },
-      "maraTao":  { "ingredients": ["mara", "yamatanoOrochi"], "race": "tenma", "note": "Special fusion" },
-      "metatronA":{ "ingredients": ["michael", "gabriel", "raphael"], "race": "herald", "note": "3-way herald fusion (lowest level)" },
-      "nuwa":     { "ingredients": ["quetzalcoatl", "amaterasu"], "race": "lady", "note": "Special fusion, requires DLC 'Sakura Cinders of the East'" },
-      "vritra":   { "ingredients": ["ananta", "quetzalcoatl"], "race": "dragon", "note": "Special fusion" },
-      "masakado": { "ingredients": ["yoshitsune", "zhaoYun", "kikuriHime", "sukunaHikona", "hayagriva", "okuninushi", "nio"], "race": "wargod", "note": "★ 7-way special fusion. Requires quest 'The 4 Heavenly Kings' in Creation route" },
-      "yurlungur":{ "ingredients": ["quetzalcoatl", "vritra"], "race": "dragon", "note": "Special fusion" },
-      "kresnik":  { "ingredients": ["nio", "alice"], "race": "hero", "note": "Special fusion" },
-      "alice":    { "ingredients": ["kikuriHime", "lilim", "parvati"], "race": "lady", "note": "3-way special fusion" },
-      "horus":    { "ingredients": ["anubis", "isis", "hathor"], "race": "herald", "note": "3-way special fusion" },
-      "mara":     { "ingredients": ["loki", "hel"], "race": "tyrant", "note": "Special fusion" },
-      "shivaX":   { "ingredients": ["thor", "yamatanoOrochi", "masakado"], "race": "wargod", "note": "3-way special fusion" },
-      "loki":     { "ingredients": ["lilim", "hel"], "race": "tyrant", "note": "2-way special fusion" }
+      "metatron": {
+        "ingredients": [
+          "michael",
+          "gabriel"
+        ],
+        "race": "herald",
+        "note": "Special 2-way herald fusion (highest level herald)"
+      },
+      "lucifer": {
+        "ingredients": [
+          "satan",
+          "michael"
+        ],
+        "race": "tyrant",
+        "note": "Special fusion — requires NG+ Creation mode first"
+      },
+      "satan": {
+        "ingredients": [
+          "samael",
+          "michael"
+        ],
+        "race": "tyrant",
+        "note": "Special post-game fusion"
+      },
+      "shiva": {
+        "ingredients": [
+          "yamatanoOrochi",
+          "masakado"
+        ],
+        "race": "wargod",
+        "note": "Special high-level fusion (Lv96)"
+      },
+      "amaterasu": {
+        "ingredients": [
+          "amaterasu",
+          "amaterasu"
+        ],
+        "race": "megami",
+        "note": "Special fusion — needs DLC 'Arahabaki' or special quest"
+      },
+      "maraTao": {
+        "ingredients": [
+          "mara",
+          "yamatanoOrochi"
+        ],
+        "race": "tenma",
+        "note": "Special fusion"
+      },
+      "metatronA": {
+        "ingredients": [
+          "michael",
+          "gabriel",
+          "raphael"
+        ],
+        "race": "herald",
+        "note": "3-way herald fusion (lowest level)"
+      },
+      "nuwa": {
+        "ingredients": [
+          "quetzalcoatl",
+          "amaterasu"
+        ],
+        "race": "lady",
+        "note": "Special fusion, requires DLC 'Sakura Cinders of the East'"
+      },
+      "vritra": {
+        "ingredients": [
+          "ananta",
+          "quetzalcoatl"
+        ],
+        "race": "dragon",
+        "note": "Special fusion"
+      },
+      "masakado": {
+        "ingredients": [
+          "yoshitsune",
+          "zhaoYun",
+          "kikuriHime",
+          "sukunaHikona",
+          "hayagriva",
+          "okuninushi",
+          "nio"
+        ],
+        "race": "wargod",
+        "note": "★ 7-way special fusion. Requires quest 'The 4 Heavenly Kings' in Creation route"
+      },
+      "yurlungur": {
+        "ingredients": [
+          "quetzalcoatl",
+          "vritra"
+        ],
+        "race": "dragon",
+        "note": "Special fusion"
+      },
+      "kresnik": {
+        "ingredients": [
+          "nio",
+          "alice"
+        ],
+        "race": "hero",
+        "note": "Special fusion"
+      },
+      "alice": {
+        "ingredients": [
+          "kikuriHime",
+          "lilim",
+          "parvati"
+        ],
+        "race": "lady",
+        "note": "3-way special fusion"
+      },
+      "horus": {
+        "ingredients": [
+          "anubis",
+          "isis",
+          "hathor"
+        ],
+        "race": "herald",
+        "note": "3-way special fusion"
+      },
+      "mara": {
+        "ingredients": [
+          "loki",
+          "hel"
+        ],
+        "race": "tyrant",
+        "note": "Special fusion"
+      },
+      "shivaX": {
+        "ingredients": [
+          "thor",
+          "yamatanoOrochi",
+          "masakado"
+        ],
+        "race": "wargod",
+        "note": "3-way special fusion"
+      },
+      "loki": {
+        "ingredients": [
+          "lilim",
+          "hel"
+        ],
+        "race": "tyrant",
+        "note": "2-way special fusion"
+      }
     },
     "elements": [
-      { "id": "fire",    "name": { "en": "Fire Sprite",   "ja": "火霊",   "ko": "불 정령",   "zh": "火精灵" }, "races": ["sprite"] },
-      { "id": "ice",     "name": { "en": "Ice Sprite",    "ja": "氷霊",   "ko": "얼음 정령", "zh": "冰精灵" }, "races": ["sprite"] },
-      { "id": "wind",    "name": { "en": "Wind Sprite",   "ja": "風霊",   "ko": "바람 정령", "zh": "风精灵" }, "races": ["sprite"] },
-      { "id": "elec",    "name": { "en": "Elec Sprite",   "ja": "雷霊",   "ko": "번개 정령","zh": "雷精灵" }, "races": ["sprite"] }
+      {
+        "id": "fire",
+        "name": {
+          "en": "Fire Sprite",
+          "ja": "火霊",
+          "ko": "불 정령",
+          "zh": "火精灵"
+        },
+        "races": [
+          "sprite"
+        ]
+      },
+      {
+        "id": "ice",
+        "name": {
+          "en": "Ice Sprite",
+          "ja": "氷霊",
+          "ko": "얼음 정령",
+          "zh": "冰精灵"
+        },
+        "races": [
+          "sprite"
+        ]
+      },
+      {
+        "id": "wind",
+        "name": {
+          "en": "Wind Sprite",
+          "ja": "風霊",
+          "ko": "바람 정령",
+          "zh": "风精灵"
+        },
+        "races": [
+          "sprite"
+        ]
+      },
+      {
+        "id": "elec",
+        "name": {
+          "en": "Elec Sprite",
+          "ja": "雷霊",
+          "ko": "번개 정령",
+          "zh": "雷精灵"
+        },
+        "races": [
+          "sprite"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "lang": "en",
+        "url": "https://megamitensei.fandom.com/wiki/Category:SMT_V_Demons",
+        "attribution": "MegaTen Wiki — SMT V Demons"
+      },
+      {
+        "lang": "en",
+        "url": "https://megamitensei.fandom.com/wiki/Press_Turn",
+        "attribution": "MegaTen Wiki — Press Turn / Combat"
+      },
+      {
+        "lang": "ja",
+        "url": "https://gamewith.jp/megaten5vengeance/",
+        "attribution": "GameWith — 真女神転生5 Vengeance 攻略"
+      }
     ]
-  }
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://megamitensei.fandom.com/wiki/Category:SMT_V_Demons",
+      "attribution": "MegaTen Wiki — SMT V Demons"
+    },
+    {
+      "lang": "en",
+      "url": "https://megamitensei.fandom.com/wiki/Press_Turn",
+      "attribution": "MegaTen Wiki — Press Turn / Combat"
+    },
+    {
+      "lang": "ja",
+      "url": "https://gamewith.jp/megaten5vengeance/",
+      "attribution": "GameWith — 真女神転生5 Vengeance 攻略"
+    }
+  ]
 }

@@ -212,6 +212,40 @@
         "通关后开启「创生」模式，敌人升至 Lv150，挑战极限。",
         "合成路西法 (Lv99) 需要先通关一次「创生」模式。"
       ]
+    },
+    "sources": [
+      {
+        "lang": "en",
+        "url": "https://www.gamespot.com/reviews/shin-megami-tensei-v-vengeance-review/",
+        "attribution": "GameSpot — Vengeance Endings Guide"
+      },
+      {
+        "lang": "en",
+        "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-walkthrough",
+        "attribution": "IGN — Vengeance Walkthrough"
+      },
+      {
+        "lang": "en",
+        "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+        "attribution": "MegaTen Wiki — Vengeance Endings"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://www.gamespot.com/reviews/shin-megami-tensei-v-vengeance-review/",
+      "attribution": "GameSpot — Vengeance Endings Guide"
+    },
+    {
+      "lang": "en",
+      "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-walkthrough",
+      "attribution": "IGN — Vengeance Walkthrough"
+    },
+    {
+      "lang": "en",
+      "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+      "attribution": "MegaTen Wiki — Vengeance Endings"
     }
-  }
+  ]
 }

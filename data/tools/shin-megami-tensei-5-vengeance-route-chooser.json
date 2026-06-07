@@ -217,11 +217,26 @@
           "zh": "创世女神篇"
         },
         "matches": {
-          "playtime": ["short", "medium"],
-          "story": ["classic"],
-          "endings": ["one", "main", "all"],
-          "difficulty": ["casual", "balanced"],
-          "experience": ["first", "played"]
+          "playtime": [
+            "short",
+            "medium"
+          ],
+          "story": [
+            "classic"
+          ],
+          "endings": [
+            "one",
+            "main",
+            "all"
+          ],
+          "difficulty": [
+            "casual",
+            "balanced"
+          ],
+          "experience": [
+            "first",
+            "played"
+          ]
         },
         "summary": {
           "en": "Start with Creation Route. It's the original story, more forgiving for newcomers, and only requires one choice at the start. You can always play Vengeance in NG+.",
@@ -245,11 +260,27 @@
           "zh": "复仇女神篇"
         },
         "matches": {
-          "playtime": ["medium", "long"],
-          "story": ["revenge", "both"],
-          "endings": ["one", "main", "all"],
-          "difficulty": ["balanced", "hardcore"],
-          "experience": ["played", "veteran"]
+          "playtime": [
+            "medium",
+            "long"
+          ],
+          "story": [
+            "revenge",
+            "both"
+          ],
+          "endings": [
+            "one",
+            "main",
+            "all"
+          ],
+          "difficulty": [
+            "balanced",
+            "hardcore"
+          ],
+          "experience": [
+            "played",
+            "veteran"
+          ]
         },
         "summary": {
           "en": "Start with Vengeance Route. The new story with Qadistu and Yoko is more cinematic, and the system improvements (e.g. Safety difficulty) make it the better 'first time' experience in 2024+. You can play Creation later for the true ending.",
@@ -264,6 +295,40 @@
           "zh": "选择「牵起少女的手」"
         }
       }
+    ],
+    "sources": [
+      {
+        "lang": "en",
+        "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+        "attribution": "MegaTen Wiki — Vengeance Routes"
+      },
+      {
+        "lang": "en",
+        "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-walkthrough",
+        "attribution": "IGN — Vengeance Walkthrough"
+      },
+      {
+        "lang": "ja",
+        "url": "https://gamewith.jp/megaten5vengeance/article/show/253034",
+        "attribution": "GameWith — 復讐の女神 vs 創造の神"
+      }
     ]
-  }
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+      "attribution": "MegaTen Wiki — Vengeance Routes"
+    },
+    {
+      "lang": "en",
+      "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-walkthrough",
+      "attribution": "IGN — Vengeance Walkthrough"
+    },
+    {
+      "lang": "ja",
+      "url": "https://gamewith.jp/megaten5vengeance/article/show/253034",
+      "attribution": "GameWith — 復讐の女神 vs 創造の神"
+    }
+  ]
 }

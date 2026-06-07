@@ -18,9 +18,17 @@
     "jobs": [
       {
         "id": "warrior",
-        "name": { "en": "Warrior", "ja": "剣士", "ko": "검사", "zh": "剑士" },
+        "name": {
+          "en": "Warrior",
+          "ja": "剣士",
+          "ko": "검사",
+          "zh": "剑士"
+        },
         "role": "attack",
-        "weapon": ["sword", "axe"],
+        "weapon": [
+          "sword",
+          "axe"
+        ],
         "description": {
           "en": "Physical tank. High HP and physical defense, wielding swords and axes. Excels at drawing enemy aggro and dishing out steady physical damage with skills like Brand's Thunder and Staggering Sword.",
           "ja": "物理アタッカー兼タンク。HPと物理防御が高く、剣と斧を使いこなす。「ブランドサンダー」や「よろめき斬り」などで安定した物理火力を出し、敵の攻撃を引きつける役割も担います。",
@@ -29,26 +37,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Cross Strike", "ja": "十文字斬り", "ko": "십자베기", "zh": "十字斩" },
-            { "en": "Brand's Thunder", "ja": "ブランディングサンダー", "ko": "브랜드의 천둥", "zh": "雷神之力" },
-            { "en": "Staggering Sword", "ja": "よろめき斬り", "ko": "비틀기 참격", "zh": "震击斩" },
-            { "en": "Abide", "ja": "アバイド", "ko": "인내", "zh": "蓄势待发" },
-            { "en": "Safeguard", "ja": "セーフガード", "ko": "세이프가드", "zh": "护卫" }
+            {
+              "en": "Cross Strike",
+              "ja": "十文字斬り",
+              "ko": "십자베기",
+              "zh": "十字斩"
+            },
+            {
+              "en": "Brand's Thunder",
+              "ja": "ブランディングサンダー",
+              "ko": "브랜드의 천둥",
+              "zh": "雷神之力"
+            },
+            {
+              "en": "Staggering Sword",
+              "ja": "よろめき斬り",
+              "ko": "비틀기 참격",
+              "zh": "震击斩"
+            },
+            {
+              "en": "Abide",
+              "ja": "アバイド",
+              "ko": "인내",
+              "zh": "蓄势待发"
+            },
+            {
+              "en": "Safeguard",
+              "ja": "セーフガード",
+              "ko": "세이프가드",
+              "zh": "护卫"
+            }
           ],
           "support": [
-            { "en": "Surpassing Power", "ja": "威力上昇", "ko": "위력 상승", "zh": "威力提升" },
-            { "en": "Grows in Strength", "ja": "力上昇", "ko": "힘 상승", "zh": "力量提升" },
-            { "en": "Empowering Blow", "ja": "強撃追加", "ko": "강격 추가", "zh": "追加重击" },
-            { "en": "Surpassing Speed", "ja": "速度上昇", "ko": "속도 상승", "zh": "速度提升" },
-            { "en": "Resounding Shield", "ja": "大盾の備え", "ko": "대패의 준비", "zh": "大盾戒备" }
+            {
+              "en": "Surpassing Power",
+              "ja": "威力上昇",
+              "ko": "위력 상승",
+              "zh": "威力提升"
+            },
+            {
+              "en": "Grows in Strength",
+              "ja": "力上昇",
+              "ko": "힘 상승",
+              "zh": "力量提升"
+            },
+            {
+              "en": "Empowering Blow",
+              "ja": "強撃追加",
+              "ko": "강격 추가",
+              "zh": "追加重击"
+            },
+            {
+              "en": "Surpassing Speed",
+              "ja": "速度上昇",
+              "ko": "속도 상승",
+              "zh": "速度提升"
+            },
+            {
+              "en": "Resounding Shield",
+              "ja": "大盾の備え",
+              "ko": "대패의 준비",
+              "zh": "大盾戒备"
+            }
           ]
         }
       },
       {
         "id": "merchant",
-        "name": { "en": "Merchant", "ja": "商人", "ko": "상인", "zh": "商人" },
+        "name": {
+          "en": "Merchant",
+          "ja": "商人",
+          "ko": "상인",
+          "zh": "商人"
+        },
         "role": "support",
-        "weapon": ["sword", "axe"],
+        "weapon": [
+          "sword",
+          "axe"
+        ],
         "description": {
           "en": "Utility and economy support. Skills like Hired Help summon mercenaries to attack, and Rest can revive a downed ally. Carries extra inventory with the Merchant's passive.",
           "ja": "ユーティリティと経済面のサポーター。「傭兵雇用」で仲間を呼んで攻撃し、「休息」で倒れた味方を蘇生可能。商人パッシブで所持アイテム数が増えます。",
@@ -57,26 +123,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Hired Help", "ja": "傭兵雇用", "ko": "고용하기", "zh": "雇佣帮手" },
-            { "en": "Rest", "ja": "休息", "ko": "휴식", "zh": "休息" },
-            { "en": "Purchase Order", "ja": "購入依頼", "ko": "구매 의뢰", "zh": "采购委托" },
-            { "en": "Sideline", "ja": "サイドライン", "ko": "부업", "zh": "副业" },
-            { "en": "Gold-Backed Hand", "ja": "金の拳", "ko": "황금의 주먹", "zh": "黄金之手" }
+            {
+              "en": "Hired Help",
+              "ja": "傭兵雇用",
+              "ko": "고용하기",
+              "zh": "雇佣帮手"
+            },
+            {
+              "en": "Rest",
+              "ja": "休息",
+              "ko": "휴식",
+              "zh": "休息"
+            },
+            {
+              "en": "Purchase Order",
+              "ja": "購入依頼",
+              "ko": "구매 의뢰",
+              "zh": "采购委托"
+            },
+            {
+              "en": "Sideline",
+              "ja": "サイドライン",
+              "ko": "부업",
+              "zh": "副业"
+            },
+            {
+              "en": "Gold-Backed Hand",
+              "ja": "金の拳",
+              "ko": "황금의 주먹",
+              "zh": "黄金之手"
+            }
           ],
           "support": [
-            { "en": "Nimble Fingers", "ja": "手先の器用さ", "ko": "손재주", "zh": "灵活手指" },
-            { "en": "Serene Wisdom", "ja": "静謐の叡智", "ko": "고요한 지혜", "zh": "宁静智慧" },
-            { "en": "A Life of Luxury", "ja": "豪華な暮らし", "ko": "사치스러운 삶", "zh": "奢华生活" },
-            { "en": "No Stone Unturned", "ja": "見逃すな", "ko": "놓치지 않는다", "zh": "不留遗漏" },
-            { "en": "Reticent Magnetism", "ja": "魅惑の人柄", "ko": "매혹적 인품", "zh": "内敛魅力" }
+            {
+              "en": "Nimble Fingers",
+              "ja": "手先の器用さ",
+              "ko": "손재주",
+              "zh": "灵活手指"
+            },
+            {
+              "en": "Serene Wisdom",
+              "ja": "静謐の叡智",
+              "ko": "고요한 지혜",
+              "zh": "宁静智慧"
+            },
+            {
+              "en": "A Life of Luxury",
+              "ja": "豪華な暮らし",
+              "ko": "사치스러운 삶",
+              "zh": "奢华生活"
+            },
+            {
+              "en": "No Stone Unturned",
+              "ja": "見逃すな",
+              "ko": "놓치지 않는다",
+              "zh": "不留遗漏"
+            },
+            {
+              "en": "Reticent Magnetism",
+              "ja": "魅惑の人柄",
+              "ko": "매혹적 인품",
+              "zh": "内敛魅力"
+            }
           ]
         }
       },
       {
         "id": "scholar",
-        "name": { "en": "Scholar", "ja": "学者", "ko": "학자", "zh": "学者" },
+        "name": {
+          "en": "Scholar",
+          "ja": "学者",
+          "ko": "학자",
+          "zh": "学者"
+        },
         "role": "magic",
-        "weapon": ["staff", "dagger"],
+        "weapon": [
+          "staff",
+          "dagger"
+        ],
         "description": {
           "en": "Pure magic damage dealer. Elemental spells (fire, ice, lightning) target multiple weaknesses. The Scholar's advanced skill 'Alephan's Wisdom' analyses enemy HP and weaknesses.",
           "ja": "純粋な魔法アタッカー。火・氷・雷の属性魔法で複数の弱点を突けます。学者の上位スキル「アレファンの叡智」は敵のHPと弱点を分析します。",
@@ -85,26 +209,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Fire Storm", "ja": "ファイアーストーム", "ko": "파이어 스톰", "zh": "火焰风暴" },
-            { "en": "Ice Storm", "ja": "アイスストーム", "ko": "아이스 스톰", "zh": "冰霜风暴" },
-            { "en": "Lightning Storm", "ja": "サンダーストーム", "ko": "썬더 스톰", "zh": "雷电风暴" },
-            { "en": "Alephan's Wisdom", "ja": "アレファンの叡智", "ko": "알레판의 지혜", "zh": "阿雷凡之智" },
-            { "en": "Sweeping Cleave", "ja": "払い斬り", "ko": "휘둘러 베기", "zh": "横扫斩" }
+            {
+              "en": "Fire Storm",
+              "ja": "ファイアーストーム",
+              "ko": "파이어 스톰",
+              "zh": "火焰风暴"
+            },
+            {
+              "en": "Ice Storm",
+              "ja": "アイスストーム",
+              "ko": "아이스 스톰",
+              "zh": "冰霜风暴"
+            },
+            {
+              "en": "Lightning Storm",
+              "ja": "サンダーストーム",
+              "ko": "썬더 스톰",
+              "zh": "雷电风暴"
+            },
+            {
+              "en": "Alephan's Wisdom",
+              "ja": "アレファンの叡智",
+              "ko": "알레판의 지혜",
+              "zh": "阿雷凡之智"
+            },
+            {
+              "en": "Sweeping Cleave",
+              "ja": "払い斬り",
+              "ko": "휘둘러 베기",
+              "zh": "横扫斩"
+            }
           ],
           "support": [
-            { "en": "Elemental Augmentation", "ja": "属性攻撃強化", "ko": "속성 공격 강화", "zh": "属性攻击强化" },
-            { "en": "Perceiver's Wisdom", "ja": "予知の知識", "ko": "예지하는 지식", "zh": "先知之智" },
-            { "en": "Heightened Intelligence", "ja": "知力上昇", "ko": "지력 상승", "zh": "智力提升" },
-            { "en": "Vim and Vigor", "ja": "気力充実", "ko": "활력 충전", "zh": "气力充沛" },
-            { "en": "Elemental Defense", "ja": "属性防御", "ko": "속성 방어", "zh": "属性防御" }
+            {
+              "en": "Elemental Augmentation",
+              "ja": "属性攻撃強化",
+              "ko": "속성 공격 강화",
+              "zh": "属性攻击强化"
+            },
+            {
+              "en": "Perceiver's Wisdom",
+              "ja": "予知の知識",
+              "ko": "예지하는 지식",
+              "zh": "先知之智"
+            },
+            {
+              "en": "Heightened Intelligence",
+              "ja": "知力上昇",
+              "ko": "지력 상승",
+              "zh": "智力提升"
+            },
+            {
+              "en": "Vim and Vigor",
+              "ja": "気力充実",
+              "ko": "활력 충전",
+              "zh": "气力充沛"
+            },
+            {
+              "en": "Elemental Defense",
+              "ja": "属性防御",
+              "ko": "속성 방어",
+              "zh": "属性防御"
+            }
           ]
         }
       },
       {
         "id": "dancer",
-        "name": { "en": "Dancer", "ja": "踊り子", "ko": "무희", "zh": "舞娘" },
+        "name": {
+          "en": "Dancer",
+          "ja": "踊り子",
+          "ko": "무희",
+          "zh": "舞娘"
+        },
         "role": "speed",
-        "weapon": ["dagger", "spear"],
+        "weapon": [
+          "dagger",
+          "spear"
+        ],
         "description": {
           "en": "Speed-focused buffer. Skills like Peacock Strut and Bewildering Grace provide party-wide buffs and unpredictable effects. Dancer's passive improves evasion.",
           "ja": "スピード重視のバッファー。「クジャクの舞」や「気まぐれの恵み」でパーティ全体にバフと予測不能な効果。踊り子パッシブで回避率が上がります。",
@@ -113,26 +295,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Bewildering Grace", "ja": "気まぐれの恵み", "ko": "변덕의 은총", "zh": "奇想天降" },
-            { "en": "Peacock Strut", "ja": "クジャクの舞", "ko": "공작의 춤", "zh": "孔雀之舞" },
-            { "en": "Slowing Strike", "ja": "減速の一撃", "ko": "감속의 일격", "zh": "减速一击" },
-            { "en": "Sweeping Gale", "ja": "払い風", "ko": "휘날리는 바람", "zh": "横扫风" },
-            { "en": "Lithe Heel", "ja": "軽業師の踵", "ko": "곡예사의 발꿈치", "zh": "轻巧之踵" }
+            {
+              "en": "Bewildering Grace",
+              "ja": "気まぐれの恵み",
+              "ko": "변덕의 은총",
+              "zh": "奇想天降"
+            },
+            {
+              "en": "Peacock Strut",
+              "ja": "クジャクの舞",
+              "ko": "공작의 춤",
+              "zh": "孔雀之舞"
+            },
+            {
+              "en": "Slowing Strike",
+              "ja": "減速の一撃",
+              "ko": "감속의 일격",
+              "zh": "减速一击"
+            },
+            {
+              "en": "Sweeping Gale",
+              "ja": "払い風",
+              "ko": "휘날리는 바람",
+              "zh": "横扫风"
+            },
+            {
+              "en": "Lithe Heel",
+              "ja": "軽業師の踵",
+              "ko": "곡예사의 발꿈치",
+              "zh": "轻巧之踵"
+            }
           ],
           "support": [
-            { "en": "Dance of Restoration", "ja": "癒しの舞", "ko": "치유의 춤", "zh": "回复之舞" },
-            { "en": "Stimulating Stride", "ja": "活気の歩み", "ko": "활기의 걸음", "zh": "焕发之步" },
-            { "en": "Enlivening Samba", "ja": "サンバの活力", "ko": "삼바의 활력", "zh": "活力桑巴" },
-            { "en": "Nimble Grace", "ja": "敏捷の恵み", "ko": "민첩의 은총", "zh": "敏捷之赐" },
-            { "en": "Glowing Waltz", "ja": "光輝のワルツ", "ko": "광휘의 왈츠", "zh": "光辉华尔兹" }
+            {
+              "en": "Dance of Restoration",
+              "ja": "癒しの舞",
+              "ko": "치유의 춤",
+              "zh": "回复之舞"
+            },
+            {
+              "en": "Stimulating Stride",
+              "ja": "活気の歩み",
+              "ko": "활기의 걸음",
+              "zh": "焕发之步"
+            },
+            {
+              "en": "Enlivening Samba",
+              "ja": "サンバの活力",
+              "ko": "삼바의 활력",
+              "zh": "活力桑巴"
+            },
+            {
+              "en": "Nimble Grace",
+              "ja": "敏捷の恵み",
+              "ko": "민첩의 은총",
+              "zh": "敏捷之赐"
+            },
+            {
+              "en": "Glowing Waltz",
+              "ja": "光輝のワルツ",
+              "ko": "광휘의 왈츠",
+              "zh": "光辉华尔兹"
+            }
           ]
         }
       },
       {
         "id": "hunter",
-        "name": { "en": "Hunter", "ja": "狩人", "ko": "사냥꾼", "zh": "猎人" },
+        "name": {
+          "en": "Hunter",
+          "ja": "狩人",
+          "ko": "사냥꾼",
+          "zh": "猎人"
+        },
         "role": "speed",
-        "weapon": ["bow", "dagger"],
+        "weapon": [
+          "bow",
+          "dagger"
+        ],
         "description": {
           "en": "Ranged physical attacker. Bow attacks hit weak points reliably. Skills like Thunderbird and Take Cover provide ranged offense and self-protection.",
           "ja": "遠距離物理アタッカー。弓攻撃で弱点を確実に突けます。「サンダーバード」や「身を隠す」で遠距離火力と自己防御を両立。",
@@ -141,26 +381,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Rain of Arrows", "ja": "アローレイン", "ko": "화살비", "zh": "箭雨" },
-            { "en": "Thunderbird", "ja": "サンダーバード", "ko": "썬더버드", "zh": "雷鸟" },
-            { "en": "Take Cover", "ja": "身を隠す", "ko": "은신", "zh": "隐匿" },
-            { "en": "Merciless Stab", "ja": "容赦なき一刺し", "ko": "자비 없는 찌르기", "zh": "无情刺击" },
-            { "en": "Empowering Shot", "ja": "強弓の一矢", "ko": "강궁의 일격", "zh": "强弓一矢" }
+            {
+              "en": "Rain of Arrows",
+              "ja": "アローレイン",
+              "ko": "화살비",
+              "zh": "箭雨"
+            },
+            {
+              "en": "Thunderbird",
+              "ja": "サンダーバード",
+              "ko": "썬더버드",
+              "zh": "雷鸟"
+            },
+            {
+              "en": "Take Cover",
+              "ja": "身を隠す",
+              "ko": "은신",
+              "zh": "隐匿"
+            },
+            {
+              "en": "Merciless Stab",
+              "ja": "容赦なき一刺し",
+              "ko": "자비 없는 찌르기",
+              "zh": "无情刺击"
+            },
+            {
+              "en": "Empowering Shot",
+              "ja": "強弓の一矢",
+              "ko": "강궁의 일격",
+              "zh": "强弓一矢"
+            }
           ],
           "support": [
-            { "en": "Heightened Reflexes", "ja": "反射神経向上", "ko": "반사신경 향상", "zh": "反射强化" },
-            { "en": "Physical Prowess", "ja": "物理適性", "ko": "물리 적성", "zh": "物理天赋" },
-            { "en": "Persisting Arrows", "ja": "矢の継承", "ko": "화살의 계승", "zh": "箭矢传承" },
-            { "en": "Bird of Prey", "ja": "猛禽の眼", "ko": "맹금의 눈", "zh": "猛禽之眼" },
-            { "en": "Peripherality", "ja": "周辺視", "ko": "주변시", "zh": "周边视野" }
+            {
+              "en": "Heightened Reflexes",
+              "ja": "反射神経向上",
+              "ko": "반사신경 향상",
+              "zh": "反射强化"
+            },
+            {
+              "en": "Physical Prowess",
+              "ja": "物理適性",
+              "ko": "물리 적성",
+              "zh": "物理天赋"
+            },
+            {
+              "en": "Persisting Arrows",
+              "ja": "矢の継承",
+              "ko": "화살의 계승",
+              "zh": "箭矢传承"
+            },
+            {
+              "en": "Bird of Prey",
+              "ja": "猛禽の眼",
+              "ko": "맹금의 눈",
+              "zh": "猛禽之眼"
+            },
+            {
+              "en": "Peripherality",
+              "ja": "周辺視",
+              "ko": "주변시",
+              "zh": "周边视野"
+            }
           ]
         }
       },
       {
         "id": "apothecary",
-        "name": { "en": "Apothecary", "ja": "薬師", "ko": "약사", "zh": "药师" },
+        "name": {
+          "en": "Apothecary",
+          "ja": "薬師",
+          "ko": "약사",
+          "zh": "药师"
+        },
         "role": "magic",
-        "weapon": ["staff", "axe"],
+        "weapon": [
+          "staff",
+          "axe"
+        ],
         "description": {
           "en": "Healer and poison specialist. Heals HP and removes status ailments. Abilities like Rehabilitate and the Apothecary's healing support skills make it the premier healer.",
           "ja": "ヒーラー兼毒使い。HP回復と状態異常回復が可能。「リハビリー」や薬師のサポート回復スキルで最強の回復役として活躍します。",
@@ -169,26 +467,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Heal", "ja": "ヒール", "ko": "힐", "zh": "治疗" },
-            { "en": "Rehabilitate", "ja": "リハビリー", "ko": "리허빌리", "zh": "康复" },
-            { "en": "Pep", "ja": "ペップ", "ko": "페프", "zh": "振奋" },
-            { "en": "Empoison", "ja": "エンポイズン", "ko": "엠포이즌", "zh": "施毒" },
-            { "en": "Muffler", "ja": "マフラー", "ko": "머플러", "zh": "消音" }
+            {
+              "en": "Heal",
+              "ja": "ヒール",
+              "ko": "힐",
+              "zh": "治疗"
+            },
+            {
+              "en": "Rehabilitate",
+              "ja": "リハビリー",
+              "ko": "리허빌리",
+              "zh": "康复"
+            },
+            {
+              "en": "Pep",
+              "ja": "ペップ",
+              "ko": "페프",
+              "zh": "振奋"
+            },
+            {
+              "en": "Empoison",
+              "ja": "エンポイズン",
+              "ko": "엠포이즌",
+              "zh": "施毒"
+            },
+            {
+              "en": "Muffler",
+              "ja": "マフラー",
+              "ko": "머플러",
+              "zh": "消音"
+            }
           ],
           "support": [
-            { "en": "Concoct", "ja": "コンコト", "ko": "콩코트", "zh": "调和" },
-            { "en": "Peripherality", "ja": "周辺視", "ko": "주변시", "zh": "周边视野" },
-            { "en": "Improved Healing", "ja": "回復強化", "ko": "회복 강화", "zh": "回复强化" },
-            { "en": "Watch for Weakness", "ja": "弱点看破", "ko": "약점 간파", "zh": "弱点洞察" },
-            { "en": "Improved Concoction", "ja": "調合強化", "ko": "조화 강화", "zh": "调和强化" }
+            {
+              "en": "Concoct",
+              "ja": "コンコト",
+              "ko": "콩코트",
+              "zh": "调和"
+            },
+            {
+              "en": "Peripherality",
+              "ja": "周辺視",
+              "ko": "주변시",
+              "zh": "周边视野"
+            },
+            {
+              "en": "Improved Healing",
+              "ja": "回復強化",
+              "ko": "회복 강화",
+              "zh": "回复强化"
+            },
+            {
+              "en": "Watch for Weakness",
+              "ja": "弱点看破",
+              "ko": "약점 간파",
+              "zh": "弱点洞察"
+            },
+            {
+              "en": "Improved Concoction",
+              "ja": "調合強化",
+              "ko": "조화 강화",
+              "zh": "调和强化"
+            }
           ]
         }
       },
       {
         "id": "thief",
-        "name": { "en": "Thief", "ja": "盗賊", "ko": "도적", "zh": "盗贼" },
+        "name": {
+          "en": "Thief",
+          "ja": "盗賊",
+          "ko": "도적",
+          "zh": "盗贼"
+        },
         "role": "speed",
-        "weapon": ["sword", "dagger"],
+        "weapon": [
+          "sword",
+          "dagger"
+        ],
         "description": {
           "en": "Fast single-target damage dealer. Steal SP from enemies, apply debuffs, and chain turn order. Daggers and swords with high speed for breaking boss shields.",
           "ja": "素早い単火力アタッカー。敵からSPを盗み、デバフを掛け、行動順をつなげます。ダガーと剣で速度が高く、ボスのシールド削りに最適。",
@@ -197,26 +553,84 @@
         },
         "skills": {
           "main": [
-            { "en": "Steal SP", "ja": "SP盗み", "ko": "SP 도둑", "zh": "偷取 SP" },
-            { "en": "Armor Corrosive Dagger", "ja": "鎧の溶ける短剣", "ko": "갑옷 녹이는 단검", "zh": "蚀甲短剑" },
-            { "en": "DP Boost", "ja": "DPブースト", "ko": "DP 부스트", "zh": "DP 强化" },
-            { "en": "Disarm Trap", "ja": "罠解除", "ko": "함정 해제", "zh": "解除陷阱" },
-            { "en": "Shadow Fade", "ja": "影に潜む", "ko": "그림자에 숨다", "zh": "影潜" }
+            {
+              "en": "Steal SP",
+              "ja": "SP盗み",
+              "ko": "SP 도둑",
+              "zh": "偷取 SP"
+            },
+            {
+              "en": "Armor Corrosive Dagger",
+              "ja": "鎧の溶ける短剣",
+              "ko": "갑옷 녹이는 단검",
+              "zh": "蚀甲短剑"
+            },
+            {
+              "en": "DP Boost",
+              "ja": "DPブースト",
+              "ko": "DP 부스트",
+              "zh": "DP 强化"
+            },
+            {
+              "en": "Disarm Trap",
+              "ja": "罠解除",
+              "ko": "함정 해제",
+              "zh": "解除陷阱"
+            },
+            {
+              "en": "Shadow Fade",
+              "ja": "影に潜む",
+              "ko": "그림자에 숨다",
+              "zh": "影潜"
+            }
           ],
           "support": [
-            { "en": "Sticky Fingers", "ja": "盗賊の指", "ko": "도적의 손가락", "zh": "盗贼之指" },
-            { "en": "Fleet Foot", "ja": "韋駄天の足", "ko": "질풍의 발", "zh": "神行之足" },
-            { "en": "HP Thief", "ja": "HP盗み", "ko": "HP 도둑", "zh": "HP 偷取" },
-            { "en": "Snuffler", "ja": "スニッフル", "ko": "코를 킁킁대다", "zh": "嗅探" },
-            { "en": "Encounter Half", "ja": "エンカウント半減", "ko": "조우 반감", "zh": "遭遇减半" }
+            {
+              "en": "Sticky Fingers",
+              "ja": "盗賊の指",
+              "ko": "도적의 손가락",
+              "zh": "盗贼之指"
+            },
+            {
+              "en": "Fleet Foot",
+              "ja": "韋駄天の足",
+              "ko": "질풍의 발",
+              "zh": "神行之足"
+            },
+            {
+              "en": "HP Thief",
+              "ja": "HP盗み",
+              "ko": "HP 도둑",
+              "zh": "HP 偷取"
+            },
+            {
+              "en": "Snuffler",
+              "ja": "スニッフル",
+              "ko": "코를 킁킁대다",
+              "zh": "嗅探"
+            },
+            {
+              "en": "Encounter Half",
+              "ja": "エンカウント半減",
+              "ko": "조우 반감",
+              "zh": "遭遇减半"
+            }
           ]
         }
       },
       {
         "id": "cleric",
-        "name": { "en": "Cleric", "ja": "神官", "ko": "사제", "zh": "神官" },
+        "name": {
+          "en": "Cleric",
+          "ja": "神官",
+          "ko": "사제",
+          "zh": "神官"
+        },
         "role": "magic",
-        "weapon": ["staff", "shield"],
+        "weapon": [
+          "staff",
+          "shield"
+        ],
         "description": {
           "en": "Light-elemental magic and support healer. Heals, revives, buffs elemental attack, and provides light damage. Cleric's defensive buff 'Healing Light' is essential for tough boss fights.",
           "ja": "光属性魔法と補助ヒーラー。回復、蘇生、属性攻撃バフ、光属性ダメージ。「癒しの光」防御バフは強敵ボス戦に必須です。",
@@ -225,18 +639,68 @@
         },
         "skills": {
           "main": [
-            { "en": "Heal", "ja": "ヒール", "ko": "힐", "zh": "治疗" },
-            { "en": "Revive", "ja": "蘇生", "ko": "부활", "zh": "复活" },
-            { "en": "Sacred Light", "ja": "セイクリッドライト", "ko": "세이크리드 라이트", "zh": "神圣之光" },
-            { "en": "Holy Light", "ja": "ホーリーライト", "ko": "홀리 라이트", "zh": "圣光" },
-            { "en": "Light Blade", "ja": "光刃", "ko": "빛의 검", "zh": "光刃" }
+            {
+              "en": "Heal",
+              "ja": "ヒール",
+              "ko": "힐",
+              "zh": "治疗"
+            },
+            {
+              "en": "Revive",
+              "ja": "蘇生",
+              "ko": "부활",
+              "zh": "复活"
+            },
+            {
+              "en": "Sacred Light",
+              "ja": "セイクリッドライト",
+              "ko": "세이크리드 라이트",
+              "zh": "神圣之光"
+            },
+            {
+              "en": "Holy Light",
+              "ja": "ホーリーライト",
+              "ko": "홀리 라이트",
+              "zh": "圣光"
+            },
+            {
+              "en": "Light Blade",
+              "ja": "光刃",
+              "ko": "빛의 검",
+              "zh": "光刃"
+            }
           ],
           "support": [
-            { "en": "Healing Light", "ja": "癒しの光", "ko": "치유의 빛", "zh": "治愈之光" },
-            { "en": "Healer's Creed", "ja": "治癒の信条", "ko": "치유의 신조", "zh": "治愈信条" },
-            { "en": "Invigorate", "ja": "活力", "ko": "활력", "zh": "焕发" },
-            { "en": "Spring of Life", "ja": "生命の泉", "ko": "생명의 샘", "zh": "生命之泉" },
-            { "en": "The Light of Grace", "ja": "恵みの光", "ko": "은혜의 빛", "zh": "恩典之光" }
+            {
+              "en": "Healing Light",
+              "ja": "癒しの光",
+              "ko": "치유의 빛",
+              "zh": "治愈之光"
+            },
+            {
+              "en": "Healer's Creed",
+              "ja": "治癒の信条",
+              "ko": "치유의 신조",
+              "zh": "治愈信条"
+            },
+            {
+              "en": "Invigorate",
+              "ja": "活力",
+              "ko": "활력",
+              "zh": "焕发"
+            },
+            {
+              "en": "Spring of Life",
+              "ja": "生命の泉",
+              "ko": "생명의 샘",
+              "zh": "生命之泉"
+            },
+            {
+              "en": "The Light of Grace",
+              "ja": "恵みの光",
+              "ko": "은혜의 빛",
+              "zh": "恩典之光"
+            }
           ]
         }
       }
@@ -250,8 +714,23 @@
           "ko": "클래식 올라운더",
           "zh": "经典全能队"
         },
-        "party": ["warrior", "cleric", "scholar", "hunter"],
-        "skills": ["Staggering Sword", "Brand's Thunder", "Heal", "Revive", "Fire Storm", "Ice Storm", "Lightning Storm", "Rain of Arrows", "Thunderbird"],
+        "party": [
+          "warrior",
+          "cleric",
+          "scholar",
+          "hunter"
+        ],
+        "skills": [
+          "Staggering Sword",
+          "Brand's Thunder",
+          "Heal",
+          "Revive",
+          "Fire Storm",
+          "Ice Storm",
+          "Lightning Storm",
+          "Rain of Arrows",
+          "Thunderbird"
+        ],
         "reason": {
           "en": "The quintessential OT2 party. Warrior tanks and breaks, Cleric heals and revives, Scholar handles all magic damage, Hunter adds range to exploit multi-hit weakness chains. Reliable from Chapter 1 through the final boss.",
           "ja": "OT2の最も定番パーティ。剣士が盾とシールド破壊、神官が回復と蘇生、学者が全属性魔法、狩人が遠距離で弱点連鎖を担当。第1章からラスボスまで安定して活躍します。",
@@ -267,8 +746,23 @@
           "ko": "유틸리티 힐러",
           "zh": "辅助治疗队"
         },
-        "party": ["warrior", "merchant", "apothecary", "hunter"],
-        "skills": ["Staggering Sword", "Cross Strike", "Hired Help", "Rest", "Heal", "Rehabilitate", "Pep", "Rain of Arrows", "Thunderbird"],
+        "party": [
+          "warrior",
+          "merchant",
+          "apothecary",
+          "hunter"
+        ],
+        "skills": [
+          "Staggering Sword",
+          "Cross Strike",
+          "Hired Help",
+          "Rest",
+          "Heal",
+          "Rehabilitate",
+          "Pep",
+          "Rain of Arrows",
+          "Thunderbird"
+        ],
         "reason": {
           "en": "Tanky with strong item economy. Merchant's Hired Help gives free summons, Apothecary heals and removes ailments, Warrior breaks shields, Hunter exploits ranged weakness. Great for players who like buying items and using them.",
           "ja": "タフで経済力に優れた構成。商人の傭兵雇用で無料召喚、薬師が回復と状態異常回復、剣士がシールド破壊、狩人が遠距離弱点を突く。アイテムを集めて使うのが好きな人向け。",
@@ -284,8 +778,22 @@
           "ko": "물리 버스트",
           "zh": "物理爆发队"
         },
-        "party": ["warrior", "hunter", "thief", "apothecary"],
-        "skills": ["Brand's Thunder", "Cross Strike", "Rain of Arrows", "Thunderbird", "Steal SP", "Armor Corrosive Dagger", "Heal", "Rehabilitate"],
+        "party": [
+          "warrior",
+          "hunter",
+          "thief",
+          "apothecary"
+        ],
+        "skills": [
+          "Brand's Thunder",
+          "Cross Strike",
+          "Rain of Arrows",
+          "Thunderbird",
+          "Steal SP",
+          "Armor Corrosive Dagger",
+          "Heal",
+          "Rehabilitate"
+        ],
         "reason": {
           "en": "Pure physical damage team. Two sword users (Warrior, Thief) and a bow user (Hunter) break enemy weaknesses in 1-2 turns. Apothecary keeps the team alive. Best for boss fights with multiple physical weaknesses.",
           "ja": "純粋物理パーティ。剣士と盗賊の剣使い2人と狩人の弓で1〜2ターンで敵弱点を破壊。薬師が生存を維持。物理弱点多数のボスに最適。",
@@ -301,8 +809,22 @@
           "ko": "쉴드 브레이커",
           "zh": "破盾队"
         },
-        "party": ["warrior", "warrior", "hunter", "apothecary"],
-        "skills": ["Staggering Sword", "Cross Strike", "Brand's Thunder", "Abide", "Rain of Arrows", "Thunderbird", "Heal", "Pep"],
+        "party": [
+          "warrior",
+          "warrior",
+          "hunter",
+          "apothecary"
+        ],
+        "skills": [
+          "Staggering Sword",
+          "Cross Strike",
+          "Brand's Thunder",
+          "Abide",
+          "Rain of Arrows",
+          "Thunderbird",
+          "Heal",
+          "Pep"
+        ],
         "reason": {
           "en": "Two Warriors means double sword/axe coverage for shield breaking, plus the Warrior's high HP lets them survive counterattacks. Use this when you need to grind through high-defense bosses.",
           "ja": "剣士2人で剣/斧カバレッジ倍増、シールド破壊に超特化。剣士の高HPで反撃も耐えます。高防御ボスのゴリ押し攻略にどうぞ。",
@@ -318,8 +840,23 @@
           "ko": "정령 마법형",
           "zh": "属性魔法队"
         },
-        "party": ["scholar", "cleric", "apothecary", "warrior"],
-        "skills": ["Fire Storm", "Ice Storm", "Lightning Storm", "Alephan's Wisdom", "Sacred Light", "Holy Light", "Heal", "Rehabilitate", "Cross Strike"],
+        "party": [
+          "scholar",
+          "cleric",
+          "apothecary",
+          "warrior"
+        ],
+        "skills": [
+          "Fire Storm",
+          "Ice Storm",
+          "Lightning Storm",
+          "Alephan's Wisdom",
+          "Sacred Light",
+          "Holy Light",
+          "Heal",
+          "Rehabilitate",
+          "Cross Strike"
+        ],
         "reason": {
           "en": "Triple magic damage dealers. Scholar, Cleric, and Apothecary all have elemental coverage; together they can hit any weakness. Warrior tanks. Best against bosses weak to fire/ice/lightning/light.",
           "ja": "魔法アタッカー3人体制。学者・神官・薬師で全属性をカバー、弱点関係なく当てられる。剣士が盾役。火/氷/雷/光弱点のボスに最適。",
@@ -335,8 +872,22 @@
           "ko": "쿼드 스콜라",
           "zh": "四学者队"
         },
-        "party": ["scholar", "scholar", "cleric", "apothecary"],
-        "skills": ["Fire Storm", "Ice Storm", "Lightning Storm", "Alephan's Wisdom", "Elemental Augmentation", "Heal", "Rehabilitate", "Pep"],
+        "party": [
+          "scholar",
+          "scholar",
+          "cleric",
+          "apothecary"
+        ],
+        "skills": [
+          "Fire Storm",
+          "Ice Storm",
+          "Lightning Storm",
+          "Alephan's Wisdom",
+          "Elemental Augmentation",
+          "Heal",
+          "Rehabilitate",
+          "Pep"
+        ],
         "reason": {
           "en": "Maximum magic DPS. With two Scholars you can output insane elemental damage, and Cleric+Apothecary keep everyone alive. Squishy, but fights end before the enemy can retaliate.",
           "ja": "最大魔法火力。学者2人で属性ダメージがエグい。神官+薬師で生存維持。防御は紙ですが、敵が反撃する前に戦闘が終わります。",
@@ -352,8 +903,22 @@
           "ko": "턴 오더 조작형",
           "zh": "行动顺序队"
         },
-        "party": ["thief", "dancer", "hunter", "scholar"],
-        "skills": ["Steal SP", "Shadow Fade", "Bewildering Grace", "Peacock Strut", "Rain of Arrows", "Thunderbird", "Lightning Storm", "Alephan's Wisdom"],
+        "party": [
+          "thief",
+          "dancer",
+          "hunter",
+          "scholar"
+        ],
+        "skills": [
+          "Steal SP",
+          "Shadow Fade",
+          "Bewildering Grace",
+          "Peacock Strut",
+          "Rain of Arrows",
+          "Thunderbird",
+          "Lightning Storm",
+          "Alephan's Wisdom"
+        ],
         "reason": {
           "en": "Three high-speed classes. Thief's dagger speed + Dancer's evasion + Hunter's bow speed means you go first in nearly every fight. Dancer's Bewildering Grace adds random effects that can one-shot enemies.",
           "ja": "スピード職3人体制。盗賊のダガー速度+踊り子の回避+狩人の弓速度でほとんどの戦闘で先手。踊り子の気まぐれの恵みで一撃必殺もあり。",
@@ -369,8 +934,22 @@
           "ko": "스피드 지속형",
           "zh": "速度续航队"
         },
-        "party": ["thief", "dancer", "hunter", "cleric"],
-        "skills": ["Steal SP", "Armor Corrosive Dagger", "Bewildering Grace", "Peacock Strut", "Rain of Arrows", "Thunderbird", "Heal", "Revive"],
+        "party": [
+          "thief",
+          "dancer",
+          "hunter",
+          "cleric"
+        ],
+        "skills": [
+          "Steal SP",
+          "Armor Corrosive Dagger",
+          "Bewildering Grace",
+          "Peacock Strut",
+          "Rain of Arrows",
+          "Thunderbird",
+          "Heal",
+          "Revive"
+        ],
         "reason": {
           "en": "Fast offence with Cleric as safety net. Thief/Hunter break shields quickly, Dancer buffs, Cleric keeps everyone healed. Strong in long boss fights where you need to stay alive while exploiting turn order.",
           "ja": "神官を安全網に据えた速攻型。盗賊/狩人がシールドを素早く破壊、踊り子がバフ、神官が回復維持。行動順を活かしながら長期戦を戦うボス戦に強い。",
@@ -386,8 +965,22 @@
           "ko": "버프 이코노미",
           "zh": "Buff 持久队"
         },
-        "party": ["merchant", "dancer", "cleric", "warrior"],
-        "skills": ["Hired Help", "Rest", "Bewildering Grace", "Peacock Strut", "Heal", "Healing Light", "Staggering Sword", "Safeguard"],
+        "party": [
+          "merchant",
+          "dancer",
+          "cleric",
+          "warrior"
+        ],
+        "skills": [
+          "Hired Help",
+          "Rest",
+          "Bewildering Grace",
+          "Peacock Strut",
+          "Heal",
+          "Healing Light",
+          "Staggering Sword",
+          "Safeguard"
+        ],
         "reason": {
           "en": "Defensive party that wins by attrition. Merchant's Hired Help + Dancer's buffs + Cleric's heals + Warrior's tank. Long fights favor this setup since you rarely run out of resources.",
           "ja": "持久戦に持ち込む防御型パーティ。商人の傭兵雇用+踊り子のバフ+神官の回復+剣士の盾。長期戦ほど有利で、リソース切れが起きにくい。",
@@ -403,8 +996,22 @@
           "ko": "힐러 스택",
           "zh": "双治疗堆叠"
         },
-        "party": ["merchant", "dancer", "cleric", "apothecary"],
-        "skills": ["Hired Help", "Rest", "Bewildering Grace", "Peacock Strut", "Heal", "Rehabilitate", "Pep", "Healing Light"],
+        "party": [
+          "merchant",
+          "dancer",
+          "cleric",
+          "apothecary"
+        ],
+        "skills": [
+          "Hired Help",
+          "Rest",
+          "Bewildering Grace",
+          "Peacock Strut",
+          "Heal",
+          "Rehabilitate",
+          "Pep",
+          "Healing Light"
+        ],
         "reason": {
           "en": "No dedicated tank, but double healer + Dancer buffs + Merchant summons. Damage output is low but you almost never die. Great for learning boss patterns without pressure.",
           "ja": "タンク不在だが回復2人+踊り子バフ+商人傭兵。火力は低いがほぼ死なない。ボスパターンを覚えてから攻略したい人向け。",
@@ -420,8 +1027,21 @@
           "ko": "초반 무료 세트",
           "zh": "前期免费队"
         },
-        "party": ["warrior", "cleric", "scholar", "dancer"],
-        "skills": ["Staggering Sword", "Cross Strike", "Heal", "Fire Storm", "Lightning Storm", "Peacock Strut", "Bewildering Grace"],
+        "party": [
+          "warrior",
+          "cleric",
+          "scholar",
+          "dancer"
+        ],
+        "skills": [
+          "Staggering Sword",
+          "Cross Strike",
+          "Heal",
+          "Fire Storm",
+          "Lightning Storm",
+          "Peacock Strut",
+          "Bewildering Grace"
+        ],
         "reason": {
           "en": "Four base jobs available from guilds in the first few hours. Tank + heal + magic + buff. The safest starter party — you'll never be stuck without an answer to a weakness.",
           "ja": "序盤数時間で取得できる基本職4つ。盾+回復+魔法+バフの最も安全なスターターパーティ。弱点に対応できない状況に陥ることはありません。",
@@ -437,8 +1057,21 @@
           "ko": "초반 딜 세팅",
           "zh": "前期输出队"
         },
-        "party": ["warrior", "hunter", "cleric", "apothecary"],
-        "skills": ["Cross Strike", "Brand's Thunder", "Rain of Arrows", "Thunderbird", "Heal", "Rehabilitate", "Pep"],
+        "party": [
+          "warrior",
+          "hunter",
+          "cleric",
+          "apothecary"
+        ],
+        "skills": [
+          "Cross Strike",
+          "Brand's Thunder",
+          "Rain of Arrows",
+          "Thunderbird",
+          "Heal",
+          "Rehabilitate",
+          "Pep"
+        ],
         "reason": {
           "en": "All four unlocked by mid-Chapter 2. Two physical damage dealers (Warrior, Hunter) plus dual healer (Cleric, Apothecary). Good for grinding JP early on.",
           "ja": "第2章中盤までに全員取得可能。物理アタッカー2人(剣士・狩人)+ダブルヒーラー(神官・薬師)。序盤のJP稼ぎに最適。",
@@ -454,8 +1087,19 @@
           "ko": "디버프 해머",
           "zh": "Debuff 锤"
         },
-        "party": ["thief", "scholar", "warrior", "cleric"],
-        "skills": ["Armor Corrosive Dagger", "Steal SP", "Lightning Storm", "Staggering Sword", "Heal"],
+        "party": [
+          "thief",
+          "scholar",
+          "warrior",
+          "cleric"
+        ],
+        "skills": [
+          "Armor Corrosive Dagger",
+          "Steal SP",
+          "Lightning Storm",
+          "Staggering Sword",
+          "Heal"
+        ],
         "reason": {
           "en": "Thief's Armor Corrosive Dagger stacks physical defense debuff. Scholar's Lightning Storm exploits the debuffed enemy. Warrior breaks shields. Cleric keeps team alive.",
           "ja": "盗賊の鎧の溶ける短剣で物理防御デバフ。学者のサンダーストームでデバフ活用。剣士がシールド破壊。神官が回復。",
@@ -471,8 +1115,19 @@
           "ko": "빛 속성 적층",
           "zh": "光属性堆叠"
         },
-        "party": ["cleric", "cleric", "scholar", "warrior"],
-        "skills": ["Sacred Light", "Holy Light", "Healing Light", "Lightning Storm", "Cross Strike"],
+        "party": [
+          "cleric",
+          "cleric",
+          "scholar",
+          "warrior"
+        ],
+        "skills": [
+          "Sacred Light",
+          "Holy Light",
+          "Healing Light",
+          "Lightning Storm",
+          "Cross Strike"
+        ],
         "reason": {
           "en": "Dual Clerics stack Sacred Light for massive AOE light damage. Scholar adds Lightning Storm for shield breaking. Warrior tanks. Best vs dark/undead bosses.",
           "ja": "神官2人でセイクリッドライトで全体光属性大ダメージ。学者はサンダーストームで盾破壊。剣士が盾役。闇/アンデッドボスに最適。",
@@ -488,8 +1143,18 @@
           "ko": "검과 단검의 연격",
           "zh": "剑匕连击"
         },
-        "party": ["warrior", "thief", "hunter", "apothecary"],
-        "skills": ["Cross Strike", "Armor Corrosive Dagger", "Rain of Arrows", "Rehabilitate"],
+        "party": [
+          "warrior",
+          "thief",
+          "hunter",
+          "apothecary"
+        ],
+        "skills": [
+          "Cross Strike",
+          "Armor Corrosive Dagger",
+          "Rain of Arrows",
+          "Rehabilitate"
+        ],
         "reason": {
           "en": "Cross Strike + Armor Corrosive Dagger stack physical defense debuff. Warrior breaks shield, Thief corrupts defense, Hunter rains arrows. Apothecary removes ailments.",
           "ja": "十文字斬り+鎧の溶ける短剣で物理防御デバフ重ね。剣士が盾破壊、盗賊が防御崩し、狩人が多段、薬師が状態異常回復。",
@@ -505,8 +1170,18 @@
           "ko": "썬더버드 연타",
           "zh": "雷鸟连击"
         },
-        "party": ["hunter", "hunter", "scholar", "cleric"],
-        "skills": ["Thunderbird", "Rain of Arrows", "Alephan's Wisdom", "Heal"],
+        "party": [
+          "hunter",
+          "hunter",
+          "scholar",
+          "cleric"
+        ],
+        "skills": [
+          "Thunderbird",
+          "Rain of Arrows",
+          "Alephan's Wisdom",
+          "Heal"
+        ],
         "reason": {
           "en": "Two Hunters spamming Thunderbird for massive multi-hit chain. Scholar for elemental coverage. Cleric for healing. Pure damage rush build.",
           "ja": "狩人2人でサンダーバード連打+多段連撃。学者で属性対応。神官で回復。火力最速ラッシュ。",
@@ -522,8 +1197,18 @@
           "ko": "도적 최속 편성",
           "zh": "盗贼最速队"
         },
-        "party": ["thief", "thief", "hunter", "apothecary"],
-        "skills": ["Steal SP", "Shadow Fade", "Rain of Arrows", "Rehabilitate"],
+        "party": [
+          "thief",
+          "thief",
+          "hunter",
+          "apothecary"
+        ],
+        "skills": [
+          "Steal SP",
+          "Shadow Fade",
+          "Rain of Arrows",
+          "Rehabilitate"
+        ],
         "reason": {
           "en": "Double Thief for maximum SP drain. Hunter provides ranged backup. Apothecary's Rehabilitate removes ailments. End fights before enemy gets a turn.",
           "ja": "盗賊2人で最大SPドレイン。狩人が遠距離サポート。薬師のリハビリーで状態異常回復。敵の番が来る前に戦闘終了。",
@@ -539,8 +1224,18 @@
           "ko": "불 속성 집중",
           "zh": "火属性集中"
         },
-        "party": ["scholar", "scholar", "warrior", "apothecary"],
-        "skills": ["Fire Storm", "Alephan's Wisdom", "Staggering Sword", "Pep"],
+        "party": [
+          "scholar",
+          "scholar",
+          "warrior",
+          "apothecary"
+        ],
+        "skills": [
+          "Fire Storm",
+          "Alephan's Wisdom",
+          "Staggering Sword",
+          "Pep"
+        ],
         "reason": {
           "en": "Double Scholar for double Fire Storm + Alephan's Wisdom reveals weakness. Warrior breaks shield. Apothecary's Pep keeps HP up. Best vs ice-element enemies.",
           "ja": "学者2人でファイアーストーム2回+アレファンの叡智で弱点分析。剣士が盾破壊。薬師ペップでHP維持。氷属性敵に最適。",
@@ -556,8 +1251,18 @@
           "ko": "학자 탱커 버스트",
           "zh": "学者坦克爆发"
         },
-        "party": ["scholar", "warrior", "warrior", "cleric"],
-        "skills": ["Fire Storm", "Ice Storm", "Cross Strike", "Healing Light"],
+        "party": [
+          "scholar",
+          "warrior",
+          "warrior",
+          "cleric"
+        ],
+        "skills": [
+          "Fire Storm",
+          "Ice Storm",
+          "Cross Strike",
+          "Healing Light"
+        ],
         "reason": {
           "en": "Two Warriors tank + Scholar AOE magic. Cleric's Healing Light halves damage. Staggering Sword + Cross Strike for fast shield break. Best for multi-phase boss fights.",
           "ja": "剣士2人タンク+学者全体魔法。神官の癒しの光で被ダメ半減。よろめき斬り+十文字斬りで素早いシールド破壊。多段階ボス戦向け。",
@@ -573,8 +1278,18 @@
           "ko": "약점 노출",
           "zh": "弱点暴露"
         },
-        "party": ["scholar", "warrior", "cleric", "hunter"],
-        "skills": ["Alephan's Wisdom", "Staggering Sword", "Heal", "Rain of Arrows"],
+        "party": [
+          "scholar",
+          "warrior",
+          "cleric",
+          "hunter"
+        ],
+        "skills": [
+          "Alephan's Wisdom",
+          "Staggering Sword",
+          "Heal",
+          "Rain of Arrows"
+        ],
         "reason": {
           "en": "Scholar's Alephan's Wisdom exposes all boss weaknesses turn 1. Warrior breaks shield. Hunter fires from range. Cleric sustains. For first-time boss attempts.",
           "ja": "学者のアレファンの叡智でボス全弱点1ターン目に公開。剣士が盾破壊、狩人が遠距離、神官が維持。ボス初見攻略向け。",
@@ -590,8 +1305,18 @@
           "ko": "풀 서포트",
           "zh": "纯辅助队"
         },
-        "party": ["merchant", "dancer", "cleric", "apothecary"],
-        "skills": ["Hired Help", "Dance of Restoration", "Heal", "Pep"],
+        "party": [
+          "merchant",
+          "dancer",
+          "cleric",
+          "apothecary"
+        ],
+        "skills": [
+          "Hired Help",
+          "Dance of Restoration",
+          "Heal",
+          "Pep"
+        ],
         "reason": {
           "en": "4 support classes. No tank. Merchant's Hired Help + Dancer's Dance of Restoration + Cleric's Heal + Apothecary's Pep = unkillable but slow. For casual play.",
           "ja": "サポート4人。タンク不在。傭兵雇用+癒しの舞+ヒール+ペップ=ほぼ死なないが火力低。のんびりプレイ向け。",
@@ -607,8 +1332,18 @@
           "ko": "버프 돌진",
           "zh": "Buff 突袭"
         },
-        "party": ["dancer", "dancer", "hunter", "warrior"],
-        "skills": ["Bewildering Grace", "Peacock Strut", "Thunderbird", "Brand's Thunder"],
+        "party": [
+          "dancer",
+          "dancer",
+          "hunter",
+          "warrior"
+        ],
+        "skills": [
+          "Bewildering Grace",
+          "Peacock Strut",
+          "Thunderbird",
+          "Brand's Thunder"
+        ],
         "reason": {
           "en": "Dual Dancers stack buffs + RNG chaos. Hunter + Warrior for raw physical damage. High-speed team that can break games with Bewildering Grace.",
           "ja": "踊り子2人でバフ+ランダム効果重ね。狩人+剣士で物理火力。気まぐれの恵みで予想外の展開も。",
@@ -624,8 +1359,18 @@
           "ko": "초반 스토리 속공",
           "zh": "前期剧情速推"
         },
-        "party": ["warrior", "hunter", "scholar", "cleric"],
-        "skills": ["Brand's Thunder", "Rain of Arrows", "Alephan's Wisdom", "Heal"],
+        "party": [
+          "warrior",
+          "hunter",
+          "scholar",
+          "cleric"
+        ],
+        "skills": [
+          "Brand's Thunder",
+          "Rain of Arrows",
+          "Alephan's Wisdom",
+          "Heal"
+        ],
         "reason": {
           "en": "Sticks to the 4 base jobs your starter character covers + their story chapters. Power up with Brand's Thunder + Rain of Arrows + Alephan's Wisdom for fast story clear.",
           "ja": "主人公4人+各章で自然な構成。ブランディングサンダー+アローレイン+アレファンの叡智で序盤ストーリー最速攻略。",
@@ -641,8 +1386,18 @@
           "ko": "BP 부스터 팀",
           "zh": "BP 加成队"
         },
-        "party": ["merchant", "dancer", "warrior", "scholar"],
-        "skills": ["Hired Help", "Peacock Strut", "Abide", "Lightning Storm"],
+        "party": [
+          "merchant",
+          "dancer",
+          "warrior",
+          "scholar"
+        ],
+        "skills": [
+          "Hired Help",
+          "Peacock Strut",
+          "Abide",
+          "Lightning Storm"
+        ],
         "reason": {
           "en": "Merchant's BP-related support, Dancer's Peacock Strut boosts attack. Warrior's Abide unleashes 3-hit combo next turn. Scholar for magic damage.",
           "ja": "商人のBP関連支援、踊り子のクジャクの舞で攻撃バフ。剣士のアバイドで次ターン3連撃。学者で魔法火力。",
@@ -650,6 +1405,50 @@
           "zh": "商人 BP 加成支援，舞娘孔雀之舞攻击 buff。剑士蓄势待发下回合 3 连击。学者魔法输出。"
         }
       }
+    ],
+    "sources": [
+      {
+        "lang": "en",
+        "url": "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+        "attribution": "GameSpot — Octopath Traveler 2 Best Jobs"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.gamersky.com/handbook/202302/1570516.shtml",
+        "attribution": "游民星空 — 歧路旅人2 全隐藏人物转职证收集"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.3dmgame.com/gl/3873706.html",
+        "attribution": "3DM — 歧路旅人2 配队推荐"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.bilibili.com/read/cv21380088",
+        "attribution": "B站 — 职业搭配与昼夜指令系统"
+      }
     ]
-  }
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+      "attribution": "GameSpot — Octopath Traveler 2 Best Jobs"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.gamersky.com/handbook/202302/1570516.shtml",
+      "attribution": "游民星空 — 歧路旅人2 全隐藏人物转职证收集"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.3dmgame.com/gl/3873706.html",
+      "attribution": "3DM — 歧路旅人2 配队推荐"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.bilibili.com/read/cv21380088",
+      "attribution": "B站 — 职业搭配与昼夜指令系统"
+    }
+  ]
 }

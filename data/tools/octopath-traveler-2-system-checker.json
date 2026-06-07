@@ -15,6 +15,20 @@
     "zh": "检测你的电脑能否运行歧路旅人II。输入 CPU、GPU、内存、硬盘后判断是否满足最低/推荐配置。"
   },
   "data": {
-    "_comment": "SystemChecker uses game.systemRequirements and data/system-tiers.json — no tool-specific data needed here."
-  }
+    "_comment": "SystemChecker uses game.systemRequirements and data/system-tiers.json — no tool-specific data needed here.",
+    "sources": [
+      {
+        "lang": "en",
+        "url": "https://store.steampowered.com/app/1971650/OCTOPATH_TRAVELER_II/",
+        "attribution": "Steam Store — Official System Requirements"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": "https://store.steampowered.com/app/1971650/OCTOPATH_TRAVELER_II/",
+      "attribution": "Steam Store — Official System Requirements"
+    }
+  ]
 }
