@@ -82,7 +82,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
   const lang = rawLang as Lang;
   const stats = getCrawledStats();
 
-  const results = q ? searchChunks({ query: q, gameSlug: game, limit: 20 }) : [];
+  const results = q ? searchChunks({ query: q, gameSlug: game, preferredLang: lang, limit: 20 }) : [];
 
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100">
@@ -172,14 +172,41 @@ export default async function SearchPage({ params, searchParams }: Props) {
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {r.snippet}
                 </p>
-                <a
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-block text-xs text-gray-500 hover:text-brand-300"
-                >
-                  🔗 {r.url.length > 60 ? r.url.slice(0, 60) + "..." : r.url}
-                </a>
+                <div className="mt-2 flex items-center justify-between gap-2 text-xs">
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-brand-300 truncate flex-1"
+                  >
+                    🔗 {r.url.length > 60 ? r.url.slice(0, 60) + "..." : r.url}
+                  </a>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {r.sourceLanguage && (
+                      <span className="rounded-full bg-white/5 border border-white/10 px-2 py-0.5 text-[10px] text-gray-400">
+                        源: {r.sourceLanguage.toUpperCase()}
+                      </span>
+                    )}
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] ${
+                        r.contentLang === "translated"
+                          ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/30"
+                          : "bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                      }`}
+                      title={r.contentLang === "translated" ? "Translated to your language" : "Showing source language"}
+                    >
+                      {r.contentLang === "translated"
+                        ? lang === "ja" ? "翻訳済"
+                        : lang === "ko" ? "번역됨"
+                        : lang === "zh" ? "已翻译"
+                        : "Translated"
+                        : lang === "ja" ? "原文"
+                        : lang === "ko" ? "원문"
+                        : lang === "zh" ? "原文"
+                        : "Original"}
+                    </span>
+                  </div>
+                </div>
               </article>
             ))}
           </div>

@@ -209,6 +209,35 @@ const MIGRATIONS: Migration[] = [
       CREATE INDEX IF NOT EXISTS idx_qa_session ON qa_interactions(session_id, created_at);
     `,
   },
+  {
+    version: 3,
+    name: "translations_and_source_language",
+    sql: `
+      -- Add source language to documents (e.g. 'en' for Fandom, 'zh' for NGA)
+      ALTER TABLE crawled_documents ADD COLUMN source_language TEXT DEFAULT 'en';
+      CREATE INDEX IF NOT EXISTS idx_documents_source_lang ON crawled_documents(source_language);
+
+      -- Pre-translated chunks: JSON map { "ja": "...", "ko": "...", "zh": "..." }
+      -- Additive: original content remains untouched
+      ALTER TABLE crawled_chunks ADD COLUMN translations TEXT DEFAULT '{}';
+      ALTER TABLE crawled_chunks ADD COLUMN translated_at INTEGER;
+
+      -- Translation job tracking
+      CREATE TABLE IF NOT EXISTS translate_jobs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        started_at INTEGER NOT NULL,
+        finished_at INTEGER,
+        target_languages TEXT NOT NULL,    -- JSON array: ["ja","ko","zh"]
+        chunks_processed INTEGER DEFAULT 0,
+        chunks_skipped INTEGER DEFAULT 0,
+        chunks_failed INTEGER DEFAULT 0,
+        model TEXT,
+        cost_tokens INTEGER,
+        status TEXT NOT NULL,             -- 'running' | 'success' | 'failed' | 'partial'
+        error_message TEXT
+      );
+    `,
+  },
 ];
 
 function runMigrations(db: Database.Database) {
@@ -454,8 +483,9 @@ export type CrawledDocument = {
 };
 
 /** Upsert by URL — uses content hash to skip unchanged content. */
-export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updated: boolean } {
+export function upsertCrawledDocument(doc: CrawledDocument & { sourceLanguage?: string }): { id: number; updated: boolean } {
   const d = dbReady();
+  const sourceLang = doc.sourceLanguage || doc.language || "en";
   const existing = d.prepare("SELECT id, content_hash FROM crawled_documents WHERE url = ?").get(doc.url) as
     | { id: number; content_hash: string }
     | undefined;
@@ -466,7 +496,7 @@ export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updat
     d.prepare(`
       UPDATE crawled_documents
       SET source_id = ?, game_slug = ?, title = ?, body_md = ?, body_text = ?,
-          content_type = ?, language = ?, meta_json = ?, content_hash = ?, fetched_at = ?,
+          content_type = ?, language = ?, source_language = ?, meta_json = ?, content_hash = ?, fetched_at = ?,
           published_at = ?
       WHERE id = ?
     `).run(
@@ -477,6 +507,7 @@ export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updat
       doc.bodyText,
       doc.contentType || null,
       doc.language || null,
+      sourceLang,
       doc.metaJson || null,
       doc.contentHash,
       doc.fetchedAt,
@@ -488,8 +519,8 @@ export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updat
     return { id: existing.id, updated: true };
   }
   const result = d.prepare(`
-    INSERT INTO crawled_documents (source_id, game_slug, url, title, body_md, body_text, content_type, language, meta_json, content_hash, fetched_at, published_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO crawled_documents (source_id, game_slug, url, title, body_md, body_text, content_type, language, source_language, meta_json, content_hash, fetched_at, published_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).run(
     doc.sourceId,
     doc.gameSlug || null,
@@ -499,6 +530,7 @@ export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updat
     doc.bodyText,
     doc.contentType || null,
     doc.language || null,
+    sourceLang,
     doc.metaJson || null,
     doc.contentHash,
     doc.fetchedAt,
@@ -661,6 +693,191 @@ export function finishCrawlJob(id: number, job: Partial<CrawlJob>): void {
 export function updateSourceCrawledAt(sourceId: string): void {
   const d = dbReady();
   d.prepare("UPDATE crawled_sources SET last_crawled_at = ? WHERE id = ?").run(Date.now(), sourceId);
+}
+
+// ===== Translations =====
+
+/** Get a chunk's translation for a given language, or null if not translated. */
+export function getChunkTranslation(chunkId: number, lang: string): string | null {
+  const d = dbReady();
+  const r = d.prepare("SELECT translations FROM crawled_chunks WHERE id = ?").get(chunkId) as
+    | { translations: string | null }
+    | undefined;
+  if (!r || !r.translations) return null;
+  try {
+    const map = JSON.parse(r.translations) as Record<string, string>;
+    return map[lang] || null;
+  } catch {
+    return null;
+  }
+}
+
+/** Set translations for a chunk. Pass map of { lang: text }. */
+export function setChunkTranslation(chunkId: number, lang: string, text: string): void {
+  const d = dbReady();
+  d.transaction(() => {
+    const r = d.prepare("SELECT translations FROM crawled_chunks WHERE id = ?").get(chunkId) as
+      | { translations: string | null }
+      | undefined;
+    const current = (() => {
+      if (!r?.translations) return {} as Record<string, string>;
+      try { return JSON.parse(r.translations) as Record<string, string>; }
+      catch { return {} as Record<string, string>; }
+    })();
+    current[lang] = text;
+    d.prepare("UPDATE crawled_chunks SET translations = ?, translated_at = ? WHERE id = ?")
+      .run(JSON.stringify(current), Date.now(), chunkId);
+  })();
+}
+
+/** Set multiple translations for a chunk in one go. */
+export function setChunkTranslations(chunkId: number, map: Record<string, string>): void {
+  const d = dbReady();
+  d.transaction(() => {
+    const r = d.prepare("SELECT translations FROM crawled_chunks WHERE id = ?").get(chunkId) as
+      | { translations: string | null }
+      | undefined;
+    const current = (() => {
+      if (!r?.translations) return {} as Record<string, string>;
+      try { return JSON.parse(r.translations) as Record<string, string>; }
+      catch { return {} as Record<string, string>; }
+    })();
+    const merged = { ...current, ...map };
+    d.prepare("UPDATE crawled_chunks SET translations = ?, translated_at = ? WHERE id = ?")
+      .run(JSON.stringify(merged), Date.now(), chunkId);
+  })();
+}
+
+/** List chunks that need translation to a given target language. */
+export function getUntranslatedChunks(targetLang: string, limit = 100, gameSlug?: string): {
+  id: number;
+  documentId: number;
+  sectionTitle: string | null;
+  content: string;
+  documentTitle: string;
+  sourceLanguage: string | null;
+}[] {
+  const d = dbReady();
+  // Get chunks that don't have a translation for targetLang
+  // (We use LIKE to check for the key in JSON)
+  const rows = d.prepare(`
+    SELECT
+      c.id, c.document_id as documentId, c.section_title as sectionTitle, c.content,
+      d.title as documentTitle, d.source_language as sourceLanguage
+    FROM crawled_chunks c
+    JOIN crawled_documents d ON d.id = c.document_id
+    WHERE
+      (c.translations IS NULL OR c.translations = '{}'
+       OR (instr(c.translations, ?) = 0))
+      ${gameSlug ? "AND d.game_slug = ?" : ""}
+    ORDER BY c.id
+    LIMIT ?
+  `).all(`"${targetLang}":`, ...(gameSlug ? [gameSlug, limit] : [limit])) as any[];
+
+  // Better filter in JS: only include chunks that actually lack the key
+  return rows.filter((r) => {
+    if (!r.id) return false;
+    if (r.sourceLanguage === targetLang) return false; // already in target language
+    try {
+      const m = r.content ? "{}" : r.content;
+      // Re-fetch translations field to check
+      return true; // LIKE filter already handled
+    } catch {
+      return true;
+    }
+  });
+}
+
+export type SearchResult = {
+  chunkId: number;
+  documentId: number;
+  title: string;
+  url: string;
+  source: string;
+  sourceLanguage?: string;
+  gameSlug?: string;
+  sectionTitle?: string;
+  content: string;        // content in user's preferred language (or fallback)
+  originalContent: string; // source-language content
+  contentLang: string;    // 'translated' | 'original'
+  snippet: string;
+  rank: number;
+};
+
+export function searchChunks(opts: {
+  query: string;
+  gameSlug?: string;
+  /** Preferred language: 'ja' | 'ko' | 'zh' | 'en'. Search returns translated version if available, else original. */
+  preferredLang?: string;
+  limit?: number;
+}): SearchResult[] {
+  const d = dbReady();
+  const limit = opts.limit || 20;
+  const safeQuery = opts.query.replace(/[^a-zA-Z0-9\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af\s]/g, " ").trim();
+  if (!safeQuery) return [];
+
+  const ftsQuery = safeQuery
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((t) => `"${t}"*`)
+    .join(" ");
+
+  const rows = d
+    .prepare(`
+      SELECT
+        c.id as chunkId,
+        c.document_id as documentId,
+        c.section_title as sectionTitle,
+        c.content,
+        c.translations,
+        d.title,
+        d.url,
+        d.game_slug as gameSlug,
+        d.source_language as sourceLanguage,
+        s.name as source,
+        bm25(crawled_chunks_fts) as rank
+      FROM crawled_chunks_fts fts
+      JOIN crawled_chunks c ON c.id = fts.rowid
+      JOIN crawled_documents d ON d.id = c.document_id
+      JOIN crawled_sources s ON s.id = d.source_id
+      WHERE crawled_chunks_fts MATCH ?
+        ${opts.gameSlug ? "AND d.game_slug = ?" : ""}
+      ORDER BY rank
+      LIMIT ?
+    `)
+    .all(opts.gameSlug ? [ftsQuery, opts.gameSlug, limit] : [ftsQuery, limit]) as any[];
+
+  const preferred = opts.preferredLang || "en";
+
+  return rows.map((r) => {
+    let displayContent = r.content;
+    let contentLang: "translated" | "original" = "original";
+    if (preferred !== r.sourceLanguage) {
+      try {
+        const map = r.translations ? JSON.parse(r.translations) as Record<string, string> : null;
+        if (map && map[preferred]) {
+          displayContent = map[preferred];
+          contentLang = "translated";
+        }
+      } catch {}
+    }
+    const snippet = displayContent.length > 240 ? displayContent.slice(0, 240) + "..." : displayContent;
+    return {
+      chunkId: r.chunkId,
+      documentId: r.documentId,
+      title: r.title,
+      url: r.url,
+      source: r.source,
+      sourceLanguage: r.sourceLanguage,
+      gameSlug: r.gameSlug,
+      sectionTitle: r.sectionTitle,
+      content: displayContent,
+      originalContent: r.content,
+      contentLang,
+      snippet,
+      rank: r.rank,
+    };
+  });
 }
 
 /** Close the DB (for cleanup; usually not needed). */

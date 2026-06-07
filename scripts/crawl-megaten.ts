@@ -230,6 +230,7 @@ async function main() {
       bodyText,
       contentType: p.contentType,
       language: "en",
+      sourceLanguage: "en",
       metaJson: JSON.stringify({ sourceTitle: fetched.title }),
       contentHash,
       fetchedAt: Date.now(),

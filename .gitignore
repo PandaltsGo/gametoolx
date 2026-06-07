@@ -3,9 +3,25 @@ data/gametoolx.db
 data/gametoolx.db-wal
 data/gametoolx.db-shm
 
+# Local env (LLM keys, etc.)
+.env
+.env.local
+.env*.local
+
 # Local dev data
 data/.dev/
 
 # Dev logs
 .dev-stdout.log
 .dev-stderr.log
+
+# Next.js build artifacts + dependencies
+.next/
+node_modules/
+next-env.d.ts
+
+# Translation launch artifacts
+.dev-translate-*.log
+.dev-translate-*.pid
+.dev-translate-test*.log
+.dev-translate-ko-tail.log
