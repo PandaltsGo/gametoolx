@@ -1,30 +1,25 @@
 {
   "_comment": "UI text translations. Nested by feature area.",
   "version": "1.0.0",
-
   "site": {
     "title": "GameToolX",
     "tagline": "Game Tools, Made Simple"
   },
-
   "nav": {
     "home": "Home",
     "tools": "Tools",
     "games": "Games"
   },
-
   "tool": {
     "systemChecker": "System Requirements Checker",
     "gachaSim": "Gacha Simulator",
     "buildRecommender": "Build Recommender",
     "achievementTracker": "Achievement Tracker"
   },
-
   "systemCheckerPage": {
     "title": "System Requirements Checker",
     "subtitle": "Check if your PC can run the game"
   },
-
   "action": {
     "check": "Check",
     "simulate": "Simulate",
@@ -32,13 +27,11 @@
     "reset": "Reset",
     "copy": "Copy Result"
   },
-
   "result": {
     "compatible": "Compatible",
     "notCompatible": "Not Compatible",
     "partial": "Partially Compatible"
   },
-
   "checker": {
     "yourPc": "Your PC Specs",
     "cpu": "Processor (CPU)",
@@ -51,7 +44,6 @@
     "recommendation": "Recommended Settings",
     "summary": "Summary"
   },
-
   "recommender": {
     "unlocked": "Unlocked Jobs",
     "playstyle": "Play Style",
@@ -71,9 +63,12 @@
     "skills": "Skills",
     "mainSkills": "Main Skills",
     "supportSkills": "Support Skills",
-    "keySkills": "Key Skills"
+    "keySkills": "Key Skills",
+    "closestMatchNote": "⚠️ Note: original recommendation ({name}) would need additional jobs: {missing}. Showing the closest match instead.",
+    "acquisitionLocation": "📍 Where",
+    "acquisitionMethod": "📝 How",
+    "acquisitionPhase": "⏰ When"
   },
-
   "page": {
     "release": "Release",
     "genres": "Genres",
@@ -84,7 +79,6 @@
     "minimum": "Minimum",
     "recommended": "Recommended"
   },
-
   "common": {
     "loading": "Loading...",
     "error": "Something went wrong",

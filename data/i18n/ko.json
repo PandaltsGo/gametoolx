@@ -1,30 +1,25 @@
 {
   "_comment": "UI text translations. Nested by feature area.",
   "version": "1.0.0",
-
   "site": {
     "title": "GameToolX",
     "tagline": "게임 도구를 더 간단하게"
   },
-
   "nav": {
     "home": "홈",
     "tools": "도구 목록",
     "games": "게임 목록"
   },
-
   "tool": {
     "systemChecker": "시스템 요구사항 체커",
     "gachaSim": "가챠 시뮬레이터",
     "buildRecommender": "빌드 추천 도구",
     "achievementTracker": "업적 추적 도구"
   },
-
   "systemCheckerPage": {
     "title": "시스템 요구사항 체커",
     "subtitle": "게임이 실행 가능한지 확인"
   },
-
   "action": {
     "check": "확인",
     "simulate": "시뮬레이트",
@@ -32,13 +27,11 @@
     "reset": "초기화",
     "copy": "결과 복사"
   },
-
   "result": {
     "compatible": "동작합니다",
     "notCompatible": "동작하지 않습니다",
     "partial": "일부 동작합니다"
   },
-
   "checker": {
     "yourPc": "내 PC 사양",
     "cpu": "프로세서 (CPU)",
@@ -51,7 +44,6 @@
     "recommendation": "추천 설정",
     "summary": "요약"
   },
-
   "recommender": {
     "unlocked": "해금된 직업",
     "playstyle": "플레이 스타일",
@@ -71,9 +63,12 @@
     "skills": "스킬 목록",
     "mainSkills": "메인 스킬",
     "supportSkills": "서포트 스킬",
-    "keySkills": "핵심 스킬"
+    "keySkills": "핵심 스킬",
+    "closestMatchNote": "⚠️ 참고: 원래 추천 ({name})은(는) 추가 직업 {missing}이(가) 필요합니다. 가장 가까운 편성을 보여드립니다.",
+    "acquisitionLocation": "📍 획득처",
+    "acquisitionMethod": "📝 방법",
+    "acquisitionPhase": "⏰ 시기"
   },
-
   "page": {
     "release": "출시일",
     "genres": "장르",
@@ -84,7 +79,6 @@
     "minimum": "최소",
     "recommended": "권장"
   },
-
   "common": {
     "loading": "불러오는 중...",
     "error": "오류가 발생했습니다",

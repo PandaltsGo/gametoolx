@@ -1,30 +1,25 @@
 {
   "_comment": "UI text translations. Nested by feature area.",
   "version": "1.0.0",
-
   "site": {
     "title": "GameToolX",
     "tagline": "ゲーム攻略ツールを、もっとシンプルに"
   },
-
   "nav": {
     "home": "ホーム",
     "tools": "ツール一覧",
     "games": "ゲーム一覧"
   },
-
   "tool": {
     "systemChecker": "動作環境チェッカー",
     "gachaSim": "ガチャシミュレーター",
     "buildRecommender": "ビルド推奨ツール",
     "achievementTracker": "実績追跡ツール"
   },
-
   "systemCheckerPage": {
     "title": "動作環境チェッカー",
     "subtitle": "ゲームが動作するかをチェック"
   },
-
   "action": {
     "check": "チェックする",
     "simulate": "シミュレート",
@@ -32,13 +27,11 @@
     "reset": "リセット",
     "copy": "結果をコピー"
   },
-
   "result": {
     "compatible": "動作します",
     "notCompatible": "動作しません",
     "partial": "一部動作します"
   },
-
   "checker": {
     "yourPc": "あなたのPCスペック",
     "cpu": "プロセッサー (CPU)",
@@ -51,7 +44,6 @@
     "recommendation": "推奨設定",
     "summary": "サマリー"
   },
-
   "recommender": {
     "unlocked": "解放済み職業",
     "playstyle": "プレイスタイル",
@@ -71,9 +63,12 @@
     "skills": "スキル一覧",
     "mainSkills": "メインスキル",
     "supportSkills": "サポートスキル",
-    "keySkills": "重要スキル"
+    "keySkills": "重要スキル",
+    "closestMatchNote": "⚠️ 注：元の推奨 ({name}) は追加ジョブ {missing} が必要です。最も近い編成を表示しています。",
+    "acquisitionLocation": "📍 入手場所",
+    "acquisitionMethod": "📝 入手方法",
+    "acquisitionPhase": "⏰ 入手時期"
   },
-
   "page": {
     "release": "発売日",
     "genres": "ジャンル",
@@ -84,7 +79,6 @@
     "minimum": "最低",
     "recommended": "推奨"
   },
-
   "common": {
     "loading": "読み込み中...",
     "error": "エラーが発生しました",

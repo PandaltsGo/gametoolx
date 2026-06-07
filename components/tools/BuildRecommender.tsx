@@ -10,7 +10,14 @@ type Props = {
 };
 
 type LocalizedName = { en: string; ja?: string; ko?: string; zh?: string };
-type Skill = { en: string; ja?: string; ko?: string; zh?: string };
+type Skill = {
+  en: string;
+  ja?: string;
+  ko?: string;
+  zh?: string;
+  /** 获取方式：位置 + 方法 + 时段（数据用 zh，但 i18n 在所有语言下都可显示） */
+  acquisition?: { location?: string; method?: string; phase?: string };
+};
 
 type Job = {
   id: string;
@@ -80,7 +87,10 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
         });
       if (sorted.length > 0 && sorted[0].miss < missingJobs.length) {
         matched = sorted[0].rec;
-        reason = `${t(matched.reason)}\n\n⚠️ Note: this is the closest match given your unlocked jobs. Original recommendation (${t(target.name)}) would need: ${missingJobs.join(", ")}.`;
+        const note = (ui.recommender.closestMatchNote || "")
+          .replace("{name}", t(target.name))
+          .replace("{missing}", missingJobs.join(", "));
+        reason = `${t(matched.reason)}\n\n${note}`;
       }
     }
 
@@ -212,14 +222,25 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
                     <div className="text-xs uppercase tracking-wide text-brand-300 mb-2">
                       {ui.recommender.mainSkills || "Main Skills"}
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid gap-2">
                       {job.skills.main.map((sk, i) => (
-                        <span
+                        <div
                           key={i}
-                          className="rounded-md bg-white/5 border border-white/10 px-2 py-1 text-xs text-white"
+                          className="rounded-md bg-white/5 border border-white/10 px-3 py-1.5 text-xs"
                         >
-                          {t(sk)}
-                        </span>
+                          <div className="text-white font-medium">{t(sk)}</div>
+                          {sk.acquisition && (
+                            <div className="mt-1 text-gray-400 leading-relaxed">
+                              {ui.recommender.acquisitionLocation}: {sk.acquisition.location}
+                              {sk.acquisition.method && (
+                                <> · {ui.recommender.acquisitionMethod}: {sk.acquisition.method}</>
+                              )}
+                              {sk.acquisition.phase && sk.acquisition.phase !== "anytime" && (
+                                <> · {ui.recommender.acquisitionPhase}: {sk.acquisition.phase}</>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -229,14 +250,25 @@ export default function BuildRecommender({ lang, ui, tool }: Props) {
                     <div className="text-xs uppercase tracking-wide text-gray-400 mb-2">
                       {ui.recommender.supportSkills || "Support Skills"}
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid gap-2">
                       {job.skills.support.map((sk, i) => (
-                        <span
+                        <div
                           key={i}
-                          className="rounded-md bg-white/5 border border-white/10 px-2 py-1 text-xs text-gray-300"
+                          className="rounded-md bg-white/5 border border-white/10 px-3 py-1.5 text-xs"
                         >
-                          {t(sk)}
-                        </span>
+                          <div className="text-gray-200 font-medium">{t(sk)}</div>
+                          {sk.acquisition && (
+                            <div className="mt-1 text-gray-500 leading-relaxed">
+                              {ui.recommender.acquisitionLocation}: {sk.acquisition.location}
+                              {sk.acquisition.method && (
+                                <> · {ui.recommender.acquisitionMethod}: {sk.acquisition.method}</>
+                              )}
+                              {sk.acquisition.phase && sk.acquisition.phase !== "anytime" && (
+                                <> · {ui.recommender.acquisitionPhase}: {sk.acquisition.phase}</>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
