@@ -8,7 +8,12 @@
 
 ## 项目是什么
 
-面向日 / 韩 / 中小语种市场的**多游戏工具站**。每个游戏提供：系统配置检测、配装推荐、全结局追踪、流程攻略、路线选择、仲魔合体计算器等工具。内容来自真实 Wiki 和社区攻略，**绝不**用 AI 编造。当前 2 款游戏在线、6 个工具、4 语言（ja/ko/zh/en），RAG 数据层（爬取 + FTS5 + LLM 翻译 chunks）已就绪，等待 AI Q&A 接入。
+面向日 / 韩 / 中小语种市场的**多游戏攻略工具站**。核心定位：「**批量搜索 + 整理 4 语言游戏攻略**」。每款游戏最低提供 2 类工具：
+
+1. **攻略（Walkthrough）** —— 多源交叉验证的流程攻略，结构化呈现
+2. **系统配置检测（System Checker）** —— 官方推荐配置 + 浏览器自动检测 + 预估画质/帧率
+
+按游戏特点再扩展 3、4 类工具：配装推荐、结局追踪、路线选择、仲魔/角色库等。游戏来源包含 Humble 月包 + 任何被验证有攻略资源的小语种市场游戏。
 
 **不是内容站，不是内容生成器。是需要准确游戏数据的工具站。**
 
@@ -104,12 +109,151 @@ gametoolx/
 - 通用系统检测器带浏览器 API 自动识别
 
 **未做（按优先级）**：
-1. **AI Q&A**（`/api/qa`）：searchChunks → LLM prompt → 流式回答。需 `/api/qa` 路由 + `qa_interactions` 日志。
-2. **更多 crawler**：NGA（zh）、3DM（zh）、GameWith（ja）、Steam News。
-3. **向量搜索**：`sqlite-vss` 或迁 `pgvector`。FTS5 是第一阶段。
-4. **云部署**：腾讯云首尔 2C4G + aaPanel + 域名。**等用户 Go 决策再买。**
-5. **第三款游戏**：验证多游戏架构。
-6. **i18n 收尾**：`SystemCheckerClient.tsx` 残留英文（"Auto-detected from your browser"、"hide"）。
+1. **OT2 攻略工具**（`octopath-traveler-2-walkthrough.json`）—— 当前最大缺口。新规则要求每款游戏至少包含攻略 + 系统检测，OT2 只有后者。按 SMT5V walkthrough 流程做一遍：选蓝本 + 交叉验证 + 结构化 + 4 语言。
+2. **AI Q&A**（`/api/qa`）：searchChunks → LLM prompt → 流式回答。
+3. **更多 crawler**：NGA（zh）、3DM（zh）、GameWith（ja）、Steam News。
+4. **向量搜索**：`sqlite-vss` 或迁 `pgvector`。
+5. **云部署**：腾讯云首尔 2C4G + aaPanel + 域名。**等用户 Go 决策再买。**
+6. **i18n 收尾**：`SystemCheckerClient.tsx` 残留英文。
+
+---
+
+## 工具 pipeline 规约（每个游戏最低 2 类工具）
+
+### 强制：每款游戏至少包含以下 2 类
+
+#### 1. 攻略（Walkthrough）—— 流程 / 章节 / Boss / 支线
+
+**数据源选择**：以**一篇综合性攻略为蓝本**（如 Wiki、3DM、GameWith、NGA 长贴），再用 **2+ 个独立来源做交叉验证**。
+
+**制作流程**（规约级，不是建议）：
+1. **选蓝本**：从 Wiki / 攻略站 / Steam 社区选一篇最全的攻略作为基础结构
+2. **交叉验证**：至少 2 个独立来源核对关键事实（章节顺序、Boss 弱点、装备属性）
+3. **结构化**：用 `walkthrough` 块格式（`heading` / `paragraph` / `callout` / `step` / `boss` / `table` / `tip`），详见 `lib/data.ts` 的 `WalkthroughBlock` 类型
+4. **多语言翻译**：把每个 chunk 翻译到 ja/ko/zh（en 用原文或本地化）
+5. **来源标注**：数据文件顶层加 `sources: [{lang, url, attribution}]`；每个 chunk 翻译时记 `sourceLanguage` + 来源
+
+**禁止**：
+- **不准**编造章节、Boss、装备、属性
+- 关键数据有矛盾时回到 Wiki 主源确认，不可挑一个就用
+- 不要混编两份攻略的章节结构（除非两份都是权威）
+
+#### 2. 系统配置检测（System Checker）—— 官方推荐配置 + 浏览器自动检测
+
+**数据来源**：Steam 商店页 / 发行商官网拉官方推荐配置（`systemRequirements.minimum` / `recommended`）。
+
+**功能要求**：
+1. 浏览器 API 自动检测（`navigator.hardwareConcurrency` / `deviceMemory` / `platform` / `screen` / `userAgent`）
+2. 不可检测项（GPU、Storage）让用户手动输入
+3. 对比用户硬件 vs 官方推荐配置 → 输出**预估画质 + 帧率**（保守 / 平衡 / 流畅 / 极佳）
+4. 每次检测入库到 `system_checks` 表，留作产品分析
+
+**数据格式参考**：`data/system-tiers.json`（GPU/CPU/RAM/Storage 等级定义）。
+
+### 3. 扩展工具（按游戏特点可选）
+
+| 类型 | 适用场景 | 数据格式参考 |
+|------|----------|--------------|
+| 配装推荐（Build） | 回合制 / 职业制 RPG（OT2、FF、BDFF） | `data/tools/<game>-job-recommender.json` |
+| 结局追踪（Endings） | 多结局游戏（SMT、RA、FFXV） | `data/tools/<game>-endings-tracker.json` |
+| 路线选择（Route） | 多分支叙事（SMT V、RA、FFXIII） | `data/tools/<game>-route-chooser.json` |
+| 仲魔 / 角色库（Compendium） | 仲魔系统、角色养成（SMT、Persona） | `data/tools/<game>-fusion-calculator.json` |
+| 流程攻略（Walkthrough） | 任何带剧情的游戏 | `data/tools/<game>-walkthrough.json` |
+
+### 当前各游戏工具覆盖
+
+| 游戏 | system-checker | walkthrough | 扩展 | 状态 |
+|------|----------------|-------------|------|------|
+| 歧路旅人 II | ✓ | **✗ 缺** | job-recommender | **不符合 2 类最低要求** |
+| 真・女神转生Ⅴ 复仇 | ✓ | ✓ | endings / route / fusion | 完整 |
+
+### 翻译的来源标注规约（所有工具数据文件）
+
+**顶层 `sources` 字段**：
+```json
+{
+  "sources": [
+    { "lang": "en", "url": "https://...", "attribution": "GameSpot Guide" },
+    { "lang": "ja", "url": "https://gamewith.jp/...", "attribution": "GameWith 攻略" },
+    { "lang": "zh", "url": "https://3dmgame.com/...", "attribution": "3DM 攻略" }
+  ]
+}
+```
+
+**单条数据可加 `sourceUrl` / `sourceLang` 字段**（引用具体来源，做交叉验证）。
+
+**RAG 爬取内容**（`crawled_documents` / `crawled_chunks`）：通过 `source_language` + `url` 字段追踪，schema v3 已实现。
+
+---
+
+## 工具 pipeline（每个游戏最低 2 类工具）
+
+### 强制要求：每款游戏至少包含以下 2 类
+
+#### 1. 攻略（Walkthrough）—— 流程 / 章节 / Boss / 支线
+
+**数据源**：以**一篇综合性攻略**为蓝本（如 Wiki、3DM、GameWith、NGA 长贴），再用 2+ 篇**其他来源**做交叉验证。
+
+**制作流程**（这是规约，不是建议）：
+1. **选蓝本**：从 Wiki / 攻略站 / Steam 社区选一篇最全的攻略作为基础结构
+2. **交叉验证**：至少 2 个独立来源核对关键事实（章节顺序、Boss 弱点、装备属性）
+3. **结构化**：用 `walkthrough` 块格式（`heading` / `paragraph` / `callout` / `step` / `boss` / `table` / `tip`），详见 `lib/data.ts` 的 `WalkthroughBlock` 类型
+4. **多语言翻译**：把每个 chunk 翻译到 ja/ko/zh（en 用原文或本地化）
+5. **来源标注**：每个数据文件顶层加 `sources: [{lang, url, attribution}]`，每个 chunk 翻译时记 `sourceLanguage` + 来源
+
+**禁止**：
+- 不准编造章节、Boss、装备、属性
+- 关键数据有矛盾时回到 Wiki 主源确认，不可挑一个就用
+- 不要混编两份攻略的章节结构（除非两份都是权威）
+
+#### 2. 系统配置检测（System Checker）—— 官方推荐配置 + 浏览器自动检测
+
+**数据**：从 Steam 商店页 / 发行商官网拉官方推荐配置（`systemRequirements.minimum` / `recommended`）。
+
+**功能**：
+1. 浏览器 API 自动检测（`navigator.hardwareConcurrency` / `deviceMemory` / `platform` / `screen` / `userAgent`）
+2. 不可检测项（GPU、Storage）让用户手动输入
+3. 对比用户的硬件 vs 官方推荐配置 → 输出**预估画质 + 帧率**（保守 / 平衡 / 流畅 / 极佳）
+4. 每次检测入库到 `system_checks` 表，留作产品分析
+
+**数据格式**：参考 `data/system-tiers.json`（GPU/CPU/RAM/Storage 等级定义）。
+
+### 3. 扩展工具（按游戏特点可选）
+
+| 类型 | 适用场景 | 数据格式参考 |
+|------|----------|--------------|
+| 配装推荐（Build） | 回合制 / 职业制 RPG（OT2、FF、BDFF） | `data/tools/<game>-job-recommender.json` |
+| 结局追踪（Endings） | 多结局游戏（SMT、RA、FFXV） | `data/tools/<game>-endings-tracker.json` |
+| 路线选择（Route） | 多分支叙事（SMT V、RA、FFXIII） | `data/tools/<game>-route-chooser.json` |
+| 仲魔 / 角色库（Compendium） | 仲魔系统、角色养成（SMT、Persona） | `data/tools/<game>-fusion-calculator.json` |
+| 流程攻略（Walkthrough） | 任何带剧情的游戏 | `data/tools/<game>-walkthrough.json` |
+
+**当前各游戏工具覆盖**：
+
+| 游戏 | 工具 | 状态 |
+|------|------|------|
+| OT2 | system-checker ✓ / job-recommender ✓ / **walkthrough ✗** | 缺攻略，需补 |
+| SMT5V | system-checker ✓ / walkthrough ✓ / endings-tracker ✓ / route-chooser ✓ / fusion-calculator ✓ | 完整 |
+
+**OT2 攻略工具**是当前最大缺口，下次开发优先补。
+
+### 翻译的来源标注规约
+
+**所有多语言数据文件（攻略 / 配装 / 工具数据）必须包含**：
+
+```json
+{
+  "sources": [
+    { "lang": "en", "url": "https://example.com/walkthrough", "attribution": "GameSpot Guide" },
+    { "lang": "ja", "url": "https://gamewith.jp/...", "attribution": "GameWith 攻略" },
+    { "lang": "zh", "url": "https://3dmgame.com/...", "attribution": "3DM 攻略" }
+  ]
+}
+```
+
+**已爬取的 RAG 内容**（`crawled_documents` / `crawled_chunks`）：通过 `source_language` 字段 + 文档 `url` 字段追踪，已在 schema v3 实现。
+
+**工具数据文件**（攻略 / 配装）：`sources` 字段在文件顶层；每个具体条目可加 `sourceUrl` / `sourceLang` 引用具体来源。
 
 ---
 

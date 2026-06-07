@@ -3,15 +3,24 @@
 > **本文档是临时的**，记录"当前"状态。要看 canonical 的接手指南（不怎么变），请先读 `AGENTS.md`。
 > 每次重要工作结束都更新一下。
 
-## 当前状态（2026-06-07 13:30 HKT）
+## 当前状态（2026-06-07 15:30 HKT）
 
 - **代码**：全部已推到 `master`，最新 commit `585bce2`
+- **定位变更**：从"Humble 月包工具站"扩展为"批量搜索 + 整理 4 语言游戏攻略"，Humble 是游戏来源之一
+- **新规则**：每款游戏至少包含 2 类工具（攻略 + 系统配置检测），扩展工具按游戏特点加
 - **数据**：本地 SQLite `data/gametoolx.db` 内保留
   - 1 个抓取源（MegaTen Wiki Fandom）
   - 15 篇文档（Vengeance / SMT V / Press Turn / Magatsuhi / Masakado + 8 个 List of XXX）
   - 833 个 chunk（~500 字/段，已 FTS5 索引）
   - **828/828 ja 翻译** | **828/828 ko 翻译** | **828/828 zh 翻译**（5 块 < 20 字符按设计跳过）
   - 共 ~320KB 正文 / ~211k token
+
+### 当前各游戏工具覆盖
+
+| 游戏 | 工具 | 状态 |
+|------|------|------|
+| OT2 | system-checker ✓ / job-recommender ✓ / **walkthrough ✗** | **缺攻略工具，下次开发优先补** |
+| SMT5V | system-checker ✓ / walkthrough ✓ / endings-tracker ✓ / route-chooser ✓ / fusion-calculator ✓ | 完整 |
 
 ## 已完成
 
