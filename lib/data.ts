@@ -52,10 +52,11 @@ export type ToolData = {
   sources?: Source[];
 };
 
-/** 单条来源：语言、URL、署名。 */
+/** 单条来源：语言、URL（可选）、署名。 */
 export type Source = {
   lang: string;
-  url: string;
+  /** 可选：源站可能已失效 / 不可公网访问 / 只在登录态可见。空字符串 / 省略 = 跳过 URL 校验。 */
+  url?: string;
   attribution: string;
 };
 
