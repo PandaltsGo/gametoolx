@@ -508,6 +508,174 @@
             }
           }
         ]
+      },
+      {
+        "id": "regional-maps",
+        "title": {
+          "en": "Regional Maps",
+          "ja": "エリアマップ",
+          "ko": "지역 지도",
+          "zh": "区域地图"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Tokyo Region Map (Minato)",
+              "ja": "東京エリアマップ（港区）",
+              "ko": "도쿄 지역 지도 (미나토)",
+              "zh": "东京区域地图（港区）"
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "en": "Minato Region",
+              "ja": "港区",
+              "ko": "미나토",
+              "zh": "港区"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-overview.jpg",
+            "description": {
+              "en": "The first explorable region in Vengeance. Contains early-game demons, level 8 story bosses, and the first route choice.",
+              "ja": "復讐篇で最初に探索可能なエリア。レベル8のストーリーBOSSと最初のルート選択を含む。",
+              "ko": "벤전스에서 처음 탐험 가능한 지역. 레벨 8 스토리 보스와 첫 루트 선택을 포함.",
+              "zh": "复仇篇首个可探索区域，包含8级剧情BOSS和首次路线选择。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+                "attribution": "Pser_hanser — 真·女神转生V 复仇 攻略文档"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Demon Recommendations by Chapter",
+              "ja": "チャプター別悪魔推薦",
+              "ko": "챕터별 악마 추천",
+              "zh": "章节仲魔推荐"
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "en": "Chapter 1-8 Recommended Demons",
+              "ja": "1-8章 推薦悪魔",
+              "ko": "1-8장 추천 악마",
+              "zh": "1-8章 推荐仲魔"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-overview.jpg",
+            "description": {
+              "en": "Demon tier list and fusion recommendations for the first chapter. Includes the level 8 story boss lineup.",
+              "ja": "第一章の悪魔ティアリストと合体推薦。レベル8ストーリーBOSS編成を含む。",
+              "ko": "1장 악마 티어 리스트와 합체 추천. 레벨 8 스토리 보스 조합 포함.",
+              "zh": "第一章仲魔分级与合体推荐，含8级剧情BOSS配队。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+                "attribution": "Pser_hanser — 真·女神转生V 复仇 攻略文档"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "boss-information",
+        "title": {
+          "en": "Boss Information (Spoilers!)",
+          "ja": "BOSS情報（ネタバレ注意）",
+          "ko": "BOSS 정보 (스포일러 주의)",
+          "zh": "BOSS 信息（剧透慎入）"
+        },
+        "blocks": [
+          {
+            "type": "callout",
+            "variant": "warning",
+            "text": {
+              "en": "Spoiler warning: This section contains detailed boss stats. Play through Chapter 8 first if you want the surprise.",
+              "ja": "ネタバレ注意：この章にはBOSS詳細データが含まれます。サプライズを楽しみたい方は第8章までプレイしてください。",
+              "ko": "스포일러 경고: 이 섹션에는 자세한 보스 정보가 포함되어 있습니다. 서프라이즈를 원한다면 8장까지 먼저 플레이하세요.",
+              "zh": "剧透警告：本章包含详细 BOSS 数据。想要惊喜感请先通关到第 8 章。"
+            }
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "en": "Chapter 8 Boss: Kogo (Level 32)",
+              "ja": "第8章BOSS：考哥（レベル32）",
+              "ko": "8장 보스: 코고 (레벨 32)",
+              "zh": "第8章 BOSS：考哥（32级）"
+            }
+          },
+          {
+            "type": "boss",
+            "name": {
+              "en": "Kogo",
+              "ja": "考哥",
+              "ko": "코고",
+              "zh": "考哥"
+            },
+            "level": "32",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/kogo-ch8-32.jpg",
+            "weakness": {
+              "en": "Light (Makajamaon, Onyudo)",
+              "ja": "光（マカジャマオン、おにゅうど）",
+              "ko": "빛 (마카자마온, 오뉴도)",
+              "zh": "光（玛迦贾玛翁 / 鬼之童）"
+            },
+            "strategy": {
+              "en": "Use Makajamaon for the magic debuff and Onyudo for sustained light damage. Keep a healer and one physical DPS in reserve for the adds.",
+              "ja": "マカジャマオンで魔法デバフ、おにゅうどで持続光ダメージ。回復と物理DPSを1体ずつ控えに。",
+              "ko": "마카자마온으로 마법 디버프, 오뉴도로 지속 빛 데미지. 힐러와 물리 딜러 1기씩 대기.",
+              "zh": "用玛迦贾玛翁上魔法 debuff，鬼之童打持续光伤。留 1 治疗 + 1 物理 DPS 备用。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+                "attribution": "Pser_hanser — 真·女神转生V 复仇 攻略文档"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "name": {
+              "en": "Main Story Boss Lineup (Overview)",
+              "ja": "メインストーリーBOSS一覧（概観）",
+              "ko": "메인 스토리 BOSS 라인업 (개요)",
+              "zh": "主线 BOSS 总览"
+            },
+            "level": "varies",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-overview.jpg",
+            "weakness": {
+              "en": "See per-chapter entries; press-turn advantage through weakness exploitation is the universal strategy.",
+              "ja": "各章エントリ参照；プレスターン優位のために弱点を活用するのが基本戦略。",
+              "ko": "챕터별 항목 참조. 약점 공략으로 프레스 턴 우위를 점하는 게 보편적 전략.",
+              "zh": "见各章条目；通过弱点利用取得 press-turn 优势是通用策略。"
+            },
+            "strategy": {
+              "en": "Bring 1 dedicated healer (Slime / Lakshmi), 2 weakness-exploiting damage dealers, and 1 backup physical attacker. Recruit before each chapter based on the boss's known weakness.",
+              "ja": "専属回復（スライム・ラクシュミ）×1、弱点利用DPS×2、控え物理アタッカー×1。章ごとに弱点に応じて入れ替え。",
+              "ko": "전담 힐러 (슬라임/락스미) 1, 약점 공략 딜러 2, 백업 물리 딜러 1. 챕터마다 보스 약점에 맞춰 교체.",
+              "zh": "1 治疗（史莱姆 / 吉祥天）+ 2 弱点利用 DPS + 1 备用物理输出。章前按 BOSS 弱点换阵容。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+                "attribution": "Pser_hanser — 真·女神转生V 复仇 攻略文档"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -551,6 +719,11 @@
       "lang": "en",
       "url": "https://www.gamersky.com/z/octopath2/1518006_32235/",
       "attribution": "Gamersky — 真·女神转生Ⅴ Vengeance 攻略合集"
+    },
+    {
+      "lang": "zh",
+      "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+      "attribution": "Pser_hanser — 真·女神转生V 复仇 攻略文档 (Pser_hanser Bilibili / 飞书云文档)"
     }
   ]
 }

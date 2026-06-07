@@ -240,12 +240,51 @@ export default function Walkthrough({ lang, tool }: Props) {
                   );
                 }
 
+                if (block.type === "region") {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border-2 border-cyan-500/40 bg-gradient-to-br from-cyan-500/10 to-black/30 p-5"
+                    >
+                      <div className="flex items-start justify-between gap-2 mb-3">
+                        <h4 className="text-lg font-bold text-cyan-200">
+                          🗺️ {t(block.name)}
+                        </h4>
+                        <VerificationBadge sources={block.sources} lang={lang} />
+                      </div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={block.image}
+                        alt={t(block.name)}
+                        className="w-full rounded-lg border border-cyan-500/30 shadow-lg shadow-cyan-500/20"
+                        loading="lazy"
+                      />
+                      {block.description && (
+                        <p className="mt-3 text-sm text-gray-200 leading-relaxed">
+                          {t(block.description)}
+                        </p>
+                      )}
+                    </div>
+                  );
+                }
+
                 if (block.type === "boss") {
                   return (
                     <div
                       key={i}
                       className="rounded-xl border-2 border-red-500/40 bg-gradient-to-br from-red-500/10 to-black/30 p-5"
                     >
+                      {block.image && (
+                        <div className="mb-4 flex justify-center">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={block.image}
+                            alt={t(block.name)}
+                            className="max-h-64 w-auto rounded-lg border border-red-500/30 shadow-lg shadow-red-500/20"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
                       <div className="flex items-start gap-3 mb-3">
                         <span className="text-3xl">👹</span>
                         <div className="flex-1">

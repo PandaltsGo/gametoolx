@@ -59,7 +59,7 @@ export type Source = {
   attribution: string;
 };
 
-/** Walkthrough block 通用结构（heading / paragraph / callout / step / boss / table / tip） */
+/** Walkthrough block 通用结构（heading / paragraph / callout / step / boss / table / tip / region） */
 export type Localized = { en: string; ja?: string; ko?: string; zh?: string };
 
 export type WalkthroughBlock =
@@ -69,9 +69,17 @@ export type WalkthroughBlock =
   | { type: "step"; text: Localized; sources?: string[] }
   | { type: "tip"; text: Localized; sources?: string[] }
   | {
+      type: "region";
+      name: Localized;
+      image: string;          // /images/games/<slug>/regions/<slug>.png
+      description?: Localized;
+      sources?: string[];
+    }
+  | {
       type: "boss";
       name: Localized;
       level: string;
+      image?: string;         // /images/games/<slug>/bosses/<slug>.png
       weakness: Localized;
       strategy: Localized;
       sources?: string[];
