@@ -1,16 +1,17 @@
-# GameToolX — Handover
+# GameToolX — Handover (transient state snapshot)
 
-> 项目暂停 — 数据保留。重启时按下面的「如何恢复」操作即可。
+> **This is a transient doc** that captures the *current* state. For canonical onboarding (what doesn't change often), read `AGENTS.md` first.
+> Update this doc at the end of every significant work session.
 
-## 当前状态（2026-06-07 10:00 HKT）
+## 当前状态（2026-06-07 13:30 HKT）
 
-- **代码**：全部已推送到 `master`，最新 commit `bbcf476+`
+- **代码**：全部已推送到 `master`，最新 commit `585bce2`
 - **数据**：本地 SQLite `data/gametoolx.db` 内保存
   - 1 个抓取源（MegaTen Wiki Fandom）
   - 15 篇文档（Vengeance / SMT V / Press Turn / Magatsuhi / Masakado + 8 个 List of XXX）
   - 833 个 chunk（~500 字/段，已 FTS5 索引）
+  - **828/828 ja 翻译** | **828/828 ko 翻译** | **828/828 zh 翻译**（5 块 < 20 字符按设计跳过）
   - 共 ~320KB 正文 / ~211k token
-  - 2 条 system check 记录
 
 ## 已完成
 
@@ -43,9 +44,15 @@
   - `crawl_jobs` — 抓取任务追踪
   - `translate_jobs` — 翻译任务追踪
   - `qa_interactions` — 未来 LLM 对话历史
+- Schema v3（**翻译流水线**）：
+  - `crawled_documents.source_language` — 来源语种（en/ja/ko/zh）
+  - `crawled_chunks.translations` — JSON map `{ja, ko, zh}`，原 content 不破坏
+  - `crawled_chunks.translated_at` — 翻译时间戳
+  - `translate_jobs` 完善：start/finish/duration/chunks_processed/failed/model
 - API：`/api/progress/[tool]/[key]` + `/api/system-checks`
 - 爬虫：`scripts/crawl-megaten.ts`（Fandom MediaWiki API）
-- 翻译脚本：`scripts/translate.ts`（LLM 批量翻译 ja/ko/zh）
+- 翻译脚本：`scripts/translate.ts`（LLM 批量翻译 ja/ko/zh，**已跑完 828/828**）
+- v3 迁移脚本：`scripts/apply-v3-migration.cjs`（幂等）
 - 搜索页：`/[lang]/search` 用 FTS5 全文检索，**按用户语言优先返回翻译版**
 - AI Q&A 占位：搜索结果底部「🤖 AI 攻略问答 · 即将上线」
 
@@ -70,7 +77,8 @@ gametoolx/
 ├── public/images/games/             # Steam 抓的 header/capsule/library/hero/logo/截图
 ├── scripts/
 │   ├── crawl-megaten.ts            # Fandom 爬虫
-│   └── translate.ts                # LLM 翻译脚本
+│   ├── translate.ts                # LLM 翻译脚本（已跑完 828/828）
+│   └── apply-v3-migration.cjs      # v3 迁移（幂等）
 ├── lib/
 │   ├── data.ts                     # JSON loaders
 │   ├── db.ts                       # SQLite 层 + 迁移 + FTS5 + 翻译 API
@@ -129,14 +137,14 @@ npx tsx scripts/crawl-megaten.ts
 
 ## 翻译脚本
 
-爬虫抓下来的是英文（Fandom），搜索时会自动返回用户语言版本（如果有翻译的话）。**首次跑需要翻译**：
+爬虫抓下来的是英文（Fandom），搜索时会自动返回用户语言版本（如果有翻译的话）。**当前 828/828/828 已完成**。
 
 ```bash
 # 1. 配置 LLM 凭据（任选一种 OpenAI 兼容接口）
 # 建议创建 .env.local
-echo 'LLM_BASE_URL=https://api.openai.com/v1' >> .env.local
+echo 'LLM_BASE_URL=https://api.minimaxi.com/v1' >> .env.local
 echo 'LLM_API_KEY=sk-...' >> .env.local
-echo 'LLM_MODEL=gpt-4o-mini' >> .env.local
+echo 'LLM_MODEL=MiniMax-Text-01' >> .env.local
 
 # 2. 跑翻译（ja + ko + zh）
 npx tsx scripts/translate.ts
@@ -146,7 +154,26 @@ npx tsx scripts/translate.ts --lang ja     # 只翻日文
 npx tsx scripts/translate.ts --limit 200  # 一轮 200 chunk
 ```
 
-翻译存在 `crawled_chunks.translations` JSON 字段，不修改原始 content。
+翻译存在 `crawled_chunks.translations` JSON 字段，不修改原始 content。`searchChunks({preferredLang})` 会按用户语言优先返回翻译版。
+
+**新抓的页面怎么补翻译**：爬虫跑完 → `apply-v3-migration.cjs` 确保 schema 是 v3 → `translate.ts` 会自动跳过已有 key，只翻译新增 chunks。
+
+## 推送通道（已修）
+
+GitHub 直连在 agent 沙箱里被 GFW 挡，每次 push 还要弹 GCM 框。两层修复：
+
+```bash
+# 1. GCM 静默失败（fall back 到 store）
+# 已设 user 级环境变量 GIT_TERMINAL_PROMPT=0
+[System.Environment]::GetEnvironmentVariable("GIT_TERMINAL_PROMPT", "User")
+# → "0"
+
+# 2. git 全局走本地 VPN 代理（Clash 默认 7890）
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+```
+
+`~/.git-credentials` 已有 github token（`x-access-token:ghp_...`），store helper 拿得到。VPN 关了会断，开了就通。
 
 ## 下次开发方向（按你定的优先级）
 
