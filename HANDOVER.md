@@ -1,12 +1,12 @@
-# GameToolX — Handover (transient state snapshot)
+# GameToolX — Handover（临时状态快照）
 
-> **This is a transient doc** that captures the *current* state. For canonical onboarding (what doesn't change often), read `AGENTS.md` first.
-> Update this doc at the end of every significant work session.
+> **本文档是临时的**，记录"当前"状态。要看 canonical 的接手指南（不怎么变），请先读 `AGENTS.md`。
+> 每次重要工作结束都更新一下。
 
 ## 当前状态（2026-06-07 13:30 HKT）
 
-- **代码**：全部已推送到 `master`，最新 commit `585bce2`
-- **数据**：本地 SQLite `data/gametoolx.db` 内保存
+- **代码**：全部已推到 `master`，最新 commit `585bce2`
+- **数据**：本地 SQLite `data/gametoolx.db` 内保留
   - 1 个抓取源（MegaTen Wiki Fandom）
   - 15 篇文档（Vengeance / SMT V / Press Turn / Magatsuhi / Masakado + 8 个 List of XXX）
   - 833 个 chunk（~500 字/段，已 FTS5 索引）
@@ -37,57 +37,57 @@
 - **better-sqlite3** + WAL 模式（100 并发 / 1w DAU 完全够用）
 - Schema v1：sessions / progress / system_checks / page_views
 - Schema v2（**RAG 核心**）：
-  - `crawled_sources` — 来源登记
-  - `crawled_documents` — 抓取页（hash 用于增量更新，**source_language** 标注）
-  - `crawled_chunks` — 切片段落，**translations JSON** 存预翻译
-  - `crawled_chunks_fts` — FTS5 全文索引（自动同步）
-  - `crawl_jobs` — 抓取任务追踪
-  - `translate_jobs` — 翻译任务追踪
-  - `qa_interactions` — 未来 LLM 对话历史
+  - `crawled_sources` —— 来源登记
+  - `crawled_documents` —— 抓取页（hash 用于增量更新，**source_language** 标注）
+  - `crawled_chunks` —— 切片段落，**translations JSON** 存预翻译
+  - `crawled_chunks_fts` —— FTS5 全文索引（自动同步）
+  - `crawl_jobs` —— 抓取任务追踪
+  - `translate_jobs` —— 翻译任务追踪
+  - `qa_interactions` —— 未来 LLM 对话历史
 - Schema v3（**翻译流水线**）：
-  - `crawled_documents.source_language` — 来源语种（en/ja/ko/zh）
-  - `crawled_chunks.translations` — JSON map `{ja, ko, zh}`，原 content 不破坏
-  - `crawled_chunks.translated_at` — 翻译时间戳
+  - `crawled_documents.source_language` —— 来源语种（en/ja/ko/zh）
+  - `crawled_chunks.translations` —— JSON map `{ja, ko, zh}`，原 content 不破坏
+  - `crawled_chunks.translated_at` —— 翻译时间戳
   - `translate_jobs` 完善：start/finish/duration/chunks_processed/failed/model
 - API：`/api/progress/[tool]/[key]` + `/api/system-checks`
 - 爬虫：`scripts/crawl-megaten.ts`（Fandom MediaWiki API）
 - 翻译脚本：`scripts/translate.ts`（LLM 批量翻译 ja/ko/zh，**已跑完 828/828**）
 - v3 迁移脚本：`scripts/apply-v3-migration.cjs`（幂等）
 - 搜索页：`/[lang]/search` 用 FTS5 全文检索，**按用户语言优先返回翻译版**
-- AI Q&A 占位：搜索结果底部「🤖 AI 攻略问答 · 即将上线」
+- AI Q&A 占位：搜索结果底部"🤖 AI 攻略问答 · 即将上线"
 
 ## 文件结构
 
 ```
 gametoolx/
 ├── data/
-│   ├── games/                      # 游戏基础数据 (JSON)
+│   ├── games/                      游戏基础数据 (JSON)
 │   │   ├── octopath-traveler-2.json
 │   │   └── shin-megami-tensei-5-vengeance.json
-│   ├── tools/                      # 工具数据 (JSON)
+│   ├── tools/                      工具数据 (JSON)
 │   │   ├── octopath-traveler-2-job-recommender.json
 │   │   ├── octopath-traveler-2-system-checker.json
 │   │   ├── shin-megami-tensei-5-vengeance-endings-tracker.json
 │   │   ├── shin-megami-tensei-5-vengeance-fusion-calculator.json
 │   │   ├── shin-megami-tensei-5-vengeance-route-chooser.json
 │   │   └── shin-megami-tensei-5-vengeance-walkthrough.json
-│   ├── i18n/                       # 4 语言翻译 (en/ja/ko/zh)
-│   ├── system-tiers.json           # GPU/CPU tier definitions
-│   └── gametoolx.db                # ⚠️ SQLite DB (gitignored, 保留在本地)
-├── public/images/games/             # Steam 抓的 header/capsule/library/hero/logo/截图
+│   ├── i18n/                       4 语言翻译 (en/ja/ko/zh)
+│   ├── system-tiers.json           GPU/CPU tier 定义
+│   └── gametoolx.db                ⚠️ SQLite DB（gitignored，本地保留）
+├── public/images/games/             Steam 抓的 header/capsule/library/hero/logo/截图
 ├── scripts/
-│   ├── crawl-megaten.ts            # Fandom 爬虫
-│   ├── translate.ts                # LLM 翻译脚本（已跑完 828/828）
-│   └── apply-v3-migration.cjs      # v3 迁移（幂等）
+│   ├── crawl-megaten.ts            Fandom 爬虫
+│   ├── translate.ts                LLM 翻译脚本（已跑完 828/828）
+│   └── apply-v3-migration.cjs      v3 迁移（幂等）
 ├── lib/
-│   ├── data.ts                     # JSON loaders
-│   ├── db.ts                       # SQLite 层 + 迁移 + FTS5 + 翻译 API
-│   └── session.ts                  # cookie session helper
+│   ├── data.ts                     JSON loaders
+│   ├── db.ts                       SQLite 层 + 迁移 + FTS5 + 翻译 API
+│   └── session.ts                  cookie session helper
 ├── hooks/
-│   └── useProgress.ts              # React hook 同步进度到 DB
+│   └── useProgress.ts              React hook 同步进度到 DB
 ├── components/
 │   ├── LanguageSwitcher.tsx
-│   └── tools/                      # 6 个工具组件
+│   └── tools/                      6 个工具组件
 │       ├── SystemCheckerClient.tsx
 │       ├── BuildRecommender.tsx
 │       ├── EndingsTracker.tsx
@@ -96,16 +96,19 @@ gametoolx/
 │       └── FusionCalculator.tsx
 ├── app/
 │   ├── [lang]/
-│   │   ├── page.tsx                # 首页
+│   │   ├── page.tsx                首页
 │   │   ├── games/[slug]/page.tsx
 │   │   ├── tools/[slug]/page.tsx
-│   │   ├── tools/system-checker/page.tsx  # 通用 system checker
-│   │   └── search/page.tsx         # FTS5 搜索页（含翻译 + 源语言徽章）
+│   │   ├── tools/system-checker/page.tsx  通用 system checker
+│   │   └── search/page.tsx         FTS5 搜索页（含翻译 + 源语言徽章）
 │   ├── api/
 │   │   ├── progress/[tool]/[key]/route.ts
 │   │   └── system-checks/route.ts
 │   └── layout.tsx
-└── middleware.ts                   # Accept-Language → /<lang>/
+├── AGENTS.md                       canonical 接手文档（智能体看）
+├── README.md                       发布文档（人看）
+├── HANDOVER.md                     本文档（临时状态）
+└── middleware.ts                   Accept-Language → /<lang>/
 ```
 
 ## 本地启动（最简）
@@ -121,7 +124,7 @@ npm run dev
 
 ```bash
 # 1. DB 文件
-ls -lh data/gametoolx.db   # 应该 ~1.5MB (含 WAL)
+ls -lh data/gametoolx.db   # 应该 ~1.5MB（含 WAL）
 
 # 2. 跑一个无依赖的 quick check
 node -e "const db=require('better-sqlite3')('data/gametoolx.db',{readonly:true});console.log('Docs:',db.prepare('SELECT COUNT(*) as c FROM crawled_documents').get().c);console.log('Chunks:',db.prepare('SELECT COUNT(*) as c FROM crawled_chunks').get().c);"
@@ -175,7 +178,7 @@ git config --global https.proxy http://127.0.0.1:7890
 
 `~/.git-credentials` 已有 github token（`x-access-token:ghp_...`），store helper 拿得到。VPN 关了会断，开了就通。
 
-## 下次开发方向（按你定的优先级）
+## 下次开发方向（按优先级）
 
 | 优先级 | 方向 | 工作量 |
 |-------|------|--------|
@@ -198,5 +201,4 @@ git config --global https.proxy http://127.0.0.1:7890
 
 ## 联系
 
-下次回来直接说「继续 gametoolx 的 XXX」即可，DB 数据都在 `data/gametoolx.db` 里等你。
-
+下次回来直接说"继续 gametoolx 的 XXX"即可，DB 数据都在 `data/gametoolx.db` 里等你。
