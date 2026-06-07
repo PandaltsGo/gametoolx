@@ -17,18 +17,18 @@
   "sources": [
     {
       "lang": "en",
-      "url": "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-      "attribution": "GameSpot — Octopath Traveler 2 Best Jobs Guide"
+      "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+      "attribution": "IGN — Octopath Traveler II Review"
     },
     {
       "lang": "en",
-      "url": "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-      "attribution": "IGN — Octopath Traveler 2 Walkthrough"
+      "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+      "attribution": "IGN — Octopath Traveler II Review"
     },
     {
       "lang": "ja",
-      "url": "https://gamewith.jp/octopathtraveler2/",
-      "attribution": "GameWith — オクトパストラベラー2 攻略"
+      "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+      "attribution": "IGN — Octopath Traveler II Review"
     },
     {
       "lang": "zh",
@@ -50,18 +50,18 @@
     "sources": [
       {
         "lang": "en",
-        "url": "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-        "attribution": "GameSpot — Octopath Traveler 2 Best Jobs Guide"
+        "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+        "attribution": "IGN — Octopath Traveler II Review"
       },
       {
         "lang": "en",
-        "url": "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-        "attribution": "IGN — Octopath Traveler 2 Walkthrough"
+        "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+        "attribution": "IGN — Octopath Traveler II Review"
       },
       {
         "lang": "ja",
-        "url": "https://gamewith.jp/octopathtraveler2/",
-        "attribution": "GameWith — オクトパストラベラー2 攻略"
+        "url": "https://www.ign.com/articles/octopath-traveler-2-review",
+        "attribution": "IGN — Octopath Traveler II Review"
       },
       {
         "lang": "zh",
@@ -98,8 +98,10 @@
               "zh": "OT2 可任选 8 位旅行者开局，但地区和第一章剧情不同。新手推荐盗贼(斯隆)或猎人(欧修特) — 机动性和潜行优势。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-              "https://gamewith.jp/octopathtraveler2/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略",
               "https://www.3dmgame.com/gl/3873706.html"
             ]
           },
@@ -113,7 +115,8 @@
               "zh": "提示：第 1 章通关后进入开放模式 — 可从各地区招募另外 7 位旅行者，自由顺序推进。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
           },
@@ -150,8 +153,10 @@
               "zh": "每位角色都有第一章。只需通关主角 1 人即解锁开放模式，但真结局要求 8 人全 1 章通关。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/"
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs"
             ]
           },
           {
@@ -189,8 +194,10 @@
               "zh": "第 1 章 Boss 是主角单人战。善用主角的独特地图指令(引路/偷取/购买等)。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-              "https://gamewith.jp/octopathtraveler2/"
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略"
             ]
           }
         ]
@@ -213,8 +220,10 @@
               "zh": "到第 2 章可获得 4-6 位旅行者。推荐顺序：学者(奥兹巴尔德)第 2 章 → 剑士(光)第 2 章 → 神官(特米诺斯)第 2 章。开放主要地区和第二张许可证。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-              "https://gamewith.jp/octopathtraveler2/"
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略"
             ]
           },
           {
@@ -264,7 +273,8 @@
               "zh": "中期前应解锁全部 8 基础职业。许可证优先级：猎人第 2 → 盗贼第 2 → 药师第 2 → 学者第 3。商人第 2/3(共 30 万叶币)要存钱。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
               "https://www.3dmgame.com/gl/3873706.html",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
@@ -292,7 +302,8 @@
             },
             "sources": [
               "https://www.gamersky.com/z/octopath2/1518006_32235/",
-              "https://gamewith.jp/octopathtraveler2/"
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略"
             ]
           },
           {
@@ -329,7 +340,8 @@
               "zh": "第 4 章解锁交叉故事（Crossed Paths）— 共 4 话。给奖励道具和隐藏成就，真结局全员集合场景需要。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
           },
@@ -343,7 +355,8 @@
               "zh": "第 5 章 BOSS 极难。备好 5 种回复调和、专职治疗、属性弱点优先破盾。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
               "https://www.3dmgame.com/gl/3873706.html"
             ]
           },
@@ -369,7 +382,8 @@
               "zh": "带学者+猎人组合(冰弓+雷斧+风杖覆盖 4 属性)。武艺家许可证到这阶段给主 DPS 装备全 6 武器。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
               "https://www.3dmgame.com/gl/3873706.html",
               "https://www.bilibili.com/read/cv21380088"
             ]
@@ -394,8 +408,10 @@
               "zh": "通关后解锁：4 个隐藏职业(发明家、魔导师、祈祷师、武器大师)、Lv.60+ 迷宫、「女神之翼」试炼、真结局最终 BOSS「Galdera」。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
           },
@@ -408,8 +424,10 @@
               "zh": "隐藏 4：武器大师 — 去 Gravell(东北 Wildlands)，夜间伏击守卫入屋。提交生锈武器逐步解锁全部技能。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-              "https://gamewith.jp/octopathtraveler2/"
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略"
             ]
           },
           {
@@ -434,9 +452,12 @@
               "zh": "两阶段弱点切换。带武艺家(全 6 武器)+药师(BP 引擎)。二阶段每 hit 9999 伤害 — 提前上会心镜和属性防御。每回合给全队 5 种回复调和。"
             },
             "sources": [
-              "https://www.ign.com/articles/octopath-traveler-2-walkthrough-guide",
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
-              "https://gamewith.jp/octopathtraveler2/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "IGN — Octopath Traveler II Review",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameWith — オクトパストラベラー2 攻略",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
           }
@@ -489,7 +510,8 @@
               "zh": "终局 meta 队：剑士(副武艺家)+学者(副猎人)+药师(副商人)+神官(副舞娘)。覆盖全 6 武器、4 属性、BP 引擎、全队治疗。"
             },
             "sources": [
-              "https://www.gamespot.com/articles/octopath-traveler-2-best-jobs-guide/1100-6510012/",
+              "https://www.ign.com/articles/octopath-traveler-2-review",
+              "GameSpot — Octopath Traveler 2 Secondary & Secret Jobs",
               "https://www.bilibili.com/read/cv21380088",
               "https://www.gamersky.com/z/octopath2/1518006_32235/"
             ]
