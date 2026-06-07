@@ -257,6 +257,35 @@ export default function SystemCheckerClient({ lang, ui, game, tiers, allGames, a
     };
   }, [submitted, cpu, gpu, ram, storage, game, tiers, ui]);
 
+  // Log to DB when result is computed
+  useEffect(() => {
+    if (!result || !submitted) return;
+    const score = result.recommendedTier?.score || 0;
+    fetch("/api/system-checks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        gameSlug: game.slug,
+        cpu: cpu || null,
+        gpu: gpu || null,
+        ramGb: typeof ram === "number" ? ram : null,
+        storage: storage,
+        score,
+        result: result.overall,
+      }),
+    }).catch(() => {});
+  }, [result, submitted, game.slug, cpu, gpu, ram, storage]);
+
+  // Load recent check history for this session
+  const [history, setHistory] = useState<Array<{ id: number; gameSlug: string; cpu?: string; gpu?: string; ramGb?: number; storage?: string; score?: number; result?: string; createdAt: number }>>([]);
+  useEffect(() => {
+    fetch("/api/system-checks", { credentials: "include" })
+      .then((r) => r.json())
+      .then((d) => setHistory(d.checks || []))
+      .catch(() => {});
+  }, [submitted]);
+
   return (
     <div className="space-y-8">
       {/* Game picker */}
@@ -378,6 +407,33 @@ export default function SystemCheckerClient({ lang, ui, game, tiers, allGames, a
           {ui.action.check}
         </button>
       </section>
+
+      {/* Recent check history */}
+      {history.length > 0 && (
+        <section className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <h3 className="text-sm font-semibold text-brand-300 mb-3 uppercase tracking-wide">
+            🕒 Recent checks (your browser, this session)
+          </h3>
+          <div className="space-y-1.5 text-sm">
+            {history.slice(0, 5).map((h) => (
+              <div key={h.id} className="flex items-center justify-between gap-3 rounded border border-white/5 bg-black/20 px-3 py-2">
+                <div className="text-gray-300 truncate">
+                  <span className="text-white">{h.gpu || "?"}</span>
+                  {h.ramGb ? <span className="text-gray-500"> · {h.ramGb}GB</span> : null}
+                  {h.cpu ? <span className="text-gray-500"> · {h.cpu.slice(0, 30)}</span> : null}
+                </div>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${
+                  h.result === "match" ? "bg-green-500/20 text-green-300" :
+                  h.result === "partial" ? "bg-yellow-500/20 text-yellow-300" :
+                  "bg-red-500/20 text-red-300"
+                }`}>
+                  {h.result === "match" ? "✓" : h.result === "partial" ? "⚠" : "✗"} {h.score ?? "?"}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Result */}
       {result && (

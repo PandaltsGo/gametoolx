@@ -99,6 +99,116 @@ const MIGRATIONS: Migration[] = [
       CREATE INDEX IF NOT EXISTS idx_views_path ON page_views(path, created_at);
     `,
   },
+  {
+    version: 2,
+    name: "crawled_content_for_rag",
+    sql: `
+      -- Registered source sites (NGA, 3DM, MegaTen Wiki, etc.)
+      CREATE TABLE IF NOT EXISTS crawled_sources (
+        id TEXT PRIMARY KEY,
+        domain TEXT NOT NULL,
+        name TEXT NOT NULL,
+        url_pattern TEXT,
+        language TEXT,
+        content_type TEXT,  -- 'wiki' | 'forum' | 'news' | 'guide'
+        enabled INTEGER NOT NULL DEFAULT 1,
+        last_crawled_at INTEGER,
+        config_json TEXT,
+        created_at INTEGER NOT NULL
+      );
+
+      -- Individual crawled pages / articles
+      CREATE TABLE IF NOT EXISTS crawled_documents (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        source_id TEXT NOT NULL,
+        game_slug TEXT,
+        url TEXT NOT NULL,
+        title TEXT NOT NULL,
+        body_md TEXT NOT NULL,           -- cleaned markdown
+        body_text TEXT NOT NULL,         -- plain text (for chunking/search)
+        content_type TEXT,               -- 'guide' | 'demon' | 'quest' | 'walkthrough' | 'news' | 'forum_thread' | ...
+        language TEXT,
+        meta_json TEXT,                  -- author, date, tags, etc.
+        content_hash TEXT NOT NULL,      -- for incremental updates
+        fetched_at INTEGER NOT NULL,
+        published_at INTEGER,
+        FOREIGN KEY (source_id) REFERENCES crawled_sources(id) ON DELETE CASCADE
+      );
+
+      CREATE UNIQUE INDEX IF NOT EXISTS idx_documents_url ON crawled_documents(url);
+      CREATE INDEX IF NOT EXISTS idx_documents_source ON crawled_documents(source_id);
+      CREATE INDEX IF NOT EXISTS idx_documents_game ON crawled_documents(game_slug);
+      CREATE INDEX IF NOT EXISTS idx_documents_fetched ON crawled_documents(fetched_at);
+
+      -- Chunked content for retrieval (RAG)
+      CREATE TABLE IF NOT EXISTS crawled_chunks (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        document_id INTEGER NOT NULL,
+        chunk_index INTEGER NOT NULL,
+        section_title TEXT,
+        content TEXT NOT NULL,
+        token_count INTEGER,
+        FOREIGN KEY (document_id) REFERENCES crawled_documents(id) ON DELETE CASCADE
+      );
+
+      CREATE INDEX IF NOT EXISTS idx_chunks_doc ON crawled_chunks(document_id);
+
+      -- FTS5 full-text search over chunks (works without vector embeddings)
+      CREATE VIRTUAL TABLE IF NOT EXISTS crawled_chunks_fts USING fts5(
+        content,
+        section_title,
+        content='crawled_chunks',
+        content_rowid='id',
+        tokenize='unicode61 remove_diacritics 2'
+      );
+
+      -- Triggers to keep FTS index in sync
+      CREATE TRIGGER IF NOT EXISTS chunks_ai AFTER INSERT ON crawled_chunks BEGIN
+        INSERT INTO crawled_chunks_fts(rowid, content, section_title)
+        VALUES (new.id, new.content, new.section_title);
+      END;
+
+      CREATE TRIGGER IF NOT EXISTS chunks_ad AFTER DELETE ON crawled_chunks BEGIN
+        INSERT INTO crawled_chunks_fts(crawled_chunks_fts, rowid, content, section_title)
+        VALUES ('delete', old.id, old.content, old.section_title);
+      END;
+
+      CREATE TRIGGER IF NOT EXISTS chunks_au AFTER UPDATE ON crawled_chunks BEGIN
+        INSERT INTO crawled_chunks_fts(crawled_chunks_fts, rowid, content, section_title)
+        VALUES ('delete', old.id, old.content, old.section_title);
+        INSERT INTO crawled_chunks_fts(rowid, content, section_title)
+        VALUES (new.id, new.content, new.section_title);
+      END;
+
+      -- Crawl job tracking
+      CREATE TABLE IF NOT EXISTS crawl_jobs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        source_id TEXT NOT NULL,
+        started_at INTEGER NOT NULL,
+        finished_at INTEGER,
+        status TEXT NOT NULL,           -- 'running' | 'success' | 'failed'
+        pages_crawled INTEGER DEFAULT 0,
+        pages_updated INTEGER DEFAULT 0,
+        pages_skipped INTEGER DEFAULT 0,
+        error_message TEXT,
+        stats_json TEXT
+      );
+
+      -- Q&A interactions (for future LLM integration)
+      CREATE TABLE IF NOT EXISTS qa_interactions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_id TEXT,
+        question TEXT NOT NULL,
+        retrieved_chunks_json TEXT,     -- chunk ids + scores
+        answer TEXT,
+        model TEXT,
+        latency_ms INTEGER,
+        created_at INTEGER NOT NULL
+      );
+
+      CREATE INDEX IF NOT EXISTS idx_qa_session ON qa_interactions(session_id, created_at);
+    `,
+  },
 ];
 
 function runMigrations(db: Database.Database) {
@@ -270,6 +380,287 @@ export function getStats(): { sessions: number; progress: number; checks: number
     checks: (d.prepare("SELECT COUNT(*) as c FROM system_checks").get() as { c: number }).c,
     views: (d.prepare("SELECT COUNT(*) as c FROM page_views").get() as { c: number }).c,
   };
+}
+
+// ===== Crawled Content API =====
+
+export type CrawledSource = {
+  id: string;
+  domain: string;
+  name: string;
+  urlPattern?: string;
+  language?: string;
+  contentType?: string;
+  enabled: boolean;
+  lastCrawledAt?: number;
+  configJson?: string;
+  createdAt: number;
+};
+
+export function upsertCrawledSource(s: CrawledSource): void {
+  const d = dbReady();
+  d.prepare(`
+    INSERT INTO crawled_sources (id, domain, name, url_pattern, language, content_type, enabled, last_crawled_at, config_json, created_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(id) DO UPDATE SET
+      domain = excluded.domain,
+      name = excluded.name,
+      url_pattern = excluded.url_pattern,
+      language = excluded.language,
+      content_type = excluded.content_type,
+      enabled = excluded.enabled,
+      last_crawled_at = COALESCE(excluded.last_crawled_at, last_crawled_at),
+      config_json = excluded.config_json
+  `).run(
+    s.id,
+    s.domain,
+    s.name,
+    s.urlPattern || null,
+    s.language || null,
+    s.contentType || null,
+    s.enabled ? 1 : 0,
+    s.lastCrawledAt || null,
+    s.configJson || null,
+    s.createdAt || Date.now()
+  );
+}
+
+export function listCrawledSources(enabledOnly = false): CrawledSource[] {
+  const d = dbReady();
+  const rows = d.prepare(`
+    SELECT id, domain, name, url_pattern as urlPattern, language, content_type as contentType,
+           enabled, last_crawled_at as lastCrawledAt, config_json as configJson, created_at as createdAt
+    FROM crawled_sources
+    ${enabledOnly ? "WHERE enabled = 1" : ""}
+    ORDER BY name
+  `).all() as any[];
+  return rows.map((r) => ({ ...r, enabled: !!r.enabled }));
+}
+
+export type CrawledDocument = {
+  id?: number;
+  sourceId: string;
+  gameSlug?: string;
+  url: string;
+  title: string;
+  bodyMd: string;
+  bodyText: string;
+  contentType?: string;
+  language?: string;
+  metaJson?: string;
+  contentHash: string;
+  fetchedAt: number;
+  publishedAt?: number;
+};
+
+/** Upsert by URL — uses content hash to skip unchanged content. */
+export function upsertCrawledDocument(doc: CrawledDocument): { id: number; updated: boolean } {
+  const d = dbReady();
+  const existing = d.prepare("SELECT id, content_hash FROM crawled_documents WHERE url = ?").get(doc.url) as
+    | { id: number; content_hash: string }
+    | undefined;
+  if (existing && existing.content_hash === doc.contentHash) {
+    return { id: existing.id, updated: false };
+  }
+  if (existing) {
+    d.prepare(`
+      UPDATE crawled_documents
+      SET source_id = ?, game_slug = ?, title = ?, body_md = ?, body_text = ?,
+          content_type = ?, language = ?, meta_json = ?, content_hash = ?, fetched_at = ?,
+          published_at = ?
+      WHERE id = ?
+    `).run(
+      doc.sourceId,
+      doc.gameSlug || null,
+      doc.title,
+      doc.bodyMd,
+      doc.bodyText,
+      doc.contentType || null,
+      doc.language || null,
+      doc.metaJson || null,
+      doc.contentHash,
+      doc.fetchedAt,
+      doc.publishedAt || null,
+      existing.id
+    );
+    // Re-chunk: clear old chunks
+    d.prepare("DELETE FROM crawled_chunks WHERE document_id = ?").run(existing.id);
+    return { id: existing.id, updated: true };
+  }
+  const result = d.prepare(`
+    INSERT INTO crawled_documents (source_id, game_slug, url, title, body_md, body_text, content_type, language, meta_json, content_hash, fetched_at, published_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `).run(
+    doc.sourceId,
+    doc.gameSlug || null,
+    doc.url,
+    doc.title,
+    doc.bodyMd,
+    doc.bodyText,
+    doc.contentType || null,
+    doc.language || null,
+    doc.metaJson || null,
+    doc.contentHash,
+    doc.fetchedAt,
+    doc.publishedAt || null
+  );
+  return { id: Number(result.lastInsertRowid), updated: true };
+}
+
+export type CrawledChunk = {
+  documentId: number;
+  chunkIndex: number;
+  sectionTitle?: string;
+  content: string;
+  tokenCount?: number;
+};
+
+export function insertCrawledChunks(chunks: CrawledChunk[]): void {
+  if (chunks.length === 0) return;
+  const d = dbReady();
+  const stmt = d.prepare(`
+    INSERT INTO crawled_chunks (document_id, chunk_index, section_title, content, token_count)
+    VALUES (?, ?, ?, ?, ?)
+  `);
+  const tx = d.transaction((rows: CrawledChunk[]) => {
+    for (const c of rows) {
+      stmt.run(c.documentId, c.chunkIndex, c.sectionTitle || null, c.content, c.tokenCount || null);
+    }
+  });
+  tx(chunks);
+}
+
+export type SearchResult = {
+  chunkId: number;
+  documentId: number;
+  title: string;
+  url: string;
+  source: string;
+  gameSlug?: string;
+  sectionTitle?: string;
+  content: string;
+  snippet: string;
+  rank: number;
+};
+
+export function searchChunks(opts: {
+  query: string;
+  gameSlug?: string;
+  limit?: number;
+}): SearchResult[] {
+  const d = dbReady();
+  const limit = opts.limit || 20;
+  // FTS5 query — sanitize: strip non-alphanumeric
+  const safeQuery = opts.query.replace(/[^a-zA-Z0-9\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af\s]/g, " ").trim();
+  if (!safeQuery) return [];
+
+  // FTS5 match operator: query* for prefix match
+  const ftsQuery = safeQuery
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((t) => `"${t}"*`)
+    .join(" ");
+
+  // Join with documents and sources
+  const rows = d
+    .prepare(`
+      SELECT
+        c.id as chunkId,
+        c.document_id as documentId,
+        d.title,
+        d.url,
+        d.game_slug as gameSlug,
+        c.section_title as sectionTitle,
+        c.content,
+        s.name as source,
+        bm25(crawled_chunks_fts) as rank
+      FROM crawled_chunks_fts fts
+      JOIN crawled_chunks c ON c.id = fts.rowid
+      JOIN crawled_documents d ON d.id = c.document_id
+      JOIN crawled_sources s ON s.id = d.source_id
+      WHERE crawled_chunks_fts MATCH ?
+        ${opts.gameSlug ? "AND d.game_slug = ?" : ""}
+      ORDER BY rank
+      LIMIT ?
+    `)
+    .all(opts.gameSlug ? [ftsQuery, opts.gameSlug, limit] : [ftsQuery, limit]) as any[];
+
+  return rows.map((r) => {
+    // Make a 200-char snippet around the first match
+    const snippet = r.content.length > 240 ? r.content.slice(0, 240) + "..." : r.content;
+    return { ...r, snippet };
+  });
+}
+
+export function getDocumentsByGame(gameSlug: string, limit = 50): { id: number; title: string; url: string; source: string; contentType?: string; language?: string; fetchedAt: number }[] {
+  const d = dbReady();
+  return d
+    .prepare(`
+      SELECT d.id, d.title, d.url, s.name as source, d.content_type as contentType, d.language, d.fetched_at as fetchedAt
+      FROM crawled_documents d
+      JOIN crawled_sources s ON s.id = d.source_id
+      WHERE d.game_slug = ?
+      ORDER BY d.fetched_at DESC
+      LIMIT ?
+    `)
+    .all(gameSlug, limit) as any[];
+}
+
+export function getCrawledStats(): { sources: number; documents: number; chunks: number; bySource: { name: string; count: number }[]; byGame: { game: string; count: number }[] } {
+  const d = dbReady();
+  const sources = (d.prepare("SELECT COUNT(*) as c FROM crawled_sources").get() as { c: number }).c;
+  const documents = (d.prepare("SELECT COUNT(*) as c FROM crawled_documents").get() as { c: number }).c;
+  const chunks = (d.prepare("SELECT COUNT(*) as c FROM crawled_chunks").get() as { c: number }).c;
+  const bySource = d
+    .prepare(`SELECT s.name as name, COUNT(d.id) as count FROM crawled_sources s LEFT JOIN crawled_documents d ON d.source_id = s.id GROUP BY s.id ORDER BY count DESC`)
+    .all() as { name: string; count: number }[];
+  const byGame = d
+    .prepare(`SELECT COALESCE(game_slug, '(none)') as game, COUNT(*) as count FROM crawled_documents GROUP BY game_slug ORDER BY count DESC`)
+    .all() as { game: string; count: number }[];
+  return { sources, documents, chunks, bySource, byGame };
+}
+
+export type CrawlJob = {
+  sourceId: string;
+  startedAt: number;
+  finishedAt?: number;
+  status: "running" | "success" | "failed";
+  pagesCrawled?: number;
+  pagesUpdated?: number;
+  pagesSkipped?: number;
+  errorMessage?: string;
+  statsJson?: string;
+};
+
+export function startCrawlJob(sourceId: string): number {
+  const d = dbReady();
+  const result = d
+    .prepare(`INSERT INTO crawl_jobs (source_id, started_at, status) VALUES (?, ?, 'running')`)
+    .run(sourceId, Date.now());
+  return Number(result.lastInsertRowid);
+}
+
+export function finishCrawlJob(id: number, job: Partial<CrawlJob>): void {
+  const d = dbReady();
+  d.prepare(`
+    UPDATE crawl_jobs
+    SET finished_at = ?, status = ?, pages_crawled = ?, pages_updated = ?, pages_skipped = ?, error_message = ?, stats_json = ?
+    WHERE id = ?
+  `).run(
+    job.finishedAt || Date.now(),
+    job.status || "success",
+    job.pagesCrawled || 0,
+    job.pagesUpdated || 0,
+    job.pagesSkipped || 0,
+    job.errorMessage || null,
+    job.statsJson || null,
+    id
+  );
+}
+
+export function updateSourceCrawledAt(sourceId: string): void {
+  const d = dbReady();
+  d.prepare("UPDATE crawled_sources SET last_crawled_at = ? WHERE id = ?").run(Date.now(), sourceId);
 }
 
 /** Close the DB (for cleanup; usually not needed). */
