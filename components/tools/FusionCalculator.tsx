@@ -152,7 +152,7 @@ export default function FusionCalculator({ tool }: Props) {
       {pickedA && pickedB && (
         <section className="rounded-2xl border-2 border-brand-500/40 bg-gradient-to-br from-brand-500/10 to-black/30 p-5">
           <h3 className="text-xl font-bold text-white mb-3">🧪 合体结果</h3>
-          {fusionResult.type === "exact" && fusionResult.result ? (
+          {fusionResult && fusionResult.type === "exact" && fusionResult.result ? (
             <div>
               <div className="rounded-lg border border-yellow-500/40 bg-yellow-500/10 p-4">
                 <div className="text-2xl font-bold text-yellow-200">

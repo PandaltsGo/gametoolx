@@ -20,8 +20,17 @@ data/.dev/
 node_modules/
 next-env.d.ts
 
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+
 # Translation launch artifacts
 .dev-translate-*.log
 .dev-translate-*.pid
 .dev-translate-test*.log
 .dev-translate-ko-tail.log
+
+.ssh-tmp/
+
+# Temp scripts (debugging/one-off)
+.tmp_*.py
+.tmp_*.log

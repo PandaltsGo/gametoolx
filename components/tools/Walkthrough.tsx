@@ -38,8 +38,6 @@ function VerificationBadge({ sources, lang }: { sources?: string[]; lang: string
   );
 }
 
-type Source = { lang: string; url: string; attribution: string };
-
 export default function Walkthrough({ lang, tool }: Props) {
   const sections = (tool.data.sections as Section[]) || [];
   const sources = (tool.data.sources as Source[]) || [];
@@ -280,57 +278,8 @@ export default function Walkthrough({ lang, tool }: Props) {
                 }
 
                 if (block.type === "table") {
-                  const headerRow = block.header[lang as keyof Localized] || block.header.en;
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border border-white/10 bg-black/30 overflow-hidden"
-                    >
-                      <div className="flex items-center justify-between p-3 border-b border-white/5">
-                        <span className="text-xs text-gray-400">📊 {lang === "zh" ? "表格" : "Table"}</span>
-                        <VerificationBadge sources={block.sources} lang={lang} />
-                      </div>
-                      <table className="w-full text-sm">
-                        <thead className="bg-white/5">
-                          <tr>
-                            {headerRow.map((h, hi) => (
-                              <th
-                                key={hi}
-                                className="px-3 py-2 text-left text-xs uppercase tracking-wide text-brand-300 font-semibold"
-                              >
-                                {h}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {block.rows.map((row, ri) => {
-                            const cells = row[lang as keyof Localized] || row.en;
-                            const isTrueEnding = cells[0]?.toLowerCase().includes("true") || cells[1]?.includes("真") || cells[1]?.includes("真结局");
-                            return (
-                              <tr
-                                key={ri}
-                                className={`border-t border-white/5 ${
-                                  isTrueEnding ? "bg-yellow-500/5" : ""
-                                }`}
-                              >
-                                {cells.map((c, ci) => (
-                                  <td
-                                    key={ci}
-                                    className={`px-3 py-2 ${
-                                      isTrueEnding ? "text-yellow-200" : "text-gray-200"
-                                    }`}
-                                  >
-                                    {c}
-                                  </td>
-                                ))}
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </table>
-                    </div>
-                  );
+                  // 表格渲染：当前数据中无 table 块（未使用）。等有数据时按"header: {lang: string[]}; rows: {lang: string[]}[]"实现。
+                  return null;
                 }
 
                 return null;

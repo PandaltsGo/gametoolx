@@ -14,7 +14,7 @@
  *   npx tsx scripts/translate.ts --game shin-megami-tensei-5-vengeance
  */
 import {
-  startCrawlJob as startTranslateJob, // not the same table; we use a new helper
+  startCrawlJob,
   upsertCrawledDocument,
 } from "../lib/db";
 import Database from "better-sqlite3";
@@ -165,7 +165,7 @@ function listChunksNeedingTranslation(db: Database.Database, targetLang: Lang, g
       ORDER BY c.id
       LIMIT ?
     `)
-    .all(targetLang === "en" ? ["en", ...params] : [targetLang, ...params]) as ChunkRow[];
+    .all([targetLang, ...params]) as ChunkRow[];
 }
 
 function getTranslationsMap(translations: string | null): Record<string, string> {

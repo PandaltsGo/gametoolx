@@ -61,18 +61,21 @@ const INDEX_LABEL: Record<Lang, string> = {
   ja: "索引済みソース",
   ko: "인덱싱된 소스",
   zh: "已索引数据源",
+  en: "Indexed Sources",
 };
 
 const DOC_LABEL: Record<Lang, string> = {
   ja: "ドキュメント",
   ko: "문서",
   zh: "文档",
+  en: "Documents",
 };
 
 const CHUNK_LABEL: Record<Lang, string> = {
   ja: "チャンク",
   ko: "청크",
   zh: "段",
+  en: "Chunks",
 };
 
 export default async function SearchPage({ params, searchParams }: Props) {

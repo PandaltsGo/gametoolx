@@ -102,7 +102,14 @@ export type SystemTiers = {
   default_scoring: { min_score: number; rec_score: number };
 };
 
-export type UITranslations = Record<string, string>;
+/**
+ * UI 翻译：嵌套对象，叶子是字符串。
+ * 例如 `ui.page.release` = "发售日期"。
+ * 用 `Record<string, any>`：翻译 JSON 字段增删不用同步改类型；
+ * 取 `any` 是因为递归 `string | UITranslations` 在 `.release` 访问时无法 narrow。
+ * 后续要严格化时改成 explicit interface 即可，调用方不动。
+ */
+export type UITranslations = Record<string, any>;
 
 async function readJson<T>(p: string): Promise<T | null> {
   try {
