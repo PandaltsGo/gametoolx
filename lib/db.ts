@@ -562,68 +562,6 @@ export function insertCrawledChunks(chunks: CrawledChunk[]): void {
   tx(chunks);
 }
 
-export type SearchResult = {
-  chunkId: number;
-  documentId: number;
-  title: string;
-  url: string;
-  source: string;
-  gameSlug?: string;
-  sectionTitle?: string;
-  content: string;
-  snippet: string;
-  rank: number;
-};
-
-export function searchChunks(opts: {
-  query: string;
-  gameSlug?: string;
-  limit?: number;
-}): SearchResult[] {
-  const d = dbReady();
-  const limit = opts.limit || 20;
-  // FTS5 query — sanitize: strip non-alphanumeric
-  const safeQuery = opts.query.replace(/[^a-zA-Z0-9\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af\s]/g, " ").trim();
-  if (!safeQuery) return [];
-
-  // FTS5 match operator: query* for prefix match
-  const ftsQuery = safeQuery
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((t) => `"${t}"*`)
-    .join(" ");
-
-  // Join with documents and sources
-  const rows = d
-    .prepare(`
-      SELECT
-        c.id as chunkId,
-        c.document_id as documentId,
-        d.title,
-        d.url,
-        d.game_slug as gameSlug,
-        c.section_title as sectionTitle,
-        c.content,
-        s.name as source,
-        bm25(crawled_chunks_fts) as rank
-      FROM crawled_chunks_fts fts
-      JOIN crawled_chunks c ON c.id = fts.rowid
-      JOIN crawled_documents d ON d.id = c.document_id
-      JOIN crawled_sources s ON s.id = d.source_id
-      WHERE crawled_chunks_fts MATCH ?
-        ${opts.gameSlug ? "AND d.game_slug = ?" : ""}
-      ORDER BY rank
-      LIMIT ?
-    `)
-    .all(opts.gameSlug ? [ftsQuery, opts.gameSlug, limit] : [ftsQuery, limit]) as any[];
-
-  return rows.map((r) => {
-    // Make a 200-char snippet around the first match
-    const snippet = r.content.length > 240 ? r.content.slice(0, 240) + "..." : r.content;
-    return { ...r, snippet };
-  });
-}
-
 export function getDocumentsByGame(gameSlug: string, limit = 50): { id: number; title: string; url: string; source: string; contentType?: string; language?: string; fetchedAt: number }[] {
   const d = dbReady();
   return d

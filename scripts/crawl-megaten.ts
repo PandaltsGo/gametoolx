@@ -16,7 +16,7 @@ import {
 const SOURCE_ID = "megaten-wiki";
 const GAME_SLUG = "shin-megami-tensei-5-vengeance";
 const API = "https://megamitensei.fandom.com/api.php";
-const UA = "GameToolX-Crawler/1.0 (+https://gametoolx.cc) SMT5V guide indexing";
+const UA = "GameToolX-Crawler/1.0 (+https://gametoolx.top) SMT5V guide indexing";
 
 const PAGES_TO_CRAWL: { page: string; contentType: string; title?: string }[] = [
   // Game overview + mechanics

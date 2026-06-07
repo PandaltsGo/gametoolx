@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.cc";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.top";
 
 export async function GET() {
   const body = `# GameToolX robots.txt

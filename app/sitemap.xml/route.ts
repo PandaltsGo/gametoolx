@@ -1,6 +1,6 @@
 import { listGames, listTools } from "@/lib/data";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.cc";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.top";
 const LANGS = ["ja", "ko", "zh", "en"] as const;
 
 export const revalidate = 3600; // 1h

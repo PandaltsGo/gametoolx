@@ -26,14 +26,14 @@ Both are free, no signup, no ads-as-you-use-it (just a single small ad slot to p
 ## What's there
 
 **1. System Requirements Checker**  
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-system-checker  
+→ https://gametoolx.top/en/tools/octopath-traveler-2-system-checker  
 Tells you if your PC can run OT2 (matches min/recommended + suggests graphics settings).  
-Also has a JP version: https://gametoolx.cc/ja/tools/octopath-traveler-2-system-checker
+Also has a JP version: https://gametoolx.top/ja/tools/octopath-traveler-2-system-checker
 
 **2. Job / Build Recommender**  
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-job-recommender  
+→ https://gametoolx.top/en/tools/octopath-traveler-2-job-recommender  
 Pick the jobs you've unlocked + your playstyle (attack/magic/speed/balanced/support) → get a suggested 4-person party with a reason explaining why.  
-Also JP: https://gametoolx.cc/ja/tools/octopath-traveler-2-job-recommender
+Also JP: https://gametoolx.top/ja/tools/octopath-traveler-2-job-recommender
 
 ## Why I made this
 
@@ -79,12 +79,12 @@ Free browser tool: which Octopath Traveler 2 jobs should I use? (party recommend
 ```markdown
 Made a free Job Recommender for OT2 — works for both Switch and Steam versions, just runs in your browser:
 
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-job-recommender
+→ https://gametoolx.top/en/tools/octopath-traveler-2-job-recommender
 
 Pick the jobs you've unlocked + your playstyle, get a suggested 4-person party with a reasoning field explaining the strengths.
 
 There's also a System Requirements Checker if you want to know if your PC can run it:
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-system-checker
+→ https://gametoolx.top/en/tools/octopath-traveler-2-system-checker
 
 Both have Japanese versions too. No signup, no ads-as-you-use-it.
 
@@ -107,11 +107,11 @@ Feedback appreciated.
 歧路旅人II向けに2つツール作った、全部ブラウザで無料、登録不要。
 
 ■ 動作環境チェッカー
-https://gametoolx.cc/ja/tools/octopath-traveler-2-system-checker
+https://gametoolx.top/ja/tools/octopath-traveler-2-system-checker
 自分のPCで動作するかすぐ分かる、推奨設定も出る
 
 ■ 職業推奨ツール
-https://gametoolx.cc/ja/tools/octopath-traveler-2-job-recommender
+https://gametoolx.top/ja/tools/octopath-traveler-2-job-recommender
 解放済み職業と好みを入れると推奨パーティ提案、12種類の組み合わせ
 
 感想・要望あればコメントください。
@@ -141,16 +141,16 @@ No signup, no email, no paywall.
 
 Tweet 2/4:
 System Requirements Checker:
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-system-checker
-→ https://gametoolx.cc/ja/tools/octopath-traveler-2-system-checker
+→ https://gametoolx.top/en/tools/octopath-traveler-2-system-checker
+→ https://gametoolx.top/ja/tools/octopath-traveler-2-system-checker
 
 Tells you if your PC can run OT2 and suggests graphics settings.
 [JP screenshot]
 
 Tweet 3/4:
 Job Recommender:
-→ https://gametoolx.cc/en/tools/octopath-traveler-2-job-recommender
-→ https://gametoolx.cc/ja/tools/octopath-traveler-2-job-recommender
+→ https://gametoolx.top/en/tools/octopath-traveler-2-job-recommender
+→ https://gametoolx.top/ja/tools/octopath-traveler-2-job-recommender
 
 Pick unlocked jobs + playstyle → get a party suggestion with reasoning.
 6 playstyles, 12 templates.
