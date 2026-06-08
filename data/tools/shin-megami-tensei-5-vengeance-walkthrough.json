@@ -771,178 +771,1001 @@
       {
         "id": "endings-quick",
         "title": {
-          "en": "Quick Endings Reference",
-          "ja": "エンディング早見表",
-          "ko": "엔딩 빠른 참조",
-          "zh": "结局速查表"
+          "zh": "全结局攻略（无剧透）",
+          "en": "All Endings Guide (no spoilers)",
+          "ja": "全エンド攻略（ネタバレなし）",
+          "ko": "전 엔딩 가이드 (스포일러 없음)"
         },
         "blocks": [
           {
             "type": "callout",
             "variant": "info",
             "text": {
-              "en": "For full endings guide (with all 6 endings, exact choices, and True Ending requirements), see our dedicated **Endings Tracker** tool. Below is the TL;DR.",
-              "ja": "全6エンディング・正確な選択肢・真エンディング条件は専用「エンドガイド」ツールへ。下記は要約。",
-              "ko": "전 6개 엔딩, 정확한 선택, 진엔딩 조건은 전용 '엔딩 가이드' 도구 참고. 아래는 요약.",
-              "zh": "完整 6 结局 + 准确选项 + 真结局条件见专用 **全结局攻略** 工具。下面是速查版。"
+              "zh": "本节为**全结局攻略**——不剧透，仅列出达成方法。每个结局下展示**关键选择**。来源：Pser_hanser 攻略 + MegaTen Fandom Wiki 交叉验证。",
+              "en": "All-endings guide — **no spoilers**, only how to achieve each ending. Each section lists **key choices** below. Sources: Pser_hanser guide + MegaTen Fandom Wiki (cross-verify).",
+              "ja": "全エンド攻略——**ネタバレなし**、達成方法のみ。各エンド下に**キー選択肢**。",
+              "ko": "전 엔딩 가이드 — **스포일러 없음**, 달성 방법만. 각 엔딩 아래에 **핵심 선택지**."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "创世线 · 秩序路线",
+              "en": "Creation Route · Law Ending",
+              "ja": "創世ルート・秩序",
+              "ko": "창세 라인 · 질서"
             }
           },
           {
-            "type": "table",
-            "header": {
-              "en": [
-                "Route",
-                "Ending",
-                "Key Choice"
-              ],
-              "ja": [
-                "ルート",
-                "エンディング",
-                "選択肢"
-              ],
-              "ko": [
-                "루트",
-                "엔딩",
-                "선택"
-              ],
-              "zh": [
-                "路线",
-                "结局",
-                "关键选择"
-              ]
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "倾向以**秩序（维持）**为主。在最终决战前保持秩序倾向即可触发。",
+              "en": "Lean **Law (Maintain)** alignment. Maintain Law alignment through the game; trigger automatically at the final choice.",
+              "ja": "**秩序（維持）** 傾向を維持。最終決戦前に秩序傾向なら自動発動。",
+              "ko": "**질서(유지)** 성향 유지. 최종 결전 전 질서 성향이면 자동 발동."
             },
-            "rows": [
+            "sources": [
               {
-                "en": [
-                  "Creation",
-                  "Law (律法永恒)",
-                  "Protect divine order"
-                ],
-                "ja": [
-                  "創世",
-                  "法 (律法永恒)",
-                  "神の秩序を守る"
-                ],
-                "ko": [
-                  "창세",
-                  "법 (율법영원)",
-                  "신의 질서를 지킨다"
-                ],
-                "zh": [
-                  "创世",
-                  "秩序 (律法永恒)",
-                  "守护神的秩序"
-                ]
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               },
               {
-                "en": [
-                  "Creation",
-                  "Neutral (破坏王座)",
-                  "Destroy the throne"
-                ],
-                "ja": [
-                  "創世",
-                  "中立 (王座破壊)",
-                  "玉座を破壊する"
-                ],
-                "ko": [
-                  "창세",
-                  "중립 (옥좌 파괴)",
-                  "옥좌를 파괴한다"
-                ],
-                "zh": [
-                  "创世",
-                  "中立 (破坏王座)",
-                  "破坏王座"
-                ]
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **不牵手**（进入创世线）",
+              "en": "[Start] Tokyo Tower: choose **'Don't hold her hand'** (enter Creation Route)",
+              "ja": "【開始】東京タワー：「手を取らない」（創世ルート入り）",
+              "ko": "[시작] 도쿄타워: '손을 잡지 않는다' (창세 라인 진입)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               },
               {
-                "en": [
-                  "Creation",
-                  "Chaos (原初的混沌)",
-                  "Recreate Tokyo"
-                ],
-                "ja": [
-                  "創世",
-                  "混沌 (原初の混沌)",
-                  "東京を救うために創世する"
-                ],
-                "ko": [
-                  "창세",
-                  "혼돈 (원초의 혼돈)",
-                  "도쿄를 구하기 위해 창세"
-                ],
-                "zh": [
-                  "创世",
-                  "混沌 (原初的混沌)",
-                  "为拯救东京而创世"
-                ]
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】尽量接 **秩序倾向** 的支线任务（飞天/拉南希、权天使 等）",
+              "en": "[Mid-game] Take **Law-aligned** side quests (Apsaras/Leanan Sidhe, Power etc.)",
+              "ja": "【中期】**秩序傾向** サイドクエスト（アプサラス/リーランシー、Power 等）",
+              "ko": "[중반] **질서 성향** 사이드 퀘스트 (압사라/리넌시, 파워 등)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               },
               {
-                "en": [
-                  "Creation",
-                  "TRUE (启示的创世)",
-                  "Destroy throne + all 4 sub-quest chains"
-                ],
-                "ja": [
-                  "創世",
-                  "真 (啓示の創世)",
-                  "玉座破壊 + 4つのサブクエスト"
-                ],
-                "ko": [
-                  "창세",
-                  "진 (계시의 창세)",
-                  "옥좌 파괴 + 4개 서브 퀘스트"
-                ],
-                "zh": [
-                  "创世",
-                  "**真结局 (启示的创世)**",
-                  "破坏王座 + 4 条支线全做完"
-                ]
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】角色倾向 = 秩序（蓝色顺转）",
+              "en": "[Pre-final] Alignment = Law (blue clockwise spin)",
+              "ja": "【決戦前】属性 = 秩序（青順転）",
+              "ko": "[결전 전] 성향 = 질서 (파란 순전)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               },
               {
-                "en": [
-                  "Vengeance",
-                  "Law",
-                  "Lean Law OR be Neutral + 'I can't let you'"
-                ],
-                "ja": [
-                  "復讐",
-                  "法",
-                  "秩序寄り OR 中立+「あなたにはそれをしてほしくない」"
-                ],
-                "ko": [
-                  "복수",
-                  "법",
-                  "질서 쪽 OR 중립+ '당신이 그렇게 하는 건 허락할 수 없어'"
-                ],
-                "zh": [
-                  "复仇",
-                  "秩序",
-                  "倾向秩序，或中立+「不能让你那么做」"
-                ]
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【最终】选择符合秩序倾向的选项 → 获得专属神意技",
+              "en": "[Final] Choose the Law-aligned option → earn unique Magatsuhi skill",
+              "ja": "【最終】秩序傾向選択肢 → 専用禍技",
+              "ko": "[최종] 질서 성향 선택 → 전용 마가츠히"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               },
               {
-                "en": [
-                  "Vengeance",
-                  "Chaos",
-                  "Lean Chaos OR be Neutral + 'I'm glad you're okay'"
-                ],
-                "ja": [
-                  "復讐",
-                  "混沌",
-                  "混沌寄り OR 中立+「無事でよかった」"
-                ],
-                "ko": [
-                  "복수",
-                  "혼돈",
-                  "혼돈 쪽 OR 중립+ '무사해서 다행이야'"
-                ],
-                "zh": [
-                  "复仇",
-                  "混沌",
-                  "倾向混沌，或中立+「你没事真好」"
-                ]
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "创世线 · 中立路线",
+              "en": "Creation Route · Neutral Ending",
+              "ja": "創世ルート・中立",
+              "ko": "창세 라인 · 중립"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "倾向**混沌/秩序平衡**或直接中立（人类）。",
+              "en": "Balanced Chaos/Law or directly Neutral (Human).",
+              "ja": "**混沌/秩序 バランス** または中立（人間）。",
+              "ko": "**혼돈/질서 균형** 또는 직접 중립(인간)."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **不牵手**（创世线）",
+              "en": "[Start] Tokyo Tower: **'Don't hold her hand'** (Creation Route)",
+              "ja": "【開始】東京タワー：「手を取らない」（創世ルート）",
+              "ko": "[시작] 도쿄타워: '손을 잡지 않는다' (창세 라인)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】双向任务中保持中立/摇摆（影响度大/小都 3 项以上才能定性）",
+              "en": "[Mid-game] Stay neutral on dual-affinity quests (need 3+ picks to set alignment)",
+              "ja": "【中期】双向タスク中立維持（3+ 選択で傾向固定）",
+              "ko": "[중반] 양방향 퀘스트에서 중립 유지 (3+ 선택해야 성향 고정)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】倾向 = 中立（不转，左右摇摆）",
+              "en": "[Pre-final] Alignment = Neutral (no spin)",
+              "ja": "【決戦前】中立（回転なし）",
+              "ko": "[결전 전] 중립 (회전 없음)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【最终】可以选择任一倾向的选项",
+              "en": "[Final] Can choose either Law or Chaos option",
+              "ja": "【最終】秩序/混沌 どちらでも選択可",
+              "ko": "[최종] 질서/혼돈 어느 쪽이든 선택 가능"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "创世线 · 混沌路线",
+              "en": "Creation Route · Chaos Ending",
+              "ja": "創世ルート・混沌",
+              "ko": "창세 라인 · 혼돈"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "倾向以**混沌（变革）**为主。",
+              "en": "Lean **Chaos (Revolution)** alignment.",
+              "ja": "**混沌（変革）** 傾向。",
+              "ko": "**혼돈(변혁)** 성향."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **不牵手**（创世线）",
+              "en": "[Start] Tokyo Tower: **'Don't hold her hand'** (Creation Route)",
+              "ja": "【開始】東京タワー：「手を取らない」（創世ルート）",
+              "ko": "[시작] 도쿄타워: '손을 잡지 않는다' (창세 라인)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】接 **混沌倾向** 支线（莉莉姆、权天使 反向 等）",
+              "en": "[Mid-game] Take **Chaos-aligned** quests (Lilim, Power inverse etc.)",
+              "ja": "【中期】**混沌傾向** サイド（リリム、パワー逆 等）",
+              "ko": "[중반] **혼돈 성향** 사이드 (릴림, 파워 역 등)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】倾向 = 混沌（蓝色逆转）",
+              "en": "[Pre-final] Alignment = Chaos (blue counter-clockwise)",
+              "ja": "【決戦前】混沌（青逆転）",
+              "ko": "[결전 전] 혼돈 (파란 역전)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【最终】选择符合混沌倾向的选项 → 获得专属神意技",
+              "en": "[Final] Choose Chaos-aligned option → earn unique Magatsuhi skill",
+              "ja": "【最終】混沌傾向選択肢 → 専用禍技",
+              "ko": "[최종] 혼돈 성향 선택 → 전용 마가츠히"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "创世线 · 真结局 ⚠️（涉及关键剧情节点）",
+              "en": "Creation Route · True Ending ⚠️",
+              "ja": "創世ルート・真エンド ⚠️",
+              "ko": "창세 라인 · 진엔딩 ⚠️"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "在创世线满足特定条件后解锁的隐藏结局。需要反向选择倾向。",
+              "en": "Hidden ending in Creation Route. Requires inverse-alignment playthrough.",
+              "ja": "創世ルートの隠しエンド。逆属性選択が必要。",
+              "ko": "창세 라인의 히든 엔딩. 역성향 플레이 필요."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【基础】完成创世线一次（任意结局）",
+              "en": "[Base] Complete Creation Route once (any ending)",
+              "ja": "【基礎】創世ルート 1 週目（任意エンド）",
+              "ko": "[기본] 창세 라인 1회 (어떤 엔딩이든)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【关键】在万古神殿门口完成 **默基瑟德** 任务链",
+              "en": "[Key] Complete **Melchizedek** quest chain at Temple of Eternity entrance",
+              "ja": "【鍵】万古神殿入口で **メルキゼデク** タスク",
+              "ko": "[핵심] 만고신전 입구 **멜기세덱** 퀘스트"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【支线】解锁 **米迦勒 + 贝利亚** 双向任务",
+              "en": "[Side] Unlock **Michael + Belial** dual-affinity quest",
+              "ja": "【サイド】**ミカエル + ベリアル** 双向解放",
+              "ko": "[사이드] **미카엘 + 벨리알** 양방향 해제"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【惩罚】反向选择倾向 → 无专属神意奖励 + 需缴 **66万 罚金**",
+              "en": "[Penalty] Inverse-alignment choice → no Magatsuhi reward + **¥660,000 fee**",
+              "ja": "【罰】逆属性 → 禍技なし + **66万 罰金**",
+              "ko": "[벌칙] 역성향 → 마가츠히 없음 + **66만 벌금**"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【触发】完成 4 条支线链 + 触发特定剧情节点 → 真结局",
+              "en": "[Trigger] Complete 4 sub-quest chains + specific plot event → True Ending",
+              "ja": "【発動】4 サブチェーン + 特定イベント → 真エンド",
+              "ko": "[발동] 4 서브체인 + 특정 이벤트 → 진엔딩"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "复仇线 · 秩序路线",
+              "en": "Vengeance Route · Law Ending",
+              "ja": "復讐ルート・秩序",
+              "ko": "복수 라인 · 질서"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "复仇篇结局 1：倾向以**多绪**为主，触发秩序路线。",
+              "en": "Vengeance ending 1: Lean **Tao/Yazu** alignment.",
+              "ja": "復讐編エンド 1：**多緒** 傾向、秩序ルート発動。",
+              "ko": "복수편 엔딩 1: **다오/야즈** 성향, 질서 루트."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **牵手**（进入复仇线）",
+              "en": "[Start] Tokyo Tower: **'Hold her hand'** (enter Vengeance Route)",
+              "ja": "【開始】東京タワー：「手を取る」（復讐ルート）",
+              "ko": "[시작] 도쿄타워: '손을 잡는다' (복수 라인)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】接 **秩序倾向** 支线（推荐接 拉南希/飞天/莉莉姆 等）",
+              "en": "[Mid-game] Take **Law-aligned** quests (Leanan Sidhe/Apsaras/Lilim etc.)",
+              "ja": "【中期】**秩序傾向** サイド（リーランシー/アプサラス/リリム 等）",
+              "ko": "[중반] **질서 성향** 사이드 (리넌시/압사라/릴림 등)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】倾向 = 秩序（或中立）",
+              "en": "[Pre-final] Alignment = Law (or Neutral)",
+              "ja": "【決戦前】秩序（または中立）",
+              "ko": "[결전 전] 질서 (또는 중립)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【最终】倾向**多绪**，至高天选择秩序选项 → 秩序路线",
+              "en": "[Final] Lean toward **Tao**, choose Law option in Empyrean → Law ending",
+              "ja": "【最終】**多緒** 傾向、至高天で秩序選択 → 秩序ルート",
+              "ko": "[최종] **다오** 성향, 지고천에서 질서 선택 → 질서 루트"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "复仇线 · 混沌路线",
+              "en": "Vengeance Route · Chaos Ending",
+              "ja": "復讐ルート・混沌",
+              "ko": "복수 라인 · 혼돈"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "复仇篇结局 2：倾向以**洋子**为主，触发混沌路线。",
+              "en": "Vengeance ending 2: Lean **Yoko** alignment.",
+              "ja": "復讐編エンド 2：**洋子** 傾向、混沌ルート発動。",
+              "ko": "복수편 엔딩 2: **요코** 성향, 혼돈 루트."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **牵手**（复仇线）",
+              "en": "[Start] Tokyo Tower: **'Hold her hand'** (Vengeance Route)",
+              "ja": "【開始】東京タワー：「手を取る」（復讐ルート）",
+              "ko": "[시작] 도쿄타워: '손을 잡는다' (복수 라인)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】接 **混沌倾向** 支线（猫妖/霜精之王 反向 等）",
+              "en": "[Mid-game] Take **Chaos-aligned** quests (Kodama/King Frost inverse etc.)",
+              "ja": "【中期】**混沌傾向** サイド（コダマ/キングフロスト逆 等）",
+              "ko": "[중반] **혼돈 성향** 사이드 (코다마/킹 프로스트 역 등)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】倾向 = 混沌（或中立）",
+              "en": "[Pre-final] Alignment = Chaos (or Neutral)",
+              "ja": "【決戦前】混沌（または中立）",
+              "ko": "[결전 전] 혼돈 (또는 중립)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【最终】倾向**洋子**，至高天选择混沌选项 → 混沌路线",
+              "en": "[Final] Lean toward **Yoko**, choose Chaos option in Empyrean → Chaos ending",
+              "ja": "【最終】**洋子** 傾向、至高天で混沌選択 → 混沌ルート",
+              "ko": "[최종] **요코** 성향, 지고천에서 혼돈 선택 → 혼돈 루트"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "复仇线 · 中立（可选结局）",
+              "en": "Vengeance Route · Neutral (choice)",
+              "ja": "復讐ルート・中立（選択可）",
+              "ko": "복수 라인 · 중립 (선택 가능)"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "复仇线专属：进入至高天前保持**中立**，可在两个结局间自由选择。",
+              "en": "Vengeance-only: stay **Neutral** before Empyrean to freely pick either ending.",
+              "ja": "復讐限定：至高天前 **中立** 維持で両エンドから選択可。",
+              "ko": "복수 한정: 지고천 진입 전 **중립** 유지 시 두 엔딩 중 선택 가능."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【开局】东京塔选择 **牵手**（复仇线）",
+              "en": "[Start] Tokyo Tower: **'Hold her hand'** (Vengeance Route)",
+              "ja": "【開始】東京タワー：「手を取る」（復讐ルート）",
+              "ko": "[시작] 도쿄타워: '손을 잡는다' (복수 라인)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【中期】双向任务互相抵消 → 维持中立",
+              "en": "[Mid-game] Cancel out dual-affinity quests → maintain Neutral",
+              "ja": "【中期】双向タスク相殺 → 中立維持",
+              "ko": "[중반] 양방향 퀘스트 상쇄 → 중립 유지"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【决战前】倾向 = 中立（不转，左右摇摆）",
+              "en": "[Pre-final] Alignment = Neutral (no spin)",
+              "ja": "【決戦前】中立（回転なし）",
+              "ko": "[결전 전] 중립 (회전 없음)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【至高天】直接显示两个结局选项 → 玩家自由选择",
+              "en": "[Empyrean] Both endings offered → player picks",
+              "ja": "【至高天】両エンド提示 → 選択可",
+              "ko": "[지고천] 두 엔딩 제시 → 선택 가능"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "新周目 · 创生结局（终局）",
+              "en": "New Cycle · Creation Ending (post-game)",
+              "ja": "新周目・創生エンド（やり込み）",
+              "ko": "신주차 · 창생 엔딩 (포스트게임)"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "复仇线通关后开启新周目，全敌人 150 级，是游戏真·终局。",
+              "en": "Unlocks after Vengeance clear, all enemies Lv 150. The true endgame.",
+              "ja": "復讐線クリア後解禁、全敵 Lv 150。真のエンドゲーム。",
+              "ko": "복수 라인 클리어 후 해제, 모든 적 Lv 150. 진짜 엔드게임."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【前置】先通关**复仇线**一次（任意结局）",
+              "en": "[Pre-req] Clear **Vengeance Route** once (any ending)",
+              "ja": "【前置】復讐線クリア 1 回",
+              "ko": "[전제] 복수 라인 1회 클리어"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【读取】通关后 **读通关前档**（二周目也可以）",
+              "en": "[Load] **Load pre-clear save** (or NG+ works)",
+              "ja": "【読込】クリア前セーブ ロード",
+              "ko": "[로드] 클리어 전 세이브 로드"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【触发】3 图（新周目）出现新任务",
+              "en": "[Trigger] New quest in Ch3 (new cycle)",
+              "ja": "【発動】3 図（新周目）新タスク",
+              "ko": "[발동] 3장 (신주차) 새 퀘스트"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【战斗】击败撒旦 → 解锁 **创生结局** 奖杯",
+              "en": "[Battle] Defeat Satan → unlock **Creation Ending** trophy",
+              "ja": "【戦闘】サタン撃破 → 創生エンド",
+              "ko": "[전투] 사탄 격파 → 창생 엔딩"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "【支线】将门线（解锁条件：通关 + 大元帅明王 + 七星任务 + 荒霸图）",
+              "en": "[Side] Masakado route (unlock: clear + Daikokuten + 7-star quest + Arahabaki)",
+              "ja": "【サイド】将門線（解禁：クリア + 大黒天 + 七星 + 荒覇吐）",
+              "ko": "[사이드] 마사카도 (해제: 클리어 + 다이코쿠텐 + 칠성 + 아라하바키)"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
               }
             ]
           }
