@@ -11,6 +11,9 @@ data/gametoolx.db-shm
 # Local dev data
 data/.dev/
 
+# Private metadata (LLM image tags, internal-only)
+data/.private/
+
 # Dev logs
 .dev-stdout.log
 .dev-stderr.log

@@ -149,119 +149,29 @@
         "id": "chapter1",
         "title": {
           "zh": "第 1 章 港区（Ch1 主线）",
-          "en": "Chapter 1 Minato (Main Story)",
+          "en": "Chapter 1: Minato",
           "ja": "第1章 港区",
-          "ko": "1장 항구구"
+          "ko": "1장: 항구구"
         },
         "blocks": [
           {
             "type": "heading",
             "level": 3,
             "text": {
+              "zh": "第一个重大选择（关键）",
               "en": "The First Major Decision (CRITICAL)",
               "ja": "最初の重要な選択（超重要）",
-              "ko": "첫 번째 주요 선택 (매우 중요)",
-              "zh": "第一个重大选择（关键）"
+              "ko": "첫 번째 주요 선택 (매우 중요)"
             }
           },
           {
             "type": "callout",
             "variant": "warning",
             "text": {
-              "en": "Right after the school scene, you'll see a girl asking for your help. **Left option: 'Hold her hand'** → Vengeance Route (new story). **Right option: 'Don't hold her hand'** → Creation Route (original story). This is the ONLY way to switch routes. There is NO option to change later — start a new save.",
-              "ja": "学校シーン直後、少女が助けてと問いかけてくる。**左:「手を取る」** → 復讐の女神編（新ストーリー）。**右:「手を取らない」** → 創世の女神編（原版）。**後から変更不可** — 別セーブで再スタート。",
-              "ko": "학교 장면 직후, 소녀가 도와달라고 묻는다. **왼쪽: '손을 잡는다'** → 복수의 여신편 (새 스토리). **오른쪽: '손을 잡지 않는다'** → 창세의 여신편 (오리지널). **나중에 변경 불가** — 새 세이브로 재시작.",
-              "zh": "学校场景之后，少女向你求助。**左选项：「牵起她的手」** → 复仇女神篇（新剧情）。**右选项：「不牵她的手」** → 创世女神篇（原版）。**这是唯一的路线切换方式**，之后无法改变 — 想换路线只能开新存档。"
-            }
-          },
-          {
-            "type": "heading",
-            "level": 3,
-            "text": {
-              "en": "Walkthrough",
-              "ja": "進行ルート",
-              "ko": "진행 루트",
-              "zh": "流程要点"
-            }
-          },
-          {
-            "type": "step",
-            "text": {
-              "en": "After the dream and school conversation, head to Shinagawa Station West Exit. Listen to the NPC near the subway, then proceed to Takanawa Tunnel.",
-              "ja": "夢と学校会話後、品川駅西口へ。地下鉄のNPCの会話を聞き、高輪トンネルへ。",
-              "ko": "꿈과 학교 대화 후, 시나가와역 서쪽 출구로. 지하철의 NPC 대화를 들으며 다카나와 터널로.",
-              "zh": "梦境 + 学校对话后，去品川站西出口。听地铁 NPC 的话，前往高轮隧道。"
-            }
-          },
-          {
-            "type": "step",
-            "text": {
-              "en": "In the tunnel you'll encounter the anomaly and collapse. You'll wake up in the ruined Tokyo. The protagonist fuses with Aogami (青神) and becomes the Nahobino.",
-              "ja": "トンネルで異変に遭い倒れる。廃墟の東京で目覚め、青神と合体し創毘となる。",
-              "ko": "터널에서 이변을 만나 쓰러진다. 폐허가 된 도쿄에서 깨어나 아오가미와 합체해 나호비노가 된다.",
-              "zh": "隧道中遭遇异变倒下。在废墟东京醒来，与青神合体重生为「创毘」。"
-            }
-          },
-          {
-            "type": "step",
-            "text": {
-              "en": "Progress to Tokyo Tower. Collect red/yellow/green crystals along the way to restore HP/MP. Reach the first Dragon's Den (龍穴) for shopping.",
-              "ja": "東京タワーへ。途中で赤/黄/緑結晶を集めてHP/MP回復。最初の龍穴で買い物。",
-              "ko": "도쿄 타워로. 가는 길에 빨강/노랑/초록 결정 수집하여 HP/MP 회복. 첫 용궁(龍穴)에서 쇼핑.",
-              "zh": "前往东京塔。沿途收集红/黄/绿结晶恢复 HP/MP，到达第一个龙穴可以购物。"
-            }
-          },
-          {
-            "type": "region",
-            "name": {
-              "zh": "港区（Ch1 主区域）",
-              "en": "Minato (Ch1 area)",
-              "ja": "港区",
-              "ko": "항구구"
-            },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/gangqu-region-01.jpg",
-            "description": {
-              "zh": "港区为 Ch1 主区域，涵盖品川站、高轮隧道、东京塔、龙穴等关键地标。",
-              "en": "Minato is Ch1's main area, covering Shinagawa Station, Takanawa Tunnel, Tokyo Tower, and Dragon's Den.",
-              "ja": "港区は Ch1 の主要エリアで、品川駅、高輪トンネル、東京タワー、龍穴を含む。",
-              "ko": "항구구는 Ch1의 주요 지역으로, 시나가와역, 다카나와 터널, 도쿄타워, 용혈을 포함."
-            },
-            "sources": [
-              {
-                "lang": "zh",
-                "url": "",
-                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
-              }
-            ]
-          },
-          {
-            "type": "boss",
-            "id": "preta",
-            "name": {
-              "zh": "普雷塔",
-              "en": "Preta",
-              "ja": "プリタ",
-              "ko": "프레타"
-            },
-            "level": "1",
-            "race": {
-              "zh": "幽灵",
-              "en": "Haunt"
-            },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-01.jpg",
-            "weakness": {
-              "zh": "火/破魔",
-              "en": "Fire/Light"
-            },
-            "strategy": {
-              "zh": "教程首战。1-2回合击杀，不掉任何资源。建议主角学一个啃咬（小鬼基础威力130，暴击200）放 4 号位。",
-              "en": "Tutorial fight. Kill in 1-2 turns, no resources lost. Recommend protagonist learns Bite (Oni base power 130, crit 200) for slot 4.",
-              "ja": "チュートリアル戦闘。1-2 ターンで撃破、資源ロストなし。主人公に「バイト」を習得させる（鬼の基本威力 130、クリティカル 200）。",
-              "ko": "튜토리얼 전투. 1-2턴에 처치, 자원 손실 없음. 주인공에게 '물기'(오니 기본 위력 130, 크리티컬 200) 습득 추천."
-            },
-            "team_rec": {
-              "zh": "主角 + 皮可西（回血） + 葛雷姆林（异常）。复仇线打完第一个祸种后会有 2 个队友帮忙，可以抓个小鬼放 4 号位开技能用啃咬。",
-              "en": "Protagonist + Pixie (heal) + Gremlins (ailment). Vengeance route: 2 allies help after the first Abscess — catch an Oni, put in slot 4 with Bite."
+              "zh": "学校场景之后，少女向你求助。**左选项：「牵起她的手」** → 复仇女神篇（新剧情）。**右选项：「不牵她的手」** → 创世女神篇（原版）。这是唯一的路线切换方法，之后无法改动。想换路线只能开新存档。",
+              "en": "Right after the school scene, a girl asks for your help. **Left: 'Hold her hand'** → Vengeance Route (new story). **Right: 'Don't hold her hand'** → Creation Route (original). The ONLY way to switch routes. No option to change later → start a new save.",
+              "ja": "学校シーン直後、少女が助けてと問いかけてくる。**左：「手を取る」** → 復讐の女神編（新ストーリー）。**右：「手を取らない」** → 創世の女神編（原版）。後から変更不可、別セーブで再スタート。",
+              "ko": "학교 장면 직후, 소녀가 도와달라 묻는다. **왼쪽: '손을 잡는다'** → 복수의 여신편 (새 스토리). **오른쪽: '손을 잡지 않는다'** → 창세의 여신편 (오리지널). 나중 변경 불가, 새 세이브."
             },
             "sources": [
               {
@@ -271,17 +181,77 @@
               },
               {
                 "lang": "en",
-                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
-                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+                "url": "https://megamitensei.fandom.com/wiki/Shin_Megami_Tensei_V:_Vengeance",
+                "attribution": "MegaTen Fandom Wiki"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "zh": "流程要点",
+              "en": "Walkthrough",
+              "ja": "進行ルート",
+              "ko": "진행 루트"
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "梦境 + 学校对话后，去品川站西出口。听地铁 NPC 的话，前往高轮隧道。",
+              "en": "After the dream and school conversation, head to Shinagawa Station West Exit. Listen to the NPC near the subway, then proceed to Takanawa Tunnel.",
+              "ja": "夢と学校会話後、品川駅西口へ。地下鉄のNPCの会話を聞き、高輪トンネルへ。",
+              "ko": "꿈과 학교 대화 후, 시나가와역 서쪽 출구로. 지하철 NPC 대화 청취, 다카나와 터널로."
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "隧道中遭遇异变倒下。在废墟东京醒来，与青神合体重生为「创毘」。",
+              "en": "In the tunnel you'll encounter the anomaly and collapse. You'll wake up in the ruined Tokyo. The protagonist fuses with Aogami and becomes the Nahobino.",
+              "ja": "トンネルで異変に遭い倒れる。廃墟の東京で目覚め、青神と合体し創毘となる。",
+              "ko": "터널에서 이변 만나 쓰러진다. 폐허 도쿄에서 깨어나 아오가미와 합체, 나호비노가 된다."
+            }
+          },
+          {
+            "type": "step",
+            "text": {
+              "zh": "前往东京塔。沿途收集红/黄/绿结晶恢复 HP/MP，到达第一个龙穴购物。",
+              "en": "Progress to Tokyo Tower. Collect red/yellow/green crystals along the way to restore HP/MP. Reach the first Dragon's Den for shopping.",
+              "ja": "東京タワーへ。途中で赤/黄/緑結晶を集めてHP/MP回復。最初の龍穴で買い物。",
+              "ko": "도쿄 타워로. 도중 빨강/노랑/초록 결정 수집, HP/MP 회복. 첫 용혈(龍穴)에서 쇼핑."
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "zh": "港区 (Minato)",
+              "en": "Minato District",
+              "ja": "港区",
+              "ko": "항구구"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/gangqu-region-01.jpg",
+            "description": {
+              "zh": "港区为 Ch1 主区域，涵盖品川站、高轮隧道、东京塔、龙穴等关键地标。下表为港区全部主线 + 可选 BOSS（含等级、弱点、策略、配队建议）。",
+              "en": "Minato is Ch1's main area, covering Shinagawa Station, Takanawa Tunnel, Tokyo Tower, and Dragon's Den. Below is the full boss list (main story + optional) with level/weakness/strategy/team rec.",
+              "ja": "港区は Ch1 の主要エリアで、品川駅、高輪トンネル、東京タワー、龍穴を含む。下記は港区の全部のボス（メイン + オプション）リスト。",
+              "ko": "항구구는 Ch1의 주요 지역으로, 시나가와역, 다카나와 터널, 도쿄타워, 용혈 포함. 아래는 항구구 전체 보스(메인+옵션) 목록."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               }
             ]
           },
           {
             "type": "boss",
-            "id": "daemon",
+            "id": "daimon",
             "name": {
               "zh": "戴蒙",
-              "en": "Daemon",
+              "en": "Daimon",
               "ja": "ダイモン",
               "ko": "다이몬"
             },
@@ -292,16 +262,18 @@
             },
             "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-02.jpg",
             "weakness": {
-              "zh": "电/冰",
-              "en": "Electric/Ice"
+              "zh": "电",
+              "en": "Electric"
             },
             "strategy": {
-              "zh": "Brute 鬼族，常驻带个火技能。一图很多祸种 + 早期 BOSS 都弱火，1 图走魔打完拿到道具洗点力也可以。",
-              "en": "Brute demon. Always bring fire skills. Many Abscesses + early bosses in Ch1 are weak to fire. Use magic build for Ch1, then respec after."
+              "zh": "一图第一个主线 BOSS。常驻带火技能——一图很多祸种 + 早期 BOSS 都弱火。1 图走魔打完拿到道具洗点力也可以。",
+              "en": "First main story boss in Ch1. Always carry fire skills — many Abscesses and early bosses are weak to fire. Magic build for Ch1 works, then respec after.",
+              "ja": "Ch1 最初のメインボス。常に火スキル持参——一図の禍種 + 初期ボスに火が弱点多し。一図魔ビルドで OK、後に振り直し可能。",
+              "ko": "Ch1 첫 메인 보스. 항상 화염 스킬 휴대——1장 많은 화종 + 초기 보스 약점. 1장 마법 빌드 OK, 이후 리스펙."
             },
             "team_rec": {
-              "zh": "主角 + 皮可西 + 葛雷姆林。复仇线打完第一个祸种补了 1 个新 BOSS（2 个队友帮忙），抓个小鬼放 4 号位开技能。",
-              "en": "Protagonist + Pixie + Gremlins. Vengeance route adds a new boss after first Abscess (2 allies help) — catch Oni, slot 4 with Bite."
+              "zh": "主角 + 皮可西（回血）+ 葛雷姆林（异常）。复仇线打完第一个祸种补一个新 BOSS，2 个队友帮忙，抓小鬼放 4 号位用啃咬。",
+              "en": "Protagonist + Pixie (heal) + Gremlins (ailment). Vengeance adds a new boss after the first Abscess — 2 allies help, catch Oni, slot 4 with Bite."
             },
             "sources": [
               {
@@ -332,12 +304,12 @@
             },
             "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-03.jpg",
             "weakness": {
-              "zh": "冲击/破魔",
-              "en": "Force/Light"
+              "zh": "冲击 / 破魔",
+              "en": "Force / Light"
             },
             "strategy": {
-              "zh": "一阶段祸灵是姆多，暗障石即可；二阶段祸灵为物理，控制好血条，进二阶段可以秒杀。其中有人需要带拉坤达（降防）。",
-              "en": "Phase 1 Magatsuhi is Almighty — use Almighty Block. Phase 2 Magatsuhi is physical — control HP, can burst it on phase transition. Someone needs Rakukaja (defense buff)."
+              "zh": "东京塔前 boss。一阶段祸灵是姆多（暗障石即可），二阶段祸灵为物理（控制血条，进二阶段可秒杀）。有人需要带拉坤达（降防）。",
+              "en": "Pre-Tokyo-Tower boss. Phase 1 Magatsuhi is Almighty (Almighty Block). Phase 2 Magatsuhi is Physical (control HP, burst on phase transition). Someone needs Rakukaja."
             },
             "team_rec": {
               "zh": "复仇线：美人鱼 + 主角 + 队友 + 涯米涯米。创世线：拉南希 + 主角 + 涯米涯米 + 美人鱼。",
@@ -358,30 +330,30 @@
           },
           {
             "type": "boss",
-            "id": "vengeance-18",
+            "id": "naamah",
             "name": {
-              "zh": "复仇限定 BOSS (18级)",
-              "en": "Vengeance Boss",
-              "ja": "復讐限定ボス",
-              "ko": "복수 한정 보스"
+              "zh": "拿玛 (Naamah)",
+              "en": "Naamah",
+              "ja": "ナアマ",
+              "ko": "나아마"
             },
             "level": "18",
             "race": {
-              "zh": "—",
-              "en": "—"
+              "zh": "夜魔",
+              "en": "Night"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-04.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-08.jpg",
             "weakness": {
               "zh": "物理",
               "en": "Physical"
             },
             "strategy": {
-              "zh": "弱物理就好解决。最麻烦就是魅惑，做奶妈耐诱惑，谁中解了就行。",
-              "en": "Weak to physical — straightforward. Charm is the main nuisance. Make healer charm-resistant. Cure anyone hit."
+              "zh": "复仇线限定 boss。弱物理——好解决。最麻烦是魅惑，做奶妈耐诱惑，谁中解了就行。打完后等级到了记得合成：皮可西（电克制鬼）+ 鸡龙（火专属 + 幻惑）。",
+              "en": "Vengeance-only boss. Weak to physical — straightforward. Charm is the main nuisance. Make healer charm-resistant. After clear, fuse 2 Pixie + Cait Sith."
             },
             "team_rec": {
-              "zh": "打完之后，等级到了记得合成两个皮可西（电克制鬼 + 主线组合）+ 鸡龙（专属技能火 + 幻惑让敌方看错）。",
-              "en": "After clearing, level up and fuse 2 Pixie (electric anti-undead + main comp) + Cait Sith (fire skill + Sukunda)."
+              "zh": "—",
+              "en": "—"
             },
             "sources": [
               {
@@ -398,26 +370,66 @@
           },
           {
             "type": "boss",
-            "id": "andras-eligor",
+            "id": "andras",
             "name": {
-              "zh": "安德拉斯 + 艾力格 (组合BOSS)",
-              "en": "Andras + Eligor (pair boss)",
-              "ja": "アンドラス+エリゴール (ペアボス)",
-              "ko": "안드라스+엘리고르 (페어 보스)"
+              "zh": "安德拉斯 (Andras)",
+              "en": "Andras",
+              "ja": "アンドラス",
+              "ko": "안드라스"
             },
-            "level": "19-20",
+            "level": "19",
             "race": {
-              "zh": "堕天使 + 堕天使",
-              "en": "Fallen x2"
+              "zh": "堕天使",
+              "en": "Fallen"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-05.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-11.jpg",
             "weakness": {
               "zh": "—",
               "en": "—"
             },
             "strategy": {
-              "zh": "两鸟一骑士，建议优先集火杀掉安德拉斯。",
-              "en": "Two birds and a knight. Focus-fire Andras first."
+              "zh": "组合 BOSS（两鸟一骑士）。建议优先集火杀掉安德拉斯。",
+              "en": "Pair boss (two birds + knight). Focus-fire Andras first."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "eligor",
+            "name": {
+              "zh": "艾力格 (Eligor)",
+              "en": "Eligor",
+              "ja": "エリゴール",
+              "ko": "엘리고르"
+            },
+            "level": "20",
+            "race": {
+              "zh": "堕天使",
+              "en": "Fallen"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-12.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "组合 BOSS 第二只。集火杀完安德拉斯后再处理。",
+              "en": "Pair boss #2. Clear Andras first, then handle Eligor."
             },
             "team_rec": {
               "zh": "—",
@@ -440,7 +452,7 @@
             "type": "boss",
             "id": "nuwa",
             "name": {
-              "zh": "女娲",
+              "zh": "女娲 (Nuwa)",
               "en": "Nuwa",
               "ja": "女媧",
               "ko": "여와"
@@ -450,14 +462,14 @@
               "zh": "女神",
               "en": "Lady"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-07.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-19.jpg",
             "weakness": {
               "zh": "火",
               "en": "Fire"
             },
             "strategy": {
-              "zh": "正常打，就是弱火，祸灵技能打冲击，所以多带耐冲的人。半血就结束，可以用冲击障石躲祸灵回合。或者合成冲无效的人一直挑衅无限吃行动。",
-              "en": "Standard: weak to fire, Magatsuhi is Force. Bring Force-resistant teammates. Half-HP ends it — use Force Block to skip Magatsuhi turn. Or build a Force-immune provoke tank to eat all actions."
+              "zh": "弱火，祸灵技能打冲击。多带耐冲的人。半血结束，可用冲击障石躲祸灵回合。合成冲无效的人挑衅无限吃行动。",
+              "en": "Weak to fire, Magatsuhi is Force. Bring Force-resistant. Half-HP ends it — Force Block skips Magatsuhi. Provoke tank with Force immunity can eat all actions."
             },
             "team_rec": {
               "zh": "鸡龙 + 主角 + 福图娜（拉坤达）+ 山灵（挑衅）。",
@@ -480,7 +492,7 @@
             "type": "boss",
             "id": "interlude-21",
             "name": {
-              "zh": "间章 BOSS (21级)",
+              "zh": "间章 BOSS",
               "en": "Interlude Boss",
               "ja": "間章ボス",
               "ko": "간장 보스"
@@ -490,14 +502,14 @@
               "zh": "—",
               "en": "—"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-09.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-20.jpg",
             "weakness": {
               "zh": "—",
               "en": "—"
             },
             "strategy": {
-              "zh": "复仇线：打完女娲之后建议做几个耐魅惑的仲魔应对间章 BOSS。创世线：直接干就完事了。",
-              "en": "Vengeance: build charm-resistant demons after Nuwa for this fight. Creation: brute force works fine."
+              "zh": "复仇线打完女娲后做几个耐魅惑的仲魔应对。创世线直接干。",
+              "en": "Vengeance: build charm-resistant after Nuwa. Creation: brute force works."
             },
             "team_rec": {
               "zh": "—",
@@ -518,30 +530,30 @@
           },
           {
             "type": "boss",
-            "id": "school-23",
+            "id": "lahmu",
             "name": {
-              "zh": "学院 BOSS (23级)",
-              "en": "School Boss",
-              "ja": "学院ボス",
-              "ko": "학원 보스"
+              "zh": "拉赫穆 (Lahmu)",
+              "en": "Lahmu",
+              "ja": "ラーフム",
+              "ko": "라흐무"
             },
             "level": "23",
             "race": {
+              "zh": "污秽",
+              "en": "Vile"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-22.jpg",
+            "weakness": {
               "zh": "—",
               "en": "—"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-11.jpg",
-            "weakness": {
-              "zh": "冲击 + 破魔",
-              "en": "Force + Light"
-            },
             "strategy": {
-              "zh": "拯救学院的 BOSS 会因为路线不同有些许区别。想省事的话，接着用福尔图娜 + 山灵组合，但是福尔图娜弱姆多，做好换成天钿女命。",
-              "en": "Saving the school boss — slightly different by route. For easy clear, reuse Fortuna + Onmoraki, but Fortuna is weak to Almighty — swap to Ame-no-Uzume if needed."
+              "zh": "学院 BOSS，弱冲击+破魔。会因路线不同有些许区别。福尔图娜弱姆多，做好换天钿女命。",
+              "en": "School boss, weak to Force+Light. Slight differences by route. Fortuna is weak to Almighty — swap Ame-no-Uzume if needed."
             },
             "team_rec": {
-              "zh": "小狐狸的警戒呼嘿挺好用，抓了和克鲁波克鲁有特殊对话。佳塔由：Hard 难度带斯坤达降回避会更好打，套路适用于斗牛士。",
-              "en": "Kodama Lulu's 'Hue' skill is great. Catch it for special dialogue with Koppa Tengu. For Jatayu: on Hard, Sukunda (evasion debuff) makes it easier — same works for Matador."
+              "zh": "小狐狸警戒呼嘿挺好用，抓了和克鲁波克鲁有特殊对话。佳塔由：Hard 带斯坤达降回避更好打。",
+              "en": "Kodama Lulu's 'Hue' skill is great. Special dialogue with Koppa Tengu. For Jatayu: Sukunda on Hard."
             },
             "sources": [
               {
@@ -558,30 +570,30 @@
           },
           {
             "type": "boss",
-            "id": "shinagawa-28",
+            "id": "pazuzu",
             "name": {
-              "zh": "品川分歧 BOSS (28级)",
-              "en": "Shinagawa Branch Boss",
-              "ja": "品川分岐ボス",
-              "ko": "시나가와 분기 보스"
+              "zh": "帕祖祖 (Pazuzu)",
+              "en": "Pazuzu",
+              "ja": "パズズ",
+              "ko": "파주주"
             },
-            "level": "28",
+            "level": "16",
             "race": {
-              "zh": "—",
-              "en": "—"
+              "zh": "污秽",
+              "en": "Vile"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-13.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-05.jpg",
             "weakness": {
               "zh": "—",
               "en": "—"
             },
             "strategy": {
-              "zh": "打完之后，双向任务，对于 BOSS 来说莉莉姆肯定更好，要是需要摇摆路线可以先留着。",
-              "en": "After clear, dual-affinity quest. Lilim is better for boss fights — keep it if you need to flip alignment later."
+              "zh": "可选 BOSS，支线「被诅咒的美人鱼」相关。",
+              "en": "Optional boss, related to 'The Cursed Mermaids' side quest."
             },
             "team_rec": {
-              "zh": "阿提斯（第一个强忍）+ 天鹅人（应对 BOSS 备用）。主角缺输出，可以学轰雷、洗点玩一下，神之忌火这图能拿，非常好用。",
-              "en": "Attis (first solid Phys) + Byakko (backup). Protagonist can learn Vorpal Blade, respec — Murakumo/Takehaha available here, very strong."
+              "zh": "—",
+              "en": "—"
             },
             "sources": [
               {
@@ -598,30 +610,30 @@
           },
           {
             "type": "boss",
-            "id": "kogo-32",
+            "id": "apsaras",
             "name": {
-              "zh": "考哥 (32级)",
-              "en": "Kogo",
-              "ja": "コーゴ",
-              "ko": "코고"
+              "zh": "飞天 (Apsaras)",
+              "en": "Apsaras",
+              "ja": "アプサラス",
+              "ko": "압사라"
             },
-            "level": "32",
+            "level": "16",
             "race": {
-              "zh": "—",
-              "en": "—"
+              "zh": "天女",
+              "en": "Yoma"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-15.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-06.jpg",
             "weakness": {
               "zh": "—",
               "en": "—"
             },
             "strategy": {
-              "zh": "它自己优先加攻击，可以降攻击，浪费它行动。它攻击暴击率较高，祸灵技能是群火，记得用火障石头。",
-              "en": "Boss prioritizes Attack buff. Debuff Attack to waste its turns. High crit rate — Magatsuhi is AoE Fire, bring Fire Block stones."
+              "zh": "可选 BOSS，支线「水之精灵」(The Water Nymph)。",
+              "en": "Optional boss, side quest 'The Water Nymph'."
             },
             "team_rec": {
-              "zh": "下面就是猛毒狂猎组合，技能基础威力 160，打中毒者的威力 320。创世路线用图特，复仇路线用羽蛇神。AOE 冰 + Debuff 是杰克霜精的 Promax 版本。",
-              "en": "After: Venom/Toxic combo (base 160 power, x2 vs poisoned). Creation: Thoth, Vengeance: Quetzalcoatl. AoE Ice + Debuff = Jack Frost Promax."
+              "zh": "—",
+              "en": "—"
             },
             "sources": [
               {
@@ -638,30 +650,70 @@
           },
           {
             "type": "boss",
-            "id": "ch2-final-38",
+            "id": "anahita",
             "name": {
-              "zh": "二图最终 BOSS (38级)",
-              "en": "Ch2 Final Boss",
-              "ja": "二図最終ボス",
-              "ko": "2장 최종 보스"
+              "zh": "阿娜希塔 (Anahita)",
+              "en": "Anahita",
+              "ja": "アナーヒタ",
+              "ko": "아나히타"
             },
-            "level": "38",
+            "level": "18",
             "race": {
-              "zh": "Vile 拉赫穆",
-              "en": "Vile Lahmu"
+              "zh": "女神",
+              "en": "Megami"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-19.jpg",
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-10.jpg",
             "weakness": {
               "zh": "—",
               "en": "—"
             },
             "strategy": {
-              "zh": "复仇线 / 创世线 BOSS 不同。战前准备：确保 Tetrakarn / Makarakarn、蓄力防大伤害。",
-              "en": "Vengeance / Creation routes have different forms. Prep: Tetrakarn/Makarakarn, Charge for big hits."
+              "zh": "可选 BOSS，支线「清净的源泉」(The Demon of the Spring)。",
+              "en": "Optional boss, side quest 'The Demon of the Spring'."
             },
             "team_rec": {
-              "zh": "狄斯专属特技和技能组都是工具人的完美形态。",
-              "en": "Dis (Kali) is a perfect support unit with its unique skills and passives."
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "glasya",
+            "name": {
+              "zh": "格刺希亚拉波斯 (Glasya-Labolas)",
+              "en": "Glasya-Labolas",
+              "ja": "グラシャ・ラボラス",
+              "ko": "글라샤 라보라스"
+            },
+            "level": "8",
+            "race": {
+              "zh": "野兽",
+              "en": "Beast"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/gangqu-boss-01.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "可选早期 BOSS，Lv 8 即可挑战。",
+              "en": "Optional early boss, available at Lv 8."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
             },
             "sources": [
               {
