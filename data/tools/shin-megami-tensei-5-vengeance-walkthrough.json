@@ -1954,6 +1954,873 @@
                 "attribution": "MegaTen Fandom Wiki (cross-verify)"
               }
             ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": {
+              "zh": "毕业仲魔推荐（Lv 99 满级配置）",
+              "en": "End-Game Demon Builds (Lv 99)",
+              "ja": "卒業仲魔推薦 (Lv 99)",
+              "ko": "졸업 마물 추천 (Lv 99)"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "本节列出 Lv 99 终章可用的毕业仲魔推荐配置（胧一闪、创吼、亚蒙、撒旦等），每个恶魔附 type、build、resistances、备注。Build 来自 Pser_hanser 攻略（本地存档）。",
+              "en": "End-game Lv 99 demon builds for SMT5V (Oboro-issetsu, Forneus, Ammon, Satan, etc.). Each entry has type, build, resistances, and notes. Builds paraphrased from Pser_hanser guide.",
+              "ja": "SMT5V 終章 Lv 99 卒業仲魔（胧一闪、フォルネウス、アモン、サタン等）。各エントリに type、build、resistances、備考。",
+              "ko": "SMT5V 종장 Lv 99 졸업 마물 추천 (오보로잇셋츠, 포르네우스, 아몬, 사탄 등)."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-oboro-issetsu",
+            "name": {
+              "zh": "胧一闪",
+              "en": "Oboro-issetsu (胧一闪)",
+              "ja": "胧一闪",
+              "ko": "Oboro-issetsu (胧一闪)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "物理稳定天花板配置。",
+              "en": "物理稳定天花板配置。"
+            },
+            "team_rec": {
+              "zh": "胧一闪 + 双物理盈满 + 专注会心 + 龙眼 + 无恙 + 不屈斗志 + 贯穿的斗气",
+              "en": "胧一闪 + 双物理盈满 + 专注会心 + 龙眼 + 无恙 + 不屈斗志 + 贯穿的斗气"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-hayataro",
+            "name": {
+              "zh": "早太郎",
+              "en": "Hayataro (早太郎)",
+              "ja": "早太郎",
+              "ko": "Hayataro (早太郎)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-196-142c5a1a.jpg",
+            "weakness": {
+              "zh": "冲击吸收/反/无效",
+              "en": "冲击吸收/反/无效"
+            },
+            "strategy": {
+              "zh": "专属高倍率，但成长力一般。",
+              "en": "专属高倍率，但成长力一般。"
+            },
+            "team_rec": {
+              "zh": "绝·闪光斩烈牙 (基础 260, 暴击 400) + 双杀戮 + 双物理盈满 + 专注会心 + 不屈斗志 + 冲击吸反无",
+              "en": "绝·闪光斩烈牙 (基础 260, 暴击 400) + 双杀戮 + 双物理盈满 + 专注会心 + 不屈斗志 + 冲击吸反无"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-kali",
+            "name": {
+              "zh": "迦梨",
+              "en": "Kali (迦梨)",
+              "ja": "迦梨",
+              "ko": "Kali (迦梨)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-262-74cc4663.jpg",
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "适合打没物理耐性的菜刀队。",
+              "en": "适合打没物理耐性的菜刀队。"
+            },
+            "team_rec": {
+              "zh": "胧一闪组合换 蓄力（辅助适应度低）。被动吃被动物理秘诀加成。",
+              "en": "胧一闪组合换 蓄力（辅助适应度低）。被动吃被动物理秘诀加成。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-yoshitsune",
+            "name": {
+              "zh": "义经",
+              "en": "Yoshitsune (义经)",
+              "ja": "義経",
+              "ko": "Yoshitsune (义经)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "被动建议 4 号位末尾触发拾弓。",
+              "en": "被动建议 4 号位末尾触发拾弓。"
+            },
+            "team_rec": {
+              "zh": "胧一闪经典组合，无恙换 强化糖球/女巫诅咒/兽眼 (特殊情况下换 咒杀吸反无)。力速双成长。",
+              "en": "胧一闪经典组合，无恙换 强化糖球/女巫诅咒/兽眼 (特殊情况下换 咒杀吸反无)。力速双成长。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-odin",
+            "name": {
+              "zh": "奥丁",
+              "en": "Odin (奥丁)",
+              "ja": "オーディン",
+              "ko": "Odin (奥丁)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/chests/chest-052-41c4efef.jpg",
+            "weakness": {
+              "zh": "自带贯穿物理",
+              "en": "自带贯穿物理"
+            },
+            "strategy": {
+              "zh": "为数不多自带贯穿，被动赋予蓄力。",
+              "en": "为数不多自带贯穿，被动赋予蓄力。"
+            },
+            "team_rec": {
+              "zh": "胧一闪组合，不屈斗志换 永恒之枪，贯穿斗气换 蓄力（可选）。小盈满可换冲击吸反无。",
+              "en": "胧一闪组合，不屈斗志换 永恒之枪，贯穿斗气换 蓄力（可选）。小盈满可换冲击吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-dagda",
+            "name": {
+              "zh": "达格达",
+              "en": "Dagda (达格达)",
+              "ja": "ダグザ",
+              "ko": "Dagda (达格达)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-262-74cc4663.jpg",
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "DLC，力成长 33 独一档（力体）。专属在 Hard/创生难触发。",
+              "en": "DLC，力成长 33 独一档（力体）。专属在 Hard/创生难触发。"
+            },
+            "team_rec": {
+              "zh": "胧一闪经典组合，小盈满可换 破魔吸反无。",
+              "en": "胧一闪经典组合，小盈满可换 破魔吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-masakado",
+            "name": {
+              "zh": "将门",
+              "en": "Masakado (平将门)",
+              "ja": "平将門",
+              "ko": "Masakado (平将门)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-262-74cc4663.jpg",
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "特性：每种 buff +40% 暴击 + 10% 伤害（蓄力/挑衅/祸时/攻防命中 各算 1 状态）。",
+              "en": "特性：每种 buff +40% 暴击 + 10% 伤害（蓄力/挑衅/祸时/攻防命中 各算 1 状态）。"
+            },
+            "team_rec": {
+              "zh": "万能流：天诛杀 + 双万能盈满 + 双杀戮 + 专注会心 + 不屈 + 蓄力。非创生走万能，创生走胧一闪。",
+              "en": "万能流：天诛杀 + 双万能盈满 + 双杀戮 + 专注会心 + 不屈 + 蓄力。非创生走万能，创生走胧一闪。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-arioch",
+            "name": {
+              "zh": "亚略",
+              "en": "Arioch (亚略)",
+              "ja": "アリオク",
+              "ko": "Arioch (亚略)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "物理",
+              "en": "Physical"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-123-5b9d4d66.jpg",
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "被动：背包中濒死加 5% 伤害（24 死亡仲魔总 2.2x）。速度低需补速。",
+              "en": "被动：背包中濒死加 5% 伤害（24 死亡仲魔总 2.2x）。速度低需补速。"
+            },
+            "team_rec": {
+              "zh": "配置 1：胧一闪 + 双物理盈满 + 专注会心 + 龙眼 + 无恙 + 兽眼 + 贯穿斗气。配置 2（极限）：虚无艺术 + 双物理盈满 + 专注会心 + 双杀戮 + 不屈斗志 + 贯穿斗气。",
+              "en": "配置 1：胧一闪 + 双物理盈满 + 专注会心 + 龙眼 + 无恙 + 兽眼 + 贯穿斗气。配置 2（极限）：虚无艺术 + 双物理盈满 + 专注会心 + 双杀戮 + 不屈斗志 + 贯穿斗气。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-ammon",
+            "name": {
+              "zh": "亚蒙",
+              "en": "Ammon (亚蒙)",
+              "ja": "アモン",
+              "ko": "Ammon (亚蒙)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "火",
+              "en": "Fire"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "冰冻吸反无",
+              "en": "冰冻吸反无"
+            },
+            "strategy": {
+              "zh": "火系备用，力体成长，专属 230 略高于孔斯 215。",
+              "en": "火系备用，力体成长，专属 230 略高于孔斯 215。"
+            },
+            "team_rec": {
+              "zh": "米吉多之火 + 双火焰盈满 + 大摩脉 + 冰冻吸反无 + 不屈斗志 + 无恙 + 专心致志。",
+              "en": "米吉多之火 + 双火焰盈满 + 大摩脉 + 冰冻吸反无 + 不屈斗志 + 无恙 + 专心致志。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-khonsu-ra",
+            "name": {
+              "zh": "孔苏·拉",
+              "en": "Khonsu Ra (孔苏·拉)",
+              "ja": "コーンス・ラ",
+              "ko": "Khonsu Ra (孔苏·拉)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "火",
+              "en": "Fire"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-260-298e359f.jpg",
+            "weakness": {
+              "zh": "冰冻 + 物理吸反无",
+              "en": "冰冻 + 物理吸反无"
+            },
+            "strategy": {
+              "zh": "火系 T1，专属群体特大贯穿 + 降攻一阶段。被动可加魔法队友伤害。",
+              "en": "火系 T1，专属群体特大贯穿 + 降攻一阶段。被动可加魔法队友伤害。"
+            },
+            "team_rec": {
+              "zh": "赫里奥波里斯的烈阳 + 双火焰盈满 + 大摩脉 + 冰冻吸反无 + 不屈斗志 + 物理吸反无 + 专心致志。",
+              "en": "赫里奥波里斯的烈阳 + 双火焰盈满 + 大摩脉 + 冰冻吸反无 + 不屈斗志 + 物理吸反无 + 专心致志。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-soryu",
+            "name": {
+              "zh": "创吼",
+              "en": "Soryu / Forneus (创吼)",
+              "ja": "フォルネウス",
+              "ko": "Soryu / Forneus (创吼)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "冰",
+              "en": "Ice"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "冲击吸反无",
+              "en": "冲击吸反无"
+            },
+            "strategy": {
+              "zh": "冰系输出天花板，可吃冰百级双加成，运低主 AOE。",
+              "en": "冰系输出天花板，可吃冰百级双加成，运低主 AOE。"
+            },
+            "team_rec": {
+              "zh": "谎神螺旋斩 + 双冰盈满 + 双杀戮 + 不屈斗志 + 冲击吸反无 + 贯穿斗气。",
+              "en": "谎神螺旋斩 + 双冰盈满 + 双杀戮 + 不屈斗志 + 冲击吸反无 + 贯穿斗气。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-zeus",
+            "name": {
+              "zh": "宙斯",
+              "en": "Zeus (宙斯)",
+              "ja": "ゼウス",
+              "ko": "Zeus (宙斯)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "电",
+              "en": "Electric"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "冲击吸反无",
+              "en": "冲击吸反无"
+            },
+            "strategy": {
+              "zh": "力速成长，专属 300 基础威力。被动：存货越多命中暴击越高。",
+              "en": "力速成长，专属 300 基础威力。被动：存货越多命中暴击越高。"
+            },
+            "team_rec": {
+              "zh": "雷霆 + 粉碎万物 + 双电击盈满 + 不屈斗志 + 双杀戮的愉悦 + 冲击吸反无。",
+              "en": "雷霆 + 粉碎万物 + 双电击盈满 + 不屈斗志 + 双杀戮的愉悦 + 冲击吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-baal",
+            "name": {
+              "zh": "巴力",
+              "en": "Baal (巴力)",
+              "ja": "バール",
+              "ko": "Baal (巴力)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "电",
+              "en": "Electric"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "冰冻 + 物理吸反无",
+              "en": "冰冻 + 物理吸反无"
+            },
+            "strategy": {
+              "zh": "—",
+              "en": "—"
+            },
+            "team_rec": {
+              "zh": "吉欧巴力翁 + 双电击盈满 + 不屈斗志 + 大魔脉 + 贯穿斗气 + 冰冻吸反无 + 物理吸反无。",
+              "en": "吉欧巴力翁 + 双电击盈满 + 不屈斗志 + 大魔脉 + 贯穿斗气 + 冰冻吸反无 + 物理吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-nuwa",
+            "name": {
+              "zh": "女娲",
+              "en": "Nuwa (女娲)",
+              "ja": "女媧",
+              "ko": "Nuwa (女娲)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "冲击",
+              "en": "Force"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-019-1748932a.jpg",
+            "weakness": {
+              "zh": "火焰 + 物理吸",
+              "en": "火焰 + 物理吸"
+            },
+            "strategy": {
+              "zh": "—",
+              "en": "—"
+            },
+            "team_rec": {
+              "zh": "土偶发破 + 杀风激 + 双冲击盈满 + 不屈斗志 + 高阶再吸收 + 火焰吸反无 + 物理吸。",
+              "en": "土偶发破 + 杀风激 + 双冲击盈满 + 不屈斗志 + 高阶再吸收 + 火焰吸反无 + 物理吸。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-metatron",
+            "name": {
+              "zh": "曼塞马特",
+              "en": "Metatron (曼塞马特)",
+              "ja": "メタトロン",
+              "ko": "Metatron (曼塞马特)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "万能",
+              "en": "Almighty"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "（暂无弱点数据）",
+              "en": "(no weakness data)"
+            },
+            "strategy": {
+              "zh": "被动配种族祸灵技能神之巨盾，可骗行动。专属可打异常。",
+              "en": "被动配种族祸灵技能神之巨盾，可骗行动。专属可打异常。"
+            },
+            "team_rec": {
+              "zh": "伟大请愿 + 哈玛巴力翁 + 大活脉 + 活脉 + 大魔脉 + 不屈斗志 + 女巫诅咒 + 强化糖球。",
+              "en": "伟大请愿 + 哈玛巴力翁 + 大活脉 + 活脉 + 大魔脉 + 不屈斗志 + 女巫诅咒 + 强化糖球。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-alice",
+            "name": {
+              "zh": "爱丽丝",
+              "en": "Alice (爱丽丝)",
+              "ja": "アリス",
+              "ko": "Alice (爱丽丝)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "咒杀",
+              "en": "Death"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "破魔 + 物理吸反无",
+              "en": "破魔 + 物理吸反无"
+            },
+            "strategy": {
+              "zh": "魔成长极高，专属 2-6 段。",
+              "en": "魔成长极高，专属 2-6 段。"
+            },
+            "team_rec": {
+              "zh": "可以为我而死吗 (基础 135, 2-6 段) + 双咒杀盈满 + 姆多翁 + 破魔吸反无 + 不屈斗志 + 高阶再吸收 + 物理吸反无。",
+              "en": "可以为我而死吗 (基础 135, 2-6 段) + 双咒杀盈满 + 姆多翁 + 破魔吸反无 + 不屈斗志 + 高阶再吸收 + 物理吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-mephisto",
+            "name": {
+              "zh": "墨菲斯托",
+              "en": "Mephisto (墨菲斯托)",
+              "ja": "メフィスト",
+              "ko": "Mephisto (墨菲斯托)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "咒杀",
+              "en": "Death"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-326-072310ce.jpg",
+            "weakness": {
+              "zh": "破魔吸反无",
+              "en": "破魔吸反无"
+            },
+            "strategy": {
+              "zh": "成长均衡，被动增伤，+4 辅助适应度。",
+              "en": "成长均衡，被动增伤，+4 辅助适应度。"
+            },
+            "team_rec": {
+              "zh": "沃普尔吉斯之夜 (330 威力) + 双咒杀盈满 + 破魔吸反无 + 不屈斗志 + 强化糖球 + 强化延长·大 + 女巫诅咒。",
+              "en": "沃普尔吉斯之夜 (330 威力) + 双咒杀盈满 + 破魔吸反无 + 不屈斗志 + 强化糖球 + 强化延长·大 + 女巫诅咒。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-beelzebub",
+            "name": {
+              "zh": "别西卜",
+              "en": "Beelzebub (别西卜)",
+              "ja": "ベルゼブブ",
+              "ko": "Beelzebub (别西卜)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "咒杀",
+              "en": "Death"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-326-072310ce.jpg",
+            "weakness": {
+              "zh": "火焰 + 物理吸反无",
+              "en": "火焰 + 物理吸反无"
+            },
+            "strategy": {
+              "zh": "专属被动一次上两层 DEBUFF，自带强化延长。",
+              "en": "专属被动一次上两层 DEBUFF，自带强化延长。"
+            },
+            "team_rec": {
+              "zh": "死蝇的送葬 (基础 320) + 女巫诅咒 + 强化延长·大 + 强化延长 + 双咒杀盈满 + 火焰吸反无 + 物理吸反无/不屈斗志/大魔脉。",
+              "en": "死蝇的送葬 (基础 320) + 女巫诅咒 + 强化延长·大 + 强化延长 + 双咒杀盈满 + 火焰吸反无 + 物理吸反无/不屈斗志/大魔脉。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-idun",
+            "name": {
+              "zh": "伊登",
+              "en": "Idun (伊登)",
+              "ja": "イズン",
+              "ko": "Idun (伊登)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "奶妈",
+              "en": "Heal"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "电击吸反无",
+              "en": "电击吸反无"
+            },
+            "strategy": {
+              "zh": "伊登 vs 多绪二选一。纯奶妈。",
+              "en": "伊登 vs 多绪二选一。纯奶妈。"
+            },
+            "team_rec": {
+              "zh": "金苹果 + 双恢复盈满 + 大魔脉 + 强化延长·大 + 力之馈赠 + 不屈斗志 + 电击吸反无。",
+              "en": "金苹果 + 双恢复盈满 + 大魔脉 + 强化延长·大 + 力之馈赠 + 不屈斗志 + 电击吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-konohana",
+            "name": {
+              "zh": "木花朔耶",
+              "en": "Konohana Sakuya (木花朔耶)",
+              "ja": "コノハナサクヤ",
+              "ko": "Konohana Sakuya (木花朔耶)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "奶妈",
+              "en": "Heal"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "电击吸反无",
+              "en": "电击吸反无"
+            },
+            "strategy": {
+              "zh": "最强奶妈。",
+              "en": "最强奶妈。"
+            },
+            "team_rec": {
+              "zh": "木花之荣 + 恢复兆倍盈满 + 魔脉 + 大魔脉 + 强化延长·大 + 力之馈赠 + 不屈斗志 + 电击吸反无。",
+              "en": "木花之荣 + 恢复兆倍盈满 + 魔脉 + 大魔脉 + 强化延长·大 + 力之馈赠 + 不屈斗志 + 电击吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demon-demeter",
+            "name": {
+              "zh": "德墨忒尔",
+              "en": "Demeter (德墨忒尔)",
+              "ja": "デメテル",
+              "ko": "Demeter (德墨忒尔)"
+            },
+            "level": "99",
+            "race": {
+              "zh": "奶妈",
+              "en": "Heal"
+            },
+            "image": null,
+            "weakness": {
+              "zh": "物无 + 火吸反无",
+              "en": "物无 + 火吸反无"
+            },
+            "strategy": {
+              "zh": "被动没用但专属自带血量突破上限。专属不吃盈满。",
+              "en": "被动没用但专属自带血量突破上限。专属不吃盈满。"
+            },
+            "team_rec": {
+              "zh": "厄琉西斯的丰收 + 大魔脉 + 强化糖球 + 强化延长 + 强化延长·大 + 力之馈赠 + 物无吸反无 + 火吸反无。",
+              "en": "厄琉西斯的丰收 + 大魔脉 + 强化糖球 + 强化延长 + 强化延长·大 + 力之馈赠 + 物无吸反无 + 火吸反无。"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://gametoolx.top/zh/games/shin-megami-tensei-5-vengeance",
+                "attribution": "GameToolX 攻略库"
+              }
+            ]
           }
         ]
       }
