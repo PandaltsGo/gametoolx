@@ -1171,6 +1171,791 @@
             ]
           }
         ]
+      },
+      {
+        "id": "shinagawa",
+        "title": {
+          "zh": "第 2 章 品川",
+          "en": "Chapter 2: Shinagawa",
+          "ja": "第2章 品川",
+          "ko": "2장: 시나가와"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "zh": "品川主线要点",
+              "en": "Shinagawa Walkthrough",
+              "ja": "品川進行ルート",
+              "ko": "시나가와 진행"
+            }
+          },
+          {
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "品川分歧 BOSS 28级：打完二图最终 BOSS 后会有双向任务（莉莉姆 vs 霜精之王 等），按倾向选择。",
+              "en": "Shinagawa branch boss Lv 28: after the second map final boss, dual-affinity quests unlock (Lilim vs King Frost etc.) — pick by alignment.",
+              "ja": "品川分岐ボス Lv 28：二図最終ボス後、双向任務（リリム vs フロストキング等）が解放、傾向に応じて選択。",
+              "ko": "시나가와 분기 보스 Lv 28: 2맵 최종 보스 후 양방향 퀘스트(릴림 vs 프로스트 킹 등) 해제, 성향에 따라 선택."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "region",
+            "name": {
+              "zh": "品川 (Shinagawa)",
+              "en": "Shinagawa District",
+              "ja": "品川区",
+              "ko": "시나가와구"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-024-e367afa9.jpg",
+            "description": {
+              "zh": "品川区为 Ch2 主区域，含天龙断（高轮隧道→品川→东京塔后续→二图最终 BOSS）。",
+              "en": "Shinagawa is Ch2 area, covering the second main dungeon and the Lahmu final boss fight."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "belphegor",
+            "name": {
+              "zh": "贝尔芬格 (Belphegor)",
+              "en": "Belphegor",
+              "ja": "ベルフェゴール",
+              "ko": "벨페고르"
+            },
+            "level": "38",
+            "race": {
+              "zh": "暴君",
+              "en": "Tyrant"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-096-cc55f80b.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "品川主线 BOSS，专属任务「Tennozu 之暴君」(The Tyrant of Tennozu)。Tyrant 种族多用物理/万能输出。",
+              "en": "Shinagawa main boss, sidequest 'The Tyrant of Tennozu'. Tyrant race — use physical/almighty damage."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "lahmu-shinagawa",
+            "name": {
+              "zh": "拉赫穆 (Lahmu) - 品川",
+              "en": "Lahmu (Shinagawa)",
+              "ja": "ラーフム (品川)",
+              "ko": "라흐무 (시나가와)"
+            },
+            "level": "38",
+            "race": {
+              "zh": "污秽",
+              "en": "Vile"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-099-4eef0263.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "品川最终 BOSS（复仇/创世线不同）。留意多阶段战斗 + 拉赫穆的召唤。",
+              "en": "Shinagawa final boss (different Vengeance/Creation). Watch multi-phase + Lahmu's summons."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "lahmu-tentacle-shinagawa",
+            "name": {
+              "zh": "拉赫穆触手 (Lahmu's Tentacle)",
+              "en": "Lahmu's Tentacle",
+              "ja": "ラーフムの触手",
+              "ko": "라흐무의 촉수"
+            },
+            "level": "38",
+            "race": {
+              "zh": "污秽",
+              "en": "Vile"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-101-716879f5.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "拉赫穆召唤单位 x6，先清触手再杀拉赫穆本体。",
+              "en": "Lahmu's summoned tentacles (x6). Clear tentacles first, then main Lahmu body."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chiyoda-shinjuku",
+        "title": {
+          "zh": "第 3 章 千代田/新宿",
+          "en": "Chapter 3: Chiyoda / Shinjuku",
+          "ja": "第3章 千代田/新宿",
+          "ko": "3장: 치요다/신주쿠"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "zh": "千代田/新宿 主线",
+              "en": "Chiyoda / Shinjuku",
+              "ja": "千代田/新宿",
+              "ko": "치요다/신주쿠"
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "zh": "新宿 (Shinjuku)",
+              "en": "Shinjuku District",
+              "ja": "新宿区",
+              "ko": "신주쿠구"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-029-39bda9dc.jpg",
+            "description": {
+              "zh": "新宿区为 Ch3 主区域之一，复兴女神线/复仇女神线剧情在此分叉。",
+              "en": "Shinjuku is one of Ch3's main areas; Canon of Creation and Canon of Vengeance diverge here."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "shohei-yakumo",
+            "name": {
+              "zh": "八云诏衡 (Shohei Yakumo)",
+              "en": "Shohei Yakumo",
+              "ja": "八雲詔衡",
+              "ko": "쇼헤이 야쿠모"
+            },
+            "level": "49",
+            "race": {
+              "zh": "人类",
+              "en": "Human"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-181-5c53e2be.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "反派的同伴，神秘男人，要杀光所有恶魔。是新宿/千代田主线 BOSS 之一。",
+              "en": "Antagonist ally, mysterious man who wants to slay all demons. Shinagawa/Chiyoda main boss."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "sahadiel",
+            "name": {
+              "zh": "萨哈吉尔 (Sahadiel)",
+              "en": "Sahadiel",
+              "ja": "サハキエル",
+              "ko": "사하다엘"
+            },
+            "level": "50",
+            "race": {
+              "zh": "天使长",
+              "en": "Herald"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-260-298e359f.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "间章 BOSS，天使阵营成员。",
+              "en": "Interlude boss, member of the angel faction."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "abdiel",
+            "name": {
+              "zh": "阿布迪亚尔 (Abdiel)",
+              "en": "Abdiel",
+              "ja": "アブディエル",
+              "ko": "압디엘"
+            },
+            "level": "58",
+            "race": {
+              "zh": "大天使",
+              "en": "Archangel"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-196-142c5a1a.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "主线 8 章关键 BOSS，Bethel 阵营天使长。和后续 Depraved Arm/Depraved Wing 一起出现（Lv 83 '万古神殿'路线 / '毁灭王座'路线）。",
+              "en": "Ch8 key boss, Bethel archangel. Also appears with Depraved Arm/Depraved Wing at Lv 83 ('Myriad Gods' / 'Destroy the Throne' routes)."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "taito",
+        "title": {
+          "zh": "第 4 章 台东",
+          "en": "Chapter 4: Taito",
+          "ja": "第4章 台東",
+          "ko": "4장: 타이토"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "zh": "台东 主线（拿三把钥匙）",
+              "en": "Taito Main Story (3 Keys)",
+              "ja": "台東メイン",
+              "ko": "타이토 메인"
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "zh": "台东 (Taito)",
+              "en": "Taito District",
+              "ja": "台東区",
+              "ko": "타이토구"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-031-2b59cae5.jpg",
+            "description": {
+              "zh": "台东区 Ch4 主线，涉及到三方势力，72级 BOSS 战。",
+              "en": "Taito is Ch4 area, involving three factions and Lv 72 boss fights."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "marici",
+            "name": {
+              "zh": "摩利支天 (Marici)",
+              "en": "Marici",
+              "ja": "摩利支天",
+              "ko": "마리치"
+            },
+            "level": "71",
+            "race": {
+              "zh": "鬼神",
+              "en": "Kishin"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/chests/chest-053-fee23202.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "台东可选 BOSS。鬼神种族，多用物理/破魔输出。",
+              "en": "Taito optional boss. Kishin race — use physical/almighty damage."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "odin",
+            "name": {
+              "zh": "奥丁 (Odin)",
+              "en": "Odin",
+              "ja": "オーディン",
+              "ko": "오딘"
+            },
+            "level": "73",
+            "race": {
+              "zh": "神族",
+              "en": "Deity"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/chests/chest-052-41c4efef.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "台东主线 8 章 BOSS，Lv 72。神族，自带贯穿物理技能。被动赋予蓄力。",
+              "en": "Ch8 Taito main boss, Lv 72. Deity race with pierce physical skill. Passive gives Charge to allies."
+            },
+            "team_rec": {
+              "zh": "胧一闪经典组合，不屈斗志换永恒之枪，贯穿斗气换蓄力。小盈满可换冲击吸反无。",
+              "en": "Oboro-issetsu build. Swap Guts for Gungnir, Pierce for Charge. Minor Victory can swap for Force absorb/repel/null."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "endgame",
+        "title": {
+          "zh": "终章 万古神殿 / 至高天 / 混沌之厅",
+          "en": "Endgame: Temple / Empyrean / Chaos Hall",
+          "ja": "終章 万古神殿/至高天/混沌之厅",
+          "ko": "종장: 만고신전/지고천/혼돈의 전당"
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": {
+              "zh": "万古神殿 / 至高天 / 混沌之厅",
+              "en": "Temple of Eternity / Empyrean / Chaos Hall",
+              "ja": "万古神殿/至高天/混沌之厅",
+              "ko": "만고신전/지고천/혼돈의 전당"
+            }
+          },
+          {
+            "type": "region",
+            "name": {
+              "zh": "万古神殿",
+              "en": "Temple of Eternity",
+              "ja": "万古神殿",
+              "ko": "만고신전"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-033-fbbef3a3.jpg",
+            "description": {
+              "zh": "终章高等级 BOSS 区域，Lv 80+。",
+              "en": "Endgame high-level boss area, Lv 80+."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "lilith",
+            "name": {
+              "zh": "莉莉丝 (Lilith)",
+              "en": "Lilith",
+              "ja": "リリス",
+              "ko": "릴리스"
+            },
+            "level": "81",
+            "race": {
+              "zh": "夜魔",
+              "en": "Night"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/demons/demon-123-5b9d4d66.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "Qadištu 阵营成员，万古神殿主线。",
+              "en": "Qadištu faction member, Myriad Gods temple main line."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "chi-you",
+            "name": {
+              "zh": "蚩尤 (Chi You)",
+              "en": "Chi You",
+              "ja": "蚩尤",
+              "ko": "치우"
+            },
+            "level": "87",
+            "race": {
+              "zh": "暴君",
+              "en": "Tyrant"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/chests/chest-057-460850b9.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "万古神殿高等级 BOSS，Lv 85+。",
+              "en": "Myriad Gods temple high-level boss, Lv 85+."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "beelzebub",
+            "name": {
+              "zh": "别西卜 (Beelzebub)",
+              "en": "Beelzebub",
+              "ja": "ベルゼブブ",
+              "ko": "벨제붑"
+            },
+            "level": "95",
+            "race": {
+              "zh": "暴君",
+              "en": "Tyrant"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-326-072310ce.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "至高天 BOSS，Lv 95+。",
+              "en": "Empyrean boss, Lv 95+."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "mara",
+            "name": {
+              "zh": "魔罗 (Mara)",
+              "en": "Mara",
+              "ja": "魔羅",
+              "ko": "마라"
+            },
+            "level": "99",
+            "race": {
+              "zh": "暴君",
+              "en": "Tyrant"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-312-ebb5c654.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "新周目 DLC BOSS，Lv 99。",
+              "en": "New cycle DLC boss, Lv 99."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "satan",
+            "name": {
+              "zh": "撒旦 (Satan)",
+              "en": "Satan",
+              "ja": "サタン",
+              "ko": "사탄"
+            },
+            "level": "99",
+            "race": {
+              "zh": "天使长",
+              "en": "Herald"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-314-03c066d8.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "新周目最终 BOSS，撒旦打法核心：人修罗被动+混沌的真理延迟撒旦行动 + 镜花水月躲米吉多方舟。",
+              "en": "New cycle final boss. Core strategy: Human修罗 passive + Truth of Chaos delays Satan, Mirror Flower dodge Megido Ark."
+            },
+            "team_rec": {
+              "zh": "一阶段每次招 2 个，二阶段每次招 3 个。混搭 5 病毒携带者 + 洛娃（病毒：幻惑/魅惑/混乱/睡眠/封技）。",
+              "en": "Phase 1 summons 2 demons, Phase 2 summons 3. Use 5 Virus Carriers + Loki (Virus: Charm/Love/Confuse/Sleep/Skill Seal)."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "masakado",
+            "name": {
+              "zh": "平将门 (Masakado)",
+              "en": "Masakado",
+              "ja": "平将門",
+              "ko": "마사카도"
+            },
+            "level": "99",
+            "race": {
+              "zh": "战神 / 鬼女",
+              "en": "Wargod / Fury"
+            },
+            "image": "/images/games/shin-megami-5-vengeance/demons/demon-262-74cc4663.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "真·隐藏 BOSS。解锁条件：通关复仇线 + 读通关前档 + 击败大元帅明王 + 完成七星任务 + 击败荒霸图。",
+              "en": "True hidden boss. Unlock: clear Vengeance + NG- save + defeat Daikokuten + 7-star quest + defeat Arahabaki."
+            },
+            "team_rec": {
+              "zh": "胧一闪 + 双物理盈满 + 专注会心 + 龙眼 + 无恙 + 兽眼/不屈 + 贯穿斗气。",
+              "en": "Oboro-issetsu + double Phys Victory + Focus Crit + Dragon Eye + Safe Passage + Beast Eye/Guts + Pierce."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "boss",
+            "id": "demi-fiend",
+            "name": {
+              "zh": "人修罗 (Demi-fiend)",
+              "en": "Demi-fiend",
+              "ja": "人修罗",
+              "ko": "데미 파인드"
+            },
+            "level": "99",
+            "race": {
+              "zh": "混沌王",
+              "en": "Chaos King"
+            },
+            "image": "/images/games/shin-megami-tensei-5-vengeance/misc/misc-310-fffdb358.jpg",
+            "weakness": {
+              "zh": "—",
+              "en": "—"
+            },
+            "strategy": {
+              "zh": "DLC BOSS，Nocturne 主角人修罗降临。专属被动+技能对撒旦有克制。",
+              "en": "DLC boss, Nocturne protagonist Demi-fiend. Special passive/skills counter Satan."
+            },
+            "team_rec": {
+              "zh": "—",
+              "en": "—"
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
+                "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
