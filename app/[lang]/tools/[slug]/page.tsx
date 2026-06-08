@@ -6,7 +6,6 @@ import SystemChecker from "@/components/tools/SystemChecker";
 import BuildRecommender from "@/components/tools/BuildRecommender";
 import EndingsTracker from "@/components/tools/EndingsTracker";
 import Walkthrough from "@/components/tools/Walkthrough";
-import RouteChooser from "@/components/tools/RouteChooser";
 import FusionCalculator from "@/components/tools/FusionCalculator";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
@@ -182,15 +181,11 @@ export default async function ToolPage({ params }: Props) {
           <Walkthrough lang={safeLang} tool={tool} />
         )}
 
-        {tool.type === "route-chooser" && (
-          <RouteChooser tool={tool} />
-        )}
-
         {tool.type === "fusion-calculator" && (
           <FusionCalculator tool={tool} />
         )}
 
-        {!["system-checker", "build-recommender", "endings-tracker", "walkthrough", "route-chooser", "fusion-calculator"].includes(tool.type) && (
+        {!["system-checker", "build-recommender", "endings-tracker", "walkthrough", "fusion-calculator"].includes(tool.type) && (
           <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6 text-center">
             <p className="text-yellow-300">
               🚧 Tool type &quot;{tool.type}&quot; not yet implemented
