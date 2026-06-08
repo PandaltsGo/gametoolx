@@ -99,11 +99,23 @@
           {
             "type": "paragraph",
             "text": {
-              "en": "Physical, Gun, Fire, Ice, Electric, Wind, Light, Dark, plus Almighty (万能) which ignores all resistances. Each demon has 2-4 weaknesses you can exploit. Scan enemies by attacking them once to reveal their weakness icon. Almighty is useful against neutral targets but can't crit or hit weakness.",
-              "ja": "物理・銃・火・氷・電・風・光・闇、万能(すべてを貫く属性)。各悪魔は2-4つの弱点を持つ。1回攻撃すれば弱点アイコンが表示される。万能は耐性を無視するがクリティカル・弱点発生は無し。",
-              "ko": "물리, 총, 불, 얼음, 번개, 풍, 빛, 어둠 + 만능(모든 내성 무시). 각 악마는 2-4개 약점 보유. 1회 공격 후 약점 아이콘 표시. 만능은 내성 무시하나 크리티컬·약점 발동 없음.",
-              "zh": "物理、枪、火、冰、雷、风、光、暗 8 种属性 + 万能（无视耐性）。每个恶魔有 2-4 个弱点。攻击 1 次后会显示弱点图标。**万能**虽然无视耐性，但不能暴击、不能触发弱点加成。"
-            }
+              "zh": "物理、枪、火、冰、雷、风、光、暗 8 种属性 + 万能（无视耐性，但有少数敌人有万能耐性/反）。每个恶魔有 2-4 个弱点。攻击 1 次后会显示弱点图标。**万能**无视大部分属性耐性，但**可以暴击、可以触发弱点图标**（只是不享受 1.5x 弱点加成，而是 1.0x + 暴击的 1.5x = 1.5x 总乘区）。",
+              "en": "Physical, Gun, Fire, Ice, Elec, Force, Light, Dark + Almighty (ignores resistances, but some enemies have almighty resist/repel). Each demon has 2-4 weaknesses. **Almighty can crit and trigger weakness icons** (1.0x weakness + 1.5x crit = 1.5x total).",
+              "ja": "物理・銃・火・氷・雷・風・光・闇 + 万能（耐性無視、ただし万能耐性/反射持ちも）。**万能でもクリティカル・弱点アイコンは発動する**。",
+              "ko": "물리/총/화/빙/뇌/풍/광/암 + 만능 (대부분 내성 무시, 일부 적은 만능 내성/반사). **만능도 크리티컬/약점 아이콘 발동 가능**."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略 + MegaTen Wiki 交叉验证"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Press_Turn",
+                "attribution": "MegaTen Fandom Wiki (Press Turn)"
+              }
+            ]
           },
           {
             "type": "heading",
@@ -118,11 +130,23 @@
           {
             "type": "paragraph",
             "text": {
-              "en": "Combine 2+ demons to create a new one. The result demon inherits skills from ingredients and gets stat bonuses based on ingredient levels. Special fusion uses 3-4 ingredients to unlock hidden/unique demons. Spirit fusion (精霊合体) uses elemental spirits to promote/demote demons within their race — essential for skill inheritance.",
-              "ja": "2体以上の悪魔を合体して新種を生成。素材はスキルと能力を継承。特殊合体は3-4素材で隠し・固有悪魔を解禁。精霊合体で同種族内昇格/降格、スキル継承に必須。",
-              "ko": "2마리 이상의 악마를 합체해 새 악마 생성. 재료는 스킬과 능력치 상속. 특수 합체는 3-4 재료로 히든/유니크 악마 해금. 정령 합체로 동일 종족 승급/강등, 스킬 상속에 필수.",
-              "zh": "2 只或以上恶魔合体生成新恶魔。**技能和属性**由素材继承，属性加成取决于素材等级。**特殊合体**用 3-4 只素材解锁隐藏/独占恶魔。**精灵合体**用元素精灵在同种族内升/降级——**技能继承的关键**。"
-            }
+              "zh": "2 只或以上恶魔合体生成新恶魔。**技能和属性**由素材继承，属性加成取决于素材等级。**特殊合体**用 3-4 只素材解锁隐藏/独占恶魔（如黄龙、米迦勒、路西法、湿婆、平将门）。**种族升降级**（race upgrade/downgrade）：同种族内高级恶魔可由 2 只低级同种族恶魔合成（如 Fairy 种族内 Pixie + Pixie = High Pixie）。这是**技能继承的关键**——选择素材时看种族 + 技能类型。",
+              "en": "2+ demons fuse to create a new demon. **Skills/stats inherited** from ingredients. **Special fusion** uses 3-4 ingredients for hidden/unique demons (Orochi, Michael, Lucifer, Shiva, Masakado). **Race upgrade/downgrade**: 2 lower-rarity demons of the same race can fuse to the next tier (e.g., Pixie + Pixie = High Pixie). This is the **key to skill inheritance** — match by race + skill type.",
+              "ja": "2 体以上の悪魔で合体。**スキル・属性**は素材継承。**特殊合体**は 3-4 素材で隠匿・専用悪魔（オロチ、ミカエル、ルシファー、シヴァ、マサカド）。**種族昇降格**：同種族内低級 2 体で次段階へ昇格可能。**スキル継承の鍵**。",
+              "ko": "2마리 이상 합체로 신악마 생성. **스킬/속성**은 재료에서 상속. **특수 합체**는 3-4 재료로 히든/전용 (오로치, 미카엘, 루시퍼, 시바, 마사카도). **종족 승강**: 같은 종족 내 저레벨 2마리로 다음 단계 승격. **스킬 상속의 핵심**."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略 + MegaTen Wiki 交叉验证"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Category:SMT_V_Fusion",
+                "attribution": "MegaTen Fandom Wiki (Fusion)"
+              }
+            ]
           },
           {
             "type": "heading",
@@ -137,11 +161,23 @@
           {
             "type": "paragraph",
             "text": {
-              "en": "Essences (神意) are passive skills unlocked with Glory (御严, earned from exploration/quests). Magatsuhi (禍霊槽) is a 4-slot gauge filled by red crystals/battles — each demon has a unique Magatsuhi skill that uses 1-4 slots. Charge them up to unleash powerful effects.",
-              "ja": "神意は御严(探索・支線で獲得)で解放するパッシブスキル。禍霊槽は4スロットのゲージ、赤結晶や戦闘で充填。各悪魔の固有禍霊スキルは1-4スロット消費し強力な効果。",
-              "ko": "신의는 어엄(탐색·의뢰로 획득)으로 해금하는 패시브 스킬. 마가츠히(禍霊槽)는 4슬롯 게이지, 붉은 결정이나 전투로 충전. 각 악마 고유 마가츠히 스킬은 1-4슬롯 소모하며 강력한 효과 발동.",
-              "zh": "**神意（被动）**用御严（探索/支线获取）解锁。**祸灵槽**是 4 格资源槽，红结晶或战斗积累。每只恶魔有独特的祸灵技能，消耗 1-4 槽位发动强力效果。"
-            }
+              "zh": "**神意（被动）**用御严（探索/支线获取）解锁，战斗中自动触发。**祸灵槽**是 4 格资源槽，红结晶或战斗积累可填充。每只恶魔有独特的祸灵技能，消耗 1-4 槽位发动强力效果（如米吉多方舟、祸时状态、群攻等）。祸灵技能无视属性抗性，但发动前有 1 回合蓄力。",
+              "en": "**Magatsuhi (passive)** unlocked via Glory (exploration/side quests), auto-triggered in battle. **Magatsuhi gauge** is a 4-segment resource bar filled by red crystals or battle actions. Each demon has unique Magatsuhi skills costing 1-4 segments. **Bypasses resistances** but has a 1-turn charge before activation.",
+              "ja": "**禍技（パッシブ）**は栄誉（探索/サブ）で解禁、戦闘中自動発動。**禍霊槽**は 4 段リソースバー、赤結晶または戦闘行動で充填。**属性耐性無視**だが発動前 1 ターン溜め必要。",
+              "ko": "**마가츠히(패시브)**는 영예(탐험/서브)로 해제, 전투 중 자동 발동. **마가츠히 게이지**는 4칸 리소스 바, 빨강 결정 또는 전투 행동으로 충전. **속성 내성 무시**지만 발동 전 1턴 차지 필요."
+            },
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 + MegaTen Wiki"
+              },
+              {
+                "lang": "en",
+                "url": "https://megamitensei.fandom.com/wiki/Magatsuhi",
+                "attribution": "MegaTen Fandom Wiki (Magatsuhi)"
+              }
+            ]
           }
         ]
       },
@@ -725,6 +761,120 @@
                 "lang": "en",
                 "url": "https://megamitensei.fandom.com/wiki/List_of_Shin_Megami_Tensei_V_Bosses",
                 "attribution": "MegaTen Fandom Wiki (cross-verify)"
+              }
+            ]
+          },
+          {
+            "type": "demon_selection",
+            "name": {
+              "zh": "港区章节仲魔",
+              "en": "Minato Chapter Demons",
+              "ja": "港区章仲魔",
+              "ko": "항구구 챕터 마물"
+            },
+            "demons": [
+              {
+                "name": {
+                  "zh": "小鬼",
+                  "en": "Oni"
+                },
+                "race": {
+                  "zh": "鬼族",
+                  "en": "Brute"
+                },
+                "level": "1-3",
+                "role": "啃咬输出 (暴击 200)",
+                "notes": {
+                  "zh": "前期主力，4 号位",
+                  "en": "Early DPS, slot 4"
+                }
+              },
+              {
+                "name": {
+                  "zh": "皮可西",
+                  "en": "Pixie"
+                },
+                "race": {
+                  "zh": "妖精",
+                  "en": "Fairy"
+                },
+                "level": "3-5",
+                "role": "回血辅助",
+                "notes": {
+                  "zh": "前期治疗",
+                  "en": "Healer"
+                }
+              },
+              {
+                "name": {
+                  "zh": "葛雷姆林",
+                  "en": "Gremlin"
+                },
+                "race": {
+                  "zh": "污秽",
+                  "en": "Foul"
+                },
+                "level": "4-6",
+                "role": "异常输出",
+                "notes": {
+                  "zh": "祸径前期",
+                  "en": "Early abscess"
+                }
+              },
+              {
+                "name": {
+                  "zh": "拉南希",
+                  "en": "Leanan Sidhe"
+                },
+                "race": {
+                  "zh": "天女",
+                  "en": "Yoma"
+                },
+                "level": "8-10",
+                "role": "海德拉前主力",
+                "notes": {
+                  "zh": "创世线海德拉 boss 前",
+                  "en": "Pre-Hydra Creation"
+                }
+              },
+              {
+                "name": {
+                  "zh": "美人鱼",
+                  "en": "Mermaid"
+                },
+                "race": {
+                  "zh": "女魔族",
+                  "en": "Femme"
+                },
+                "level": "10-12",
+                "role": "复仇线海德拉",
+                "notes": {
+                  "zh": "复仇线海德拉 boss 前",
+                  "en": "Pre-Hydra Vengeance"
+                }
+              },
+              {
+                "name": {
+                  "zh": "涯米涯米",
+                  "en": "Yami-Yami"
+                },
+                "race": {
+                  "zh": "魔王",
+                  "en": "Fiend"
+                },
+                "level": "12-15",
+                "role": "4 号位辅助 (队友越多伤害越高)",
+                "notes": {
+                  "zh": "海德拉 boss 4 号位",
+                  "en": "Slot 4 for Hydra"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档"
               }
             ]
           }
@@ -1828,168 +1978,782 @@
         ]
       },
       {
-        "id": "regional-maps",
+        "id": "regions",
         "title": {
-          "en": "Regional Maps",
-          "ja": "エリアマップ",
-          "ko": "지역 지도",
-          "zh": "区域地图"
+          "zh": "区域地图（结构化）",
+          "en": "Regional Maps (Structured)",
+          "ja": "区域地図（構造化）",
+          "ko": "지역 지도 (구조화)"
         },
         "blocks": [
           {
-            "type": "heading",
-            "level": 2,
+            "type": "callout",
+            "variant": "info",
             "text": {
-              "en": "Tokyo Region Map (Minato)",
-              "ja": "東京エリアマップ（港区）",
-              "ko": "도쿄 지역 지도 (미나토)",
-              "zh": "东京区域地图（港区）"
-            }
-          },
-          {
-            "type": "region",
-            "name": {
-              "en": "Minato Region",
-              "ja": "港区",
-              "ko": "미나토",
-              "zh": "港区"
-            },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-overview.jpg",
-            "description": {
-              "en": "The first explorable region in Vengeance. Contains early-game demons, level 8 story bosses, and the first route choice.",
-              "ja": "復讐篇で最初に探索可能なエリア。レベル8のストーリーBOSSと最初のルート選択を含む。",
-              "ko": "벤전스에서 처음 탐험 가능한 지역. 레벨 8 스토리 보스와 첫 루트 선택을 포함.",
-              "zh": "复仇篇首个可探索区域，包含8级剧情BOSS和首次路线选择。"
+              "zh": "本节列出每章节主区域的**结构化子地图**与**灵体列表**（灵体 = 章节内随机出现的特殊恶魔）。来源：Pser_hanser 攻略文档。",
+              "en": "Each chapter's main area broken into sub-maps + esper lists (esp = rare spawns). Source: Pser_hanser doc.",
+              "ja": "各章のメインエリアをサブマップ + 霊体リストに分解。",
+              "ko": "각 장 메인 영역을 서브맵 + 영체 리스트로 분해."
             },
             "sources": [
               {
                 "lang": "zh",
                 "url": "",
-                "attribution": "Pser_hanser (B站 / 飞书) — 真·女神转生V 复仇 攻略 (原飞书链接 2026-06-07 已失效)"
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               }
             ]
           },
           {
-            "type": "heading",
-            "level": 2,
-            "text": {
-              "en": "Demon Recommendations by Chapter",
-              "ja": "チャプター別悪魔推薦",
-              "ko": "챕터별 악마 추천",
-              "zh": "章节仲魔推荐"
-            }
-          },
-          {
-            "type": "region",
+            "type": "region_map",
             "name": {
-              "en": "Chapter 1-8 Recommended Demons",
-              "ja": "1-8章 推薦悪魔",
-              "ko": "1-8장 추천 악마",
-              "zh": "1-8章 推荐仲魔"
+              "zh": "港区（Ch1）",
+              "en": "Minato (Ch1)",
+              "ja": "港区",
+              "ko": "항구구"
             },
-            "image": "/images/games/shin-megami-tensei-5-vengeance/regions/region-overview.jpg",
-            "description": {
-              "en": "Demon tier list and fusion recommendations for the first chapter. Includes the level 8 story boss lineup.",
-              "ja": "第一章の悪魔ティアリストと合体推薦。レベル8ストーリーBOSS編成を含む。",
-              "ko": "1장 악마 티어 리스트와 합체 추천. 레벨 8 스토리 보스 조합 포함.",
-              "zh": "第一章仲魔分级与合体推荐，含8级剧情BOSS配队。"
-            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "港区表层（品川站-高轮隧道-东京塔）",
+                  "en": "Minato surface (Shinagawa-Takanawa Tower)",
+                  "ja": "港区表層",
+                  "ko": "항구구 표층"
+                },
+                "description": {
+                  "zh": "Ch1 主线路径，含龙穴、东京塔、东京都厅",
+                  "en": "Ch1 main path: Shinagawa → Takanawa → Tokyo Tower",
+                  "ja": "Ch1 メインルート",
+                  "ko": "Ch1 메인 경로"
+                }
+              },
+              {
+                "name": {
+                  "zh": "祸径：神保町（永田町）",
+                  "en": "Abscess: Jimbocho (Nagatacho)",
+                  "ja": "禍径：神保町",
+                  "ko": "화종: 진보초"
+                },
+                "description": {
+                  "zh": "永田町→东京议事堂房顶，恶魔遭遇概率高",
+                  "en": "Nagatacho → Diet Building rooftop, high demon encounter rate",
+                  "ja": "国会議事堂屋上、悪魔遭遇率高",
+                  "ko": "국회의사당 지붕, 악마 조우 확률 높음"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "小鬼灵体",
+                  "en": "Oni"
+                },
+                "type": "Foul"
+              },
+              {
+                "name": {
+                  "zh": "软泥怪灵体",
+                  "en": "Slime"
+                },
+                "type": "Foul"
+              },
+              {
+                "name": {
+                  "zh": "皮克希灵体",
+                  "en": "Pixie"
+                },
+                "type": "Fairy"
+              },
+              {
+                "name": {
+                  "zh": "格雷姆林灵体",
+                  "en": "Gremlin"
+                },
+                "type": "Foul"
+              },
+              {
+                "name": {
+                  "zh": "皮亚雷灵体",
+                  "en": "Pisaca"
+                },
+                "type": "Spirit"
+              },
+              {
+                "name": {
+                  "zh": "曼陀罗灵体",
+                  "en": "Mandrake"
+                },
+                "type": "Wood"
+              },
+              {
+                "name": {
+                  "zh": "安昙神灵体",
+                  "en": "Ame-no-Uzume"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "土蜘蛛灵体",
+                  "en": "Tsuchigumo"
+                },
+                "type": "Wilder"
+              },
+              {
+                "name": {
+                  "zh": "猫妖精灵体",
+                  "en": "Kodama"
+                },
+                "type": "Jirae"
+              },
+              {
+                "name": {
+                  "zh": "美人鱼灵体",
+                  "en": "Mermaid"
+                },
+                "type": "Femme"
+              },
+              {
+                "name": {
+                  "zh": "亚米亚米灵体",
+                  "en": "Yami-Yami"
+                },
+                "type": "Fiend"
+              },
+              {
+                "name": {
+                  "zh": "山灵灵体",
+                  "en": "Onmoraki"
+                },
+                "type": "Beast"
+              },
+              {
+                "name": {
+                  "zh": "皮可西 (电克制)",
+                  "en": "Pixie (electric)"
+                },
+                "type": "Fairy"
+              },
+              {
+                "name": {
+                  "zh": "鸡龙 (火专属)",
+                  "en": "Cait Sith (fire)"
+                },
+                "type": "Beast"
+              }
+            ],
             "sources": [
               {
                 "lang": "zh",
                 "url": "",
-                "attribution": "Pser_hanser (B站 / 飞书) — 真·女神转生V 复仇 攻略 (原飞书链接 2026-06-07 已失效)"
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "region_map",
+            "name": {
+              "zh": "品川（Ch2）",
+              "en": "Shinagawa (Ch2)",
+              "ja": "品川",
+              "ko": "시나가와"
+            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "品川表层（天龙断-东京塔后续）",
+                  "en": "Shinagawa surface",
+                  "ja": "品川表層",
+                  "ko": "시나가와 표층"
+                },
+                "description": {
+                  "zh": "Ch2 主线 + 二图最终 BOSS 路径",
+                  "en": "Ch2 main + 2nd dungeon final boss",
+                  "ja": "Ch2 メイン",
+                  "ko": "Ch2 메인"
+                }
+              },
+              {
+                "name": {
+                  "zh": "祸径：高轮（天龙）",
+                  "en": "Abscess: Takanawa (Dragon)",
+                  "ja": "禍径：高輪",
+                  "ko": "화종: 다카나와"
+                },
+                "description": {
+                  "zh": "高轮天龙支线",
+                  "en": "Takanawa dragon sidequest",
+                  "ja": "高輪龍サブ",
+                  "ko": "다카나와 드래곤 서브"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "安德拉斯灵体",
+                  "en": "Andras"
+                },
+                "type": "Fallen"
+              },
+              {
+                "name": {
+                  "zh": "青神三式灵体",
+                  "en": "Aogami Type-III"
+                },
+                "type": "Herald"
+              },
+              {
+                "name": {
+                  "zh": "福图纳灵体",
+                  "en": "Fortuna"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "罗刹灵体",
+                  "en": "Rakshasa"
+                },
+                "type": "Jaki"
+              },
+              {
+                "name": {
+                  "zh": "拉南希灵体",
+                  "en": "Leanan Sidhe"
+                },
+                "type": "Femme"
+              },
+              {
+                "name": {
+                  "zh": "杰克霜精灵体",
+                  "en": "Jack Frost"
+                },
+                "type": "Fairy"
+              },
+              {
+                "name": {
+                  "zh": "双角兽灵体",
+                  "en": "Bicorn"
+                },
+                "type": "Wilder"
+              },
+              {
+                "name": {
+                  "zh": "山灵灵体",
+                  "en": "Onmoraki"
+                },
+                "type": "Beast"
+              },
+              {
+                "name": {
+                  "zh": "式王子灵体",
+                  "en": "Shiki-Ouji"
+                },
+                "type": "Brute"
+              },
+              {
+                "name": {
+                  "zh": "暴走婆婆灵体",
+                  "en": "Baekho (暴走)"
+                },
+                "type": "Wilder"
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "region_map",
+            "name": {
+              "zh": "新宿/千代田（Ch3）",
+              "en": "Shinjuku/Chiyoda (Ch3)",
+              "ja": "新宿/千代田",
+              "ko": "신주쿠/치요다"
+            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "新宿/千代田表层（创世线）",
+                  "en": "Shinjuku/Chiyoda (Creation)",
+                  "ja": "新宿/千代田（創世）",
+                  "ko": "신주쿠/치요다 (창세)"
+                },
+                "description": {
+                  "zh": "创世线 Ch3 主线",
+                  "en": "Creation route Ch3",
+                  "ja": "創世ルート Ch3",
+                  "ko": "창세 라우트 Ch3"
+                }
+              },
+              {
+                "name": {
+                  "zh": "新宿/千代田表层（复仇线）",
+                  "en": "Shinjuku/Chiyoda (Vengeance)",
+                  "ja": "新宿/千代田（復讐）",
+                  "ko": "신주쿠/치요다 (복수)"
+                },
+                "description": {
+                  "zh": "复仇线 Ch3 主线 + 学院 BOSS",
+                  "en": "Vengeance Ch3 + School BOSS",
+                  "ja": "復讐 Ch3 + 学院ボス",
+                  "ko": "복수 Ch3 + 학원 보스"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "拉弥亚灵体",
+                  "en": "Lamia"
+                },
+                "type": "Femme"
+              },
+              {
+                "name": {
+                  "zh": "伊登灵体",
+                  "en": "Idun"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "摩索保灵体",
+                  "en": "Mothman"
+                },
+                "type": "Wilder"
+              },
+              {
+                "name": {
+                  "zh": "贝尔芬格灵体",
+                  "en": "Belphegor"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "娜迦之王灵体",
+                  "en": "Naga Raja"
+                },
+                "type": "Snake"
+              },
+              {
+                "name": {
+                  "zh": "哪吒太子灵体",
+                  "en": "Nezha Taizi"
+                },
+                "type": "Fury"
+              },
+              {
+                "name": {
+                  "zh": "阿南希灵体",
+                  "en": "Anahita"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "狄俄索尼斯灵体",
+                  "en": "Dionysus"
+                },
+                "type": "Fury"
+              },
+              {
+                "name": {
+                  "zh": "少彦名灵体",
+                  "en": "Sukuna-Hikona"
+                },
+                "type": "Kunitsu"
+              },
+              {
+                "name": {
+                  "zh": "欧特鲁斯灵体",
+                  "en": "Orthrus"
+                },
+                "type": "Beast"
+              },
+              {
+                "name": {
+                  "zh": "妙音天女灵体",
+                  "en": "Sarasvati"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "奥博隆灵体",
+                  "en": "Oberon"
+                },
+                "type": "Fairy"
+              },
+              {
+                "name": {
+                  "zh": "德玛斯灵体",
+                  "en": "Daemon"
+                },
+                "type": "Brute"
+              },
+              {
+                "name": {
+                  "zh": "鸠盘荼灵体",
+                  "en": "Kumbhanda"
+                },
+                "type": "Vile"
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "region_map",
+            "name": {
+              "zh": "台东（Ch4）",
+              "en": "Taito (Ch4)",
+              "ja": "台東",
+              "ko": "타이토"
+            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "台东表层（三方势力）",
+                  "en": "Taito (3 factions)",
+                  "ja": "台東表層（三勢力）",
+                  "ko": "타이토 표층 (3개 세력)"
+                },
+                "description": {
+                  "zh": "Ch4 主线，72 级 BOSS 战",
+                  "en": "Ch4 main, Lv 72 boss",
+                  "ja": "Ch4 メイン、Lv 72 ボス",
+                  "ko": "Ch4 메인, Lv 72 보스"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "芬里尔灵体",
+                  "en": "Fenrir"
+                },
+                "type": "Wilder"
+              },
+              {
+                "name": {
+                  "zh": "巴隆灵体",
+                  "en": "Baron"
+                },
+                "type": "Fiend"
+              },
+              {
+                "name": {
+                  "zh": "拉克西斯灵体",
+                  "en": "Lachesis"
+                },
+                "type": "Fate"
+              },
+              {
+                "name": {
+                  "zh": "阿难陀灵体",
+                  "en": "Ananta"
+                },
+                "type": "Dragon"
+              },
+              {
+                "name": {
+                  "zh": "洛基灵体",
+                  "en": "Loki"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "阿特波罗斯灵体",
+                  "en": "Atropos"
+                },
+                "type": "Fate"
+              },
+              {
+                "name": {
+                  "zh": "百臂巨人灵体",
+                  "en": "Hecatoncheires"
+                },
+                "type": "Jaki"
+              },
+              {
+                "name": {
+                  "zh": "奇拉美灵体",
+                  "en": "Kali"
+                },
+                "type": "Femme"
+              },
+              {
+                "name": {
+                  "zh": "克雷斯尼克灵体",
+                  "en": "Kresnik"
+                },
+                "type": "Herald"
+              },
+              {
+                "name": {
+                  "zh": "古德拉克灵体",
+                  "en": "Cu Chulainn"
+                },
+                "type": "Kunitsu"
+              },
+              {
+                "name": {
+                  "zh": "风鬼灵体",
+                  "en": "Vetala"
+                },
+                "type": "Ghost"
+              },
+              {
+                "name": {
+                  "zh": "荒霸图灵体",
+                  "en": "Arahabaki"
+                },
+                "type": "Kunitsu"
+              },
+              {
+                "name": {
+                  "zh": "格刺西亚灵体",
+                  "en": "Glasya-Labolas"
+                },
+                "type": "Beast"
+              },
+              {
+                "name": {
+                  "zh": "迦楼罗灵体",
+                  "en": "Garuda"
+                },
+                "type": "Avian"
+              },
+              {
+                "name": {
+                  "zh": "伊斯塔灵体",
+                  "en": "Ishtar"
+                },
+                "type": "Megami"
+              },
+              {
+                "name": {
+                  "zh": "座天使灵体",
+                  "en": "Principality"
+                },
+                "type": "Divine"
+              },
+              {
+                "name": {
+                  "zh": "魔罗灵体",
+                  "en": "Mara"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "基路伯灵体",
+                  "en": "Cherub"
+                },
+                "type": "Divine"
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
+              }
+            ]
+          },
+          {
+            "type": "region_map",
+            "name": {
+              "zh": "万古神殿 / 至高天 / 混沌之厅（终章）",
+              "en": "Temple/Empyrean/Chaos Hall (Final)",
+              "ja": "万古神殿/至高天/混沌之厅",
+              "ko": "만고신전/지고천/혼돈의 전당"
+            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "万古神殿",
+                  "en": "Temple of Eternity",
+                  "ja": "万古神殿",
+                  "ko": "만고신전"
+                },
+                "description": {
+                  "zh": "创世/复仇线最终 BOSS 战",
+                  "en": "Final boss fight (both routes)",
+                  "ja": "最終ボス戦（両ルート）",
+                  "ko": "최종 보스 (양 라우트)"
+                }
+              },
+              {
+                "name": {
+                  "zh": "至高天",
+                  "en": "Empyrean",
+                  "ja": "至高天",
+                  "ko": "지고천"
+                },
+                "description": {
+                  "zh": "Ch3 创世/复仇线分叉",
+                  "en": "Ch3 route divergence",
+                  "ja": "Ch3 分岐",
+                  "ko": "Ch3 분기"
+                }
+              },
+              {
+                "name": {
+                  "zh": "混沌之厅（创生结局）",
+                  "en": "Chaos Hall (NG+)",
+                  "ja": "混沌之厅",
+                  "ko": "혼돈의 전당"
+                },
+                "description": {
+                  "zh": "新周目撒旦战",
+                  "en": "New cycle Satan fight",
+                  "ja": "新周目サタン戦",
+                  "ko": "신주차 사탄전"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "迦梨灵体",
+                  "en": "Kali"
+                },
+                "type": "Femme"
+              },
+              {
+                "name": {
+                  "zh": "亚德米勒灵体",
+                  "en": "Adramelech"
+                },
+                "type": "Fallen"
+              },
+              {
+                "name": {
+                  "zh": "婆稣吉灵体",
+                  "en": "Vasuki"
+                },
+                "type": "Drake"
+              },
+              {
+                "name": {
+                  "zh": "奥丁灵体",
+                  "en": "Odin"
+                },
+                "type": "Deity"
+              },
+              {
+                "name": {
+                  "zh": "亚略灵体",
+                  "en": "Arioch"
+                },
+                "type": "Warchief"
+              },
+              {
+                "name": {
+                  "zh": "兹兹米特尔灵体",
+                  "en": "Tzitzimitl"
+                },
+                "type": "Vile"
+              },
+              {
+                "name": {
+                  "zh": "蚩尤灵体",
+                  "en": "Chi You"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "摩陀灵体",
+                  "en": "Mada"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "别西卜灵体",
+                  "en": "Beelzebub"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "圣达芬灵体",
+                  "en": "Satan"
+                },
+                "type": "Herald"
+              },
+              {
+                "name": {
+                  "zh": "毗湿奴灵体",
+                  "en": "Vishnu"
+                },
+                "type": "Deity"
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档 (本地存档 2026-06-08)"
               }
             ]
           }
         ]
       },
       {
-        "id": "boss-information",
+        "id": "boss-spoiler",
         "title": {
-          "en": "Boss Information (Spoilers!)",
-          "ja": "BOSS情報（ネタバレ注意）",
-          "ko": "BOSS 정보 (스포일러 주의)",
-          "zh": "BOSS 信息（剧透慎入）"
+          "zh": "BOSS 详细信息（剧透慎入）",
+          "en": "Boss Details (Spoilers)",
+          "ja": "ボス詳細（ネタバレ注意）",
+          "ko": "보스 상세 (스포일러 주의)"
         },
         "blocks": [
           {
             "type": "callout",
             "variant": "warning",
             "text": {
-              "en": "Spoiler warning: This section contains detailed boss stats. Play through Chapter 8 first if you want the surprise.",
-              "ja": "ネタバレ注意：この章にはBOSS詳細データが含まれます。サプライズを楽しみたい方は第8章までプレイしてください。",
-              "ko": "스포일러 경고: 이 섹션에는 자세한 보스 정보가 포함되어 있습니다. 서프라이즈를 원한다면 8장까지 먼저 플레이하세요.",
-              "zh": "剧透警告：本章包含详细 BOSS 数据。想要惊喜感请先通关到第 8 章。"
-            }
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": {
-              "en": "Chapter 8 Boss: Kogo (Level 32)",
-              "ja": "第8章BOSS：考哥（レベル32）",
-              "ko": "8장 보스: 코고 (레벨 32)",
-              "zh": "第8章 BOSS：考哥（32级）"
-            }
-          },
-          {
-            "type": "boss",
-            "name": {
-              "en": "Kogo",
-              "ja": "考哥",
-              "ko": "코고",
-              "zh": "考哥"
-            },
-            "level": "32",
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/kogo-ch8-32.jpg",
-            "weakness": {
-              "en": "Light (Makajamaon, Onyudo)",
-              "ja": "光（マカジャマオン、おにゅうど）",
-              "ko": "빛 (마카자마온, 오뉴도)",
-              "zh": "光（玛迦贾玛翁 / 鬼之童）"
-            },
-            "strategy": {
-              "en": "Use Makajamaon for the magic debuff and Onyudo for sustained light damage. Keep a healer and one physical DPS in reserve for the adds.",
-              "ja": "マカジャマオンで魔法デバフ、おにゅうどで持続光ダメージ。回復と物理DPSを1体ずつ控えに。",
-              "ko": "마카자마온으로 마법 디버프, 오뉴도로 지속 빛 데미지. 힐러와 물리 딜러 1기씩 대기.",
-              "zh": "用玛迦贾玛翁上魔法 debuff，鬼之童打持续光伤。留 1 治疗 + 1 物理 DPS 备用。"
+              "zh": "⚠️ 剧透警告：本节包含所有主线 + 可选 BOSS 的详细数据（弱点、攻略、配队）。想要惊喜感请先通关到对应章节。",
+              "en": "⚠️ Spoiler warning: full boss data (weakness, strategy, team rec) for all main + optional bosses. Play through the chapter first if you want surprises.",
+              "ja": "⚠️ ネタバレ注意：全メイン＋オプション BOSS の詳細データ。",
+              "ko": "⚠️ 스포일러 경고: 모든 메인 + 선택 보스 상세 데이터."
             },
             "sources": [
               {
                 "lang": "zh",
                 "url": "",
-                "attribution": "Pser_hanser (B站 / 飞书) — 真·女神转生V 复仇 攻略 (原飞书链接 2026-06-07 已失效)"
+                "attribution": "Pser_hanser 攻略文档"
               }
             ]
           },
           {
-            "type": "boss",
-            "name": {
-              "en": "Main Story Boss Lineup (Overview)",
-              "ja": "メインストーリーBOSS一覧（概観）",
-              "ko": "메인 스토리 BOSS 라인업 (개요)",
-              "zh": "主线 BOSS 总览"
-            },
-            "level": "varies",
-            "image": "/images/games/shin-megami-tensei-5-vengeance/bosses/boss-overview.jpg",
-            "weakness": {
-              "en": "See per-chapter entries; press-turn advantage through weakness exploitation is the universal strategy.",
-              "ja": "各章エントリ参照；プレスターン優位のために弱点を活用するのが基本戦略。",
-              "ko": "챕터별 항목 참조. 약점 공략으로 프레스 턴 우위를 점하는 게 보편적 전략.",
-              "zh": "见各章条目；通过弱点利用取得 press-turn 优势是通用策略。"
-            },
-            "strategy": {
-              "en": "Bring 1 dedicated healer (Slime / Lakshmi), 2 weakness-exploiting damage dealers, and 1 backup physical attacker. Recruit before each chapter based on the boss's known weakness.",
-              "ja": "専属回復（スライム・ラクシュミ）×1、弱点利用DPS×2、控え物理アタッカー×1。章ごとに弱点に応じて入れ替え。",
-              "ko": "전담 힐러 (슬라임/락스미) 1, 약점 공략 딜러 2, 백업 물리 딜러 1. 챕터마다 보스 약점에 맞춰 교체.",
-              "zh": "1 治疗（史莱姆 / 吉祥天）+ 2 弱点利用 DPS + 1 备用物理输出。章前按 BOSS 弱点换阵容。"
+            "type": "callout",
+            "variant": "info",
+            "text": {
+              "zh": "每章节 BOSS 详情见：第 1 章 港区 / 第 2 章 品川 / 第 3 章 千代田/新宿 / 第 4 章 台东 / 终章。每个 BOSS 含弱点、攻略、配队建议。",
+              "en": "Per-chapter boss details: Ch1 Minato / Ch2 Shinagawa / Ch3 Chiyoda-Shinjuku / Ch4 Taito / Endgame. Each boss has weakness, strategy, team rec.",
+              "ja": "各章 BOSS 詳細：第1章 港区 / 第2章 品川 / 第3章 千代田・新宿 / 第4章 台東 / 終章。各 BOSS に弱点・攻略・配隊。",
+              "ko": "각 챕터 보스 상세: 1장 항구구 / 2장 시나가와 / 3장 치요다-신주쿠 / 4장 타이토 / 종장. 각 보스 약점/전략/팀."
             },
             "sources": [
               {
                 "lang": "zh",
                 "url": "",
-                "attribution": "Pser_hanser (B站 / 飞书) — 真·女神转生V 复仇 攻略 (原飞书链接 2026-06-07 已失效)"
+                "attribution": "MegaTen Fandom Wiki + Pser_hanser 攻略"
               }
             ]
           }
@@ -2171,6 +2935,104 @@
                 "attribution": "MegaTen Fandom Wiki (cross-verify)"
               }
             ]
+          },
+          {
+            "type": "demon_selection",
+            "name": {
+              "zh": "品川章节仲魔",
+              "en": "Shinagawa Chapter Demons",
+              "ja": "品川章仲魔",
+              "ko": "시나가와 챕터 마물"
+            },
+            "demons": [
+              {
+                "name": {
+                  "zh": "双角兽",
+                  "en": "Bicorn"
+                },
+                "race": {
+                  "zh": "野兽",
+                  "en": "Wilder"
+                },
+                "level": "25-28",
+                "role": "提升暴击伤害",
+                "notes": {
+                  "zh": "满血时舍身相撞伤害高",
+                  "en": "High dmg when full HP"
+                }
+              },
+              {
+                "name": {
+                  "zh": "福图娜",
+                  "en": "Fortuna"
+                },
+                "race": {
+                  "zh": "女神",
+                  "en": "Megami"
+                },
+                "level": "26-30",
+                "role": "奶妈 (拉坤达)",
+                "notes": {
+                  "zh": "用到打女娲",
+                  "en": "Use until Nuwa"
+                }
+              },
+              {
+                "name": {
+                  "zh": "山灵",
+                  "en": "Onmoraki"
+                },
+                "race": {
+                  "zh": "兽",
+                  "en": "Beast"
+                },
+                "level": "28-32",
+                "role": "挑衅吃行动",
+                "notes": {
+                  "zh": "女娲 + 学院 boss 配队",
+                  "en": "Nuwa + School team"
+                }
+              },
+              {
+                "name": {
+                  "zh": "莉莉姆",
+                  "en": "Lilim"
+                },
+                "race": {
+                  "zh": "夜魔",
+                  "en": "Night"
+                },
+                "level": "28-30",
+                "role": "双向任务 boss",
+                "notes": {
+                  "zh": "双向任务对 BOSS 更好",
+                  "en": "Better for dual-quest"
+                }
+              },
+              {
+                "name": {
+                  "zh": "权天使",
+                  "en": "Power"
+                },
+                "race": {
+                  "zh": "天使",
+                  "en": "Divine"
+                },
+                "level": "28-30",
+                "role": "双向任务 alt",
+                "notes": {
+                  "zh": "若需摇摆路线可先留",
+                  "en": "Keep if route-flexing"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档"
+              }
+            ]
           }
         ]
       },
@@ -2333,6 +3195,104 @@
                 "attribution": "MegaTen Fandom Wiki (cross-verify)"
               }
             ]
+          },
+          {
+            "type": "demon_selection",
+            "name": {
+              "zh": "千代田/新宿章节仲魔",
+              "en": "Chiyoda/Shinjuku Chapter Demons",
+              "ja": "千代田/新宿章仲魔",
+              "ko": "치요다/신주쿠 챕터 마물"
+            },
+            "demons": [
+              {
+                "name": {
+                  "zh": "早太郎",
+                  "en": "Hayataro"
+                },
+                "race": {
+                  "zh": "圣兽",
+                  "en": "Holy"
+                },
+                "level": "32-40",
+                "role": "物理毕业 (暴击 400)",
+                "notes": {
+                  "zh": "主角+早太郎主力",
+                  "en": "Main DPS"
+                }
+              },
+              {
+                "name": {
+                  "zh": "伊登",
+                  "en": "Idun"
+                },
+                "race": {
+                  "zh": "女神",
+                  "en": "Megami"
+                },
+                "level": "40-50",
+                "role": "奶妈 (金苹果)",
+                "notes": {
+                  "zh": "电击吸反无",
+                  "en": "Elec absorb"
+                }
+              },
+              {
+                "name": {
+                  "zh": "木花朔耶",
+                  "en": "Konohana Sakuya"
+                },
+                "race": {
+                  "zh": "女神",
+                  "en": "Megami"
+                },
+                "level": "50-60",
+                "role": "最强奶妈 (木花之荣)",
+                "notes": {
+                  "zh": "最强奶",
+                  "en": "Best healer"
+                }
+              },
+              {
+                "name": {
+                  "zh": "天钿女命",
+                  "en": "Ame-no-Uzume"
+                },
+                "race": {
+                  "zh": "女神",
+                  "en": "Megami"
+                },
+                "level": "38-45",
+                "role": "奶妈 alt (福图娜弱姆多)",
+                "notes": {
+                  "zh": "替代福图娜",
+                  "en": "Fortuna replacement"
+                }
+              },
+              {
+                "name": {
+                  "zh": "妖狐 (小狐狸)",
+                  "en": "Kodama (Fox)"
+                },
+                "race": {
+                  "zh": "地灵",
+                  "en": "Jirae"
+                },
+                "level": "25-30",
+                "role": "警戒呼嘿 + 克鲁波克鲁特殊对话",
+                "notes": {
+                  "zh": "佳塔由战有用",
+                  "en": "Jatayu fight"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档"
+              }
+            ]
           }
         ]
       },
@@ -2455,6 +3415,104 @@
                 "attribution": "MegaTen Fandom Wiki (cross-verify)"
               }
             ]
+          },
+          {
+            "type": "demon_selection",
+            "name": {
+              "zh": "台东章节仲魔",
+              "en": "Taito Chapter Demons",
+              "ja": "台東章仲魔",
+              "ko": "타이토 챕터 마물"
+            },
+            "demons": [
+              {
+                "name": {
+                  "zh": "奇拉美",
+                  "en": "Kali"
+                },
+                "race": {
+                  "zh": "女魔族",
+                  "en": "Femme"
+                },
+                "level": "60-70",
+                "role": "物理菜刀 (被动物理秘诀)",
+                "notes": {
+                  "zh": "适合没物理耐性 BOSS",
+                  "en": "Anti-phys-resist BOSS"
+                }
+              },
+              {
+                "name": {
+                  "zh": "克雷斯尼克",
+                  "en": "Kresnik"
+                },
+                "race": {
+                  "zh": "天使长",
+                  "en": "Herald"
+                },
+                "level": "65-72",
+                "role": "主输出 (任务获取)",
+                "notes": {
+                  "zh": "需要完成 BOSS 击杀任务",
+                  "en": "Quest-gated"
+                }
+              },
+              {
+                "name": {
+                  "zh": "亚蒙",
+                  "en": "Ammon"
+                },
+                "race": {
+                  "zh": "暴君",
+                  "en": "Tyrant"
+                },
+                "level": "65-75",
+                "role": "火系备用",
+                "notes": {
+                  "zh": "米吉多之火",
+                  "en": "Megido Fire"
+                }
+              },
+              {
+                "name": {
+                  "zh": "奥丁",
+                  "en": "Odin"
+                },
+                "race": {
+                  "zh": "神族",
+                  "en": "Deity"
+                },
+                "level": "70-80",
+                "role": "物理 (自带贯穿 + 蓄力)",
+                "notes": {
+                  "zh": "穿透物理 + 给队友蓄力",
+                  "en": "Pierce + Charge"
+                }
+              },
+              {
+                "name": {
+                  "zh": "创吼",
+                  "en": "Forneus (Soryu)"
+                },
+                "race": {
+                  "zh": "污秽",
+                  "en": "Foul"
+                },
+                "level": "70-80",
+                "role": "冰系天花板 (谎神螺旋斩)",
+                "notes": {
+                  "zh": "冰系最强 AOE",
+                  "en": "Ice AOE ceiling"
+                }
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档"
+              }
+            ]
           }
         ]
       },
@@ -2467,6 +3525,96 @@
           "ko": "종장: 만고신전/지고천/혼돈의 전당"
         },
         "blocks": [
+          {
+            "type": "region_map",
+            "name": {
+              "zh": "终章区域",
+              "en": "Endgame Regions",
+              "ja": "終章エリア",
+              "ko": "종장 영역"
+            },
+            "subMaps": [
+              {
+                "name": {
+                  "zh": "万古神殿（创世/复仇线）",
+                  "en": "Temple of Eternity (both routes)",
+                  "ja": "万古神殿（両ルート）",
+                  "ko": "만고신전 (양 라우트)"
+                },
+                "description": {
+                  "zh": "Lv 70-85 范围 BOSS 战",
+                  "en": "Lv 70-85 boss fights",
+                  "ja": "Lv 70-85 ボス戦",
+                  "ko": "Lv 70-85 보스"
+                }
+              },
+              {
+                "name": {
+                  "zh": "至高天（Ch3 分叉点）",
+                  "en": "Empyrean (Ch3 divergence)",
+                  "ja": "至高天",
+                  "ko": "지고천"
+                },
+                "description": {
+                  "zh": "创世/复仇线分叉点 (Lv 80-95)",
+                  "en": "Route divergence (Lv 80-95)",
+                  "ja": "ルート分岐 (Lv 80-95)",
+                  "ko": "라우트 분기 (Lv 80-95)"
+                }
+              },
+              {
+                "name": {
+                  "zh": "混沌之厅（创生结局）",
+                  "en": "Chaos Hall (NG+)",
+                  "ja": "混沌之厅",
+                  "ko": "혼돈의 전당"
+                },
+                "description": {
+                  "zh": "新周目 Lv 99 撒旦战",
+                  "en": "NG+ Lv 99 Satan",
+                  "ja": "新周目 Lv 99 サタン",
+                  "ko": "신주차 Lv 99 사탄"
+                }
+              }
+            ],
+            "espers": [
+              {
+                "name": {
+                  "zh": "蚩尤",
+                  "en": "Chi You"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "摩陀",
+                  "en": "Mada"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "别西卜",
+                  "en": "Beelzebub"
+                },
+                "type": "Tyrant"
+              },
+              {
+                "name": {
+                  "zh": "圣达芬",
+                  "en": "Satan"
+                },
+                "type": "Herald"
+              }
+            ],
+            "sources": [
+              {
+                "lang": "zh",
+                "url": "",
+                "attribution": "Pser_hanser 攻略文档"
+              }
+            ]
+          },
           {
             "type": "heading",
             "level": 3,

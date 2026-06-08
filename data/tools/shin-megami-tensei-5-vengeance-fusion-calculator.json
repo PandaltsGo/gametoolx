@@ -1567,6 +1567,281 @@
         ],
         "race": "tyrant",
         "note": "2-way special fusion"
+      },
+      "okuninushi": {
+        "ingredients": [
+          "izanagi",
+          "lakshmi"
+        ],
+        "race": "kishin",
+        "note": "2-way: 伊邪那岐 (Lv80) + 吉祥天 (Lv38) → 大国主 (Lv40)"
+      },
+      "nio": {
+        "ingredients": [
+          "lakshmi",
+          "sati"
+        ],
+        "race": "kishin",
+        "note": "2-way: 莎缇 (Lv30) + 吉祥天 (Lv38) → 仁王 (Lv38)"
+      },
+      "kikuriHime": {
+        "ingredients": [
+          "kushinadaHime",
+          "sati"
+        ],
+        "race": "kishin",
+        "note": "2-way: 菊理媛 (Lv24) + 莎缇 (Lv30) → 菊理媛 (Lv18)"
+      },
+      "oumagadinesvara": {
+        "ingredients": [
+          "kikuriHime",
+          "nio"
+        ],
+        "race": "tenma",
+        "note": "2-way Tenma: 仁王 + 菊理媛"
+      },
+      "cliodna": {
+        "ingredients": [
+          "lakshmi",
+          "maraTao"
+        ],
+        "race": "yoma",
+        "note": "2-way: 吉祥天 (Lv38) + 天魔波罗 (Lv65) → 克里欧德娜 (Lv38)"
+      },
+      "highPixie": {
+        "ingredients": [
+          "azumi",
+          "kikuri"
+        ],
+        "race": "fairy",
+        "note": "2-way: 菊理 (Lv18) + 阿吽 (Lv24) → 杰克霜精 (Lv11)"
+      },
+      "kingJack": {
+        "ingredients": [
+          "cliodna",
+          "kikuri"
+        ],
+        "race": "fairy",
+        "note": "2-way: 菊理 (Lv18) + 克里欧德娜 (Lv38) → 霜精之王 (Lv33)"
+      },
+      "lilim": {
+        "ingredients": [
+          "kingJack",
+          "maraTao"
+        ],
+        "race": "night",
+        "note": "2-way: 天魔波罗 (Lv65) + 霜精之王 (Lv33) → 莉莉姆 (Lv16)"
+      },
+      "chuChulainn": {
+        "ingredients": [
+          "horus",
+          "kingJack"
+        ],
+        "race": "genma",
+        "note": "2-way: 霜精之王 (Lv33) + 荷鲁斯 (Lv60) → 库夫林 (Lv50)"
+      },
+      "vasukid": {
+        "ingredients": [
+          "horus",
+          "narcissus"
+        ],
+        "race": "snake",
+        "note": "2-way: 荷鲁斯 (Lv60) + 那耳喀索斯 (Lv18) → 那伽 (Lv38)"
+      },
+      "cerberus": {
+        "ingredients": [
+          "horus",
+          "vasukid"
+        ],
+        "race": "beast",
+        "note": "2-way Beast: 那伽 + 荷鲁斯"
+      },
+      "kama": {
+        "ingredients": [
+          "cerberus",
+          "narcissus"
+        ],
+        "race": "wargod",
+        "note": "2-way: 那耳喀索斯 (Lv18) + 刻耳柏洛斯 (Lv36) → 迦摩 (Lv50)"
+      },
+      "hel": {
+        "ingredients": [
+          "masakado",
+          "vasukid"
+        ],
+        "race": "lady",
+        "note": "2-way: 那伽 (Lv38) + 平将门 (Lv94) → 赫尔 (Lv58)"
+      },
+      "ananta": {
+        "ingredients": [
+          "hathor",
+          "surt"
+        ],
+        "race": "dragon",
+        "note": "2-way Dragon: 苏尔特 + 哈托尔"
+      },
+      "makami": {
+        "ingredients": [
+          "anubis",
+          "yurlungur"
+        ],
+        "race": "avatar",
+        "note": "2-way: 阿努比斯 (Lv50) + 彩虹蛇 (Lv70) → 真神 (Lv33)"
+      },
+      "xuanzang": {
+        "ingredients": [
+          "abaddon",
+          "samael"
+        ],
+        "race": "hero",
+        "note": "2-way: 萨麦尔 (Lv88) + 亚巴顿 (Lv78) → 玄奘 (Lv48)"
+      },
+      "izanagi": {
+        "ingredients": [
+          "samael",
+          "xuanzang",
+          "kresnik",
+          "abaddon"
+        ],
+        "race": "divine",
+        "note": "4-way Divine (NG+): 萨麦尔 + 玄奘 + 克雷斯尼克 + 亚巴顿"
+      },
+      "narcissus": {
+        "ingredients": [
+          "chuChulainn",
+          "lilim"
+        ],
+        "race": "jirae",
+        "note": "2-way: 莉莉姆 (Lv16) + 库夫林 (Lv50) → 那耳喀索斯 (Lv18)"
+      },
+      "yoshitsune": {
+        "ingredients": [
+          "cerberus",
+          "yamatanoOrochi"
+        ],
+        "race": "wargod",
+        "note": "2-way: 八岐大蛇 (Lv80) + 刻耳柏洛斯 (Lv36) → 义经 (Lv64)"
+      },
+      "hathor": {
+        "ingredients": [
+          "hayagriva",
+          "kelpie"
+        ],
+        "race": "lady",
+        "note": "2-way: 凯尔皮 (Lv6) + 马头观音 (Lv70) → 哈托尔 (Lv30)"
+      },
+      "anat": {
+        "ingredients": [
+          "hathor",
+          "kushinadaHime"
+        ],
+        "race": "lady",
+        "note": "2-way Lady: 哈托尔 + 菊理媛"
+      },
+      "quetzalcoatl": {
+        "ingredients": [
+          "narcissus",
+          "uriel"
+        ],
+        "race": "snake",
+        "note": "2-way: 乌列尔 (Lv82) + 那耳喀索斯 (Lv18) → 羽蛇神 (Lv55)"
+      },
+      "beelzebub": {
+        "ingredients": [
+          "lucifer",
+          "satan",
+          "mephisto"
+        ],
+        "race": "tyrant",
+        "note": "3-way Tyrant (post-game)"
+      },
+      "pixie": {
+        "ingredients": [
+          "genbu",
+          "kelpie"
+        ],
+        "race": "fairy",
+        "note": "2-way fairy: 玄武 + 凯尔皮"
+      },
+      "jackFrost": {
+        "ingredients": [
+          "highPixie",
+          "pixie"
+        ],
+        "race": "fairy",
+        "note": "2-way fairy: 小妖精 + 杰克霜精"
+      },
+      "apsaras": {
+        "ingredients": [
+          "kushinadaHime",
+          "lilim"
+        ],
+        "race": "yoma",
+        "note": "2-way Yoma: 菊理媛 + 莉莉姆"
+      },
+      "kinnari": {
+        "ingredients": [
+          "apsaras",
+          "azumi"
+        ],
+        "race": "yoma",
+        "note": "2-way Yoma: 阿吽 + 飞天"
+      },
+      "artemis": {
+        "ingredients": [
+          "parvati",
+          "sarasvati"
+        ],
+        "race": "megami",
+        "note": "2-way Megami: 帕尔瓦蒂 + 辩才天"
+      },
+      "kuramaTengu": {
+        "ingredients": [
+          "genbu",
+          "narcissus"
+        ],
+        "race": "jirae",
+        "note": "2-way Jirae: 玄武 + 那耳喀索斯"
+      },
+      "osiris": {
+        "ingredients": [
+          "hathor",
+          "horus"
+        ],
+        "race": "tyrant",
+        "note": "2-way Tyrant: 荷鲁斯 + 哈托尔"
+      },
+      "mephisto": {
+        "ingredients": [
+          "anubis",
+          "horus"
+        ],
+        "race": "tyrant",
+        "note": "2-way Tyrant: 阿努比斯 + 荷鲁斯"
+      },
+      "surt": {
+        "ingredients": [
+          "shiva",
+          "thor"
+        ],
+        "race": "tyrant",
+        "note": "2-way Tyrant alt: 湿婆 + 托尔"
+      },
+      "thor": {
+        "ingredients": [
+          "hayagriva",
+          "yoshitsune"
+        ],
+        "race": "wargod",
+        "note": "2-way Wargod: 马头观音 + 义经"
+      },
+      "abaddon": {
+        "ingredients": [
+          "mara",
+          "samael"
+        ],
+        "race": "fallen",
+        "note": "2-way Fallen: 萨麦尔 + 魔罗"
       }
     },
     "elements": [

@@ -343,6 +343,130 @@ export default function Walkthrough({ lang, tool }: Props) {
                     return null;
                   }
 
+                  if (block.type === "region_map") {
+                    return (
+                      <div
+                        key={i}
+                        className="rounded-xl border-2 border-cyan-500/40 bg-gradient-to-br from-cyan-500/10 to-black/30 p-5"
+                      >
+                        <div className="flex items-start justify-between gap-2 mb-3">
+                          <h4 className="text-lg font-bold text-cyan-200">
+                            🗺️ {t(block.name)}
+                          </h4>
+                          <VerificationBadge sources={block.sources} lang={lang} />
+                        </div>
+                        {/* Sub-maps (港区表 / 祸径 / 未满 etc.) */}
+                        {block.subMaps.length > 0 && (
+                          <div className="mb-4">
+                            <div className="text-xs uppercase tracking-wide text-cyan-300 mb-2">
+                              {lang === "zh" ? "子地图" : "Sub-maps"}
+                            </div>
+                            <ul className="space-y-1.5 pl-4 border-l-2 border-cyan-500/30">
+                              {block.subMaps.map((sub, j) => (
+                                <li key={j} className="text-sm">
+                                  <span className="text-cyan-200 font-medium">
+                                    {t(sub.name)}
+                                  </span>
+                                  <span className="text-gray-400 mx-2">—</span>
+                                  <span className="text-gray-200">
+                                    {t(sub.description)}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {/* Espers (灵体) */}
+                        {block.espers.length > 0 && (
+                          <div>
+                            <div className="text-xs uppercase tracking-wide text-cyan-300 mb-2">
+                              {lang === "zh" ? "灵体列表" : "Espers"}
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                              {block.espers.map((e, j) => (
+                                <div
+                                  key={j}
+                                  className="flex items-center gap-2 rounded-md border border-white/5 bg-black/20 px-3 py-1.5"
+                                >
+                                  <span className="text-base">✦</span>
+                                  <span className="text-sm text-gray-200 font-medium flex-1">
+                                    {t(e.name)}
+                                  </span>
+                                  <span className="text-xs text-cyan-300 font-mono">
+                                    {e.type}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  if (block.type === "demon_selection") {
+                    return (
+                      <div
+                        key={i}
+                        className="rounded-xl border-2 border-purple-500/40 bg-gradient-to-br from-purple-500/10 to-black/30 p-5"
+                      >
+                        <div className="flex items-start justify-between gap-2 mb-3">
+                          <h4 className="text-lg font-bold text-purple-200">
+                            👥 {t(block.name)}
+                          </h4>
+                          <VerificationBadge sources={block.sources} lang={lang} />
+                        </div>
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-sm border-collapse">
+                            <thead>
+                              <tr className="border-b-2 border-purple-500/40">
+                                <th className="text-left py-2 px-2 text-purple-200 font-semibold">
+                                  {lang === "zh" ? "名称" : "Name"}
+                                </th>
+                                <th className="text-left py-2 px-2 text-purple-200 font-semibold">
+                                  {lang === "zh" ? "种族" : "Race"}
+                                </th>
+                                <th className="text-left py-2 px-2 text-purple-200 font-semibold">
+                                  {lang === "zh" ? "等级" : "Level"}
+                                </th>
+                                <th className="text-left py-2 px-2 text-purple-200 font-semibold">
+                                  {lang === "zh" ? "角色" : "Role"}
+                                </th>
+                                <th className="text-left py-2 px-2 text-purple-200 font-semibold">
+                                  {lang === "zh" ? "备注" : "Notes"}
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {block.demons.map((d, j) => (
+                                <tr
+                                  key={j}
+                                  className="border-b border-white/5 hover:bg-white/5"
+                                >
+                                  <td className="py-2 px-2 text-gray-100 font-medium">
+                                    {t(d.name)}
+                                  </td>
+                                  <td className="py-2 px-2 text-gray-300">
+                                    {t(d.race)}
+                                  </td>
+                                  <td className="py-2 px-2 text-purple-300 font-mono text-xs">
+                                    {d.level}
+                                  </td>
+                                  <td className="py-2 px-2 text-cyan-300 text-xs">
+                                    {d.role}
+                                  </td>
+                                  <td className="py-2 px-2 text-gray-400 text-xs">
+                                    {d.notes ? t(d.notes) : ""}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    );
+                  }
+
                   return null;
                 })}
               </div>

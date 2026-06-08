@@ -90,6 +90,35 @@ export type WalkthroughBlock =
       header: Localized;
       rows: Localized[];
       sources?: string[];
+    }
+  | {
+      /**
+       * 区域地图（结构化）。无图，纯文本 + 子地图列表 + 灵体列表。
+       * 用于替代 region 类型（避免用截图当内容），由前端用 flex/grid 渲染。
+       */
+      type: "region_map";
+      name: Localized;
+      /** 子地图（如：港区表 / 祸径 / 未满 等） */
+      subMaps: { name: Localized; description: Localized }[];
+      /** 灵体/恶魔列表（按出现顺序） */
+      espers: { name: Localized; type: string }[];
+      sources?: string[];
+    }
+  | {
+      /**
+       * 章节仲魔选择（结构化表格）。表头：Name / Race / Level / Role / Notes。
+       * 用于推荐某一章内可用的恶魔配队。
+       */
+      type: "demon_selection";
+      name: Localized;
+      demons: {
+        name: Localized;
+        race: Localized;
+        level: string;
+        role: string;
+        notes?: Localized;
+      }[];
+      sources?: string[];
     };
 
 export type WalkthroughSection = {
