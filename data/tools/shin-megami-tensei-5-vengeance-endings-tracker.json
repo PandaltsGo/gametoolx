@@ -9,12 +9,84 @@
     "zh": "全结局攻略"
   },
   "description": {
-    "en": "Complete guide to all 6 endings in Shin Megami Tensei V: Vengeance. Track your progress, learn the requirements for each route, and unlock every secret ending.",
-    "ja": "『真・女神転生V Vengeance』の全6エンディング完全攻略。進行状況を記録し、各ルートの条件を把握して、すべての隠しエンディングを解放しよう。",
-    "ko": "『신・여신전생V Vengeance』의 전 6개 엔딩 완벽 가이드. 진행 상황을 추적하고 각 루트의 조건을 파악해 모든 히든 엔딩을 해금하세요.",
-    "zh": "《真·女神转生Ⅴ 复仇》全 6 结局完整攻略。记录你的进度，掌握每条路线的条件，解锁所有隐藏结局。"
+    "en": "Complete guide to all 8 endings in Shin Megami Tensei V: Vengeance. Detailed step-by-step choices for each route, tendency rules, recommended save points, and exclusive rewards. Check the box to track which endings you have achieved.",
+    "ja": "『真・女神転生V Vengeance』全 8 エンディングの詳細攻略。各ルートの選択肢、傾向ルール、推奨セーブポイント、限定報酬を完全網羅。チェックボックスで達成済みエンディングを管理。",
+    "ko": "『신・여신전생V Vengeance』전 8개 엔딩 상세 가이드. 각 루트의 선택지, 성향 규칙, 추천 세이브 포인트, 한정 보상을 모두 수록. 체크박스로 달성한 엔딩을 관리하세요.",
+    "zh": "《真·女神转生Ⅴ 复仇》全 8 结局详细攻略。每条路线的关键选择、倾向系统规则、推荐存档点、专属奖励完整收录。勾选框追踪你已达成结局。"
   },
   "data": {
+    "trackerHelp": {
+      "en": "✅ Click the checkbox next to any ending you have achieved. Your progress is saved to your account and synced across devices.",
+      "ja": "✅ 達成したエンディングのチェックボックスをクリック。進捗はアカウントに保存され、複数デバイスで同期されます。",
+      "ko": "✅ 달성한 엔딩의 체크박스를 클릭하세요. 진행 상황이 계정에 저장되어 여러 기기에서 동기화됩니다.",
+      "zh": "✅ 点击结局旁的复选框即可标记为已达成。进度保存到你的账号，跨设备同步。"
+    },
+    "tendencyRules": {
+      "title": {
+        "en": "Tendency (傾向) System",
+        "ja": "傾向システム",
+        "ko": "성향 시스템",
+        "zh": "倾向系统"
+      },
+      "summary": {
+        "en": "Your alignment drifts between 混沌 (Chaos/Change) / 秩序 (Law/Maintain) / 中立 (Neutral/Human) based on story and side-quest choices. The final route branch is determined by accumulated tendency, with one last free choice at the throne of YHVH.",
+        "ja": "物語とサブクエストの選択に応じて、傾向が 混沌（変革）／秩序（維持）／中立（人間）の間で変動する。最終分岐は蓄積された傾向で決まり、玉座で最後の選択を行う。",
+        "ko": "스토리와 서브 퀘스트 선택에 따라 성향이 混沌(변혁) / 秩序(유지) / 中立(인간) 사이에서 변동. 최종 분기는 축적된 성향으로 결정되며, 옥좌에서 마지막 선택이 가능.",
+        "zh": "根据主线与支线选项，倾向在 混沌（变革）/ 秩序（维持）/ 中立（人类）之间漂移。最终结局由累计倾向决定，并在王座前有一次最终自由选择。"
+      },
+      "keyRules": {
+        "en": [
+          "Every major dialogue/quest choice adds +1 to one alignment (some add to all 3).",
+          "3 high-impact main story choices (結弦, Khonsu, Zeus/Odin) decide the dominant tendency.",
+          "At the throne, your accumulated tendency unlocks a corresponding route choice.",
+          "If you choose the OPPOSITE of your tendency, you still get that ending, but pay 660,000 macca penalty AND miss the unique almighty skill reward.",
+          "Hidden value: the game tracks your tendency silently. Returning to overworld, your avatar spins (中立), or clockwise (秩序), or counter-clockwise (混沌)."
+        ],
+        "ja": [
+          "主要な選択肢のたびに、いずれかの傾向に +1（一部は 3 つ全てに加算）。",
+          "高影響の 3 つの選択肢（結弦、コンズー、ゼウス＆オーディン）が支配的な傾向を決める。",
+          "玉座で、蓄積された傾向に応じた選択肢が解放される。",
+          "傾向と逆の選択をしてもそのエンディングは得られるが、66 万マッカの罰金と限定万能スキルの報酬を逃す。",
+          "隠し値: ゲームは傾向を静かに追跡。オーバーワールドに戻ると、自機が回転（中立）、時計回り（秩序）、反時計回り（混沌）で示される。"
+        ],
+        "ko": [
+          "주요 선택마다 하나의 성향에 +1 (일부는 3개 모두에 가산).",
+          "영향력 큰 3개 주요 선택 (유즈하, 콘수, 제우스&오딘) 이 지배적 성향을 결정.",
+          "옥좌에서 축적된 성향에 따른 선택지가 해금.",
+          "성향과 반대 방향을 선택해도 그 엔딩은 달성 가능하나 66만 마카 벌금 + 한정 전능 스킬 보상을 놓침.",
+          "숨김 값: 게임은 성향을 조용히 추적. 오버월드 복귀 시 아바타가 회전(中立), 시계 방향(秩序), 반시계 방향(混沌)으로 표시."
+        ],
+        "zh": [
+          "每次重要对话/支线选择都会向某一倾向 +1（部分向三种全部加成）。",
+          "3 个高权重主线选择（结弦、孔苏、宙斯&奥丁）决定主导倾向。",
+          "王座前会按累计倾向解锁对应的路线选项。",
+          "即使选择与倾向相反的路线，仍可达成该结局，但需支付 66 万魔晶罚金且失去专属万能技能奖励。",
+          "隐藏值：游戏静默追踪你的倾向。返回大地图时，角色原地自转（中立）、顺时针转（秩序）、逆时针转（混沌）。"
+        ]
+      },
+      "highImpactChoices": {
+        "en": [
+          "① 結弦 battle (sister abducted): \"I can't believe in the future\" → Yoko / \"A bright future\" → Tao",
+          "② Khonsu battle (after returning to Tokyo): \"Demons can be trusted\" → Yoko / \"Can't really trust them\" → Tao",
+          "③ Zeus & Odin battle (pre-fight dialog): \"Despair for humanity\" → Yoko / \"Believe in humanity's future\" → Tao / \"Neither\" → no effect"
+        ],
+        "ja": [
+          "① 結弦戦（妹が拉致）：「未来を信じられない」→ 洋子 / 「明るい未来」→ 多緒",
+          "② コンズー戦（帰京後）：「悪魔を信頼できる」→ 洋子 / 「あまり信頼できない」→ 多緒",
+          "③ ゼウス＆オーディン戦（戦闘前会話）：「人類に絶望」→ 洋子 / 「人類の未来を信じる」→ 多緒 / 「どちらでもない」→ 影響なし"
+        ],
+        "ko": [
+          "① 유즈하 전투 (여동생 납치): '미래를 믿을 수 없다' → 요코 / '밝은 미래' → 다오",
+          "② 콘수 전투 (도쿄 귀환 후): '악마를 믿을 수 있다' → 요코 / '별로 신뢰할 수 없다' → 다오",
+          "③ 제우스 & 오딘 전투 (전투 전 대화): '인류에 절망' → 요코 / '인류의 미래를 믿는다' → 다오 / '어느 쪽도 아님' → 영향 없음"
+        ],
+        "zh": [
+          "① 结弦战（妹妹被掳走）：「无法相信未来」→ 洋子 / 「明朗的未来」→ 多绪",
+          "② 孔苏战（返回东京后）：「恶魔可信」→ 洋子 / 「不大可信」→ 多绪",
+          "③ 宙斯 & 奥丁战（开战前对话）：「对人类绝望」→ 洋子 / 「相信人类的未来」→ 多绪 / 「哪边都不是」→ 无影响"
+        ]
+      }
+    },
     "routes": [
       {
         "id": "creation",
@@ -25,98 +97,252 @@
           "zh": "创世女神篇"
         },
         "description": {
-          "en": "The original story of Shin Megami Tensei V. Available by choosing 'Don't hold the girl's hand' at the start. Contains 4 endings.",
-          "ja": "『真・女神転生V』の原版ストーリー。冒頭で「少女の手を取らない」を選択すると開始できる。4種のエンディングあり。",
-          "ko": "『신・여신전생V』의 오리지널 스토리. 시작 시 '소녀의 손을 잡지 않는다'를 선택하면 시작 가능. 4종 엔딩 포함.",
-          "zh": "《真·女神转生Ⅴ》的原版剧情。开局选择「不牵少女的手」即可进入。包含 4 种结局。"
+          "en": "The original story of Shin Megami Tensei V. Choose 'Don't hold the girl's hand' at the very start of the game. Contains 4 endings (Law / Chaos / Neutral / True).",
+          "ja": "『真・女神転生V』の原版ストーリー。冒頭で「少女の手を取らない」を選択。4 種のエンディング（秩序／混沌／中立／真）あり。",
+          "ko": "『신・여신전생V』 오리지널 스토리. 시작 시 '소녀의 손을 잡지 않는다' 선택. 4종 엔딩 (법/혼돈/중립/진) 포함.",
+          "zh": "《真·女神转生Ⅴ》原版剧情。开局选择「不牵少女的手」进入。含 4 个结局（秩序 / 混沌 / 中立 / 真）。"
+        },
+        "startChoice": {
+          "en": "At the very opening, choose 'Don't hold the girl's hand' (不牵少女的手) to enter the Creation route.",
+          "ja": "冒頭で「少女の手を取らない」を選択すると創世ルートへ。",
+          "ko": "시작 시 '소녀의 손을 잡지 않는다'를 선택해 창세 루트 진입.",
+          "zh": "开局选择「不牵少女的手」进入创世线。"
         },
         "endings": [
           {
             "id": "creation-law",
             "name": {
-              "en": "Law Ending (律法永恒)",
-              "ja": "法のエンディング",
-              "ko": "법의 엔딩",
-              "zh": "秩序结局"
+              "en": "Creation · Law Route",
+              "ja": "創世 · 秩序ルート",
+              "ko": "창세 · 법 루트",
+              "zh": "创世线 · 秩序路线"
             },
-            "requirement": "Before entering Tennozu, choose 'Protect the order of the gods'.",
+            "tendency": "law",
+            "difficulty": "normal",
+            "requirement": "Accumulate Law tendency, then choose 'I must protect the order of the gods' (必須守護神的秩序) at the throne.",
             "requirementLocalized": {
-              "en": "Before entering Tennozu (至高天), choose 'Protect the order of the gods' (必须守护神的秩序).",
-              "ja": "至高天に入る前に「神の秩序を守る」を選択する。",
-              "ko": "천공전에 들어가기 전에 '신의 질서를 지킨다'를 선택.",
-              "zh": "在进入至高天前选择「必须守护神的秩序」。"
+              "en": "Accumulate 秩序 (Law) tendency throughout the game. At the throne of YHVH, choose 'I must protect the order of the gods' (必須守護神的秩序). The route is locked if you pick the opposite of your tendency (you'd need to pay the 66w macca penalty).",
+              "ja": "ゲーム中盤まで 秩序 (Law) 傾向を蓄積。玉座で「神の秩序を守らなければならない」(必須守護神的秩序) を選択。傾向と逆を選ぶと 66 万マッカの罰金が必要。",
+              "ko": "게임 내내 秩序 (Law) 성향 축적. YHVH 옥좌에서 '신의 질서를 반드시 수호한다' (必須守護神的秩序) 선택. 성향과 반대 선택 시 66만 마카 벌금.",
+              "zh": "全程累积 秩序 倾向。在 YHVH 王座前选择「必须守护神的秩序」。若选与倾向相反的路线，需支付 66 万魔晶罚金。"
             },
-            "summary": {
-              "en": "Yoshido becomes the new YHVH, creating a world of strict divine law.",
-              "ja": "ヨシダが新しいヤハウェとなり、厳格な神の法に支配された世界が誕生する。",
-              "ko": "요시도가 새로운 야훼가 되어 엄격한 신의 법에 지배된 세계가 탄생한다.",
-              "zh": "吉田成为新的耶和华，建立起严格的神之秩序支配的世界。"
+            "keyChoices": {
+              "en": [
+                "Save before entering 至高天 (Tennozu) — this is the irreversible branch point.",
+                "Recommended: 結弦 battle → 'I can't believe in the future' (Yoko / Law-aligned)",
+                "Recommended: 宙斯 & Odin → 'Believe in humanity's future' (more Law-compatible)"
+              ],
+              "ja": [
+                "至高天 (Tennozu) に入る前にセーブ — 不可逆の分岐点。",
+                "推奨: 結弦戦 → 「未来を信じられない」（洋子 / 秩序寄り）",
+                "推奨: ゼウス＆オーディン → 「人類の未来を信じる」（秩序寄り）"
+              ],
+              "ko": [
+                "천공전 (Tennozu) 진입 전 세이브 — 되돌릴 수 없는 분기점.",
+                "추천: 유즈하 전투 → '미래를 믿을 수 없다' (요코 / 법 계열)",
+                "추천: 제우스 & 오딘 → '인류의 미래를 믿는다' (법 계열)"
+              ],
+              "zh": [
+                "进入至高天 (Tennozu) 前存档——这是不可逆的分歧点。",
+                "推荐：结弦战 → 「无法相信未来」（洋子 / 偏秩序）",
+                "推荐：宙斯 & 奥丁 → 「相信人类的未来」（偏秩序）"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Order-aligned 創毘: ルシファー (Lucifer) summon-friendly + early 万魔殿 access",
+                "Unique almighty skill reward (if tendency matches your choice)"
+              ],
+              "ja": [
+                "秩序寄りの創毘: ルシファー (Lucifer) 召喚可 + 早期 万魔殿 アクセス",
+                "限定万能スキル報酬（傾向と選択が一致する場合）"
+              ],
+              "ko": [
+                "법 계열 아오비: 루시퍼 (Lucifer) 소환 가능 + 조기 마마도마 접속",
+                "한정 전능 스킬 보상 (성향과 선택 일치 시)"
+              ],
+              "zh": [
+                "秩序倾向的创毘：可召唤路西法 (Lucifer) + 提前进入万魔殿",
+                "专属万能技能奖励（倾向与选择一致时获得）"
+              ]
             }
           },
           {
             "id": "creation-neutral",
             "name": {
-              "en": "Neutral Ending (破坏王座)",
-              "ja": "中立のエンディング",
-              "ko": "중립의 엔딩",
-              "zh": "中立结局"
+              "en": "Creation · Neutral Route",
+              "ja": "創世 · 中立ルート",
+              "ko": "창세 · 중립 루트",
+              "zh": "创世线 · 中立路线"
             },
-            "requirement": "Before entering Tennozu, choose 'Destroy the throne' (破坏王座).",
+            "tendency": "neutral",
+            "difficulty": "normal",
+            "requirement": "Accumulate roughly equal Law and Chaos points (or insufficient of both).",
             "requirementLocalized": {
-              "en": "Before entering Tennozu, choose 'Destroy the throne' (破坏王座).",
-              "ja": "至高天に入る前に「玉座を破壊する」を選択する。",
-              "ko": "천공전에 들어가기 전에 '옥좌를 파괴한다'를 선택.",
-              "zh": "在进入至高天前选择「破坏王座」。"
+              "en": "Maintain balance throughout — roughly equal 秩序 and 混沌 points, OR keep 3 'Neither / no effect' choices. At the throne, the Neutral option appears when neither Law nor Chaos dominates. A new NPC (not Yoshido, not Tao) appears for the Neutral route.",
+              "ja": "全編で 秩序 と 混沌 のバランスを保つ（両方が拮抗）か、「どちらでもない」を 3 回以上選ぶ。玉座で 秩序/混沌 どちらも優位でない場合に中立の選択肢が解放され、洋子でも多緒でもない新しい NPC が現れる。",
+              "ko": "전개 동안 秩序와 混沌 균형 유지 (양쪽 모두 비등) 또는 '어느 쪽도 아님' 3회 이상 선택. 옥좌에서 법/혼돈 모두 우위가 아닐 때 중립 선택지 해금, 요코도 다오도 아닌 새로운 NPC 등장.",
+              "zh": "全程保持平衡——秩序与混沌点数大致相等，或累计 3 次以上「哪边都不是」选项。王座前出现中立选项，会出现一个既非洋子也非多绪的新 NPC 来引导该路线。"
             },
-            "summary": {
-              "en": "The protagonist destroys YHVH's throne. Order and chaos both lose their leaders, leaving humanity free to choose its own path.",
-              "ja": "主人公がヤハウェの玉座を破壊。秩序と混沌のリーダーを失い、人類は自らの道を選択する自由を得る。",
-              "ko": "주인공이 야훼의 옥좌를 파괴. 질서와 혼돈의 지도자를 잃고 인류는 스스로의 길을 선택할 자유를 얻는다.",
-              "zh": "主人公破坏了耶和华的王座。秩序与混沌都失去领袖，人类获得选择自己道路的自由。"
+            "keyChoices": {
+              "en": [
+                "Save before 至高天 — Neutral option is fragile (only 1-2 points leeway).",
+                "Helpful: 宙斯 & Odin battle → 'Neither' (no effect, preserves balance).",
+                "Helpful: complete quests that count for both alignments."
+              ],
+              "ja": [
+                "至高天前にセーブ — 中立分岐の許容差は 1〜2 点のみ。",
+                "ヒント: ゼウス＆オーディン戦 → 「どちらでもない」（影響なし、均衡維持）。",
+                "ヒント: 両方の傾向に加算されるクエストを完了する。"
+              ],
+              "ko": [
+                "천공전 진입 전 세이브 — 중립 분기 허용치는 1~2점뿐.",
+                "도움: 제우스 & 오딘 전투 → '어느 쪽도 아님' (영향 없음, 균형 유지).",
+                "도움: 두 성향 모두에 가산되는 퀘스트 완료."
+              ],
+              "zh": [
+                "进入至高天前存档——中立分支的容差只有 1-2 点。",
+                "技巧：宙斯 & 奥丁战 → 「哪边都不是」（无影响，保持平衡）。",
+                "技巧：完成同时计入两种倾向的支线。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Unlock a unique Neutral-only boss / demon",
+                "Different post-game dialogue from the Law/Chaos routes"
+              ],
+              "ja": [
+                "中立限定のボス/悪魔が解放",
+                "秩序/混沌ルートとは異なるクリア後会話"
+              ],
+              "ko": [
+                "중립 한정 보스/악마 해금",
+                "법/혼돈 루트와 다른 클리어 후 대화"
+              ],
+              "zh": [
+                "解锁中立专属 BOSS/恶魔",
+                "通关后对话与秩序/混沌路线不同"
+              ]
             }
           },
           {
             "id": "creation-chaos",
             "name": {
-              "en": "Chaos Ending (原初的混沌)",
-              "ja": "混沌のエンディング",
-              "ko": "혼돈의 엔딩",
-              "zh": "混沌结局"
+              "en": "Creation · Chaos Route",
+              "ja": "創世 · 混沌ルート",
+              "ko": "창세 · 혼돈 루트",
+              "zh": "创世线 · 混沌路线"
             },
-            "requirement": "Before entering Tennozu, choose 'Create to save Tokyo' (为了拯救东京我要创世).",
+            "tendency": "chaos",
+            "difficulty": "normal",
+            "requirement": "Accumulate Chaos tendency, then choose 'Create to save Tokyo' (為了拯救東京我要創世) at the throne.",
             "requirementLocalized": {
-              "en": "Before entering Tennozu, choose 'Create to save Tokyo' (为了拯救东京我要创世).",
-              "ja": "至高天に入る前に「東京を救うために創世する」を選択する。",
-              "ko": "천공전에 들어가기 전에 '도쿄를 구하기 위해 창세한다'를 선택.",
-              "zh": "在进入至高天前选择「为了拯救东京，我要创世」。"
+              "en": "Accumulate 混沌 (Chaos) tendency. At the throne, choose 'I'll create to save Tokyo' (為了拯救東京我要創世) / 破壊王座 (Destroy the throne). Pairs with Tao Isonokami (多緒) ending.",
+              "ja": "混沌 (Chaos) 傾向を蓄積。玉座で「東京を救うために創世する」(為了拯救東京我要創世) / 玉座を破壊 を選択。多緒 (Tao) エンディングと対になる。",
+              "ko": "混沌 (Chaos) 성향 축적. 옥좌에서 '도쿄를 구하기 위해 창세한다' (為了拯救東京我要創世) / 옥좌 파괴 선택. 다오 (Tao) 엔딩과 짝.",
+              "zh": "累积 混沌 倾向。在王座前选择「为了拯救东京，我要创世」（即破坏王座）。与多绪 (Tao) 结局配对。"
             },
-            "summary": {
-              "en": "The protagonist attempts to recreate Tokyo as a new world, but at great personal cost.",
-              "ja": "主人公が東京を新しい世界として再生しようとするが、莫大な代償を払うことになる。",
-              "ko": "주인공이 도쿄를 새로운 세계로 재생하려 하지만 막대한 대가를 치른다.",
-              "zh": "主人公试图将东京重塑为新世界，但付出了巨大的代价。"
+            "keyChoices": {
+              "en": [
+                "Save before 至高天.",
+                "Recommended: 結弦 battle → 'A bright future' (Tao / Chaos-aligned)",
+                "Recommended: 宙斯 & Odin → 'Despair for humanity' (more Chaos-compatible)"
+              ],
+              "ja": [
+                "至高天前にセーブ。",
+                "推奨: 結弦戦 → 「明るい未来」（多緒 / 混沌寄り）",
+                "推奨: ゼウス＆オーディン → 「人類に絶望」（混沌寄り）"
+              ],
+              "ko": [
+                "천공전 진입 전 세이브.",
+                "추천: 유즈하 전투 → '밝은 미래' (다오 / 혼돈 계열)",
+                "추천: 제우스 & 오딘 → '인류에 절망' (혼돈 계열)"
+              ],
+              "zh": [
+                "进入至高天前存档。",
+                "推荐：结弦战 → 「明朗的未来」（多绪 / 偏混沌）",
+                "推荐：宙斯 & 奥丁 → 「对人类绝望」（偏混沌）"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Tao (多緒) joins your party for the final battle",
+                "Unique almighty skill reward (if tendency matches your choice)"
+              ],
+              "ja": [
+                "多緒 (Tao) が最終戦闘に同行",
+                "限定万能スキル報酬（傾向と選択が一致する場合）"
+              ],
+              "ko": [
+                "다오 (Tao) 가 최종 전투에 동행",
+                "한정 전능 스킬 보상 (성향과 선택 일치 시)"
+              ],
+              "zh": [
+                "多绪 (Tao) 在最终战加入队伍",
+                "专属万能技能奖励（倾向与选择一致时获得）"
+              ]
             }
           },
           {
             "id": "creation-true",
             "name": {
-              "en": "True Ending (启示的创世)",
-              "ja": "真エンディング",
-              "ko": "진 엔딩",
-              "zh": "真结局"
+              "en": "Creation · True Ending (Hidden)",
+              "ja": "創世 · 真エンディング (隠し)",
+              "ko": "창세 · 진 엔딩 (히든)",
+              "zh": "创世线 · 真结局（隐藏）"
             },
-            "requirement": "Choose 'Destroy the throne' + complete 4 sub-quest chains (Finn MacCool + Egyptian gods + Shiva).",
+            "tendency": "neutral",
+            "difficulty": "hidden",
+            "requirement": "1) Choose 'Destroy the throne'. 2) Complete all 4 Egyptian god quest chains (Khonsu MUST survive). 3) Complete 'The Universe's Destruction' (Lv80+ requirement). 4) Have Tao Isonokami available.",
             "requirementLocalized": {
-              "en": "1) Choose 'Destroy the throne'. 2) Complete sub-quests 'Mandrake Root' + 'Like Dew' + 'Finn MacCool's Resolution'. 3) Complete 'Falcon Head' + 'Investigate Egypt Branch' + 'Battle for Winged Sun' + 'Inheritance of Ra' (keep Khonsu alive!). 4) Complete 'Stop the Universe from Being Destroyed' (need Lv80+ to enter Asakusa pink leyline).",
-              "ja": "1）「玉座を破壊する」を選択。2）サブクエスト「マンドレイクの根」「露のごとく」「フィン・マックールの決意」を完了。3）「鷹の頭」「エジプト支部の調査」「翼ある太陽の争奪戦」「ラの継承」を完了（コンズー生存必須！）。4）「宇宙が破壊されるのを阻止せよ」を完了（浅草の桃色龍脈、レベル80以上必要）。",
-              "ko": "1) '옥좌를 파괴한다'를 선택. 2) 서브 퀘스트 '맨드레이크 뿌리' + '이슬처럼' + '핀 매쿠얼의 결의' 완료. 3) '매의 머리' + '이집트 지부 조사' + '날개 달린 태양 쟁탈전' + '라의 계승' 완료 (콘수 생존 필수!). 4) '우주가 파괴되는 것을 막아라' 완료 (아사쿠사 핑크색 용맥, 레벨 80 이상 필요).",
-              "zh": "1) 选择「破坏王座」。2) 完成支线「收集曼陀罗的根」+「如雨露般」+「芬恩·麦克库尔的决心」。3) 完成「隼鹰头」+「打探埃及分部的情况」+「有翼太阳争夺战」+「拉的继承」（**孔苏必须存活！**）。4) 完成「阻止宇宙被破坏吧」（浅草粉紫色龙脉，需 80 级）。"
+              "en": "Most complex ending. (1) At the throne, choose 'Destroy the throne' (破壊王座). (2) Complete the Egyptian chain: 'Falcon's Head' + 'Investigate the Egypt Branch' + 'Battle for the Winged Sun' + 'Inheritance of Ra' — **CRITICAL: Do NOT kill Khonsu** in 'Investigate the Egypt Branch', his survival is required. (3) Complete 'Stop the Universe from Being Destroyed' — requires reaching 浅草 (Asakusa) pink leyline at Lv80+. (4) Have Tao Isonokami as the partner.",
+              "ja": "最も複雑なエンディング。(1) 玉座で「玉座を破壊する」を選択。(2) エジプト系サブクエストを全て完了：「鷹の頭」「エジプト支部の調査」「翼ある太陽の争奪戦」「ラの継承」— **重要: 「エジプト支部の調査」でコンズーを殺さない**こと、生息が必須。(3) 「宇宙が破壊されるのを阻止せよ」を完了 — 浅草の桃色龍脈に到達、レベル 80 以上必要。(4) 多緒 (Tao) を仲魔に。",
+              "ko": "가장 복잡한 엔딩. (1) 옥좌에서 '옥좌를 파괴한다' 선택. (2) 이집트 퀘스트 체인 완료: '매의 머리' + '이집트 지부 조사' + '날개 달린 태양 쟁탈전' + '라의 계승' — **중요: '이집트 지부 조사'에서 콘수를 죽이지 말 것**. (3) '우주가 파괴되는 것을 막아라' 완료 — 아사쿠사 핑크색 용맥 레벨 80 이상. (4) 다오 (Tao) 동료.",
+              "zh": "最复杂的结局。(1) 在王座前选择「破坏王座」。(2) 完成埃及支线链：「隼鹰头」→「打探埃及分部的情况」→「有翼太阳争夺战」→「拉的继承」——**关键：不要在「打探埃及分部的情况」中杀死孔苏**，他必须存活。(3) 完成「阻止宇宙被破坏吧」——需到达浅草粉紫色龙脉，等级 80+。(4) 让多绪 (Tao) 加入队伍。"
             },
-            "summary": {
-              "en": "The 'best' ending. The protagonist creates a truly new world alongside Tao Isonokami.",
-              "ja": "「最良」のエンディング。主人公が五十嵐(いそらぎ)タオと共に真に新しい世界を創造する。",
-              "ko": "가장 좋은 엔딩. 주인공이 이소라기 타오와 함께 진정으로 새로운 세계를 창조한다.",
-              "zh": "「最佳」结局。主人公与矶野上多绪一同创造了真正崭新的世界。"
+            "keyChoices": {
+              "en": [
+                "Save before entering 至高天, then again before each quest chain.",
+                "Do NOT kill Khonsu in 'Investigate the Egypt Branch' — this gates the entire chain.",
+                "Level to 80+ before entering the Asakusa pink leyline.",
+                "Talk to Tao Isonokami to recruit her before the final sequence."
+              ],
+              "ja": [
+                "至高天前と各サブクエスト前にセーブ。",
+                "「エジプト支部の調査」でコンズーを殺さない — 全チェーンの前提。",
+                "浅草の桃色龍脈に入る前にレベル 80 以上。",
+                "最終盤の前に多緒 (Tao) を仲魔にする。"
+              ],
+              "ko": [
+                "천공전 진입 전, 각 서브 퀘스트 체인 전 세이브.",
+                "'이집트 지부 조사'에서 콘수를 죽이지 말 것 — 전체 체인의 전제.",
+                "아사쿠사 핑크색 용맥 진입 전 레벨 80+.",
+                "최종 시퀀스 전 다오 (Tao) 를 동료로 영입."
+              ],
+              "zh": [
+                "进入至高天前存档，每个支线链开始前也存一次。",
+                "不要在「打探埃及分部的情况」中杀死孔苏——这是整个支线链的前提。",
+                "进入浅草粉紫色龙脉前等级需达 80+。",
+                "最终序列前把多绪 (Tao) 加入队伍。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "True Ending cutscene with Tao Isonokami",
+                "Unique post-game content (new dungeon + NG+ mode unlock)"
+              ],
+              "ja": [
+                "多緒 (Tao) との真エンディング演出",
+                "限定クリア後コンテンツ（新ダンジョン + NG+ モード解放）"
+              ],
+              "ko": [
+                "다오 (Tao) 와 진 엔딩 컷신",
+                "한정 클리어 후 콘텐츠 (신 던전 + NG+ 모드 해금)"
+              ],
+              "zh": [
+                "与多绪 (Tao) 的真结局过场",
+                "专属通关后内容（新迷宫 + NG+ 模式解锁）"
+              ]
             }
           }
         ]
@@ -130,122 +356,326 @@
           "zh": "复仇女神篇"
         },
         "description": {
-          "en": "The new story added in Vengeance. Available by choosing 'Hold the girl's hand' at the start. Contains 2 endings.",
-          "ja": "Vengeanceで追加された新ストーリー。冒頭で「少女の手を取る」を選択すると開始できる。2種のエンディングあり。",
-          "ko": "Vengeance에서 추가된 새로운 스토리. 시작 시 '소녀의 손을 잡는다'를 선택하면 시작 가능. 2종 엔딩 포함.",
-          "zh": "复仇版新增剧情。开局选择「牵起少女的手」即可进入。包含 2 种结局。"
+          "en": "The new story added in Vengeance. Choose 'Hold the girl's hand' at the start. Contains 3 endings (Law / Chaos / Neutral).",
+          "ja": "Vengeance で追加された新ストーリー。冒頭で「少女の手を取る」を選択。3 種のエンディング（秩序／混沌／中立）あり。",
+          "ko": "Vengeance 신규 스토리. 시작 시 '소녀의 손을 잡는다' 선택. 3종 엔딩 (법/혼돈/중립) 포함.",
+          "zh": "复仇版新增剧情。开局选择「牵起少女的手」进入。含 3 个结局（秩序 / 混沌 / 中立）。"
+        },
+        "startChoice": {
+          "en": "At the very opening, choose 'Hold the girl's hand' (牽起少女的手) to enter the Vengeance route.",
+          "ja": "冒頭で「少女の手を取る」を選択すると復讐ルートへ。",
+          "ko": "시작 시 '소녀의 손을 잡는다'를 선택해 복수 루트 진입.",
+          "zh": "开局选择「牵起少女的手」进入复仇线。"
         },
         "endings": [
           {
             "id": "vengeance-law",
             "name": {
-              "en": "Law Ending (律法永恒)",
-              "ja": "法のエンディング",
-              "ko": "법의 엔딩",
-              "zh": "秩序结局"
+              "en": "Vengeance · Law Route",
+              "ja": "復讐 · 秩序ルート",
+              "ko": "복수 · 법 루트",
+              "zh": "复仇线 · 秩序路线"
             },
-            "requirement": "Before entering Tennozu, lean towards Law. OR: be Neutral, then choose 'I can't let you do that' at the throne.",
+            "tendency": "law",
+            "difficulty": "normal",
+            "requirement": "Accumulate Law tendency. The Qadistu are defeated; Yoko leads a new divine order.",
             "requirementLocalized": {
-              "en": "Before entering Tennozu, lean towards Law alignment. Alternative: be Neutral, then choose 'I can't let you do that' (不能让你那么做) at the throne.",
-              "ja": "至高天に入る前に秩序寄りの選択肢を選ぶ。別ルート: 中立の場合、玉座で「あなたにはそれをしてほしくない」(不能让你那么做)を選ぶ。",
-              "ko": "천공전에 들어가기 전에 질서 쪽 선택. 대안: 중립일 경우 옥좌에서 '당신이 그렇게 하는 건 허락할 수 없어' 선택.",
-              "zh": "进入至高天前倾向秩序方向。或保持中立后在王座前选择「不能让你那么做」。"
+              "en": "Accumulate 秩序 (Law) tendency throughout the Vengeance route. Final choice: side with Yoko and the new divine order. The Qadistu (the 4 Sacrifices) are defeated at the climax.",
+              "ja": "復讐ルートを通して 秩序 (Law) 傾向を蓄積。最終選択: 洋子と新しい神の秩序側に就く。Qadistu（献牲者 4 名）は結末で倒される。",
+              "ko": "복수 루트 전체에서 秩序 (Law) 성향 축적. 최종 선택: 요코와 새로운 신의 질서 편. Qadistu (희생자 4명) 는 결말에서 격파.",
+              "zh": "复仇线全程累积 秩序 倾向。最终选择：与洋子及新的神之秩序站在一边。献牲者 4 人在高潮时被打败。"
             },
-            "summary": {
-              "en": "A new divine order rises. The Qadistu are defeated but their grievance remains.",
-              "ja": "新しい神の秩序が立ち上がる。カディシュトゥは倒されるが、彼女たちの怨恨は消えない。",
-              "ko": "새로운 신의 질서가 세워진다. 카디슈투는 패배하지만 그녀들의 원한은 사라지지 않는다.",
-              "zh": "新的神之秩序建立。献牲者被打败，但她们的怨恨并未消散。"
+            "keyChoices": {
+              "en": [
+                "Save before the Qadistu boss fight (Tiamat phase).",
+                "Key mid-game choice: when 寻峰洋子 questions the protagonist about cooperation with gods, choose the Law-aligned answer."
+              ],
+              "ja": [
+                "Qadistu ボス戦（ティアマト形態）前にセーブ。",
+                "重要中盤選択: 洋子が神との協力を問う際、秩序寄りの回答を選ぶ。"
+              ],
+              "ko": [
+                "Qadistu 보스전 (티아마트 페이즈) 전 세이브.",
+                "주요 중반 선택: 요코가 신과의 협력을 물을 때, 법 계열 답변 선택."
+              ],
+              "zh": [
+                "献牲者 BOSS 战（提亚马特阶段）前存档。",
+                "关键中盘选择：洋子询问与神合作时，选择偏秩序的答复。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Unique Law-aligned post-game bosses",
+                "Yoko-exclusive 創毘 transformation"
+              ],
+              "ja": [
+                "秩序限定のクリア後ボス",
+                "洋子限定 創毘 形態"
+              ],
+              "ko": [
+                "법 계열 한정 클리어 후 보스",
+                "요코 한정 아오비 변신"
+              ],
+              "zh": [
+                "秩序专属通关后 BOSS",
+                "洋子专属创毘形态"
+              ]
+            }
+          },
+          {
+            "id": "vengeance-neutral",
+            "name": {
+              "en": "Vengeance · Neutral Route",
+              "ja": "復讐 · 中立ルート",
+              "ko": "복수 · 중립 루트",
+              "zh": "复仇线 · 中立路线"
+            },
+            "tendency": "neutral",
+            "difficulty": "normal",
+            "requirement": "Maintain balance — neither Law nor Chaos dominates. The protagonist walks away from the divine conflict.",
+            "requirementLocalized": {
+              "en": "Maintain balance throughout the Vengeance route — roughly equal Law and Chaos. Neither side dominates. The protagonist refuses both divine orders, leading to a third path where humanity is left to its own future.",
+              "ja": "復讐ルートを通して 秩序 と 混沌 のバランスを保つ（どちらも優位にならない）。主人公は両方の神の秩序を拒否し、人類が自らの未来を選ぶ第三の道へ。",
+              "ko": "복수 루트 내내 秩序와 混沌 균형 유지 (어느 쪽도 우세 아님). 주인공은 양쪽 신의 질서를 모두 거부, 인류가 스스로 미래를 선택하는 제3의 길.",
+              "zh": "复仇线全程保持平衡——秩序与混沌大致相当，无主导方。主人公拒绝两边的神之秩序，走上让人类自决未来的第三条路。"
+            },
+            "keyChoices": {
+              "en": [
+                "Save before the Qadistu boss fight.",
+                "Keep 'Neither / no effect' choices when offered.",
+                "Avoid strongly one-sided side-quest patterns (e.g. always siding with Yoko or always against)."
+              ],
+              "ja": [
+                "Qadistu ボス戦前にセーブ。",
+                "「どちらでもない」選択肢が出たら維持する。",
+                "極端なサブクエスト選択（常に洋子側 / 常に反対側など）を避ける。"
+              ],
+              "ko": [
+                "Qadistu 보스전 전 세이브.",
+                "'어느 쪽도 아님' 선택지가 나오면 유지.",
+                "극단적 서브 퀘스트 선택 (항상 요코 편 / 항상 반대 등) 회피."
+              ],
+              "zh": [
+                "献牲者 BOSS 战前存档。",
+                "遇到「哪边都不是」选项时保持选择。",
+                "避免极端的支线倾向（总站洋子 / 总反洋子之类）。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Independent ending — neither divine order wins",
+                "A unique companion joins at the very end"
+              ],
+              "ja": [
+                "独立エンディング — どちらの神の秩序も勝たない",
+                "最後にユニークな仲間が加入"
+              ],
+              "ko": [
+                "독립 엔딩 — 어느 신의 질서도 승리하지 않음",
+                "마지막에 고유한 동료 합류"
+              ],
+              "zh": [
+                "独立结局——两边的神之秩序都不胜",
+                "最终加入独特同伴"
+              ]
             }
           },
           {
             "id": "vengeance-chaos",
             "name": {
-              "en": "Chaos Ending (原初的混沌)",
-              "ja": "混沌のエンディング",
-              "ko": "혼돈의 엔딩",
-              "zh": "混沌结局"
+              "en": "Vengeance · Chaos Route",
+              "ja": "復讐 · 混沌ルート",
+              "ko": "복수 · 혼돈 루트",
+              "zh": "复仇线 · 混沌路线"
             },
-            "requirement": "Before entering Tennozu, lean towards Chaos. OR: be Neutral, then choose 'I'm glad you're okay' at the throne.",
+            "tendency": "chaos",
+            "difficulty": "normal",
+            "requirement": "Accumulate Chaos tendency. Tiamat resurrects; YHVH's reign ends.",
             "requirementLocalized": {
-              "en": "Before entering Tennozu, lean towards Chaos alignment. Alternative: be Neutral, then choose 'I'm glad you're okay' (你没事真好) at the throne.",
-              "ja": "至高天に入る前に混沌寄りの選択肢を選ぶ。別ルート: 中立の場合、玉座で「無事でよかった」(你没事真好)を選ぶ。",
-              "ko": "천공전에 들어가기 전에 혼돈 쪽 선택. 대안: 중립일 경우 옥좌에서 '무사해서 다행이야' 선택.",
-              "zh": "进入至高天前倾向混沌方向。或保持中立后在王座前选择「你没事真好」。"
+              "en": "Accumulate 混沌 (Chaos) tendency. Tiamat (ティアマト / 提亚马特) is resurrected at the climax, replacing YHVH. A new chaotic world is born.",
+              "ja": "混沌 (Chaos) 傾向を蓄積。結末で ティアマト（Tiamat / 提亚马特）が復活し、ヤハウェに取って代わる。新しい混沌の世界が誕生。",
+              "ko": "混沌 (Chaos) 성향 축적. 클라이맥스에서 티아마트 (Tiamat) 가 부활, 야훼를 대체. 새로운 혼돈의 세계 탄생.",
+              "zh": "累积 混沌 倾向。高潮时提亚马特 (Tiamat) 复活取代 YHVH。新的混沌世界诞生。"
             },
-            "summary": {
-              "en": "Tiamat is resurrected, ending YHVH's reign. The world is reborn through chaos.",
-              "ja": "ティアマトが復活し、ヤハウェの支配が終わる。混沌を通じて世界は再生する。",
-              "ko": "티아마트가 부활하고 야훼의 지배가 끝난다. 혼돈을 통해 세계가 재생된다.",
-              "zh": "提亚马特复活，耶和华的统治终结。混沌中世界迎来新生。"
+            "keyChoices": {
+              "en": [
+                "Save before the Qadistu boss fight.",
+                "Key mid-game: when Yoko offers cooperation with the gods, decline or stay neutral with skepticism."
+              ],
+              "ja": [
+                "Qadistu ボス戦前にセーブ。",
+                "重要中盤: 洋子が神との協力を提案した時、拒否または懐疑的に中立維持。"
+              ],
+              "ko": [
+                "Qadistu 보스전 전 세이브.",
+                "주요 중반: 요코가 신과의 협력을 제안할 때, 거부 또는 회의적으로 중립 유지."
+              ],
+              "zh": [
+                "献牲者 BOSS 战前存档。",
+                "关键中盘：洋子提议与神合作时，婉拒或保持怀疑中立。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Tiamat-exclusive 創毘 transformation",
+                "Highest difficulty bonus boss in NG+"
+              ],
+              "ja": [
+                "ティアマト限定 創毘 形態",
+                "NG+ の最高難易度ボーナスボス"
+              ],
+              "ko": [
+                "티아마트 한정 아오비 변신",
+                "NG+ 최고 난이도 보너스 보스"
+              ],
+              "zh": [
+                "提亚马特专属创毘形态",
+                "NG+ 最高难度奖励 BOSS"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "ngplus",
+        "name": {
+          "en": "New Game+ (創生モード)",
+          "ja": "新周目 (創生モード)",
+          "ko": "신주차 (창생 모드)",
+          "zh": "新周目 (创生模式)"
+        },
+        "description": {
+          "en": "Unlocked after clearing either route once. 創生 (Creation) mode scales enemies to Lv150 with extreme difficulty, and unlocks one final exclusive ending.",
+          "ja": "いずれかのルートをクリア後に解放。創生モードは敵が Lv150 相当の超高難度に。最後の限定エンディング 1 種が解放される。",
+          "ko": "어느 루트든 1회 클리어 후 해금. 창생 모드는 적을 Lv150 초고난도로 스케일링, 마지막 한정 엔딩 1종 해금.",
+          "zh": "通关任一路线后解锁。创生模式将敌人提升至 Lv150 极难等级，并解锁最后一个专属结局。"
+        },
+        "unlockCondition": {
+          "en": "Clear any of the 7 main endings (Creation 4 + Vengeance 3).",
+          "ja": "7 種の主要エンディング（創世 4 + 復讐 3）のいずれかをクリア。",
+          "ko": "주요 7종 엔딩 (창세 4 + 복수 3) 중 하나 클리어.",
+          "zh": "通关 7 个主要结局（创世 4 + 复仇 3）中的任意一个。"
+        },
+        "endings": [
+          {
+            "id": "ngplus-rebirth",
+            "name": {
+              "en": "New Game+ · Rebirth (創生)",
+              "ja": "新周目 · 創生",
+              "ko": "신주차 · 창생",
+              "zh": "新周目 · 创生结局"
+            },
+            "tendency": "any",
+            "difficulty": "extreme",
+            "requirement": "Clear any main ending → Start NG+ in 創生 mode → Defeat the new super-boss at Lv150+.",
+            "requirementLocalized": {
+              "en": "(1) Clear any of the 7 main endings. (2) Start New Game+ in 創生 (Creation) mode. (3) Reach the new NG+ exclusive boss (Lv150+ requirement). (4) Defeat the boss. The Rebirth ending unlocks automatically.",
+              "ja": "(1) 7 種の主要エンディングのいずれかをクリア。(2) 新周目を 創生モードで開始。(3) 新周目限定ボス（Lv150 以上到達）に挑む。(4) ボスを撃破。創生エンディングが自動解放。",
+              "ko": "(1) 주요 7종 엔딩 중 하나 클리어. (2) 신주차를 창생 모드로 시작. (3) 신주차 한정 보스 (Lv150+ 도달) 에 도전. (4) 보스 격파. 창생 엔딩 자동 해금.",
+              "zh": "(1) 通关 7 个主要结局之一。(2) 以创生模式开始新周目。(3) 挑战新周目专属 BOSS（需 Lv150+）。(4) 击败 BOSS。自动解锁创生结局。"
+            },
+            "keyChoices": {
+              "en": [
+                "From the title screen, select 'New Game+' after clearing any main ending.",
+                "Choose 創生 (Creation) mode for the exclusive Lv150 content.",
+                "Level up efficiently in 創生 mode before engaging the late-game boss."
+              ],
+              "ja": [
+                "タイトル画面で「ニューゲーム+」を選択（主要エンディング 1 つクリア後）。",
+                "Lv150 限定コンテンツのため 創生モードを選択。",
+                "終盤ボス前に効率的にレベル上げ。"
+              ],
+              "ko": [
+                "타이틀 화면에서 'New Game+' 선택 (주요 엔딩 1개 클리어 후).",
+                "Lv150 한정 콘텐츠를 위해 창생 모드 선택.",
+                "종반 보스 전에 효율적 레벨업."
+              ],
+              "zh": [
+                "通关任一主要结局后，在标题画面选择「New Game+」。",
+                "选择创生模式以解锁 Lv150 专属内容。",
+                "终盘 BOSS 战前高效练级。"
+              ]
+            },
+            "rewards": {
+              "en": [
+                "Rebirth ending (post-game epilogue)",
+                "Synthesize Lv99 Lucifer (requires 創生 mode completion)"
+              ],
+              "ja": [
+                "創生エンディング（クリア後エピローグ）",
+                "Lv99 ルシファー（Lucifer）合体制限には 創生モード クリアが必要"
+              ],
+              "ko": [
+                "창생 엔딩 (클리어 후 에필로그)",
+                "Lv99 루시퍼 합체 해금에는 창생 모드 클리어 필요"
+              ],
+              "zh": [
+                "创生结局（通关后尾声）",
+                "合成 Lv99 路西法需要通关创生模式"
+              ]
             }
           }
         ]
       }
     ],
-    "proTips": {
-      "en": [
-        "Save before entering Tennozu to access all 4 Creation endings in one playthrough.",
-        "For the True Ending, do NOT kill Khonsu in 'Investigate Egypt Branch' - his survival is required for 'Inheritance of Ra'.",
-        "The 'Safety' difficulty is unlocked after clearing the game - great for casual play.",
-        "On NG+, 'Creation Mode' (创生) is available - enemies scale to Lv150 with extreme difficulty.",
-        "To recruit Lucifer (Lv99) you need to play through the 'Creation' (创生) mode at least once."
-      ],
-      "ja": [
-        "至高天に入る前にセーブすれば、1周で4種のエンディングを確認できる。",
-        "真エンディングのため、「エジプト支部の調査」でコンズーを殺さないこと。「ラの継承」の前提条件。",
-        "「Safety」難易度はゲームクリア後に解放される - カジュアル向け。",
-        "NG+で「創生モード」解放 - 敵がLv150相当の超高難度。",
-        "ルシフェル(Lv99)を合体制限するには「創生」モードを一度プレイする必要がある。"
-      ],
-      "ko": [
-        "천공전에 들어가기 전에 세이브하면 한 플레이로 4종 엔딩 확인 가능.",
-        "진 엔딩을 위해 '이집트 지부 조사'에서 콘수를 죽이지 말 것. '라의 계승' 전제 조건.",
-        "'Safety' 난이도는 게임 클리어 후 해금 - 캐주얼 플레이용.",
-        "NG+에서 '창생 모드' 해금 - 적이 Lv150 수준의 초고난도.",
-        "루시퍼(Lv99) 합체 해금에는 '창생' 모드를 한 번 플레이해야 함."
-      ],
-      "zh": [
-        "进入至高天前存档，1 周目可看完创世线 4 个结局。",
-        "真结局关键：**不要在「打探埃及分部的情况」中杀死孔苏**，否则无法完成「拉的继承」。",
-        "通关后解锁「Safety」难度，适合休闲玩家。",
-        "通关后开启「创生」模式，敌人升至 Lv150，挑战极限。",
-        "合成路西法 (Lv99) 需要先通关一次「创生」模式。"
-      ]
-    },
     "sources": [
       {
-        "lang": "en",
-        "url": "https://www.3dmgame.com/games/smtvv/",
-        "attribution": "3DM — 真·女神转生Ⅴ Vengeance 评测"
+        "lang": "zh",
+        "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+        "attribution": "Pser_hanser 攻略文档（飞书） — 倾向系统 / 创世 4 结局 / 默基瑟德双向任务详细条件"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.gamersky.com/handbook/202406/1775983.shtml",
+        "attribution": "游民星空 / 3DM — 全结局全收集流程图文攻略（含 3 主线选择 + 11 支线选择 完整影响表）"
+      },
+      {
+        "lang": "zh",
+        "url": "https://a.9game.cn/news/10198482.html",
+        "attribution": "3DM 单机 — 全支线全收集全结局攻略（神意恶魔 / 隐藏宝箱）"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.bilibili.com/read/cv13953332",
+        "attribution": "B站 (哔哩哔哩) — 全收集解密全结局完美流程攻略"
+      },
+      {
+        "lang": "zh",
+        "url": "https://www.bilibili.com/video/BV1fF4reME27/",
+        "attribution": "B站 — 真·女神转生5 复仇 全恶魔专属技能"
       },
       {
         "lang": "en",
         "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-review",
         "attribution": "IGN — Shin Megami Tensei V: Vengeance Review"
-      },
-      {
-        "lang": "en",
-        "url": "https://www.gamersky.com/z/octopath2/1518006_32235/",
-        "attribution": "Gamersky — 真·女神转生Ⅴ Vengeance 攻略合集"
       }
     ]
   },
   "sources": [
     {
-      "lang": "en",
-      "url": "https://www.3dmgame.com/games/smtvv/",
-      "attribution": "3DM — 真·女神转生Ⅴ Vengeance 评测"
+      "lang": "zh",
+      "url": "https://d0zjwjbcg6.feishu.cn/docx/GPYxdaSgDosUeLxjC71cRdxDnmc",
+      "attribution": "Pser_hanser 攻略文档（飞书） — 倾向系统 / 创世 4 结局 / 默基瑟德双向任务详细条件"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.gamersky.com/handbook/202406/1775983.shtml",
+      "attribution": "游民星空 / 3DM — 全结局全收集流程图文攻略"
+    },
+    {
+      "lang": "zh",
+      "url": "https://a.9game.cn/news/10198482.html",
+      "attribution": "3DM 单机 — 全支线全收集全结局攻略"
+    },
+    {
+      "lang": "zh",
+      "url": "https://www.bilibili.com/read/cv13953332",
+      "attribution": "B站 (哔哩哔哩) — 全收集解密全结局完美流程攻略"
     },
     {
       "lang": "en",
       "url": "https://www.ign.com/articles/shin-megami-tensei-v-vengeance-review",
       "attribution": "IGN — Shin Megami Tensei V: Vengeance Review"
-    },
-    {
-      "lang": "en",
-      "url": "https://www.gamersky.com/z/octopath2/1518006_32235/",
-      "attribution": "Gamersky — 真·女神转生Ⅴ Vengeance 攻略合集"
     }
   ]
 }
