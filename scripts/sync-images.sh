@@ -17,6 +17,28 @@
 #   GTX_SSH_HOST    default: root@124.156.229.149
 #   GTX_REMOTE_DIR  default: /www/wwwroot/gametoolx.top/public/images/games/shin-megami-tensei-5-vengeance
 #   GTX_LOCAL_DIR   default: ./public/images/games/shin-megami-tensei-5-vengeance
+#
+# ============================================================================
+# CRITICAL GOTCHA — read this before running `git pull` on the server
+# ============================================================================
+# When you `git pull` on the server, git will DELETE the 5 subdirs (bosses/
+# regions/ chests/ demons/ misc/) from the working tree because:
+#   - HEAD before pull: those files are tracked
+#   - HEAD after pull:  those files are untracked (we ran `git rm --cached`)
+#   - git pull reconciles working tree to match new HEAD → files DELETED
+#
+# This is NOT a bug — it's correct git behavior. To recover:
+#   1. From your local dev box: `bash scripts/sync-images.sh push`
+#   2. Or, on the server first: `tar -czf /tmp/img-backup.tar.gz ...` before
+#      pulling, then untar after.
+#
+# The `push` command in this script auto-recovers by recreating the 5 subdirs
+# on the remote, but you still need LOCAL images to push from.
+#
+# Long-term mitigation: set up `git update-server-info` + `git pull` to use
+# a hook that preserves untracked files, OR move images to a separate store
+# (S3 / COS / git LFS).
+# ============================================================================
 
 set -euo pipefail
 
@@ -50,6 +72,12 @@ check_remote() {
   ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$SSH_HOST" \
     "test -d '$REMOTE_DIR'" >/dev/null 2>&1 \
     || die "remote dir not found: $SSH_HOST:$REMOTE_DIR"
+  # Ensure all 5 subdirs exist on remote (git pull can delete untracked subdirs
+  # whose contents are removed from tracking). This auto-recovers from that
+  # scenario so push always works.
+  ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$SSH_HOST" \
+    "mkdir -p '$REMOTE_DIR/bosses' '$REMOTE_DIR/regions' '$REMOTE_DIR/chests' '$REMOTE_DIR/demons' '$REMOTE_DIR/misc'" \
+    >/dev/null 2>&1
 }
 
 # Build rsync include/exclude patterns
