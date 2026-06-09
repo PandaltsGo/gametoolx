@@ -43,7 +43,9 @@ export type GameData = {
 
 export type ToolData = {
   slug: string;
-  gameSlug: string;
+  /** Game binding — `null` for universal tools (e.g. system-checker) that
+   * appear under every game page. */
+  gameSlug: string | null;
   type: string;
   title: Record<string, string>;
   description: Record<string, string>;

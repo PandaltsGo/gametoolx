@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { GameData, SystemTiers, UITranslations } from "@/lib/data";
 
 type Props = {
@@ -8,15 +9,22 @@ type Props = {
   ui: UITranslations;
   game: GameData;
   tiers: SystemTiers;
+  allGames: { slug: string; title: string }[];
+  /** Auto-detect hardware + auto-submit on mount. Default true. */
+  autoTrigger?: boolean;
+  /** When the parent page is the universal entry (gameSlug === null tool),
+   * skip game-specific header / breadcrumb. */
+  isUniversal?: boolean;
 };
 
 type Status = "match" | "partial" | "nomatch";
 type Check = { label: string; status: Status; detail: string };
-type Result = {
-  overall: Status;
-  summary: string;
-  checks: Check[];
-  recommendedTier?: { score: number; label: string; resolution: string; fps: number };
+type Detected = {
+  cores: number | null;
+  memoryGb: number | null;
+  platform: string;
+  screen: string;
+  ua: string;
 };
 
 const STATUS_ICON: Record<Status, string> = {
@@ -80,17 +88,98 @@ function checkStorage(reqStr: string | undefined, userStorage: string): Status {
   return "match";
 }
 
-export default function SystemChecker({ ui, game, tiers }: Props) {
+function detectHardware(): Detected {
+  const nav = typeof navigator !== "undefined" ? navigator : null;
+  return {
+    cores: (nav as any)?.hardwareConcurrency ?? null,
+    memoryGb: (nav as any)?.deviceMemory ?? null,
+    platform: nav?.platform ?? "unknown",
+    screen: typeof screen !== "undefined" ? `${screen.width}×${screen.height}` : "unknown",
+    ua: nav?.userAgent ?? "unknown",
+  };
+}
+
+function inferCpuFromCores(cores: number | null): string {
+  if (cores === null) return "";
+  if (cores >= 16) return "i9-13900K";        // 推测
+  if (cores >= 12) return "i7-12700K";
+  if (cores >= 8)  return "i5-12400F";
+  if (cores >= 6)  return "Ryzen 5 5600X";
+  if (cores >= 4)  return "i3-12100";
+  return "Ryzen 3 4100";
+}
+
+function inferRamFromGb(gb: number | null): number {
+  if (gb === null) return 8;
+  if (gb >= 32) return 32;
+  if (gb >= 16) return 16;
+  if (gb >= 8)  return 8;
+  if (gb >= 4)  return 4;
+  return 4;
+}
+
+function inferGpuFromUa(ua: string): string {
+  const s = ua.toLowerCase();
+  // Try to find common dGPU strings in UA (rare but possible)
+  const known = ["rtx 4090", "rtx 4080", "rtx 4070", "rtx 4060", "rtx 3090", "rtx 3080", "rtx 3070", "rtx 3060", "rtx 2080", "rtx 2070", "rtx 2060", "gtx 1660", "gtx 1080", "gtx 1070", "rx 7900", "rx 7800", "rx 7700", "rx 7600", "rx 6900", "rx 6800", "rx 6700", "rx 6600"];
+  for (const k of known) if (s.includes(k)) return k.toUpperCase();
+  return "";
+}
+
+export default function SystemChecker({ lang, ui, game, tiers, allGames, autoTrigger = true, isUniversal = false }: Props) {
+  const router = useRouter();
+  const params = useSearchParams();
   const [cpu, setCpu] = useState("");
   const [gpu, setGpu] = useState("");
   const [ram, setRam] = useState<number | "">("");
   const [storage, setStorage] = useState<"SSD" | "HDD">("SSD");
   const [submitted, setSubmitted] = useState(false);
+  const [detected, setDetected] = useState<Detected | null>(null);
+  const [showDetected, setShowDetected] = useState(false);
+  const [isAutoDetecting, setIsAutoDetecting] = useState(false);
+
+  // Auto-detect on mount if autoTrigger (default true)
+  useEffect(() => {
+    if (autoTrigger) {
+      handleAutoDetect();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function handleAutoDetect() {
+    setIsAutoDetecting(true);
+    const det = detectHardware();
+    setDetected(det);
+    setShowDetected(true);
+    // Pre-fill fields with educated guesses
+    if (!cpu) setCpu(inferCpuFromCores(det.cores));
+    if (!ram) setRam(inferRamFromGb(det.memoryGb));
+    if (!gpu) {
+      const g = inferGpuFromUa(det.ua);
+      if (g) setGpu(g);
+    }
+    // Simulate brief loading then auto-submit
+    setTimeout(() => {
+      setSubmitted(true);
+      setIsAutoDetecting(false);
+    }, 350);
+  }
+
+  function switchGame(slug: string) {
+    const p = new URLSearchParams(params?.toString() || "");
+    p.set("game", slug);
+    router.push(`/${lang}/tools/system-checker?${p.toString()}`);
+  }
 
   const rec = game.systemRequirements?.recommended || {};
   const min = game.systemRequirements?.minimum || {};
 
-  const result = useMemo<Result | null>(() => {
+  const result = useMemo<{
+    overall: Status;
+    summary: string;
+    checks: Check[];
+    recommendedTier?: { score: number; label: string; resolution: string; fps: number };
+  } | null>(() => {
     if (!submitted) return null;
 
     const checks: Check[] = [];
@@ -104,7 +193,7 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
     let gpuDetail: string;
     if (userGpuScore === 0) {
       gpuStatus = "nomatch";
-      gpuDetail = `❌ GPU unknown — could not match "${gpu || "—"}"`;
+      gpuDetail = `❌ GPU unknown — could not match "${gpu || "—"}". Type your model name above for an accurate result.`;
     } else if (userGpuScore >= recGpuScore) {
       gpuStatus = "match";
       gpuDetail = `✅ ${gpu} ≥ ${rec.gpu || "recommended"}`;
@@ -125,7 +214,7 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
     let cpuDetail: string;
     if (userCpuLvl === 0) {
       cpuStatus = "nomatch";
-      cpuDetail = `❌ CPU unknown — could not match "${cpu || "—"}"`;
+      cpuDetail = `❌ CPU unknown — could not match "${cpu || "—"}". Type a model name like "i5-12400F".`;
     } else if (userCpuLvl >= recCpuLvl) {
       cpuStatus = "match";
       cpuDetail = `✅ ${cpu} ≥ ${rec.cpu || "recommended"}`;
@@ -190,11 +279,104 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
     };
   }, [submitted, cpu, gpu, ram, storage, game, tiers, ui]);
 
+  // Log to DB when result is computed
+  useEffect(() => {
+    if (!result || !submitted) return;
+    const score = result.recommendedTier?.score || 0;
+    fetch("/api/system-checks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        gameSlug: game.slug,
+        cpu: cpu || null,
+        gpu: gpu || null,
+        ramGb: typeof ram === "number" ? ram : null,
+        storage: storage,
+        score,
+        result: result.overall,
+      }),
+    }).catch(() => {});
+  }, [result, submitted, game.slug, cpu, gpu, ram, storage]);
+
+  // Load recent check history for this session
+  const [history, setHistory] = useState<Array<{ id: number; gameSlug: string; cpu?: string; gpu?: string; ramGb?: number; storage?: string; score?: number; result?: string; createdAt: number }>>([]);
+  useEffect(() => {
+    fetch("/api/system-checks", { credentials: "include" })
+      .then((r) => r.json())
+      .then((d) => setHistory(d.checks || []))
+      .catch(() => {});
+  }, [submitted]);
+
   return (
     <div className="space-y-8">
+      {/* Game picker (only when universal) */}
+      {isUniversal && (
+        <section className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            {ui.checker.gameLabel || "Select Game"}
+          </label>
+          <select
+            value={game.slug}
+            onChange={(e) => switchGame(e.target.value)}
+            className="w-full rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-white"
+          >
+            {allGames.map((g) => (
+              <option key={g.slug} value={g.slug}>
+                {g.title}
+              </option>
+            ))}
+          </select>
+        </section>
+      )}
+
+      {/* Auto-detecting spinner (during 350ms on mount) */}
+      {isAutoDetecting && !submitted && (
+        <section className="rounded-2xl border border-blue-500/30 bg-blue-500/5 p-6 text-center">
+          <div className="inline-block animate-pulse text-blue-300">
+            <span className="text-2xl">🔍</span> {ui.checker.detecting || "Detecting your hardware..."}
+          </div>
+        </section>
+      )}
+
+      {/* Auto-detect banner (after detection) */}
+      {detected && showDetected && (
+        <section className="rounded-2xl border border-blue-500/30 bg-blue-500/5 p-4 text-sm">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-blue-300 font-semibold">🔍 Auto-detected from your browser</h3>
+            <button
+              onClick={() => setShowDetected(false)}
+              className="text-xs text-gray-500 hover:text-white"
+            >
+              ✕ hide
+            </button>
+          </div>
+          <dl className="grid grid-cols-2 gap-2 text-xs">
+            <div><dt className="text-gray-400">CPU cores:</dt><dd className="text-white">{detected.cores ?? "N/A"}</dd></div>
+            <div><dt className="text-gray-400">Memory:</dt><dd className="text-white">{detected.memoryGb ? `${detected.memoryGb} GB` : "N/A"}</dd></div>
+            <div><dt className="text-gray-400">Platform:</dt><dd className="text-white">{detected.platform}</dd></div>
+            <div><dt className="text-gray-400">Screen:</dt><dd className="text-white">{detected.screen}</dd></div>
+            <div className="col-span-2"><dt className="text-gray-400">User-Agent:</dt><dd className="text-white text-xs truncate">{detected.ua}</dd></div>
+          </dl>
+          <p className="mt-3 text-xs text-gray-500">
+            ⚠️ Browser can only detect CPU cores, memory, platform, screen, and user-agent.
+            For GPU and storage, type the model manually if the field is empty.
+          </p>
+        </section>
+      )}
+
       {/* Form */}
       <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <h2 className="text-2xl font-semibold mb-4">{ui.checker.yourPc}</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-semibold text-white">{ui.checker.yourPc}</h2>
+          <button
+            onClick={handleAutoDetect}
+            className="text-sm rounded-lg bg-blue-600 hover:bg-blue-500 px-3 py-1 text-white"
+            type="button"
+          >
+            🔄 {ui.checker.redetect || "Re-detect"}
+          </button>
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">{ui.checker.cpu}</label>
@@ -205,6 +387,9 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
               placeholder={ui.checker.cpuPlaceholder}
               className="w-full rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-white placeholder-gray-500"
             />
+            {detected?.cores && (
+              <p className="mt-1 text-xs text-gray-500">Auto-suggested: {inferCpuFromCores(detected.cores)} (based on {detected.cores} cores)</p>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">{ui.checker.gpu}</label>
@@ -215,6 +400,9 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
               placeholder={ui.checker.gpuPlaceholder}
               className="w-full rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-white placeholder-gray-500"
             />
+            {!gpu && (
+              <p className="mt-1 text-xs text-yellow-500">⚠️ Browser cannot detect GPU. Type model name (e.g. "RTX 3060") for accurate result.</p>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">{ui.checker.ram}</label>
@@ -230,6 +418,9 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
                 </option>
               ))}
             </select>
+            {detected?.memoryGb && (
+              <p className="mt-1 text-xs text-gray-500">Auto-suggested: {inferRamFromGb(detected.memoryGb)} GB (based on {detected.memoryGb} GB detected)</p>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">{ui.checker.storage}</label>
@@ -244,20 +435,48 @@ export default function SystemChecker({ ui, game, tiers }: Props) {
                 </option>
               ))}
             </select>
+            <p className="mt-1 text-xs text-gray-500">Browser cannot detect storage. Default: SSD.</p>
           </div>
         </div>
         <button
           onClick={() => setSubmitted(true)}
           className="mt-6 w-full rounded-lg bg-brand-600 hover:bg-brand-400 px-4 py-3 font-semibold text-white transition-colors"
         >
-          {ui.action.check}
+          {ui.checker.recheck || "Re-check"}
         </button>
       </section>
+
+      {/* Recent check history */}
+      {history.length > 0 && (
+        <section className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <h3 className="text-sm font-semibold text-brand-300 mb-3 uppercase tracking-wide">
+            🕒 Recent checks (your browser, this session)
+          </h3>
+          <div className="space-y-1.5 text-sm">
+            {history.slice(0, 5).map((h) => (
+              <div key={h.id} className="flex items-center justify-between gap-3 rounded border border-white/5 bg-black/20 px-3 py-2">
+                <div className="text-gray-300 truncate">
+                  <span className="text-white">{h.gpu || "?"}</span>
+                  {h.ramGb ? <span className="text-gray-500"> · {h.ramGb}GB</span> : null}
+                  {h.cpu ? <span className="text-gray-500"> · {h.cpu.slice(0, 30)}</span> : null}
+                </div>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${
+                  h.result === "match" ? "bg-green-500/20 text-green-300" :
+                  h.result === "partial" ? "bg-yellow-500/20 text-yellow-300" :
+                  "bg-red-500/20 text-red-300"
+                }`}>
+                  {h.result === "match" ? "✓" : h.result === "partial" ? "⚠" : "✗"} {h.score ?? "?"}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Result */}
       {result && (
         <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-2xl font-semibold mb-2">{ui.checker.result}</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-white">{ui.checker.result}</h2>
           <p className={`text-lg font-medium ${STATUS_TEXT[result.overall]}`}>
             {STATUS_ICON[result.overall]} {result.summary}
           </p>

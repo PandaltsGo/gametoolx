@@ -42,7 +42,11 @@
     "gpuPlaceholder": "例: RTX 3060, RX 6600",
     "result": "判定結果",
     "recommendation": "推奨設定",
-    "summary": "サマリー"
+    "summary": "サマリー",
+    "gameLabel": "ゲーム選択",
+    "detecting": "ハードウェアを検出中…",
+    "redetect": "再検出",
+    "recheck": "再確認"
   },
   "recommender": {
     "unlocked": "解放済み職業",

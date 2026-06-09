@@ -86,13 +86,20 @@ export default async function LangHomePage({ params }: Props) {
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
               {tools.map((tool) => {
-                const game = games.find((g) => g.slug === tool.gameSlug);
+                // Universal tool (gameSlug === null) — show first game as default
+                const game = tool.gameSlug
+                  ? games.find((g) => g.slug === tool.gameSlug)
+                  : games[0];
                 const toolTitle = tool.title[safeLang] || tool.title.en;
-                const gameTitle = game?.title[safeLang] || game?.title.en || tool.gameSlug;
+                const gameTitle = game?.title[safeLang] || game?.title.en || (tool.gameSlug ?? "Universal");
+                // Universal tool needs ?game=<slug> in URL — use first game as default
+                const toolHref = tool.gameSlug === null && games[0]
+                  ? `/${safeLang}/tools/${tool.slug}?game=${games[0].slug}`
+                  : `/${safeLang}/tools/${tool.slug}`;
                 return (
                   <Link
                     key={tool.slug}
-                    href={`/${safeLang}/tools/${tool.slug}`}
+                    href={toolHref}
                     className="block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-colors hover:bg-white/10"
                   >
                     {game?.images?.capsule && (

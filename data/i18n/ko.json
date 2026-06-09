@@ -42,7 +42,11 @@
     "gpuPlaceholder": "예: RTX 3060, RX 6600",
     "result": "판정 결과",
     "recommendation": "추천 설정",
-    "summary": "요약"
+    "summary": "요약",
+    "gameLabel": "게임 선택",
+    "detecting": "하드웨어 감지 중…",
+    "redetect": "다시 감지",
+    "recheck": "다시 확인"
   },
   "recommender": {
     "unlocked": "해금된 직업",

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getGame, getTool, getSystemTiers, getUITranslations, listTools } from "@/lib/data";
+import { getGame, getTool, getSystemTiers, getUITranslations, listTools, listGames } from "@/lib/data";
 import SystemChecker from "@/components/tools/SystemChecker";
 import BuildRecommender from "@/components/tools/BuildRecommender";
 import EndingsTracker from "@/components/tools/EndingsTracker";
@@ -14,6 +14,7 @@ type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;
+  searchParams: Promise<{ game?: string }>;
 };
 
 export async function generateStaticParams() {
@@ -28,11 +29,21 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
+  const { game: gameParam } = await searchParams;
+
   const tool = await getTool(slug);
-  const game = tool ? await getGame(tool.gameSlug) : null;
-  if (!tool || !game) return { title: "Not Found" };
+  if (!tool) return { title: "Not Found" };
+
+  // Universal tool (gameSlug === null) — use query ?game= or first game for metadata
+  let game = tool.gameSlug ? await getGame(tool.gameSlug) : null;
+  if (!game) {
+    const games = await listGames();
+    const target = gameParam || games[0]?.slug;
+    game = target ? await getGame(target) : null;
+  }
+  if (!game) return { title: "Not Found" };
 
   const toolTitle = tool.title[lang] || tool.title.en;
   const gameTitle = game.title[lang] || game.title.en;
@@ -91,8 +102,9 @@ function JsonLdScript({ data }: { data: object }) {
   );
 }
 
-export default async function ToolPage({ params }: Props) {
+export default async function ToolPage({ params, searchParams }: Props) {
   const { lang, slug } = await params;
+  const { game: gameParam } = await searchParams;
 
   if (!SUPPORTED_LANGS.includes(lang as Lang)) {
     notFound();
@@ -102,23 +114,37 @@ export default async function ToolPage({ params }: Props) {
   const tool = await getTool(slug);
   if (!tool) notFound();
 
-  const game = await getGame(tool.gameSlug);
+  // Universal tool (gameSlug === null) — resolve game from ?game= or first available
+  let game = tool.gameSlug ? await getGame(tool.gameSlug) : null;
+  if (!game) {
+    const games = await listGames();
+    const target = gameParam || games[0]?.slug;
+    game = target ? await getGame(target) : null;
+  }
   if (!game) notFound();
 
   const ui = await getUITranslations(safeLang);
   const tiers = await getSystemTiers();
   if (!tiers) notFound();
 
+  // Fetch all games for the universal system-checker picker
+  const allGamesList = await listGames();
+  const allGamesForPicker = allGamesList.map((g) => ({
+    slug: g.slug,
+    title: g.title[safeLang] || g.title.en,
+  }));
+
   const toolTitle = tool.title[safeLang] || tool.title.en;
   const gameTitle = game.title[safeLang] || game.title.en;
   const toolDesc = tool.description[safeLang] || tool.description.en;
+  const isUniversal = tool.gameSlug === null;
 
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100">
       <JsonLdScript data={{
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        name: `${gameTitle} ${toolTitle}`,
+        name: isUniversal ? toolTitle : `${gameTitle} ${toolTitle}`,
         description: toolDesc,
         url: `https://gametoolx.top/${safeLang}/tools/${slug}`,
         applicationCategory: "GameApplication",
@@ -139,16 +165,22 @@ export default async function ToolPage({ params }: Props) {
             GameToolX
           </Link>
           <span className="mx-1">›</span>
-          <Link href={`/${safeLang}/games/${game.slug}`} className="hover:text-white">
-            {gameTitle}
-          </Link>
-          <span className="mx-1">›</span>
-          <span className="text-white">{toolTitle}</span>
+          {isUniversal ? (
+            <span className="text-white">{toolTitle}</span>
+          ) : (
+            <>
+              <Link href={`/${safeLang}/games/${game.slug}`} className="hover:text-white">
+                {gameTitle}
+              </Link>
+              <span className="mx-1">›</span>
+              <span className="text-white">{toolTitle}</span>
+            </>
+          )}
         </nav>
 
         {/* Header */}
         <header className="mb-8">
-          {game.images?.capsule && (
+          {game.images?.capsule && !isUniversal && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={game.images.capsule}
@@ -157,7 +189,7 @@ export default async function ToolPage({ params }: Props) {
             />
           )}
           <h1 className="text-3xl font-bold text-white">
-            {gameTitle} - {toolTitle}
+            {isUniversal ? toolTitle : `${gameTitle} - ${toolTitle}`}
           </h1>
           <p className="mt-2 text-gray-400">
             {tool.description[safeLang] || tool.description.en}
@@ -166,7 +198,15 @@ export default async function ToolPage({ params }: Props) {
 
         {/* Tool-specific component */}
         {tool.type === "system-checker" && (
-          <SystemChecker lang={safeLang} ui={ui} game={game} tiers={tiers} />
+          <SystemChecker
+            lang={safeLang}
+            ui={ui}
+            game={game}
+            tiers={tiers}
+            allGames={allGamesForPicker}
+            autoTrigger={true}
+            isUniversal={isUniversal}
+          />
         )}
 
         {tool.type === "build-recommender" && (

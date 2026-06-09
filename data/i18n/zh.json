@@ -42,7 +42,11 @@
     "gpuPlaceholder": "例如: RTX 3060, RX 6600",
     "result": "兼容性检测结果",
     "recommendation": "推荐画质设置",
-    "summary": "总结"
+    "summary": "总结",
+    "gameLabel": "选择游戏",
+    "detecting": "正在检测你的硬件…",
+    "redetect": "重新检测",
+    "recheck": "重新检查"
   },
   "recommender": {
     "unlocked": "已解锁职业",

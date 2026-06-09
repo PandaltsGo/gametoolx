@@ -42,7 +42,11 @@
     "gpuPlaceholder": "e.g. RTX 3060, RX 6600",
     "result": "Compatibility Result",
     "recommendation": "Recommended Settings",
-    "summary": "Summary"
+    "summary": "Summary",
+    "gameLabel": "Select Game",
+    "detecting": "Detecting your hardware…",
+    "redetect": "Re-detect",
+    "recheck": "Re-check"
   },
   "recommender": {
     "unlocked": "Unlocked Jobs",

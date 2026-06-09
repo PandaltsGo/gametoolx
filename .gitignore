@@ -45,3 +45,9 @@ public/images/games/shin-megami-tensei-5-vengeance/regions/
 public/images/games/shin-megami-tensei-5-vengeance/chests/
 public/images/games/shin-megami-tensei-5-vengeance/demons/
 public/images/games/shin-megami-tensei-5-vengeance/misc/
+
+# mavis agent internal data (plans, scratchpad) — not part of source code
+.mavis/
+
+# One-time evaluation report (was committed accidentally in 2026-06-08)
+EVALUATION_REPORT.md

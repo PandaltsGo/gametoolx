@@ -70,7 +70,8 @@ export default async function GamePage({ params }: Props) {
 
   const ui = await getUITranslations(safeLang);
   const allTools = await listTools();
-  const gameTools = allTools.filter((t) => t.gameSlug === slug);
+  // Game-specific tools + universal tools (gameSlug === null, e.g. system-checker)
+  const gameTools = allTools.filter((t) => t.gameSlug === slug || t.gameSlug === null);
 
   const gameTitle = game.title[safeLang] || game.title.en;
 
@@ -149,10 +150,15 @@ export default async function GamePage({ params }: Props) {
             <div className="grid gap-4 md:grid-cols-2">
               {gameTools.map((tool) => {
                 const toolTitle = tool.title[safeLang] || tool.title.en;
+                // Universal tools (gameSlug === null) need ?game=<slug> in URL
+                // so the tool page pre-selects the current game.
+                const toolHref = tool.gameSlug === null
+                  ? `/${safeLang}/tools/${tool.slug}?game=${slug}`
+                  : `/${safeLang}/tools/${tool.slug}`;
                 return (
                   <Link
                     key={tool.slug}
-                    href={`/${safeLang}/tools/${tool.slug}`}
+                    href={toolHref}
                     className="block rounded-2xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10"
                   >
                     <h3 className="text-lg font-semibold text-white">{toolTitle}</h3>

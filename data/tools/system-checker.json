@@ -1,0 +1,34 @@
+{
+  "slug": "system-checker",
+  "gameSlug": null,
+  "type": "system-checker",
+  "title": {
+    "en": "System Requirements Checker",
+    "ja": "動作環境チェッカー",
+    "ko": "시스템 요구사항 체커",
+    "zh": "系统配置检测"
+  },
+  "description": {
+    "en": "Check if your PC can run the game. Auto-detects your hardware on page load, then compares against minimum and recommended requirements. Supports multiple games — switch the game dropdown to check different titles.",
+    "ja": "あなたのPCでゲームが動作するかチェックします。ページ読み込み時にハードウェアを自動検出し、最低・推奨要件と比較します。複数のゲームに対応 — ドロップダウンで切り替えて様々なタイトルを確認できます。",
+    "ko": "내 PC에서 게임이 동작하는지 확인합니다. 페이지 로드 시 하드웨어를 자동 감지하여 최소/권장 사양과 비교합니다. 여러 게임 지원 — 드롭다운으로 전환하여 다양한 타이틀을 확인하세요.",
+    "zh": "检测你的电脑能否运行游戏。进入页面后自动检测硬件配置,并与最低/推荐配置对比。支持多游戏 — 通过下拉菜单切换不同游戏进行检测。"
+  },
+  "data": {
+    "_comment": "Universal system-checker — uses game.systemRequirements and data/system-tiers.json. gameSlug is null so it appears under every game page. Pass ?game=<slug> in URL to pre-select a specific game.",
+    "sources": [
+      {
+        "lang": "en",
+        "url": null,
+        "attribution": "Per-game official Steam Store pages (see each game's availableTools for specific URLs)"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "lang": "en",
+      "url": null,
+      "attribution": "Per-game official Steam Store pages (see each game's availableTools for specific URLs)"
+    }
+  ]
+}
