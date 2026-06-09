@@ -9,6 +9,11 @@ type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
+// Re-validate the SSG cache every 60s so content changes (new tools, updated
+// walkthroughs, etc.) show up within a minute of deploy. Without this, Next.js
+// 16's default `s-maxage=31536000` (1 year) would cache forever.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const games = await listGames();
   const params: { lang: string; slug: string }[] = [];

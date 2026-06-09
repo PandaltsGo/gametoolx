@@ -9,6 +9,9 @@ type Lang = (typeof SUPPORTED_LANGS)[number];
 
 type Props = { params: Promise<{ lang: string }> };
 
+// Re-validate every 60s so new tools / games show up quickly after deploy.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   return SUPPORTED_LANGS.map((lang) => ({ lang }));
 }

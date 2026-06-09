@@ -17,6 +17,11 @@ type Props = {
   searchParams: Promise<{ game?: string }>;
 };
 
+// Re-validate the SSG cache every 60s so content changes show up within a
+// minute of deploy. Without this, Next.js 16's default `s-maxage=31536000`
+// would cache the prerender for a year.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   // MVP: 2 tools × 3 langs = 6 pages
   const tools = await listTools();
