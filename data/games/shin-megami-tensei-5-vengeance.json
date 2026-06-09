@@ -96,9 +96,9 @@
     }
   },
   "availableTools": [
-    "system-checker",
     "endings-tracker",
-    "fusion-calculator"
+    "fusion-calculator",
+    "walkthrough"
   ],
   "sources": [
     {
@@ -107,5 +107,9 @@
       "attribution": "Steam Store — Official Page"
     }
   ],
-  "tools": []
+  "tools": [
+    "endings-tracker",
+    "fusion-calculator",
+    "walkthrough"
+  ]
 }
