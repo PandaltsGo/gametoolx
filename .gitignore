@@ -37,3 +37,11 @@ tsconfig.tsbuildinfo
 # Temp scripts (debugging/one-off)
 .tmp_*.py
 .tmp_*.log
+
+# LLM-tagged SMT5V images (Pser_hanser doc screenshots) — stored on server only,
+# synced via scripts/sync-images.sh. NOT shipped in git to avoid 29MB+ pack.
+public/images/games/shin-megami-tensei-5-vengeance/bosses/
+public/images/games/shin-megami-tensei-5-vengeance/regions/
+public/images/games/shin-megami-tensei-5-vengeance/chests/
+public/images/games/shin-megami-tensei-5-vengeance/demons/
+public/images/games/shin-megami-tensei-5-vengeance/misc/
