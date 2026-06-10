@@ -10,6 +10,7 @@
  */
 import Link from "next/link";
 import type { ResourceView } from "@/lib/data";
+import TrackedOutboundLink from "./TrackedOutboundLink";
 
 type Lang = "ja" | "ko" | "zh" | "en";
 
@@ -112,14 +113,15 @@ export default function ResourceCard({ resource, lang, ui }: Props) {
         >
           {ui.resource?.viewResource || "View Resource →"}
         </Link>
-        <a
+        <TrackedOutboundLink
           href={r.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer ugc"
+          resourceId={r.id}
+          sourceId={r.sourceId}
+          lang={lang}
           className="text-xs text-gray-400 hover:text-white"
         >
           {ui.resource?.viewOriginal || "View Original →"}
-        </a>
+        </TrackedOutboundLink>
       </div>
     </article>
   );

@@ -1,7 +1,13 @@
 import { listGames, listTools } from "@/lib/data";
+import { listResourcesByGame } from "@/lib/resources";
+import { getOutboundStats } from "@/lib/analytics";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.top";
 const LANGS = ["ja", "ko", "zh", "en"] as const;
+const TOPIC_SLUGS = [
+  "ending", "boss", "quest", "build", "item", "map",
+  "system", "lore", "character", "mechanic", "walkthrough",
+];
 
 export const revalidate = 3600; // 1h
 
@@ -16,7 +22,6 @@ type Entry = {
 function urlEntry(path: string, priority: number, freq: Entry["changeFrequency"]): Entry {
   const fullUrl = `${BASE_URL}${path}`;
   const alternates: Record<string, string> = {};
-  // Build alternates from path: /ja/tools/foo -> /ko/tools/foo, /en/tools/foo
   const altPaths = path.match(/^\/([a-z]{2})(\/.*)$/);
   if (altPaths) {
     for (const l of LANGS) {
@@ -58,27 +63,59 @@ function toXml(entry: Entry): string {
 export async function GET() {
   const games = await listGames();
   const tools = await listTools();
+  void getOutboundStats; // warm analytics
 
   const entries: Entry[] = [];
 
-  // Home pages (priority 1.0)
+  // Home pages
   for (const lang of LANGS) {
     entries.push(urlEntry(`/${lang}`, 1.0, "daily"));
   }
 
-  // Game pages (priority 0.8)
+  // Game pages
   for (const g of games) {
     for (const lang of LANGS) {
       entries.push(urlEntry(`/${lang}/games/${g.slug}`, 0.8, "weekly"));
     }
   }
 
-  // Tool pages (priority 0.7)
+  // Tool pages
   for (const t of tools) {
     for (const lang of LANGS) {
-      const priority = t.type === "system-checker" ? 0.9 : 0.7; // system-checker gets boost (hot type)
+      const priority = t.type === "system-checker" ? 0.9 : 0.7;
       entries.push(urlEntry(`/${lang}/tools/${t.slug}`, priority, "monthly"));
     }
+  }
+
+  // Topic pages (v2)
+  for (const g of games) {
+    let topicsForGame: string[] = [];
+    try {
+      const r = listResourcesByGame(g.slug, { limit: 1000 });
+      const set = new Set<string>();
+      r.forEach((x) => x.topicTags.forEach((t) => set.add(t)));
+      topicsForGame = Array.from(set);
+    } catch {}
+    if (topicsForGame.length === 0) topicsForGame = TOPIC_SLUGS.slice(0, 5);
+    for (const topic of topicsForGame) {
+      for (const lang of LANGS) {
+        entries.push(urlEntry(`/${lang}/games/${g.slug}/${topic}`, 0.7, "weekly"));
+      }
+    }
+  }
+
+  // Resource pages (v2) — only if DB ready
+  try {
+    for (const g of games) {
+      const r = listResourcesByGame(g.slug, { limit: 1000 });
+      for (const res of r) {
+        for (const lang of LANGS) {
+          entries.push(urlEntry(`/${lang}/resource/${res.id}`, 0.6, "monthly"));
+        }
+      }
+    }
+  } catch {
+    // DB not ready yet — skip resource pages
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

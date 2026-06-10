@@ -12,12 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gametoolx.top";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "GameToolX - Free game tools for JRPG, RPG, strategy",
+    default: "GameToolX - Multi-language game guide index",
     template: "%s | GameToolX",
   },
-  description: "Free online game tools: system requirement checkers, build recommenders, endings guides, and walkthroughs for popular JRPG and RPG games.",
+  description: "Free multi-language game guide index with AI summaries. Aggregated from multiple public sources. No login required. License-aware attribution to original authors.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "GameToolX",
+    url: SITE_URL,
+  },
 };
 
 export default function RootLayout({

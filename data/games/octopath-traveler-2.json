@@ -45,6 +45,12 @@
       "notes": "60 FPS @ 1920x1080, Preset \"Highest\", Systen RAM 16GB required when running on Intel GPU"
     }
   },
+  "availableTools": [
+    "system-checker"
+  ],
+  "tools": [
+    "system-checker"
+  ],
   "sources": [
     {
       "lang": "en",

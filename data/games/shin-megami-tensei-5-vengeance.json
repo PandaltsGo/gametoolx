@@ -97,9 +97,7 @@
   },
   "availableTools": [
     "system-checker",
-    "endings-tracker",
-    "fusion-calculator",
-    "walkthrough"
+    "endings-tracker"
   ],
   "sources": [
     {
@@ -110,8 +108,6 @@
   ],
   "tools": [
     "system-checker",
-    "endings-tracker",
-    "fusion-calculator",
-    "walkthrough"
+    "endings-tracker"
   ]
 }

@@ -368,6 +368,41 @@ const MIGRATIONS: Migration[] = [
       );
     `,
   },
+  {
+    // 出站点击埋点（每次用户点"查看原文" / "view original"记一次）
+    // §19 核心指标 #2：每日 outbound clicks（回原源）
+    version: 6,
+    name: "outbound_clicks",
+    sql: `
+      CREATE TABLE IF NOT EXISTS outbound_clicks (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        resource_id TEXT,
+        source_id TEXT,
+        target_url TEXT NOT NULL,
+        target_domain TEXT NOT NULL,         -- 从 URL 提取，用于聚合
+        session_id TEXT,
+        lang TEXT,
+        referrer_path TEXT,                  -- 当前页（哪个游戏页/资源页/主题页）
+        user_agent TEXT,
+        created_at INTEGER NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS idx_outbound_resource ON outbound_clicks(resource_id, created_at);
+      CREATE INDEX IF NOT EXISTS idx_outbound_domain ON outbound_clicks(target_domain, created_at);
+      CREATE INDEX IF NOT EXISTS idx_outbound_created ON outbound_clicks(created_at);
+
+      -- 翻译按钮点击（用户点"翻译此条"的次数）
+      CREATE TABLE IF NOT EXISTS translate_clicks (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        resource_id TEXT NOT NULL,
+        target_lang TEXT NOT NULL,
+        session_id TEXT,
+        lang TEXT,
+        referrer_path TEXT,
+        created_at INTEGER NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS idx_translate_resource ON translate_clicks(resource_id, target_lang, created_at);
+    `,
+  },
 ];
 
 function runMigrations(db: Database.Database) {

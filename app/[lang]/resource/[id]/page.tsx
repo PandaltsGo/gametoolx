@@ -16,7 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, id } = await params;
   if (!SUPPORTED_LANGS.includes(lang as Lang)) return { title: "Not Found" };
 
-  const view = getResourceView(id);
+  let view: Awaited<ReturnType<typeof getResourceView>>;
+  try {
+    view = getResourceView(id);
+  } catch {
+    return { title: "Not Found" };
+  }
   if (!view) return { title: "Not Found" };
 
   const safeLang = lang as Lang;
@@ -174,6 +179,21 @@ export default async function ResourcePage({ params }: Props) {
           <div className="text-gray-500">
             {ui.resource?.footer?.disclaimer}
           </div>
+          {/* CC BY-SA ShareAlike: this page is a derivative; declare our page license too. */}
+          {view.source.licenseType === "cc-by-sa" && (
+            <div className="pt-2 border-t border-white/5 text-gray-400">
+              <p>
+                {safeLang === "zh"
+                  ? "本页内容基于 CC BY-SA 4.0 源材料整理。衍生作品按相同或兼容许可发布。"
+                  : safeLang === "ja"
+                  ? "このページは CC BY-SA 4.0 ソース素材を整理した派生著作物であり、同じまたは互換ライセンスの下で公開されています。"
+                  : safeLang === "ko"
+                  ? "이 페이지는 CC BY-SA 4.0 소스 자료를 정리한 파생 저작물이며, 동일하거나 호환 가능한 라이선스로 게시됩니다."
+                  : "This page is a derivative work based on CC BY-SA 4.0 source material, published under the same or compatible license."}{" "}
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline">CC BY-SA 4.0</a>
+              </p>
+            </div>
+          )}
           {isFullTranslation && (
             <div className="text-yellow-400">
               ⚠ This is an approximate mirror — see <a href={view.sourceUrl} className="underline">original</a>.
