@@ -83,6 +83,53 @@
     "minimum": "최소",
     "recommended": "권장"
   },
+  "resource": {
+    "indexTitle": "공략 리소스 인덱스",
+    "indexSubtitle": "여러 소스에서 AI 요약과 외부 링크를 주제별로 정리했습니다.",
+    "browseByTopic": "주제별로 보기",
+    "allTopics": "전체",
+    "viewResource": "리소스 보기 →",
+    "viewOriginal": "원문 보기 →",
+    "indexedOn": "{date}에 인덱싱됨",
+    "by": "소스",
+    "topics": "주제",
+    "reliability": "신뢰도",
+    "sourceLang": "소스 언어",
+    "noResources": "이 게임에는 아직 인덱싱된 리소스가 없습니다.",
+    "noResourcesInTopic": "이 주제에는 아직 리소스가 없습니다.",
+    "resourceCount": "리소스 {count}개",
+    "topicCount": "{count}개",
+    "filters": {
+      "lang": "언어",
+      "allLangs": "모든 언어",
+      "sort": "정렬",
+      "sortReliability": "신뢰도순",
+      "sortFreshness": "최신순"
+    },
+    "banner": {
+      "translatedBy": "이 페이지는 GameToolX의 AI 요약/번역입니다. 원문: {url}",
+      "noTranslation": "{lang} 번역이 아직 없습니다. AI 요약: {summary}",
+      "translateThis": "번역하기"
+    },
+    "footer": {
+      "disclaimer": "이 페이지는 GameToolX의 인덱스/요약입니다. 저작권은 원작자에게 있습니다.",
+      "license": "소스 라이선스: {license}",
+      "indexedAt": "{date}에 인덱싱됨"
+    },
+    "topicLabels": {
+      "ending": "엔딩",
+      "boss": "보스전",
+      "quest": "퀘스트",
+      "build": "빌드",
+      "item": "아이템",
+      "map": "맵",
+      "system": "시스템",
+      "lore": "설정",
+      "character": "캐릭터",
+      "mechanic": "전투",
+      "walkthrough": "공략"
+    }
+  },
   "common": {
     "loading": "불러오는 중...",
     "error": "오류가 발생했습니다",

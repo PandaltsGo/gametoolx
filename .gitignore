@@ -17,6 +17,9 @@ data/.private/
 # Dev logs
 .dev-stdout.log
 .dev-stderr.log
+.dev-nextdev.log
+.dev-nextdev-err.log
+build.log
 
 # Next.js build artifacts + dependencies
 .next/

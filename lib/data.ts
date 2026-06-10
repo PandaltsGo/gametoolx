@@ -142,6 +142,79 @@ export type SystemTiers = {
   default_scoring: { min_score: number; rec_score: number };
 };
 
+// ===== Resource Index DB (v2) =====
+
+/** 来源站类型 */
+export type SourceType = "wiki" | "official" | "guide" | "personal_blog" | "rss";
+
+/** 许可类型 — 决定 DisplayPolicy 上限 */
+export type LicenseType =
+  | "cc-by-sa"     // 强制显示 license + 我们的页面也是 CC BY-SA
+  | "cc-by"        // 强制显示 license
+  | "official"     // 官方内容, 仅元数据
+  | "permission"   // 作者授权
+  | "unknown"      // 不明确, 默认 summary
+  | "restricted";  // 商业站, 仅 metadata_only
+
+/** DisplayPolicy — 决定前端能显示什么 */
+export type DisplayPolicy = "metadata_only" | "summary" | "excerpt" | "full_translation";
+
+/** Takedown status */
+export type TakedownStatus = "active" | "removed" | "blocked";
+
+/** SourceSite — per-domain policy */
+export type SourceSite = {
+  id: string;
+  domain: string;
+  sourceName: string;
+  sourceType: SourceType;
+  defaultLang: "en" | "ja" | "ko" | "zh";
+  robotsUrl?: string;
+  tosUrl?: string;
+  licenseType: LicenseType;
+  crawlAllowed: boolean;
+  crawlIntervalSec: number;
+  dailyLimit: number;
+  contactEmail?: string;
+  lastReviewedAt?: number;
+  displayPolicy: DisplayPolicy;
+  takedownStatus: TakedownStatus;
+  notes?: string;
+  createdAt: number;
+};
+
+/** Resource — 元数据 + AI 摘要（不存 content_snapshot / full_text） */
+export type Resource = {
+  id: string;
+  sourceId: string;
+  gameSlug: string;
+  sourceUrl: string;
+  sourceLang: "en" | "ja" | "ko" | "zh";
+  author?: string;
+  publishedAt?: number;
+  fetchedAt: number;
+  topicTags: string[];                 // max 3
+  reliabilityScore: 1 | 2 | 3 | 4 | 5;
+  title: { en: string; ja?: string; ko?: string; zh?: string };
+  summary: { en: string; ja?: string; ko?: string; zh?: string };
+  excerpt?: { en?: string; ja?: string; ko?: string; zh?: string };
+  keyTimestamps?: Array<{ time: number; label: string }>;
+  displayPolicyOverride?: DisplayPolicy;
+  status: "active" | "pending_review" | "removed";
+  reviewedAt?: number;
+  reviewedBy?: string;
+  internalHash?: string;
+  internalCanonicalUrl?: string;
+  createdAt: number;
+};
+
+/** Resource 展示数据（join SourceSite 后） */
+export type ResourceView = Resource & {
+  source: SourceSite;
+  /** 实际生效的 DisplayPolicy（override > source.displayPolicy） */
+  effectiveDisplayPolicy: DisplayPolicy;
+};
+
 /**
  * UI 翻译：嵌套对象，叶子是字符串。
  * 例如 `ui.page.release` = "发售日期"。

@@ -83,6 +83,53 @@
     "minimum": "Minimum",
     "recommended": "Recommended"
   },
+  "resource": {
+    "indexTitle": "Guide Resource Index",
+    "indexSubtitle": "AI summaries and outbound links from multiple sources, organized by topic.",
+    "browseByTopic": "Browse by Topic",
+    "allTopics": "All",
+    "viewResource": "View Resource →",
+    "viewOriginal": "View Original →",
+    "indexedOn": "Indexed on {date}",
+    "by": "Source",
+    "topics": "Topics",
+    "reliability": "Reliability",
+    "sourceLang": "Source Language",
+    "noResources": "No indexed resources for this game yet.",
+    "noResourcesInTopic": "No resources in this topic yet.",
+    "resourceCount": "{count} resources",
+    "topicCount": "{count} items",
+    "filters": {
+      "lang": "Language",
+      "allLangs": "All Languages",
+      "sort": "Sort",
+      "sortReliability": "Reliability",
+      "sortFreshness": "Newest"
+    },
+    "banner": {
+      "translatedBy": "This page is an AI summary/translation by GameToolX. Original: {url}",
+      "noTranslation": "No {lang} translation yet. AI summary: {summary}",
+      "translateThis": "Translate This"
+    },
+    "footer": {
+      "disclaimer": "This page is an index/summary by GameToolX. Copyright belongs to the original author.",
+      "license": "Source license: {license}",
+      "indexedAt": "Indexed on {date}"
+    },
+    "topicLabels": {
+      "ending": "Endings",
+      "boss": "Bosses",
+      "quest": "Quests",
+      "build": "Builds",
+      "item": "Items",
+      "map": "Maps",
+      "system": "Systems",
+      "lore": "Lore",
+      "character": "Characters",
+      "mechanic": "Mechanics",
+      "walkthrough": "Walkthroughs"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "Something went wrong",

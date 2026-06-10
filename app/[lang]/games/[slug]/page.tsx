@@ -2,7 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getGame, getUITranslations, listTools, listGames } from "@/lib/data";
+import { listResourcesByGame, listTopicsByGame } from "@/lib/resources";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ResourceCard from "@/components/ResourceCard";
 
 const SUPPORTED_LANGS = ["ja", "ko", "zh", "en"] as const;
 type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -31,36 +33,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!game) return { title: "Not Found" };
 
   const gameTitle = game.title[lang] || game.title.en;
-  const desc = `${gameTitle} のツール一覧。 ${(game.genres || []).join(", ")}。`;
+  const desc = `${gameTitle} 攻略资源索引与工具。 ${(game.genres || []).join(", ")}。`;
   return {
-    title: `${gameTitle} ツール一覧 | GameToolX`,
+    title: `${gameTitle} | GameToolX`,
     description: desc,
-    openGraph: {
-      title: `${gameTitle} ツール一覧`,
-      description: desc,
-      locale: lang === "ja" ? "ja_JP" : lang === "ko" ? "ko_KR" : "en_US",
-      type: "website",
-    },
+    // Self-canonical — we are an aggregator, not a mirror (see §18.1 of 需求-v2-资源索引.md)
     alternates: {
+      canonical: `/${lang}/games/${slug}`,
       languages: Object.fromEntries(
         SUPPORTED_LANGS.map((l) => [l, `/${l}/games/${slug}`]),
       ),
     },
-    other: {
-      "application/ld+json": JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        name: gameTitle,
-        description: game.title.en,
-        datePublished: game.releaseDate,
-        gamePlatform: ["PC", "Steam"],
-        applicationCategory: "Game",
-        inLanguage: SUPPORTED_LANGS,
-        offers: {
-          "@type": "Offer",
-          url: `https://store.steampowered.com/app/${game.steamAppId}`,
-        },
-      }),
+    openGraph: {
+      title: `${gameTitle}`,
+      description: desc,
+      locale: lang === "ja" ? "ja_JP" : lang === "ko" ? "ko_KR" : "en_US",
+      type: "website",
     },
   };
 }
@@ -77,6 +65,16 @@ export default async function GamePage({ params }: Props) {
   const allTools = await listTools();
   // Game-specific tools + universal tools (gameSlug === null, e.g. system-checker)
   const gameTools = allTools.filter((t) => t.gameSlug === slug || t.gameSlug === null);
+
+  // v2: Resource index
+  let resources: Awaited<ReturnType<typeof listResourcesByGame>> = [];
+  let topics: { topic: string; count: number }[] = [];
+  try {
+    resources = listResourcesByGame(slug, { limit: 12 });
+    topics = listTopicsByGame(slug);
+  } catch {
+    // DB not initialized yet — silently fall back to empty
+  }
 
   const gameTitle = game.title[safeLang] || game.title.en;
 
@@ -179,6 +177,58 @@ export default async function GamePage({ params }: Props) {
             </div>
           )}
         </section>
+
+        {/* v2: Resource Index Section */}
+        {resources.length > 0 && (
+          <section className="mt-12">
+            <div className="mb-4 flex items-baseline justify-between">
+              <h2 className="text-2xl font-semibold text-white">
+                {ui.resource?.indexTitle || "Guide Resource Index"}
+              </h2>
+              <span className="text-sm text-gray-500">
+                {(ui.resource?.resourceCount || "{count} resources").replace("{count}", String(resources.length))}
+              </span>
+            </div>
+            {ui.resource?.indexSubtitle && (
+              <p className="mb-4 text-sm text-gray-400">{ui.resource.indexSubtitle}</p>
+            )}
+
+            {/* Topic chips */}
+            {topics.length > 0 && (
+              <div className="mb-4 flex flex-wrap gap-2">
+                <span className="text-sm text-gray-400 self-center mr-1">
+                  {ui.resource?.browseByTopic || "Browse by topic"}:
+                </span>
+                <Link
+                  href={`/${safeLang}/games/${slug}`}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300 hover:bg-white/10"
+                >
+                  {ui.resource?.allTopics || "All"}
+                </Link>
+                {topics.map((t) => (
+                  <Link
+                    key={t.topic}
+                    href={`/${safeLang}/games/${slug}/${t.topic}`}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300 hover:bg-white/10"
+                  >
+                    {ui.resource?.topicLabels?.[t.topic] || t.topic} ({t.count})
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {resources.map((r) => (
+                <ResourceCard
+                  key={r.id}
+                  resource={r}
+                  lang={safeLang}
+                  ui={ui}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* System requirements reference */}
         {game.systemRequirements && (

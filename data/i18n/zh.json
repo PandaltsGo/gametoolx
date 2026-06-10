@@ -83,6 +83,53 @@
     "minimum": "最低配置",
     "recommended": "推荐配置"
   },
+  "resource": {
+    "indexTitle": "攻略资源索引",
+    "indexSubtitle": "来自多个来源的 AI 摘要与外链，按主题归类。",
+    "browseByTopic": "按主题浏览",
+    "allTopics": "全部",
+    "viewResource": "查看资源 →",
+    "viewOriginal": "查看原文 →",
+    "indexedOn": "索引于 {date}",
+    "by": "来源",
+    "topics": "主题",
+    "reliability": "可靠度",
+    "sourceLang": "源语言",
+    "noResources": "该游戏暂无可索引资源。",
+    "noResourcesInTopic": "该主题暂无资源。",
+    "resourceCount": "共 {count} 条资源",
+    "topicCount": "共 {count} 条",
+    "filters": {
+      "lang": "语言",
+      "allLangs": "全部语言",
+      "sort": "排序",
+      "sortReliability": "可靠度优先",
+      "sortFreshness": "最新优先"
+    },
+    "banner": {
+      "translatedBy": "本页面为 GameToolX AI 摘要/翻译，原文：{url}",
+      "noTranslation": "暂无 {lang} 翻译，AI 摘要：{summary}",
+      "translateThis": "翻译此条"
+    },
+    "footer": {
+      "disclaimer": "本页面为 GameToolX 索引/摘要，版权归原作者。",
+      "license": "原源 license：{license}",
+      "indexedAt": "索引于 {date}"
+    },
+    "topicLabels": {
+      "ending": "结局路线",
+      "boss": "BOSS 战",
+      "quest": "支线任务",
+      "build": "队伍构筑",
+      "item": "道具装备",
+      "map": "区域地图",
+      "system": "系统机制",
+      "lore": "设定背景",
+      "character": "角色仲魔",
+      "mechanic": "战斗机制",
+      "walkthrough": "流程攻略"
+    }
+  },
   "common": {
     "loading": "加载中...",
     "error": "出错了",

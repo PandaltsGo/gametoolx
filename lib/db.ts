@@ -238,6 +238,136 @@ const MIGRATIONS: Migration[] = [
       );
     `,
   },
+  {
+    // v0 of v2: 资源索引 DB
+    // SourceSite 独立于 Resource（per-domain policy）
+    // Resource 只存摘要 + 元数据，不存完整原文
+    // DisplayPolicy 决定 UI 显示层级
+    version: 4,
+    name: "resource_index_db",
+    sql: `
+      -- 来源站点 (per-domain policy)
+      CREATE TABLE IF NOT EXISTS source_sites (
+        id TEXT PRIMARY KEY,                       -- domain-based slug
+        domain TEXT NOT NULL UNIQUE,
+        source_name TEXT NOT NULL,
+        source_type TEXT NOT NULL,                 -- 'wiki' | 'official' | 'guide' | 'personal_blog' | 'rss'
+        default_lang TEXT NOT NULL,                -- 'en' | 'ja' | 'ko' | 'zh'
+
+        -- Legal / compliance
+        robots_url TEXT,
+        tos_url TEXT,
+        license_type TEXT NOT NULL,                -- 'cc-by-sa' | 'cc-by' | 'official' | 'permission' | 'unknown' | 'restricted'
+        crawl_allowed INTEGER NOT NULL DEFAULT 1,
+        crawl_interval_sec INTEGER NOT NULL DEFAULT 5,
+        daily_limit INTEGER NOT NULL DEFAULT 100,
+        contact_email TEXT,
+        last_reviewed_at INTEGER,
+
+        -- Display policy drives frontend
+        display_policy TEXT NOT NULL DEFAULT 'summary',  -- 'metadata_only' | 'summary' | 'excerpt' | 'full_translation'
+
+        -- Status
+        takedown_status TEXT NOT NULL DEFAULT 'active',  -- 'active' | 'removed' | 'blocked'
+        notes TEXT,
+
+        created_at INTEGER NOT NULL
+      );
+
+      -- 资源 (Resource) — 元数据 + AI 摘要
+      -- 注意：不存 content_snapshot / full_text（合规）
+      CREATE TABLE IF NOT EXISTS resources (
+        id TEXT PRIMARY KEY,                       -- url-slug
+        source_id TEXT NOT NULL,
+        game_slug TEXT NOT NULL,
+
+        -- Origin
+        source_url TEXT NOT NULL,
+        source_lang TEXT NOT NULL,                 -- 'en' | 'ja' | 'ko' | 'zh'
+        author TEXT,
+        published_at INTEGER,
+        fetched_at INTEGER NOT NULL,
+
+        -- Topic / classification
+        topic_tags TEXT NOT NULL DEFAULT '[]',     -- JSON array, max 3 tags
+        reliability_score INTEGER NOT NULL DEFAULT 3,  -- 1-5
+
+        -- Title (always 4 langs; original + AI 翻译)
+        title_en TEXT NOT NULL,
+        title_ja TEXT,
+        title_ko TEXT,
+        title_zh TEXT,
+
+        -- AI summary (always 4 langs, 1-2 sentences)
+        summary_en TEXT NOT NULL,
+        summary_ja TEXT,
+        summary_ko TEXT,
+        summary_zh TEXT,
+
+        -- Short excerpt (optional, only if display_policy allows)
+        excerpt_en TEXT,
+        excerpt_ja TEXT,
+        excerpt_ko TEXT,
+        excerpt_zh TEXT,
+
+        -- Key timestamps (for video sources)
+        key_timestamps TEXT,                       -- JSON: [{time, label}]
+
+        -- Display policy override (per-resource, default = source.display_policy)
+        -- Allows finer-grained control: e.g. a wiki may have one article = full_translation
+        display_policy_override TEXT,
+
+        -- Status
+        status TEXT NOT NULL DEFAULT 'active',     -- 'active' | 'pending_review' | 'removed'
+        reviewed_at INTEGER,
+        reviewed_by TEXT,
+
+        -- Internal (not exposed)
+        internal_hash TEXT,                        -- dedup key
+        internal_canonical_url TEXT,              -- HTML <link rel="canonical">
+
+        created_at INTEGER NOT NULL,
+
+        FOREIGN KEY (source_id) REFERENCES source_sites(id) ON DELETE CASCADE
+      );
+
+      CREATE INDEX IF NOT EXISTS idx_resources_url ON resources(source_url);
+      CREATE INDEX IF NOT EXISTS idx_resources_game ON resources(game_slug);
+      CREATE INDEX IF NOT EXISTS idx_resources_source ON resources(source_id);
+      CREATE INDEX IF NOT EXISTS idx_resources_lang ON resources(source_lang);
+      CREATE INDEX IF NOT EXISTS idx_resources_fetched ON resources(fetched_at);
+      CREATE INDEX IF NOT EXISTS idx_resources_status ON resources(status);
+    `,
+  },
+  {
+    // 主题索引（聚合表，便于快速查询）
+    // 同一 resource 可属于多个 topic（topic 最多 3 个/资源）
+    version: 5,
+    name: "topic_index_and_dedup",
+    sql: `
+      -- 主题计数（避免每次都 JSON parse topic_tags）
+      CREATE TABLE IF NOT EXISTS resource_topics (
+        resource_id TEXT NOT NULL,
+        topic_slug TEXT NOT NULL,
+        game_slug TEXT NOT NULL,
+        rank_score REAL NOT NULL DEFAULT 0,        -- quality * freshness * votes
+        is_featured INTEGER NOT NULL DEFAULT 0,
+        PRIMARY KEY (resource_id, topic_slug),
+        FOREIGN KEY (resource_id) REFERENCES resources(id) ON DELETE CASCADE
+      );
+      CREATE INDEX IF NOT EXISTS idx_topics_game ON resource_topics(game_slug, topic_slug);
+      CREATE INDEX IF NOT EXISTS idx_topics_rank ON resource_topics(game_slug, topic_slug, rank_score DESC);
+
+      -- 黑名单（域名 / 作者 / 资源）
+      CREATE TABLE IF NOT EXISTS blacklist (
+        kind TEXT NOT NULL,                        -- 'domain' | 'author' | 'url_pattern'
+        value TEXT NOT NULL,
+        reason TEXT,
+        added_at INTEGER NOT NULL,
+        PRIMARY KEY (kind, value)
+      );
+    `,
+  },
 ];
 
 function runMigrations(db: Database.Database) {
@@ -263,7 +393,7 @@ function runMigrations(db: Database.Database) {
 }
 
 let db: Database.Database | null = null;
-function dbReady() {
+export function dbReady() {
   if (!db) db = getRawDb();
   return db;
 }
