@@ -403,6 +403,14 @@ const MIGRATIONS: Migration[] = [
       CREATE INDEX IF NOT EXISTS idx_translate_resource ON translate_clicks(resource_id, target_lang, created_at);
     `,
   },
+  {
+    // 给 source_sites 加 config_json (crawler token bucket + circuit breaker state)
+    version: 7,
+    name: "source_config_json",
+    sql: `
+      ALTER TABLE source_sites ADD COLUMN config_json TEXT DEFAULT '{}';
+    `,
+  },
 ];
 
 function runMigrations(db: Database.Database) {
